@@ -12,6 +12,8 @@
   if (!SB || !book || !READABLE.learn) return;
 
   var NAMES = { learn: "Walkthrough", kisi: "Kisi-kisi" };
+  Object.keys(READABLE).forEach(function (k) { if (READABLE[k].dataset.title) NAMES[k] = READABLE[k].dataset.title; });
+  var VIEWS = Array.prototype.map.call(document.querySelectorAll("[data-view]"), function (el) { return el.id.replace(/^v-/, ""); });
   var view = READABLE.learn; // the readable view on screen; see syncPaged()
   var sectionsOf = function (el) { return Array.prototype.slice.call(el.querySelectorAll("section.topic")); };
   var allSections = [].concat.apply([], Object.keys(READABLE).map(function (k) { return sectionsOf(READABLE[k]); }));
@@ -20,10 +22,12 @@
   var reduce = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   var esc = SB.esc;
 
-  // keep in step with route() in the page and boot.js
+  // keep in step with route() in the page and boot.js: a view name, or an anchor inside a readable view
   function currentView() {
     var h = (location.hash || "").slice(1);
-    return /^(kisi|cards|quiz|mock)$/.test(h) ? h : /^q(\d\d|-map)$/.test(h) ? "kisi" : "learn";
+    if (VIEWS.indexOf(h) >= 0) return h;
+    var el = h && document.getElementById(h);
+    return el && el.closest("[data-readable]") ? viewOf(el) : "learn";
   }
   function viewOf(el) { var v = el.closest("[data-readable]"); return v ? v.id.replace(/^v-/, "") : "learn"; }
   function isSlide() { return root.getAttribute("data-layout") === "slide" && !!READABLE[currentView()]; }
@@ -211,7 +215,7 @@
     var go = function () {
       if (isSlide()) { measure(); goTo(pageOf(el), true); }
       else el.scrollIntoView({ block: block || "start" });
-      if (/^(t-|q)/.test(el.id || "") && el.matches("section.topic")) history.replaceState(null, "", "#" + el.id);
+      if (el.id && el.matches("section.topic")) history.replaceState(null, "", "#" + el.id);
     };
     if (currentView() !== v) { pendingJump = go; location.hash = "#" + v; }
     else go();
@@ -237,11 +241,11 @@
       }).join("") + "</div>";
   }
   SB.panel("toc", "Contents", function (body) {
-    body.innerHTML = tocGroup("learn") + tocGroup("kisi") +
-      '<span class="sb-label">Practice</span><div class="sb-group rd-toc">' +
-      '<a class="sb-row" href="#cards"><span class="grow">Flashcards</span></a>' +
-      '<a class="sb-row" href="#quiz"><span class="grow">Self-check quiz</span></a>' +
-      '<a class="sb-row" href="#mock"><span class="grow">Mock exam</span></a></div>';
+    // practice tabs are the header tabs that are not readable views
+    var practice = Array.prototype.filter.call(document.querySelectorAll(".sb-nav a[href^='#']"), function (a) { return !READABLE[a.getAttribute("href").slice(1)]; });
+    body.innerHTML = Object.keys(READABLE).map(tocGroup).join("") +
+      (practice.length ? '<span class="sb-label">Practice</span><div class="sb-group rd-toc">' +
+        practice.map(function (a) { return '<a class="sb-row" href="' + a.getAttribute("href") + '"><span class="grow">' + esc(a.textContent) + "</span></a>"; }).join("") + "</div>" : "");
     tocList = body;
     body.addEventListener("click", function (e) {
       var a = e.target.closest("a[href^='#']");
@@ -459,7 +463,7 @@
     if (!hlBody) return;
     if (!n) {
       hlBody.innerHTML = '<div class="rd-empty"><div class="rd-empty-mark" aria-hidden="true"></div><p><b>No highlights yet.</b></p>' +
-        "<p>Select any text in the walkthrough or the kisi-kisi, then pick a colour to save it here.</p></div>";
+        "<p>Select any text in the notes, then pick a colour to save it here.</p></div>";
       return;
     }
     var bySec = {};
@@ -501,8 +505,8 @@
 
   /* ---------- wiring ---------- */
   function anchorTarget() {
-    var id = location.hash.slice(1);
-    return /^(t-|q\d\d$|q-map$)/.test(id) ? document.getElementById(id) : null;
+    var el = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+    return el && el.matches("[data-readable] section.topic") ? el : null;
   }
   addEventListener("hashchange", function () {
     syncPaged();
