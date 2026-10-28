@@ -27,12 +27,15 @@ The toolbar at the top right works like the Malaka Books reader:
 
 Highlights, reading progress and the chosen mode are saved in the browser on each device.
 
+The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questions, each worked through the same way (what the question asks, a numbered reasoning staircase, the diagram with a "draw this in the exam" tip, a model answer hidden behind **Show answer**, and common mistakes). Tick "I can explain this without looking" on each question to track what you've mastered. It works with Slide mode, Contents and highlights just like the walkthrough. It was built from `Steven_Shiendy_GSCM_KisiKisi_Report/REPORT.md`, keeping its wording, with the figures drawn in the page's theme colours.
+
 ## Adding a notebook
 
 1. Copy `notes/gscm-midterm.html` to `notes/<name>.html`.
 2. Replace everything inside `<main>`, plus the flashcard/quiz/mock data in the inline `<script>`.
 3. Set `data-book="<name>"` on `<body>`, which keys the reading-progress tracking.
-4. Copy the `<article class="book">` card in `index.html` and set `data-progress-for="<name>"` and its links.
+4. Mark each long reading view with `data-readable` (as `#v-learn` and `#v-kisi` are) so Slide mode, Contents and highlights cover it.
+5. Copy the `<article class="book">` card in `index.html` and set `data-progress-for="<name>"` and its links.
 
 Shared files:
 - `assets/secondbrain.css`: themes, header, preferences panel, library

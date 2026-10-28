@@ -9,8 +9,13 @@
   d.setAttribute("data-theme", theme);
   d.setAttribute("data-mode", /^(dark|navy|charcoal)$/.test(theme) ? "dark" : "light");
   // notebook reading mode: two-page "slide" spreads on wide screens, "scroll" on phones, until the reader picks one
-  d.setAttribute("data-layout", p.layout || (window.innerWidth >= 1024 ? "slide" : "scroll"));
-  d.setAttribute("data-reading", /^#(cards|quiz|mock)$/.test(location.hash) ? location.hash.slice(1) : "learn");
+  var layout = p.layout || (window.innerWidth >= 1024 ? "slide" : "scroll");
+  var h = location.hash.slice(1);
+  var reading = /^(kisi|cards|quiz|mock)$/.test(h) ? h : /^q(\d\d|-map)$/.test(h) ? "kisi" : "learn";
+  d.setAttribute("data-layout", layout);
+  d.setAttribute("data-reading", reading);
+  // data-paged: the open view is shown as pages (keep in step with syncPaged() in reader.js)
+  if (layout === "slide" && /^(learn|kisi)$/.test(reading)) d.setAttribute("data-paged", "");
   if (p.bold) d.setAttribute("data-bold", "");
   if (p.justify) d.setAttribute("data-justify", "");
   if (p.contrast) d.setAttribute("data-contrast", "high");

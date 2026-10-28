@@ -1,24 +1,39 @@
-/* SECONDBRAIN notebook reader: Scroll / Slide modes for the walkthrough, the Contents panel,
-   text highlights, and reading progress. Needs secondbrain.js (window.SB) loaded first. */
+/* SECONDBRAIN notebook reader: Scroll / Slide modes for the readable views (any [data-readable]
+   view, e.g. the walkthrough and kisi-kisi), the Contents panel, text highlights, reading progress,
+   and the kisi-kisi answer toggles and self-checks. Needs secondbrain.js (window.SB) loaded first. */
 (function () {
   "use strict";
 
   var SB = window.SB;
   var root = document.documentElement;
   var book = document.body.dataset.book;
-  var view = document.getElementById("v-learn");
-  if (!SB || !book || !view) return;
+  var READABLE = {};
+  Array.prototype.forEach.call(document.querySelectorAll("[data-readable]"), function (el) { READABLE[el.id.replace(/^v-/, "")] = el; });
+  if (!SB || !book || !READABLE.learn) return;
 
-  var sections = Array.prototype.slice.call(view.querySelectorAll("section.topic"));
+  var NAMES = { learn: "Walkthrough", kisi: "Kisi-kisi" };
+  var view = READABLE.learn; // the readable view on screen; see syncPaged()
+  var sectionsOf = function (el) { return Array.prototype.slice.call(el.querySelectorAll("section.topic")); };
+  var allSections = [].concat.apply([], Object.keys(READABLE).map(function (k) { return sectionsOf(READABLE[k]); }));
+  var sections = sectionsOf(view);
   var bar = document.querySelector(".sb-progress");
   var reduce = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   var esc = SB.esc;
 
+  // keep in step with route() in the page and boot.js
   function currentView() {
     var h = (location.hash || "").slice(1);
-    return /^(cards|quiz|mock)$/.test(h) ? h : "learn";
+    return /^(kisi|cards|quiz|mock)$/.test(h) ? h : /^q(\d\d|-map)$/.test(h) ? "kisi" : "learn";
   }
-  function isSlide() { return root.getAttribute("data-layout") === "slide" && currentView() === "learn"; }
+  function viewOf(el) { var v = el.closest("[data-readable]"); return v ? v.id.replace(/^v-/, "") : "learn"; }
+  function isSlide() { return root.getAttribute("data-layout") === "slide" && !!READABLE[currentView()]; }
+  var pageBy = {};
+  function syncPaged() {
+    var v = currentView();
+    if (READABLE[v] && READABLE[v] !== view) { pageBy[viewOf(view)] = page; view = READABLE[v]; sections = sectionsOf(view); page = pageBy[v] || 0; }
+    root.setAttribute("data-reading", v);
+    root.toggleAttribute("data-paged", isSlide());
+  }
   function headerH() { return parseFloat(getComputedStyle(root).getPropertyValue("--header-h")) || 64; }
   function titleOf(sec) { var h = sec && sec.querySelector("h2"); return h ? h.textContent : ""; }
   function tagOf(sec) { var t = sec && sec.querySelector(".tag"); return t ? t.textContent : ""; }
@@ -70,7 +85,7 @@
   }
   // text selection or keyboard focus can nudge the hidden scroller; settle back onto a page edge
   var settle;
-  view.addEventListener("scroll", function () {
+  onReadable("scroll", function () {
     if (!isSlide()) return;
     clearTimeout(settle);
     settle = setTimeout(function () {
@@ -78,6 +93,10 @@
       if (Math.abs(view.scrollLeft - want) > 4) { page = Math.round(view.scrollLeft / step); goTo(page, true); }
     }, 180);
   }, { passive: true });
+
+  function onReadable(type, fn, opts) {
+    Object.keys(READABLE).forEach(function (k) { READABLE[k].addEventListener(type, function (e) { if (this === view) fn.call(this, e); }, opts); });
+  }
 
   function currentSection() {
     var cur = null;
@@ -94,7 +113,7 @@
   var where = foot.querySelector(".rd-where"), count = foot.querySelector(".rd-count"), pctEl = foot.querySelector(".rd-pct");
   var saveTimer;
   function update() {
-    if (currentView() !== "learn") { if (bar) bar.style.setProperty("--p", 0); return; }
+    if (!READABLE[currentView()]) { if (bar) bar.style.setProperty("--p", 0); return; }
     var pct;
     if (isSlide()) {
       pct = pages > 1 ? page / (pages - 1) : 1;
@@ -107,12 +126,12 @@
     }
     if (bar) bar.style.setProperty("--p", pct);
     var sec = currentSection();
-    where.textContent = sec ? tagOf(sec).split("·")[0].trim() : "Introduction";
+    where.textContent = sec ? tagOf(sec).split("·")[0].trim() : NAMES[currentView()] || "Introduction";
     pctEl.textContent = Math.round(pct * 100) + "% read";
     markToc(sec);
     clearTimeout(saveTimer);
     saveTimer = setTimeout(function () {
-      if (sec) SB.store.set("sb-progress:" + book, { pct: Math.round(pct * 100), id: sec.id, title: titleOf(sec), t: Date.now() });
+      if (sec) SB.store.set("sb-progress:" + book, { pct: Math.round(pct * 100), id: sec.id, title: (currentView() === "learn" ? "" : NAMES[currentView()] + ": ") + titleOf(sec), t: Date.now() });
     }, 250);
   }
   var ticking = false;
@@ -130,10 +149,11 @@
   }
   function setLayout(mode) {
     if (mode === root.getAttribute("data-layout")) return;
-    var sec = currentView() === "learn" ? currentSection() : null;
+    var sec = READABLE[currentView()] ? currentSection() : null;
     root.setAttribute("data-layout", mode);
     SB.set("layout", mode);
     syncSeg();
+    syncPaged();
     requestAnimationFrame(function () {
       if (isSlide()) { measure(); goTo(sec ? pageOf(sec) : 0, true); }
       else { if (sec) sec.scrollIntoView(); else scrollTo(0, 0); update(); }
@@ -154,7 +174,7 @@
     if (d) { e.preventDefault(); goTo(page + d); }
   });
   var wheelLock = 0, wheelSum = 0;
-  view.addEventListener("wheel", function (e) {
+  onReadable("wheel", function (e) {
     if (!isSlide()) return;
     var inner = e.target.closest(".figscroll, .tbl, .formula");
     var dx = e.deltaX, dy = e.deltaY;
@@ -169,11 +189,11 @@
     }
   }, { passive: false });
   var touch = null;
-  view.addEventListener("touchstart", function (e) {
+  onReadable("touchstart", function (e) {
     if (!isSlide() || e.touches.length !== 1 || e.target.closest(".figscroll, .tbl, .formula")) { touch = null; return; }
     touch = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() };
   }, { passive: true });
-  view.addEventListener("touchend", function (e) {
+  onReadable("touchend", function (e) {
     if (!touch) return;
     var dx = e.changedTouches[0].clientX - touch.x, dy = e.changedTouches[0].clientY - touch.y;
     var sel = window.getSelection();
@@ -184,13 +204,16 @@
   }, { passive: true });
 
   /* ---------- contents panel ---------- */
-  var tocList;
+  var tocList, pendingJump = null;
+  // el: any element inside a readable view; switches to that view first when needed
   function jumpTo(el, block) {
+    var v = viewOf(el);
     var go = function () {
       if (isSlide()) { measure(); goTo(pageOf(el), true); }
       else el.scrollIntoView({ block: block || "start" });
+      if (/^(t-|q)/.test(el.id || "") && el.matches("section.topic")) history.replaceState(null, "", "#" + el.id);
     };
-    if (currentView() !== "learn") { location.hash = "#learn"; requestAnimationFrame(function () { requestAnimationFrame(go); }); }
+    if (currentView() !== v) { pendingJump = go; location.hash = "#" + v; }
     else go();
   }
   function markToc(sec) {
@@ -201,14 +224,20 @@
       if (on) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current");
     });
   }
-  SB.panel("toc", "Contents", function (body) {
-    body.innerHTML =
-      '<span class="sb-label">Walkthrough</span><div class="sb-group rd-toc">' +
-      '<button class="sb-row" data-goto="_start"><span class="grow"><small>Start</small>Course walkthrough</span></button>' +
-      sections.map(function (s, i) {
-        return '<button class="sb-row" data-goto="' + s.id + '"><span class="num" aria-hidden="true">' + (i + 1) + '</span><span class="grow"><small>' +
+  function tocGroup(name) {
+    var el = READABLE[name];
+    if (!el) return "";
+    var h1 = el.querySelector("h1");
+    return '<span class="sb-label">' + NAMES[name] + '</span><div class="sb-group rd-toc">' +
+      '<button class="sb-row" data-goto="_' + name + '"><span class="grow"><small>Start</small>' + esc(h1 ? h1.textContent : NAMES[name]) + "</span></button>" +
+      sectionsOf(el).map(function (s, i) {
+        var num = name === "kisi" ? (/^q\d/.test(s.id) ? "Q" + (+s.id.slice(1)) : "") : i + 1;
+        return '<button class="sb-row" data-goto="' + s.id + '"><span class="num" aria-hidden="true">' + num + '</span><span class="grow"><small>' +
           esc(tagOf(s)) + "</small>" + esc(titleOf(s)) + "</span></button>";
-      }).join("") + "</div>" +
+      }).join("") + "</div>";
+  }
+  SB.panel("toc", "Contents", function (body) {
+    body.innerHTML = tocGroup("learn") + tocGroup("kisi") +
       '<span class="sb-label">Practice</span><div class="sb-group rd-toc">' +
       '<a class="sb-row" href="#cards"><span class="grow">Flashcards</span></a>' +
       '<a class="sb-row" href="#quiz"><span class="grow">Self-check quiz</span></a>' +
@@ -220,12 +249,11 @@
       var b = e.target.closest("[data-goto]");
       if (!b) return;
       SB.panelClose("toc");
-      var target = b.dataset.goto === "_start" ? view.firstElementChild : document.getElementById(b.dataset.goto);
-      if (b.dataset.goto !== "_start") history.replaceState(null, "", "#" + b.dataset.goto);
-      else history.replaceState(null, "", "#learn");
+      var g = b.dataset.goto;
+      var target = g.charAt(0) === "_" ? READABLE[g.slice(1)].firstElementChild : document.getElementById(g);
       jumpTo(target);
     });
-  }, function () { markToc(currentView() === "learn" ? currentSection() : null); });
+  }, function () { markToc(READABLE[currentView()] ? currentSection() : null); });
 
   /* ---------- highlights ---------- */
   var HL_KEY = "sb-hl:" + book;
@@ -374,7 +402,7 @@
     var a = r.startContainer.nodeType === 3 ? r.startContainer.parentNode : r.startContainer;
     var b = r.endContainer.nodeType === 3 ? r.endContainer.parentNode : r.endContainer;
     var sec = a.closest && a.closest("section.topic");
-    if (!sec || !view.contains(sec) || b.closest("section.topic") !== sec) return null;
+    if (!sec || !sec.closest("[data-readable]") || b.closest("section.topic") !== sec) return null;
     if (a.closest("svg") || b.closest("svg")) return null;
     var start = offsetOf(sec, r.startContainer, r.startOffset), end = offsetOf(sec, r.endContainer, r.endOffset);
     if (start < 0 || end <= start) return null;
@@ -388,9 +416,9 @@
     showPop(s.rect);
   }
   document.addEventListener("selectionchange", function () { clearTimeout(selTimer); selTimer = setTimeout(checkSelection, coarse ? 350 : 220); });
-  view.addEventListener("mouseup", function () { clearTimeout(selTimer); setTimeout(checkSelection, 10); });
+  onReadable("mouseup", function () { clearTimeout(selTimer); setTimeout(checkSelection, 10); });
 
-  view.addEventListener("click", function (e) {
+  onReadable("click", function (e) {
     var m = e.target.closest("mark.hl");
     if (!m) return;
     var sel = window.getSelection();
@@ -431,17 +459,17 @@
     if (!hlBody) return;
     if (!n) {
       hlBody.innerHTML = '<div class="rd-empty"><div class="rd-empty-mark" aria-hidden="true"></div><p><b>No highlights yet.</b></p>' +
-        "<p>Select any text in the walkthrough, then pick a colour to save it here.</p></div>";
+        "<p>Select any text in the walkthrough or the kisi-kisi, then pick a colour to save it here.</p></div>";
       return;
     }
     var bySec = {};
     hls.slice().sort(function (a, b) {
-      return sections.indexOf(document.getElementById(a.sec)) - sections.indexOf(document.getElementById(b.sec)) || a.start - b.start;
+      return allSections.indexOf(document.getElementById(a.sec)) - allSections.indexOf(document.getElementById(b.sec)) || a.start - b.start;
     }).forEach(function (h) { (bySec[h.sec] = bySec[h.sec] || []).push(h); });
     hlBody.innerHTML = '<p class="sb-note" style="margin:0 2px 4px">' + n + " highlight" + (n > 1 ? "s" : "") + ", saved on this device.</p>" +
       Object.keys(bySec).map(function (sid) {
         var sec = document.getElementById(sid);
-        return '<span class="sb-label">' + esc(titleOf(sec)) + '</span><div class="sb-group">' +
+        return '<span class="sb-label">' + (viewOf(sec) === "learn" ? "" : NAMES[viewOf(sec)] + " · ") + esc(titleOf(sec)) + '</span><div class="sb-group">' +
           bySec[sid].map(function (h) {
             return '<div class="rd-hl"><button class="rd-hl-go" data-go="' + h.id + '"><span class="rd-hl-bar hl-' + h.color + '" aria-hidden="true"></span><span class="rd-hl-text">' +
               esc(h.text) + '</span></button><button class="rd-hl-del" data-del="' + h.id + '" aria-label="Remove highlight">' +
@@ -472,14 +500,19 @@
   refreshHlList();
 
   /* ---------- wiring ---------- */
+  function anchorTarget() {
+    var id = location.hash.slice(1);
+    return /^(t-|q\d\d$|q-map$)/.test(id) ? document.getElementById(id) : null;
+  }
   addEventListener("hashchange", function () {
-    root.setAttribute("data-reading", currentView());
+    syncPaged();
     hidePop();
     requestAnimationFrame(function () {
+      if (pendingJump) { var j = pendingJump; pendingJump = null; return j(); }
       if (isSlide()) {
         measure();
-        var t = /^#t-/.test(location.hash) && document.getElementById(location.hash.slice(1));
-        goTo(t ? pageOf(t) : 0, true);
+        var t = anchorTarget();
+        goTo(t ? pageOf(t) : page, true);
       } else update();
     });
   });
@@ -487,11 +520,56 @@
   addEventListener("resize", function () { clearTimeout(rT); rT = setTimeout(reflow, 120); });
   document.addEventListener("sb:apply", function () { requestAnimationFrame(reflow); });
 
+  /* ---------- kisi-kisi: answer toggles, copy, self-checks ---------- */
+  var CHECK_KEY = "sb-check:" + book;
+  var checks = SB.store.get(CHECK_KEY, []);
+  function setAnswer(btn, open) {
+    var body = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!body) return;
+    body.hidden = !open;
+    btn.setAttribute("aria-expanded", open);
+    btn.textContent = open ? "Hide answer" : "Show answer";
+  }
+  function syncChecks() {
+    document.querySelectorAll("[data-selfcheck]").forEach(function (c) { c.checked = checks.indexOf(c.dataset.selfcheck) >= 0; });
+    document.querySelectorAll("[data-check-count]").forEach(function (el) { el.textContent = checks.length; });
+    document.querySelectorAll('.kq-toc a[href^="#q"]').forEach(function (a) { a.classList.toggle("done", checks.indexOf(a.getAttribute("href").slice(1)) >= 0); });
+  }
+  document.addEventListener("click", function (e) {
+    var r = e.target.closest("[data-reveal]");
+    if (r) { setAnswer(r, r.getAttribute("aria-expanded") !== "true"); return reflow(); }
+    var all = e.target.closest("[data-reveal-all]");
+    if (all) {
+      var open = all.getAttribute("aria-pressed") !== "true";
+      all.setAttribute("aria-pressed", open);
+      all.textContent = open ? "Hide all answers" : "Show all answers";
+      document.querySelectorAll("[data-reveal]").forEach(function (b) { setAnswer(b, open); });
+      return reflow();
+    }
+    var c = e.target.closest("[data-copy]");
+    if (c) {
+      var src = document.getElementById(c.dataset.copy);
+      var text = src ? Array.prototype.map.call(src.querySelectorAll("p, li"), function (p) { return p.textContent; }).join("\n\n") : "";
+      var done = function () { c.textContent = "Copied"; setTimeout(function () { c.textContent = "Copy"; }, 900); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, done);
+      else done();
+    }
+  });
+  document.addEventListener("change", function (e) {
+    var c = e.target.closest("[data-selfcheck]");
+    if (!c) return;
+    checks = checks.filter(function (id) { return id !== c.dataset.selfcheck; });
+    if (c.checked) checks.push(c.dataset.selfcheck);
+    SB.store.set(CHECK_KEY, checks);
+    syncChecks();
+  });
+  syncChecks();
+
   function start() {
-    root.setAttribute("data-reading", currentView());
+    syncPaged();
     if (isSlide()) {
       measure();
-      var t = /^#t-/.test(location.hash) && document.getElementById(location.hash.slice(1));
+      var t = anchorTarget();
       page = t ? pageOf(t) : 0;
       goTo(page, true);
     } else update();
