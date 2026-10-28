@@ -1,0 +1,42 @@
+# SECONDBRAIN
+
+Study notes and course notebooks, kept like books.
+
+Open `index.html` in any browser (double-click works), or host the folder on any static host such as GitHub Pages.
+
+## Reading preferences
+
+The **Aa** button opens the preferences panel. It slides in from the right on wide screens and up from the bottom on phones. Every page uses the same saved settings:
+
+- **Themes:** Light, Dark, Sepia, Navy, Charcoal, Sage. In every theme, body text has a contrast ratio of at least 9:1 and secondary text at least 4.5:1.
+- **Match system light/dark:** follows the device setting. The sun/moon button in the header switches between light and dark.
+- **High contrast:** shows secondary text at full strength and makes rules heavier.
+- **Font size, font, bold text, justify text**
+- **Line, character and word spacing; page width** (page width shows on wide screens only)
+
+Settings are saved in the browser on each device.
+
+## Reading a notebook
+
+The toolbar at the top right works like the Malaka Books reader:
+
+- **Scroll / Slide:** Scroll is one long page. Slide turns the walkthrough into pages: two side by side on wide screens, one on phones. Turn pages with the ‹ › buttons, the arrow keys, a trackpad or mouse wheel, or a swipe. Each topic starts on a new page.
+- **Contents** (list icon): jump to any topic, or to Flashcards, the quiz or the mock exam. The topic you're reading is highlighted.
+- **Highlights** (marker icon): select text in the walkthrough and pick yellow, green, blue or pink. Click a highlight to change its colour or remove it. The panel lists every highlight by topic, and clicking one takes you to it.
+- **Aa:** reading preferences. **Sun/moon:** switches between light and dark.
+
+Highlights, reading progress and the chosen mode are saved in the browser on each device.
+
+## Adding a notebook
+
+1. Copy `notes/gscm-midterm.html` to `notes/<name>.html`.
+2. Replace everything inside `<main>`, plus the flashcard/quiz/mock data in the inline `<script>`.
+3. Set `data-book="<name>"` on `<body>`, which keys the reading-progress tracking.
+4. Copy the `<article class="book">` card in `index.html` and set `data-progress-for="<name>"` and its links.
+
+Shared files:
+- `assets/secondbrain.css`: themes, header, preferences panel, library
+- `assets/notebook.css`: notebook content
+- `assets/secondbrain.js`: preferences, side panels, shelf progress
+- `assets/reader.js`: Scroll/Slide modes, contents, highlights, reading progress
+- `assets/boot.js`: applies saved settings before the page draws
