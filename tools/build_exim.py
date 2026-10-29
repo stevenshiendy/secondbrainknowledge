@@ -107,6 +107,21 @@ at = g1["html"].index("<h3>The 10 General Prohibitions</h3>")
 end = g1["html"].index("</table></div>", at) + len("</table></div>")
 g1["html"] = g1["html"][:end] + "\n" + mnemonic + g1["html"][end:]
 
+# the course assignments (tools/exim-additions/assignments/, in file-name order) get a tab of their own, and each related
+# walkthrough chapter links to its assignment
+AS_FILES = sorted((ADD / "assignments").glob("*.html"))
+as_sections = [re.sub(r"<!--.*?-->\s*", "", f.read_text(), flags=re.S).strip() for f in AS_FILES]
+as_title = {re.search(r'id="([^"]+)"', x).group(1): re.sub(r"<[^>]+>", "", re.search(r"<h2>(.*?)</h2>", x, re.S).group(1)) for x in as_sections}
+AS_LINKS = {"b6": "as-gatt", "f2": "as-eska-dgd", "g1": "as-ear", "h5": "as-label-lc"}
+for s_ in sections:
+    aid = AS_LINKS.get(s_["id"])
+    if aid:
+        s_["html"] += '\n<p class="as-link"><span>Our assignment on this topic</span><a href="#%s">%s</a></p>' % (aid, as_title[aid])
+assign_html = ('<div id="v-assign" data-view data-readable data-title="Assignments" data-no-quiz hidden>\n'
+               '<p class="kicker">ENPR6304032 · Coursework</p>\n<h1>Assignments</h1>\n'
+               '<p class="lede">The written assignments submitted for this course, set out as chapters. Each one is linked from the walkthrough chapter it draws on.</p>\n'
+               + "\n".join(as_sections) + "\n</div>")
+
 learn_html = render("learn", "Walkthrough", eyebrow, h1,
                     '<p class="lede">%s</p><p class="ex-meta">%s</p>' % (lede, meta), sections, foot.group(1).strip() if foot else "", "Start here")
 n_learn = len(sections)
@@ -187,12 +202,12 @@ head = head.replace('<link rel="stylesheet" href="../assets/book.css">',
                     '<link rel="stylesheet" href="../assets/exim.css">\n<link rel="stylesheet" href="../assets/book.css">')
 header = shell[shell.index("<header"): shell.index("</header>") + 9].replace("GSCM Midterm</span>", "Export-Import</span>")
 header = re.sub(r'<nav class="sb-nav".*?</nav>',
-                '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    <a href="#learn">Walkthrough</a><a href="#fobcif">FOB &amp; CIF</a><a href="#quiz">Quiz</a>'
+                '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    <a href="#learn">Walkthrough</a><a href="#fobcif">FOB &amp; CIF</a><a href="#assign">Assignments</a><a href="#quiz">Quiz</a>'
                 '<a href="#flashcards">Flashcards</a><a href="#mock-exam">Mock exam</a><a href="#glossary">Glossary</a>\n  </nav>', header, flags=re.S)
 
 router = """
 /* ---------- routing: a view name, or an anchor inside a readable view ---------- */
-const views=["learn","fobcif","quiz","flashcards","mock-exam"];
+const views=["learn","fobcif","assign","quiz","flashcards","mock-exam"];
 function route(){
   const h=(location.hash||"#learn").slice(1);
   const t=views.includes(h)?null:document.getElementById(h);
@@ -209,6 +224,7 @@ route();
 page = (head + '<body data-book="export-import">\n\n' + header + '\n\n<main class="wrap" id="main">\n\n'
         + "<!-- ================= WALKTHROUGH (export-import-foundations.html) ================= -->\n" + learn_html
         + "\n\n<!-- ================= FOB & CIF (fob-cif.html) ================= -->\n" + fob_html
+        + "\n\n<!-- ================= ASSIGNMENTS (tools/exim-additions/assignments/) ================= -->\n" + assign_html
         + "\n\n<!-- ================= PRACTICE (export-import-practice.html) ================= -->\n" + practice_html.strip()
         + "\n\n</main>\n\n<script>\n" + fj.strip() + "\n" + fob_js[0].strip() + "\n</script>\n<script>\n" + pj.strip() + "\n" + router + "</script>\n"
         + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n</body>\n</html>\n')

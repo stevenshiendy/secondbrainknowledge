@@ -233,3 +233,19 @@ td.s { color: var(--seller); font-weight: 600; } td.b { color: var(--buyer); fon
 .mn-q li { margin: 4px 0; }
 .mn-r { color: var(--muted); font-size: .88em; white-space: nowrap; }
 :root[data-paged] [data-readable] :is(.mn-line, .mn-q li) { break-inside: avoid; }
+
+/* ---------- course assignments (tools/exim-additions/assignments/) ---------- */
+.as-q { margin: 18px 0 14px; padding: 12px 16px; border-left: 3px solid var(--cargo); background: var(--cargo-soft); border-radius: 0 6px 6px 0; }
+.as-q-k { display: block; margin-bottom: 4px; font: 700 .66rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--cargo); }
+[data-readable] section.topic .as-q > p { margin: 0; text-indent: 0; font-style: italic; }
+.as-q ol { margin: 0; padding-left: 1.3em; font-style: italic; }
+.as-q li + li { margin-top: 6px; }
+.as-refs { list-style: none; padding: 0; margin: 6px 0; font-size: .84rem; }
+.as-refs li { margin: 0 0 8px; padding-left: 2em; text-indent: -2em; overflow-wrap: anywhere; }
+.as-note { font-size: .8rem; color: var(--muted); }
+[data-readable] .tbl caption { caption-side: top; text-align: left; padding: 0 0 6px; font: italic .84rem var(--display); color: var(--muted); }
+.as-link { margin: 24px 0 0 !important; padding: 10px 14px; border: 1px dashed var(--line-strong); border-radius: 8px; text-indent: 0 !important; }
+.as-link span { display: block; margin-bottom: 2px; font: 700 .64rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--cargo); }
+.as-link a { font: 500 .95rem/1.35 var(--display); color: var(--fg); text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+.as-link a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+:root[data-paged] [data-readable] :is(.as-q, .as-link) { break-inside: avoid; }

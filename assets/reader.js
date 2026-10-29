@@ -488,7 +488,7 @@
     if (!quiz.length && !deck.length) return;
     var secs = [];
     Object.keys(READABLE).forEach(function (k) {
-      if (k === "kisi") return; // Kisi-kisi ends every question with its own self-check
+      if (k === "kisi" || READABLE[k].hasAttribute("data-no-quiz")) return; // Kisi-kisi has its own self-checks; coursework is not quizzed
       sectionsOf(READABLE[k]).forEach(function (s) {
         if (s.classList.contains("bk-back") || /start here/i.test(tagOf(s))) return;
         secs.push({ el: s, view: k, week: weekOf(s), tf: {}, items: [] });
