@@ -167,10 +167,13 @@ pj += """CARDS.push(
 buildDeck();
 """
 # search hook: assets/reader.js lists and opens flashcards through window.SB_CARDS
+# (and chapter "Check yourself" boxes draw on the quiz and cards through window.SB_QUIZ / SB_CARDS)
 pj += """window.SB_CARDS={view:'flashcards',
-  list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b}})},
+  list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b,week:/^w\\d$/.test(c.d)?+c.d.slice(1):null,quizzable:c.d!=='ab'}})},
   open:function(i,back){var d=document.getElementById('fc-deck');d.value=CARDS[i].d==='ab'?'ab':'all';buildDeck();
-    order=[i].concat(order.filter(function(x){return x!==i}));pos=0;showCard();var c=document.getElementById('fc-card');if(back)c.classList.add('flipped');return c;}};
+    order=[i].concat(order.filter(function(x){return x!==i}));pos=0;showCard();var c=document.getElementById('fc-card');if(back)c.classList.add('flipped');return c;},
+  mark:function(i,knew){marks[i]=knew?'k':'r';store.set('eip-marks2',marks);tally();}};
+window.SB_QUIZ={list:function(){return QUIZ.map(function(q){return {q:q.q,o:q.o,a:q.a,e:q.e,week:q.w}})}};
 """
 
 # ---------- assemble on the GSCM page shell ----------

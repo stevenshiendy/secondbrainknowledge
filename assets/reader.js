@@ -161,11 +161,12 @@
   // A heading must never end a page with its text on the next one. CSS "break-after: avoid" is not reliable inside
   // multi-column layouts (and is ignored inside grids), so after each re-layout any stranded heading, together with
   // the block it belongs to, is pushed to the top of the next column.
-  var HEADS = "h3, h4, .kq-h, .explain > span, .gl-h, section.topic > .tag, p";
+  var HEADS = "h3, h4, .kq-h, .explain > span, .gl-h, section.topic > .tag, .pq-sub, .mn-k, p";
   var NO_HEAD = ".chain, .ex-why, .trap, .tip, .summary, .scen, .defs, .q, .face, figure, .fig, .tbl, nav, .kq-answer-bar, .kq-check";
   function headingsOf(el) {
     return Array.prototype.filter.call(el.querySelectorAll(HEADS), function (h) {
       if (h.closest(NO_HEAD)) return false;
+      if (h.matches(".pq-sub, .mn-k")) return true; // a box's label or subtitle travels with what follows
       if (h.tagName === "P") { // a lead-in line such as "Every model has four parts:" belongs with its list or table
         var nx = h.nextElementSibling;
         return /:\s*$/.test(h.textContent) && !!nx && /^(UL|OL|DIV|TABLE)$/.test(nx.tagName);
@@ -468,6 +469,146 @@
       jumpTo(target);
     });
   }, function () { markToc(READABLE[currentView()] ? currentSection() : null); });
+
+  /* ---------- "Check yourself": a short quiz at the end of each chapter, for recall while reading ----------
+     Questions come from the notebook's own quiz and flashcards (window.SB_QUIZ / SB_CARDS). Each one goes to the
+     chapter it tests: the chapter it is tagged with, or else the chapter whose wording it matches best (within its
+     week when it has one). Up to two multiple-choice questions and one recall card per chapter. */
+  var PQ_KEY = "sb-pq:" + book;
+  var pqState = SB.store.get(PQ_KEY, {});
+  var STOP = {};
+  ("the and for with that this from are was were which what why how who when where into its their they not but can has have had more than one each all any most only also does did should would must may about between because under over other such these those there then them its your you our out per via use used using being been very much many some same both own off upon onto whose while like just than make made makes etc").split(" ").forEach(function (w) { STOP[w] = 1; });
+  function terms(html) {
+    var t = String(html).replace(/<[^>]+>/g, " ").toLowerCase().match(/[a-z][a-z0-9-]{2,}/g) || [];
+    return t.filter(function (w) { return !STOP[w]; }).map(function (w) { return w.replace(/(ies|es|s)$/, ""); });
+  }
+  function weekOf(sec) { var m = /week\s*(\d+)/i.exec(tagOf(sec)); return m ? +m[1] : null; }
+  function buildPopQuizzes() {
+    var quiz = window.SB_QUIZ ? window.SB_QUIZ.list() : [], deck = window.SB_CARDS ? window.SB_CARDS.list() : [];
+    if (!quiz.length && !deck.length) return;
+    var secs = [];
+    Object.keys(READABLE).forEach(function (k) {
+      if (k === "kisi") return; // Kisi-kisi ends every question with its own self-check
+      sectionsOf(READABLE[k]).forEach(function (s) {
+        if (s.classList.contains("bk-back") || /start here/i.test(tagOf(s))) return;
+        secs.push({ el: s, view: k, week: weekOf(s), tf: {}, items: [] });
+      });
+    });
+    if (!secs.length) return;
+    // tf-idf vectors of each chapter's text
+    var df = {};
+    secs.forEach(function (c) {
+      terms(textNodes(c.el).map(function (t) { return t.data; }).join(" ")).forEach(function (w) { c.tf[w] = (c.tf[w] || 0) + 1; });
+      Object.keys(c.tf).forEach(function (w) { df[w] = (df[w] || 0) + 1; });
+    });
+    var idf = function (w) { return Math.log((secs.length + 1) / ((df[w] || 0) + 1)); };
+    secs.forEach(function (c) { var n = 0; for (var w in c.tf) { var x = (1 + Math.log(c.tf[w])) * idf(w); n += x * x; } c.norm = Math.sqrt(n) || 1; });
+    function place(text, hint) {
+      var v = {}, n = 0, own = null, ownScore = 0, other = null, otherScore = 0;
+      terms(text).forEach(function (w) { v[w] = (v[w] || 0) + 1; });
+      for (var w in v) { v[w] = (1 + Math.log(v[w])) * idf(w); n += v[w] * v[w]; }
+      n = Math.sqrt(n) || 1;
+      secs.forEach(function (c) {
+        if (hint.sec && c.el.id !== hint.sec) return;
+        if (!hint.sec && hint.week && c.week && c.week !== hint.week) return; // another week's chapter
+        var dot = 0;
+        for (var w2 in v) if (c.tf[w2]) dot += v[w2] * (1 + Math.log(c.tf[w2])) * idf(w2);
+        var sc = dot / (n * c.norm);
+        // a week-tagged item belongs to its week's chapters; an untagged chapter (e.g. FOB & CIF) wins only by a clear margin
+        var mine = hint.sec || !hint.week || c.week === hint.week;
+        if (mine) { if (sc > ownScore) { ownScore = sc; own = c; } }
+        else if (sc > otherScore) { otherScore = sc; other = c; }
+      });
+      var best = own, bestScore = ownScore;
+      if (other && otherScore >= 0.15 && otherScore > ownScore * 1.8) { best = other; bestScore = otherScore; }
+      return best && (hint.sec || bestScore >= 0.06) ? { c: best, score: bestScore } : null;
+    }
+    quiz.forEach(function (q, i) {
+      var p = place(q.q + " " + q.o[q.a] + " " + q.o[q.a] + " " + (q.e || ""), { week: q.week });
+      if (p) p.c.items.push({ kind: "q", i: i, score: p.score, it: q });
+    });
+    deck.forEach(function (d, i) {
+      if (d.quizzable === false) return;
+      var p = place(d.front + " " + d.back, { sec: d.sec, week: d.week });
+      if (p) p.c.items.push({ kind: "c", i: i, score: p.score, it: d });
+    });
+    secs.forEach(function (c) {
+      var top = function (kind, n) { return c.items.filter(function (x) { return x.kind === kind; }).sort(function (a, b) { return b.score - a.score; }).slice(0, n); };
+      var pick = top("q", 2).concat(top("c", 1));
+      if (pick.length) renderPopQuiz(c.el, pick);
+    });
+  }
+  function renderPopQuiz(sec, pick) {
+    var box = document.createElement("aside");
+    box.className = "pq";
+    box.setAttribute("aria-label", "Check yourself: " + titleOf(sec));
+    var n = 0;
+    box.innerHTML = '<h4 class="pq-h">Check yourself</h4><p class="pq-sub">Answer from memory before you turn the page.</p><ol class="pq-list">' +
+      pick.map(function (x) {
+        n++;
+        if (x.kind === "q") {
+          return '<li class="pq-item" data-pq="q' + x.i + '" data-a="' + x.it.a + '"><p class="pq-stem">' + x.it.q + '</p><div class="pq-opts">' +
+            x.it.o.map(function (o, j) { return '<button type="button" class="pq-opt" data-j="' + j + '"><span class="pq-l">' + "ABCD"[j] + "</span><span>" + o + "</span></button>"; }).join("") +
+            '</div><p class="pq-why" hidden></p></li>';
+        }
+        return '<li class="pq-item pq-recall" data-pq="c' + x.i + '"><p class="pq-stem"><span class="pq-tag">Recall</span>' + esc(x.it.front) + '</p>' +
+          '<button type="button" class="pq-show">Show answer</button><div class="pq-back" hidden><p>' + esc(x.it.back) + '</p>' +
+          '<p class="pq-rate">Did you remember it? <button type="button" data-knew="1">Yes, I knew it</button><button type="button" data-knew="0">Not yet</button></p></div></li>';
+      }).join("") + '</ol><p class="pq-score" aria-live="polite"></p><button type="button" class="pq-reset" hidden>Try again</button>';
+    sec.appendChild(box);
+    if (typeof window.abbrify === "function") window.abbrify(box);
+    box.querySelectorAll(".pq-item").forEach(function (li) { showPq(li, pqState[li.dataset.pq]); });
+    scorePq(box);
+  }
+  // draw one question in its answered (or fresh) state
+  function showPq(li, st) {
+    if (li.classList.contains("pq-recall")) {
+      var open = st != null;
+      li.querySelector(".pq-back").hidden = !open;
+      li.querySelector(".pq-show").hidden = open;
+      li.querySelectorAll("[data-knew]").forEach(function (b) { b.setAttribute("aria-pressed", st === "k" ? b.dataset.knew === "1" : st === "r" ? b.dataset.knew === "0" : false); });
+      return;
+    }
+    var a = +li.dataset.a, why = li.querySelector(".pq-why");
+    li.querySelectorAll(".pq-opt").forEach(function (b) {
+      var j = +b.dataset.j;
+      b.disabled = st != null;
+      b.classList.toggle("right", st != null && j === a);
+      b.classList.toggle("wrong", st != null && j === st && j !== a);
+    });
+    why.hidden = st == null;
+    if (st != null) {
+      var src = window.SB_QUIZ.list()[+li.dataset.pq.slice(1)];
+      why.innerHTML = (st === a ? '<b class="pq-ok">Correct.</b> ' : '<b class="pq-no">Not quite.</b> The answer is ' + "ABCD"[a] + ". ") + (src ? src.e : "");
+      if (typeof window.abbrify === "function") window.abbrify(why);
+    }
+  }
+  function scorePq(box) {
+    var qs = box.querySelectorAll('.pq-item:not(.pq-recall)'), done = 0, right = 0, any = false;
+    qs.forEach(function (li) { var st = pqState[li.dataset.pq]; if (st != null) { done++; if (st === +li.dataset.a) right++; } });
+    box.querySelectorAll(".pq-item").forEach(function (li) { if (pqState[li.dataset.pq] != null) any = true; });
+    box.querySelector(".pq-score").textContent = done ? right + " of " + qs.length + " correct" + (done < qs.length ? " so far" : right === qs.length ? ". Well remembered." : ". Re-read the parts you missed, then try again.") : "";
+    box.querySelector(".pq-reset").hidden = !any;
+  }
+  document.addEventListener("click", function (e) {
+    var box = e.target.closest(".pq");
+    if (!box) return;
+    var li = e.target.closest(".pq-item"), b;
+    if ((b = e.target.closest(".pq-opt")) && li) { pqState[li.dataset.pq] = +b.dataset.j; }
+    else if (e.target.closest(".pq-show") && li) { pqState[li.dataset.pq] = "seen"; }
+    else if ((b = e.target.closest("[data-knew]")) && li) {
+      pqState[li.dataset.pq] = b.dataset.knew === "1" ? "k" : "r";
+      // a card you could not recall joins the flashcards' review pile
+      if (window.SB_CARDS && window.SB_CARDS.mark) window.SB_CARDS.mark(+li.dataset.pq.slice(1), b.dataset.knew === "1");
+    } else if (e.target.closest(".pq-reset")) {
+      box.querySelectorAll(".pq-item").forEach(function (x) { delete pqState[x.dataset.pq]; });
+    } else return;
+    SB.store.set(PQ_KEY, pqState);
+    box.querySelectorAll(".pq-item").forEach(function (x) { showPq(x, pqState[x.dataset.pq]); });
+    scorePq(box);
+    document.dispatchEvent(new CustomEvent("sb:reflow")); // answers open up: re-page if needed
+  });
+  buildPopQuizzes();
 
   /* ---------- highlights ---------- */
   var HL_KEY = "sb-hl:" + book;

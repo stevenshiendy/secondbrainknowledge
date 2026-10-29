@@ -541,9 +541,14 @@ MOCK.forEach((m,i)=>{
   M.appendChild(d)});
 
 /* ---------- search hook (assets/reader.js finds flashcards through this) ---------- */
+/* hooks for assets/reader.js: search lists and opens flashcards; chapter "Check yourself" boxes draw on the quiz and cards */
+const htmlText=t=>String(t).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"})[c]);
+const DECK_CHAPTER={Intro:"t-intro",Mfg:"t-mfg",Proc:"t-proc",Strat:"t-strat",Sus:"t-sus",Risk:"t-risk",Buy:"t-buy",OM:"t-om",Imp:"t-imp",FC:"t-fc"};
 window.SB_CARDS={view:"cards",
-  list:()=>CARDS.map(c=>({deck:DECKS[c[0]],front:c[1],back:c[2]})),
-  open:(i,back)=>{deckSel.value="All";buildDeck(false);order=[i].concat(order.filter(x=>x!==i));idx=0;show();if(back)flip();return document.getElementById("card");}};
+  list:()=>CARDS.map(c=>({deck:DECKS[c[0]],front:c[1],back:c[2],sec:DECK_CHAPTER[c[0]]})),
+  open:(i,back)=>{deckSel.value="All";buildDeck(false);order=[i].concat(order.filter(x=>x!==i));idx=0;show();if(back)flip();return document.getElementById("card");},
+  mark:(i,knew)=>{if(knew)known.add(i);else known.delete(i);store.set("gscm-known",[...known]);}};
+window.SB_QUIZ={list:()=>QUIZ.map(q=>({q:htmlText(q[0]),o:q[1].map(htmlText),a:q[2],e:htmlText(q[3])}))};
 
 buildDeck(true);buildQuiz();route();
 </script>

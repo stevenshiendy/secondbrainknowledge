@@ -108,3 +108,41 @@
 [data-readable] .kq-moves { grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
 [data-readable] .kq-toc { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
 [data-readable] :is(.summary, .scen, .defs) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+
+/* ---------- "Check yourself" at the end of a chapter: like a textbook's review questions ---------- */
+.pq { margin: 36px 0 6px; padding: 16px 0 6px; border-top: 3px double var(--line-strong); }
+.pq-h { margin: 0; text-align: center; font-size: .78rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); }
+[data-readable] section.topic .pq > p.pq-sub { margin: 4px 0 14px; text-align: center; text-indent: 0; font-style: italic; font-size: .86rem; color: var(--muted); }
+.pq-list { margin: 0; padding-left: 1.6em; }
+.pq-item { margin: 0 0 18px; padding-left: 2px; }
+.pq-item::marker { font-weight: 700; color: var(--accent); }
+.pq-stem { margin: 0 0 8px; font-weight: var(--w-strong); }
+.pq-tag { display: inline-block; margin-right: 8px; padding: 1px 7px; border: 1px solid var(--accent); border-radius: 999px; font: 700 .62rem/1.5 var(--ui); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); vertical-align: .12em; }
+.pq-opts { display: grid; gap: 6px; }
+main button.pq-opt {
+  display: flex; gap: 10px; align-items: flex-start; width: 100%; min-height: 0; padding: 8px 11px; text-align: left;
+  font: var(--w-body) .9rem/1.45 var(--reader); letter-spacing: var(--ls); color: var(--fg);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 6px; cursor: pointer;
+}
+main button.pq-opt:hover:not(:disabled) { border-color: var(--accent); }
+main button.pq-opt:disabled { cursor: default; }
+main button.pq-opt.right { border: 2px solid var(--good); background: var(--accent-soft); }
+main button.pq-opt.wrong { border: 2px solid var(--bad); background: var(--sunk); text-decoration: line-through; }
+.pq-l { flex: none; font: 700 .76rem/1.7 var(--ui); color: var(--muted); }
+.pq-why { margin: 8px 0 0; padding: 7px 12px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 6px 6px 0; font-size: .86rem; }
+.pq-ok { color: var(--accent); } .pq-no { color: var(--flag); }
+main button.pq-show, .pq-rate button, main button.pq-reset {
+  min-height: 34px; padding: 6px 13px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--panel);
+  font: 600 .8rem var(--ui); color: var(--fg); cursor: pointer;
+}
+main button.pq-show { border-color: var(--accent); background: var(--accent); color: var(--on-accent); }
+.pq-back { margin-top: 8px; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 6px 6px 0; }
+[data-readable] section.topic .pq-back > p { margin: 0 0 6px; text-indent: 0; }
+.pq-rate { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font: .8rem var(--ui); color: var(--muted); }
+.pq-rate button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); background: var(--bg); }
+.pq-score { margin: 0 0 8px; text-align: center; font: 600 .84rem var(--ui); color: var(--accent); }
+.pq-score:empty { display: none; }
+main button.pq-reset { display: block; margin: 0 auto 6px; }
+main button.pq-reset[hidden] { display: none; }
+:root[data-paged] [data-readable] :is(.pq-item, .pq-h) { break-inside: avoid; }
+:root[data-paged] [data-readable] .pq-h { break-after: avoid; }

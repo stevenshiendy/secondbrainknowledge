@@ -26,6 +26,8 @@ The toolbar at the top right works like the Malaka Books reader:
 - **Highlights** (marker icon): select text in the notes and pick yellow, green, blue or pink. A small toolbar then sits at the top of the highlight with **Remove**, the colours and **Copy**. Tap any highlight later to bring it back. The panel lists every highlight by topic, and clicking one takes you to it.
 - **Aa:** reading preferences. **Sun/moon:** switches between light and dark.
 
+Most chapters in the Walkthrough and FOB & CIF tabs end with a **Check yourself** box: two multiple-choice questions and one recall card, to answer from memory before moving on. They are drawn from the notebook's own quiz and flashcards. Each item goes to the chapter it tests: the chapter it is tagged with, otherwise the chapter whose wording it matches best within its week. Answers are saved. Rating a recall card **Not yet** adds that card to the Flashcards tab's review pile, and **Try again** clears a box.
+
 Each notebook remembers the exact spot you were reading: the line at the top of the screen in Scroll mode, or the page in Slide mode, and in any tab. Refreshing, reopening the notebook or tapping **Resume** on the home page brings you straight back there. A link to a specific chapter or tab still goes to that chapter or tab.
 
 Highlights, reading progress and the chosen mode are saved in the browser on each device.
