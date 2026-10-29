@@ -21,8 +21,9 @@ Settings are saved in the browser on each device.
 The toolbar at the top right works like the Malaka Books reader:
 
 - **Scroll / Slide:** Scroll is one long page. Slide turns the walkthrough into pages: two side by side on wide screens, one on phones. Turn pages with the ‹ › buttons, the arrow keys, a trackpad or mouse wheel, or a swipe. Each topic starts on a new page.
+- **Search** (magnifier icon, or press `/`): finds a word or phrase across the whole notebook, including every chapter, Kisi-kisi, FOB & CIF, quiz and mock-exam questions (model answers too), flashcards and the glossary. Results are grouped by tab with a short preview; tap one to jump there with every match marked. A bar at the bottom steps through all matches (‹ ›) and ✕ clears them.
 - **Contents** (list icon): jump to any topic, or to Flashcards, the quiz or the mock exam. The topic you're reading is highlighted.
-- **Highlights** (marker icon): select text in the walkthrough and pick yellow, green, blue or pink. Click a highlight to change its colour or remove it. The panel lists every highlight by topic, and clicking one takes you to it.
+- **Highlights** (marker icon): select text in the notes and pick yellow, green, blue or pink. A small toolbar then sits at the top of the highlight with **Remove**, the colours and **Copy**. Tap any highlight later to bring it back. The panel lists every highlight by topic, and clicking one takes you to it.
 - **Aa:** reading preferences. **Sun/moon:** switches between light and dark.
 
 Highlights, reading progress and the chosen mode are saved in the browser on each device.

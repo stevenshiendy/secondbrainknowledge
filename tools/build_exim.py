@@ -150,6 +150,12 @@ pj, n = re.subn(r"l\.href='#glossary';l\.textContent='Glossary';l\.addEventListe
                 "l.href='#g-'+g.id;l.textContent='Glossary';l.addEventListener('click',function(){tip.hidden=true});tip.appendChild(l);", pj, flags=re.S)
 assert n == 1, "tip glossary link"
 pj = fix_classes(pj) + "renderQuiz();buildDeck();renderMock();drawT();\n['v-quiz','v-flashcards','v-mock-exam'].forEach(function(id){abbrify(document.getElementById(id))});\n"
+# search hook: assets/reader.js lists and opens flashcards through window.SB_CARDS
+pj += """window.SB_CARDS={view:'flashcards',
+  list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b}})},
+  open:function(i,back){var d=document.getElementById('fc-deck');d.value=CARDS[i].d==='ab'?'ab':'all';buildDeck();
+    order=[i].concat(order.filter(function(x){return x!==i}));pos=0;showCard();var c=document.getElementById('fc-card');if(back)c.classList.add('flipped');return c;}};
+"""
 
 # ---------- assemble on the GSCM page shell ----------
 shell = (SITE / "notes" / "gscm-midterm.html").read_text()

@@ -29,6 +29,7 @@
       <button role="radio" data-layout-set="slide"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 5.5C8.5 4.2 6.3 3.8 3 4.2v11c3.3-.4 5.5 0 7 1.3 1.5-1.3 3.7-1.7 7-1.3v-11c-3.3-.4-5.5 0-7 1.3zM10 5.5v11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Slide</span></button>
     </div>
     <span class="sb-tool-group">
+    <button class="sb-icon" data-panel="search" aria-haspopup="dialog" aria-expanded="false" aria-label="Search this notebook" title="Search ( / )"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
     <button class="sb-icon" data-panel="toc" aria-haspopup="dialog" aria-expanded="false" aria-label="Contents"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 5.5h9M7.5 10h9M7.5 14.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="5.5" r="1.1" fill="currentColor"/><circle cx="4" cy="10" r="1.1" fill="currentColor"/><circle cx="4" cy="14.5" r="1.1" fill="currentColor"/></svg></button>
     <button class="sb-icon" data-panel="highlights" aria-haspopup="dialog" aria-expanded="false" aria-label="Highlights"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.6 3.6l3.8 3.8-7.3 7.3H5.3v-3.8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10.5 5.7l3.8 3.8M3 17.5h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="sb-badge" data-hl-count hidden></span></button>
     <button class="sb-icon" data-panel="prefs" aria-haspopup="dialog" aria-expanded="false" aria-label="Reading preferences"><span class="aa-small">A</span>A</button>
@@ -1823,6 +1824,10 @@ document.getElementById('tm-reset').addEventListener('click',function(){if(tid){
 
 renderQuiz();buildDeck();renderMock();drawT();
 ['v-quiz','v-flashcards','v-mock-exam'].forEach(function(id){abbrify(document.getElementById(id))});
+window.SB_CARDS={view:'flashcards',
+  list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b}})},
+  open:function(i,back){var d=document.getElementById('fc-deck');d.value=CARDS[i].d==='ab'?'ab':'all';buildDeck();
+    order=[i].concat(order.filter(function(x){return x!==i}));pos=0;showCard();var c=document.getElementById('fc-card');if(back)c.classList.add('flipped');return c;}};
 
 /* ---------- routing: a view name, or an anchor inside a readable view ---------- */
 const views=["learn","fobcif","quiz","flashcards","mock-exam"];

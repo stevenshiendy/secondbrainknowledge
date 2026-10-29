@@ -23,6 +23,12 @@
   var esc = SB.esc;
 
   // keep in step with route() in the page and boot.js: a view name, or an anchor inside a readable view
+  // next frame, or a short timer when frames are throttled (background tabs, some embedded web views)
+  function soon(fn) {
+    var done = false, go = function () { if (!done) { done = true; fn(); } };
+    window.requestAnimationFrame(go);
+    setTimeout(go, 60);
+  }
   function currentView() {
     var h = (location.hash || "").slice(1);
     if (VIEWS.indexOf(h) >= 0) return h;
@@ -179,7 +185,7 @@
   addEventListener("scroll", function () {
     if (isSlide() || ticking) return;
     ticking = true;
-    requestAnimationFrame(function () { ticking = false; update(); });
+    soon(function () { ticking = false; update(); });
   }, { passive: true });
 
   /* ---------- mode switch ---------- */
@@ -195,7 +201,7 @@
     SB.set("layout", mode);
     syncSeg();
     syncPaged();
-    requestAnimationFrame(function () {
+    soon(function () {
       if (isSlide()) { measure(); goTo(sec ? pageOf(sec) : 0, true); }
       else { numberContents(); if (sec) sec.scrollIntoView(); else scrollTo(0, 0); update(); }
     });
@@ -387,6 +393,7 @@
     render(h);
     saveHls();
     refreshHlList();
+    return h.id;
   }
   function removeHighlight(id, quiet) {
     unrender(id);
@@ -412,23 +419,31 @@
   }).join("") +
     '<span class="hl-sep" aria-hidden="true"></span>' +
     '<button class="hl-act" data-act="copy">Copy</button>' +
-    '<button class="hl-act" data-act="remove" hidden>Remove</button>';
+    '<button class="hl-act hl-remove" data-act="remove" hidden><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 6h11M8 6V4.5h4V6M6 6l.8 10h6.4L14 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Remove</button>';
   document.body.appendChild(pop);
 
   var pending = null; // { sec, start, end, text } for a fresh selection, or { id } for an existing highlight
   var coarse = window.matchMedia && matchMedia("(pointer: coarse)").matches;
 
+  // first line box of a saved highlight: the toolbar sits at its top-left (or top-right when that runs off screen)
+  function hlRect(id) {
+    var m = document.querySelector('mark[data-hl="' + id + '"]');
+    return m ? m.getClientRects()[0] || m.getBoundingClientRect() : null;
+  }
   function showPop(rect) {
+    var saved = !!(pending && pending.id);
+    pop.querySelector('[data-act="remove"]').hidden = !saved;
     pop.hidden = false;
     var pw = pop.offsetWidth, ph = pop.offsetHeight, gap = 10;
-    var x = Math.min(innerWidth - pw - 8, Math.max(8, rect.left + rect.width / 2 - pw / 2));
-    // phones show their own copy menu above the selection, so sit below it there
-    var below = coarse || rect.top - ph - gap < headerH() + 4;
+    var x = saved ? (rect.left + pw <= innerWidth - 8 ? rect.left : rect.right - pw)
+      : rect.left + rect.width / 2 - pw / 2;
+    x = Math.min(innerWidth - pw - 8, Math.max(8, x));
+    // phones show their own copy menu above a fresh selection, so sit below it there
+    var below = (coarse && !saved) || rect.top - ph - gap < headerH() + 4;
     var y = below ? rect.bottom + gap : rect.top - ph - gap;
     y = Math.min(innerHeight - ph - 8, Math.max(headerH() + 4, y));
     pop.style.left = x + "px";
     pop.style.top = y + "px";
-    pop.querySelector('[data-act="remove"]').hidden = !pending || !pending.id;
     pop.querySelectorAll("[data-color]").forEach(function (b) {
       var cur = pending && pending.id && hls.filter(function (h) { return h.id === pending.id; })[0];
       b.setAttribute("aria-pressed", !!cur && cur.color === b.dataset.color);
@@ -465,18 +480,23 @@
     var sel = window.getSelection();
     if (sel && !sel.isCollapsed) return;
     pending = { id: m.dataset.hl };
-    showPop(m.getBoundingClientRect());
+    showPop(hlRect(m.dataset.hl) || m.getBoundingClientRect());
   });
   pop.addEventListener("mousedown", function (e) { e.preventDefault(); }); // keep the text selection alive
   pop.addEventListener("click", function (e) {
     var b = e.target.closest("button");
     if (!b || !pending) return;
     if (b.dataset.color) {
-      if (pending.id) recolor(pending.id, b.dataset.color);
-      else addHighlight(pending.sec, pending.start, pending.end, b.dataset.color);
+      var id = pending.id;
+      if (id) recolor(id, b.dataset.color);
+      else id = addHighlight(pending.sec, pending.start, pending.end, b.dataset.color);
       var sel = window.getSelection();
       if (sel) sel.removeAllRanges();
-      return hidePop();
+      // keep the toolbar on the new highlight so Remove is one tap away
+      var r = id && hlRect(id);
+      if (!r) return hidePop();
+      pending = { id: id };
+      return showPop(r);
     }
     if (b.dataset.act === "remove" && pending.id) { removeHighlight(pending.id); return hidePop(); }
     if (b.dataset.act === "copy") {
@@ -540,6 +560,240 @@
   }, refreshHlList);
   refreshHlList();
 
+  /* ---------- search: every view of the notebook, plus the flashcard decks (window.SB_CARDS) ---------- */
+  var SKIP_TAGS = /^(SCRIPT|STYLE|SELECT|OPTION|TEXTAREA)$/;
+  function searchNodes(el) {
+    var out = [], n;
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (t) {
+        var p = t.parentNode;
+        return SKIP_TAGS.test(p.nodeName) || p.closest("svg") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    while ((n = w.nextNode())) out.push(n);
+    return out;
+  }
+  function tabName(v) {
+    var a = document.querySelector('.sb-nav a[href="#' + v + '"]');
+    return NAMES[v] || (a ? a.textContent : v);
+  }
+  // searchable units: a chapter, a quiz/mock question, a glossary entry, or a flashcard
+  function buildUnits() {
+    var units = [];
+    VIEWS.forEach(function (v) {
+      var el = document.getElementById("v-" + v);
+      if (!el) return;
+      if (READABLE[v]) {
+        sectionsOf(el).forEach(function (s) {
+          var n = chapterNo(s);
+          units.push({ view: v, el: s, group: tabName(v),
+            label: v === "kisi" ? tagOf(s).split("·")[0].trim() : n ? "Chapter " + n : "Appendix", title: titleOf(s) });
+        });
+      } else {
+        Array.prototype.forEach.call(el.querySelectorAll(".qitem, .q, details.mock, .gl-row"), function (q, i) {
+          var t = q.querySelector("summary, .stem, dt b");
+          units.push({ view: v, el: q, group: tabName(v), label: "Item " + (i + 1), title: t ? t.textContent : "" });
+        });
+      }
+    });
+    var deck = window.SB_CARDS;
+    if (deck) {
+      deck.list().forEach(function (c, i) {
+        units.push({ view: deck.view, card: i, text: c.front + "\n" + c.back, group: tabName(deck.view), label: c.deck || "Card " + (i + 1), title: c.front });
+      });
+    }
+    units.forEach(function (u) { if (!u.text) u.text = searchNodes(u.el).map(function (t) { return t.data; }).join(""); u.low = u.text.toLowerCase(); });
+    return units;
+  }
+
+  var units = null, query = "", occ = [], cur = -1;
+  function find(q) {
+    var ql = q.toLowerCase();
+    occ = [];
+    var hits = [];
+    if (!units) units = buildUnits();
+    units.forEach(function (u) {
+      var i = 0, n = 0, first = -1;
+      while ((i = u.low.indexOf(ql, i)) >= 0) {
+        if (first < 0) first = i;
+        occ.push({ u: u, n: n++ });
+        i += ql.length;
+      }
+      if (n) hits.push({ u: u, count: n, at: first, start: occ.length - n });
+    });
+    return hits;
+  }
+  function snippet(u, at, len) {
+    var a = Math.max(0, at - 50), b = Math.min(u.text.length, at + len + 70);
+    var t = u.text.replace(/\s+/g, " ");
+    var raw = u.text;
+    var pre = raw.slice(a, at).replace(/\s+/g, " "), hit = raw.slice(at, at + len), post = raw.slice(at + len, b).replace(/\s+/g, " ");
+    return (a > 0 ? "…" : "") + esc(pre) + "<b>" + esc(hit) + "</b>" + esc(post) + (b < t.length ? "…" : "");
+  }
+
+  // mark every match inside one unit; returns the first <mark> of each match, in order
+  function markHits(el, q) {
+    var nodes = searchNodes(el), full = nodes.map(function (t) { return t.data; }).join(""), low = full.toLowerCase(), ql = q.toLowerCase();
+    var pos = [], i = 0, firsts = [];
+    while ((i = low.indexOf(ql, i)) >= 0) { pos.push(i); i += ql.length; }
+    for (var k = pos.length - 1; k >= 0; k--) {
+      var start = pos[k], end = start + ql.length, acc = 0, parts = [];
+      nodes.forEach(function (t) {
+        var s = Math.max(start - acc, 0), e = Math.min(end - acc, t.length);
+        if (s < e) parts.push([t, s, e]);
+        acc += t.length;
+      });
+      var firstMark = null;
+      parts.forEach(function (p) {
+        var t = p[0];
+        if (p[2] < t.length) t.splitText(p[2]);
+        if (p[1] > 0) t = t.splitText(p[1]);
+        var m = document.createElement("mark");
+        m.className = "sr-hit";
+        t.parentNode.insertBefore(m, t);
+        m.appendChild(t);
+        if (!firstMark) firstMark = m;
+      });
+      firsts[k] = firstMark;
+      nodes = searchNodes(el); // re-read after splitting
+    }
+    return firsts;
+  }
+  function clearMarks() {
+    document.querySelectorAll("mark.sr-hit").forEach(function (m) {
+      var p = m.parentNode;
+      while (m.firstChild) p.insertBefore(m.firstChild, m);
+      p.removeChild(m);
+      p.normalize();
+    });
+  }
+  // open anything that hides the match: kisi answers, mock model answers, closed <details>
+  function reveal(m) {
+    for (var p = m.parentElement; p && !p.matches("[data-view]"); p = p.parentElement) {
+      if (p.tagName === "DETAILS") p.open = true;
+      if (p.hidden) {
+        var ctl = p.id && document.querySelector('[aria-controls="' + p.id + '"]');
+        var btn = ctl || (p.previousElementSibling && p.previousElementSibling.querySelector("button[aria-expanded]"));
+        if (btn) btn.click(); else p.hidden = false;
+      }
+    }
+  }
+
+  var srBar = document.createElement("div");
+  srBar.className = "sr-bar";
+  srBar.hidden = true;
+  srBar.setAttribute("role", "region");
+  srBar.setAttribute("aria-label", "Search matches");
+  srBar.innerHTML = '<span class="sr-bar-q"></span><span class="sr-bar-n" aria-live="polite"></span>' +
+    '<button class="sb-icon" data-sr="-1" aria-label="Previous match"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 12.5L10 7.5l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+    '<button class="sb-icon" data-sr="1" aria-label="Next match"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+    '<button class="sb-icon" data-sr="x" aria-label="Clear search"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>';
+  document.body.appendChild(srBar);
+  srBar.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-sr]");
+    if (!b) return;
+    if (b.dataset.sr === "x") return endSearch();
+    goHit(cur + +b.dataset.sr);
+  });
+  function endSearch() {
+    clearMarks();
+    srBar.hidden = true;
+    occ = []; cur = -1; query = "";
+    var inp = document.querySelector(".sr-input");
+    if (inp) { inp.value = ""; renderResults(); }
+  }
+
+  function goHit(k) {
+    if (!occ.length) return;
+    cur = (k + occ.length) % occ.length;
+    var o = occ[cur], u = o.u;
+    clearMarks();
+    srBar.hidden = false;
+    srBar.querySelector(".sr-bar-q").textContent = "“" + query + "”";
+    srBar.querySelector(".sr-bar-n").textContent = (cur + 1) + " of " + occ.length;
+    var land = function (el) {
+      var marks = markHits(el, query), m = marks[o.n] || marks[0];
+      if (!m) return;
+      document.querySelectorAll('mark.sr-hit').forEach(function (x) { x.classList.remove("cur"); });
+      m.classList.add("cur");
+      reveal(m);
+      if (READABLE[u.view]) jumpTo(m, "center");
+      else soon(function () { m.scrollIntoView({ block: "center" }); });
+    };
+    if (u.card != null) {
+      if (currentView() !== u.view) location.hash = "#" + u.view;
+      var el = window.SB_CARDS.open(u.card, nthInBack(u, o.n));
+      setTimeout(function () { land(el); }, 30);
+      return;
+    }
+    if (!READABLE[u.view] && currentView() !== u.view) {
+      location.hash = "#" + u.view;
+      setTimeout(function () { land(u.el); }, 60);
+    } else land(u.el);
+  }
+  // flashcards: is the n-th match on the back of the card?
+  function nthInBack(u, n) {
+    var ql = query.toLowerCase(), i = 0, k = 0, split = u.text.indexOf("\n");
+    while ((i = u.low.indexOf(ql, i)) >= 0) { if (k++ === n) return i > split; i += ql.length; }
+    return false;
+  }
+
+  var resBody, inputEl, sumEl;
+  function renderResults() {
+    if (!resBody) return;
+    var q = inputEl.value.trim();
+    if (q.length < 2) {
+      sumEl.textContent = "Type at least two letters to search every chapter, question, flashcard and glossary entry in this notebook.";
+      resBody.innerHTML = "";
+      return;
+    }
+    query = q;
+    var hits = find(q);
+    if (!hits.length) { sumEl.textContent = "No matches for “" + q + "”."; resBody.innerHTML = ""; return; }
+    sumEl.textContent = occ.length + " match" + (occ.length > 1 ? "es" : "") + " in " + hits.length + " place" + (hits.length > 1 ? "s" : "") + ".";
+    var groups = {}, order = [];
+    hits.slice(0, 300).forEach(function (h) {
+      if (!groups[h.u.group]) { groups[h.u.group] = []; order.push(h.u.group); }
+      groups[h.u.group].push(h);
+    });
+    resBody.innerHTML = order.map(function (g) {
+      return '<span class="sb-label">' + esc(g) + '</span><div class="sb-group sr-list">' + groups[g].map(function (h) {
+        return '<button class="sr-res" data-occ="' + h.start + '"><span class="sr-res-h"><span class="sr-res-l">' + esc(h.u.label) + "</span>" +
+          (h.u.title ? '<span class="sr-res-t">' + esc(h.u.title.replace(/\s+/g, " ").slice(0, 90)) + "</span>" : "") +
+          (h.count > 1 ? '<span class="sr-res-c">' + h.count + "</span>" : "") + '</span><span class="sr-res-s">' + snippet(h.u, h.at, q.length) + "</span></button>";
+      }).join("") + "</div>";
+    }).join("");
+  }
+  var searchTimer;
+  SB.panel("search", "Search", function (body) {
+    body.innerHTML = '<label class="sr-field"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.5 12.5l4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>' +
+      '<span class="sr">Search this notebook</span><input class="sr-input" type="search" data-autofocus placeholder="Search this notebook" autocomplete="off" spellcheck="false"></label>' +
+      '<p class="sb-note sr-sum" aria-live="polite"></p><div class="sr-results"></div>';
+    inputEl = body.querySelector(".sr-input");
+    sumEl = body.querySelector(".sr-sum");
+    resBody = body.querySelector(".sr-results");
+    inputEl.addEventListener("input", function () { clearTimeout(searchTimer); searchTimer = setTimeout(renderResults, 180); });
+    inputEl.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); renderResults(); if (occ.length) { SB.panelClose("search"); goHit(0); } }
+    });
+    resBody.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-occ]");
+      if (!b) return;
+      SB.panelClose("search");
+      goHit(+b.dataset.occ);
+    });
+    renderResults();
+  }, function () {
+    units = null; // quiz lists and answers may have been re-rendered since the last search
+    if (inputEl) { renderResults(); setTimeout(function () { inputEl.select(); }, 30); }
+  });
+  // "/" opens search, as in most readers; Enter / Shift+Enter step through matches while the srBar is up
+  document.addEventListener("keydown", function (e) {
+    if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === "/") { e.preventDefault(); var t = document.querySelector('[data-panel="search"]'); if (t) t.click(); }
+    else if (e.key === "Escape" && !srBar.hidden && !document.querySelector(".sb-sheet.on")) endSearch();
+  });
+
   /* ---------- wiring ---------- */
   // any element inside a readable view (a topic, a glossary entry…) that the hash points at
   function anchorTarget() {
@@ -549,7 +803,7 @@
   addEventListener("hashchange", function () {
     syncPaged();
     hidePop();
-    requestAnimationFrame(function () {
+    soon(function () {
       if (pendingJump) { var j = pendingJump; pendingJump = null; return j(); }
       if (isSlide()) {
         measure();
@@ -560,8 +814,8 @@
   });
   var rT;
   addEventListener("resize", function () { clearTimeout(rT); rT = setTimeout(reflow, 120); });
-  document.addEventListener("sb:apply", function () { requestAnimationFrame(reflow); });
-  document.addEventListener("sb:reflow", function () { requestAnimationFrame(reflow); }); // page content changed size
+  document.addEventListener("sb:apply", function () { soon(reflow); });
+  document.addEventListener("sb:reflow", function () { soon(reflow); }); // page content changed size
 
   /* ---------- kisi-kisi: answer toggles, copy, self-checks ---------- */
   var CHECK_KEY = "sb-check:" + book;

@@ -28,6 +28,7 @@
       <button role="radio" data-layout-set="slide"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 5.5C8.5 4.2 6.3 3.8 3 4.2v11c3.3-.4 5.5 0 7 1.3 1.5-1.3 3.7-1.7 7-1.3v-11c-3.3-.4-5.5 0-7 1.3zM10 5.5v11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Slide</span></button>
     </div>
     <span class="sb-tool-group">
+    <button class="sb-icon" data-panel="search" aria-haspopup="dialog" aria-expanded="false" aria-label="Search this notebook" title="Search ( / )"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
     <button class="sb-icon" data-panel="toc" aria-haspopup="dialog" aria-expanded="false" aria-label="Contents"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 5.5h9M7.5 10h9M7.5 14.5h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="4" cy="5.5" r="1.1" fill="currentColor"/><circle cx="4" cy="10" r="1.1" fill="currentColor"/><circle cx="4" cy="14.5" r="1.1" fill="currentColor"/></svg></button>
     <button class="sb-icon" data-panel="highlights" aria-haspopup="dialog" aria-expanded="false" aria-label="Highlights"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.6 3.6l3.8 3.8-7.3 7.3H5.3v-3.8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10.5 5.7l3.8 3.8M3 17.5h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="sb-badge" data-hl-count hidden></span></button>
     <button class="sb-icon" data-panel="prefs" aria-haspopup="dialog" aria-expanded="false" aria-label="Reading preferences"><span class="aa-small">A</span>A</button>
@@ -538,6 +539,11 @@ MOCK.forEach((m,i)=>{
   const d=document.createElement("details");d.className="mock";
   d.innerHTML=`<summary>Q${i+1}. ${m[2]}<span class="pts">[${m[3]} marks]</span></summary><div class="ans"><b>Model answer</b><p>${m[4]}</p><b>Marking points</b><ul>${m[5].map(p=>`<li>${p}</li>`).join("")}</ul></div>`;
   M.appendChild(d)});
+
+/* ---------- search hook (assets/reader.js finds flashcards through this) ---------- */
+window.SB_CARDS={view:"cards",
+  list:()=>CARDS.map(c=>({deck:DECKS[c[0]],front:c[1],back:c[2]})),
+  open:(i,back)=>{deckSel.value="All";buildDeck(false);order=[i].concat(order.filter(x=>x!==i));idx=0;show();if(back)flip();return document.getElementById("card");}};
 
 buildDeck(true);buildQuiz();route();
 </script>
