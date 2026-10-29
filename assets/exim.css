@@ -6,7 +6,7 @@
   --paper: var(--bg); --sheet: var(--panel); --ink: var(--fg); --ink-2: var(--muted); --rule: var(--line);
   --sea: var(--accent); --sea-soft: var(--accent-soft); --node: var(--sunk); --node-line: var(--line-strong);
   --cargo: #7F4A00; --stamp: #9E2219; --leaf: #2A6239;
-  --f-display: var(--reader); --f-body: var(--reader); --f-mono: var(--mono);
+  --f-display: var(--display); --f-body: var(--reader); --f-mono: var(--mono);
   --f-diagram: "IBM Plex Sans", "Nunito Sans", system-ui, sans-serif; /* diagrams were drawn for this face */
 }
 :root[data-theme="sage"] { --cargo: #5E3600; --stamp: #7A1A13; --leaf: #1D4728; }
@@ -196,7 +196,7 @@ main .abbr-tip button, .abbr-tip button {
 :root { --seller: var(--accent); --seller-soft: var(--accent-soft); --buyer: var(--cargo); --buyer-soft: var(--cargo-soft); }
 .defs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 14px; margin: 24px 0; }
 .def { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; min-width: 0; }
-.def .code { font: 700 2.4rem/1 var(--reader); letter-spacing: .02em; }
+.def .code { font: 700 2.4rem/1 var(--display); letter-spacing: .02em; }
 .def .full { font: 700 .72rem var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin: 4px 0 10px; }
 .def p { margin: 0; font-size: .92rem; }
 .fig.wide svg { min-width: 640px; }

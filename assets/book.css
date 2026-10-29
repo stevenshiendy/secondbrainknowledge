@@ -78,3 +78,33 @@
   :root[data-paged] [data-readable] .tbl :is(th, td) { padding: 6px 6px; overflow-wrap: anywhere; }
   :root[data-paged] [data-readable] .tbl table { table-layout: fixed; width: 100%; }
 }
+
+/* ---------- headings keep one design in every font and size ----------
+   Headings are set in the book face and keep their own spacing; the reading-font, letter- and word-spacing
+   settings change the body text only. Sizes are in rem, so headings scale with the text and keep their proportions. */
+[data-readable] :is(h1, h2, h3, h4, .kq-step, .bk-contents-h, .gl-h, .summary h4, .scen h4) {
+  font-family: var(--display); letter-spacing: 0; word-spacing: normal; font-style: normal;
+}
+[data-readable] section.topic > h2 { font-weight: 500; line-height: 1.2; }
+[data-readable] :is(h3, h4) { line-height: 1.3; }
+.bk-part-n { font-family: var(--display); }
+[data-readable] .kq-step { font-weight: 700; } /* the Bold-text setting thickens body text, not headings */
+/* a heading the reader moved to the next page so it stays with its text */
+:root[data-paged] [data-readable] .bk-push { break-before: column; }
+
+/* ---------- boxes and columns re-flow with the text size instead of squeezing words apart ----------
+   Widths are in rem (= the chosen text size), so bigger text means fewer boxes per row, never split words. */
+[data-readable] .chain { display: flex; flex-wrap: wrap; gap: 22px; container-type: inline-size; }
+[data-readable] .chain > div { flex: 1 1 0; min-width: 0; }
+@container (max-width: 30rem) {
+  [data-readable] .chain > div { flex-basis: 100%; }
+  [data-readable] .chain > div:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -20px; transform: translateX(-50%); }
+}
+[data-readable] .cols { display: flex; flex-wrap: wrap; gap: 18px; }
+[data-readable] .cols > * { flex: 1 1 15rem; }
+[data-readable] .trio { display: flex; flex-wrap: wrap; gap: 10px; }
+[data-readable] .trio > * { flex: 1 1 12rem; }
+[data-readable] .steps li { flex-basis: 8rem; }
+[data-readable] .kq-moves { grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+[data-readable] .kq-toc { grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+[data-readable] :is(.summary, .scen, .defs) { grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }

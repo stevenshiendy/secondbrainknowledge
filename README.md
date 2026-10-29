@@ -30,7 +30,7 @@ Each notebook remembers the exact spot you were reading: the line at the top of 
 
 Highlights, reading progress and the chosen mode are saved in the browser on each device.
 
-Every reading view is laid out as a book (`assets/book.css`): a title page, a contents page (with page numbers in Slide mode), part-title pages, numbered chapters and figures, indented paragraphs with a drop cap, and reference sections set as appendices.
+Every reading view is laid out as a book (`assets/book.css`): a title page, a contents page (with page numbers in Slide mode), part-title pages, numbered chapters and figures, indented paragraphs with a drop cap, and reference sections set as appendices. Headings keep one design whatever the reading font, text size or spacing: they stay in the book serif, and the font and spacing settings change only the body text. In Slide mode a heading never sits at the bottom of a page with its text on the next; the reader moves it, with the box or list it opens, to the next page. Boxes and two-column lists re-flow with the text size, so big text stacks them instead of splitting words.
 
 The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questions, each worked through the same way (what the question asks, a numbered reasoning staircase, the diagram with a "draw this in the exam" tip, a model answer hidden behind **Show answer**, and common mistakes). Tick "I can explain this without looking" on each question to track what you've mastered. It works with Slide mode, Contents and highlights just like the walkthrough. It was built from `Steven_Shiendy_GSCM_KisiKisi_Report/REPORT.md`, keeping its wording, with the figures drawn in the page's theme colours.
 

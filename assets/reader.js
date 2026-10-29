@@ -158,7 +158,73 @@
   /* ---------- pagination ---------- */
   var page = 0, pages = 1, step = 1;
 
+  // A heading must never end a page with its text on the next one. CSS "break-after: avoid" is not reliable inside
+  // multi-column layouts (and is ignored inside grids), so after each re-layout any stranded heading, together with
+  // the block it belongs to, is pushed to the top of the next column.
+  var HEADS = "h3, h4, .kq-h, .explain > span, .gl-h, section.topic > .tag, p";
+  var NO_HEAD = ".chain, .ex-why, .trap, .tip, .summary, .scen, .defs, .q, .face, figure, .fig, .tbl, nav, .kq-answer-bar, .kq-check";
+  function headingsOf(el) {
+    return Array.prototype.filter.call(el.querySelectorAll(HEADS), function (h) {
+      if (h.closest(NO_HEAD)) return false;
+      if (h.tagName === "P") { // a lead-in line such as "Every model has four parts:" belongs with its list or table
+        var nx = h.nextElementSibling;
+        return /:\s*$/.test(h.textContent) && !!nx && /^(UL|OL|DIV|TABLE)$/.test(nx.tagName);
+      }
+      return true;
+    });
+  }
+  function visibleRects(el) { return Array.prototype.filter.call(el.getClientRects(), function (r) { return r.width && r.height; }); }
+  function keepHeadings() {
+    // re-check only when something that moves text has changed: size, settings, or an answer/filter opening or closing
+    var sig = layoutSig();
+    if (view.dataset.bkSig === sig) return;
+    view.querySelectorAll(".bk-push").forEach(function (x) { x.classList.remove("bk-push"); });
+    var cs = getComputedStyle(view), cols = parseInt(cs.columnCount, 10) || 1, gap = parseFloat(cs.columnGap) || 0;
+    var pitch = (view.clientWidth + gap) / cols;
+    var colOf = function (r) { return Math.floor((r.left - view.getBoundingClientRect().left + view.scrollLeft + 2) / pitch); };
+    var heads = headingsOf(view), tried = [];
+    for (var guard = 0; guard < 80; guard++) {
+      var hit = null;
+      for (var i = 0; i < heads.length && !hit; i++) {
+        var h = heads[i];
+        if (tried.indexOf(h) >= 0) continue;
+        var n = h.nextElementSibling;
+        while (n && !(n.textContent.trim() || n.querySelector("svg, img"))) n = n.nextElementSibling;
+        if (!n) continue;
+        var a = visibleRects(h), b = visibleRects(n);
+        if (a.length && b.length && colOf(a[a.length - 1]) !== colOf(b[0])) hit = h;
+      }
+      if (!hit) break;
+      tried.push(hit);
+      // Move the whole unit the heading opens. Climb while the target is the first thing in its parent (so a step's
+      // heading takes its list and the label above it), and take any headings or lead-in lines just before it along.
+      var target = hit, prev;
+      for (;;) {
+        while ((prev = target.previousElementSibling) && heads.indexOf(prev) >= 0) target = prev;
+        var par = target.parentElement;
+        if (!target.previousElementSibling && par && !par.matches("section.topic, [data-readable]")) { target = par; continue; }
+        break;
+      }
+      var grid = target.closest(".cols"); // a page break cannot fall inside a grid cell: move the whole grid
+      if (grid) target = grid;
+      var secEl = target.closest("section.topic");
+      if (secEl && target === secEl.firstElementChild) continue; // chapters already start a page
+      target.classList.add("bk-push");
+    }
+    view.dataset.bkSig = layoutSig();
+  }
+  function layoutSig() {
+    return [view.id, view.clientWidth, view.clientHeight, root.style.cssText, root.getAttribute("data-bold"), view.querySelectorAll("[hidden]").length].join("|");
+  }
+  function clearKeep() {
+    Object.keys(READABLE).forEach(function (k) {
+      READABLE[k].querySelectorAll(".bk-push").forEach(function (x) { x.classList.remove("bk-push"); });
+      delete READABLE[k].dataset.bkSig;
+    });
+  }
+
   function measure() {
+    keepHeadings();
     var gap = parseFloat(getComputedStyle(view).columnGap) || 0;
     if (scrollY) scrollTo(0, 0); // the page itself never scrolls in slide mode
     step = view.clientWidth + gap;
@@ -261,7 +327,7 @@
     syncPaged();
     soon(function () {
       if (isSlide()) { measure(); goTo(sec ? pageOf(sec) : 0, true); }
-      else { numberContents(); if (sec) sec.scrollIntoView(); else scrollTo(0, 0); update(); }
+      else { clearKeep(); numberContents(); if (sec) sec.scrollIntoView(); else scrollTo(0, 0); update(); }
     });
   }
   seg.forEach(function (b) { b.addEventListener("click", function () { setLayout(b.dataset.layoutSet); }); });
