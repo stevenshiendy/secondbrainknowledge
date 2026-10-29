@@ -323,7 +323,7 @@
     if (!p) return;
     if (fill) fill.style.width = p.pct + "%";
     if (txt) txt.textContent = p.pct + "% read · last at “" + p.title + "”";
-    if (link && p.id) { link.hidden = false; link.href = link.dataset.resume + "#" + p.id; }
+    if (link && p.id) { link.hidden = false; link.href = link.dataset.resume; } // the notebook reopens at the exact spot
   });
 
   // shared with reader.js

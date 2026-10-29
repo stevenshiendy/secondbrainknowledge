@@ -179,6 +179,7 @@
     clearTimeout(saveTimer);
     saveTimer = setTimeout(function () {
       if (sec) SB.store.set("sb-progress:" + book, { pct: Math.round(pct * 100), id: sec.id, title: (currentView() === "learn" ? "" : NAMES[currentView()] + ": ") + titleOf(sec), t: Date.now() });
+      savePos();
     }, 250);
   }
   var ticking = false;
@@ -862,8 +863,104 @@
   });
   syncChecks();
 
+  /* ---------- last-read position: the exact spot, restored on refresh or when the notebook is reopened ---------- */
+  // { view, sec, off } for a reading view (off = character offset of the first line on screen within the chapter),
+  // or { view, y } for the practice tabs
+  var POS_KEY = "sb-pos:" + book, restoring = false, userMoved = false;
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual"; // we restore it ourselves
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (t) { addEventListener(t, function () { userMoved = true; }, { passive: true, capture: true }); });
+
+  function caretAt(x, y) {
+    if (document.caretRangeFromPoint) { var r = document.caretRangeFromPoint(x, y); return r && { node: r.startContainer, off: r.startOffset }; }
+    if (document.caretPositionFromPoint) { var c = document.caretPositionFromPoint(x, y); return c && { node: c.offsetNode, off: c.offset }; }
+    return null;
+  }
+  // the first readable character at the top of the page (or screen)
+  function topPoint() {
+    var r = view.getBoundingClientRect(), x = r.left + 12, y;
+    y = isSlide() ? r.top + (parseFloat(getComputedStyle(view).paddingTop) || 0) + 8 : headerH() + 20;
+    for (var i = 0; i < 12; i++, y += 28) {
+      var c = caretAt(x, y), el = c && (c.node.nodeType === 3 ? c.node.parentNode : c.node);
+      var sec = el && el.closest && el.closest("section.topic");
+      if (!sec || !view.contains(sec)) { if (el && el.closest && el.closest(".bk-contents, .bk-part, .kicker, h1, .lede")) return { sec: null, off: 0 }; continue; }
+      var off = offsetOf(sec, c.node, c.off);
+      if (off >= 0) return { sec: sec, off: off };
+    }
+    var s = currentSection();
+    return s ? { sec: s, off: 0 } : { sec: null, off: 0 };
+  }
+  function savePos() {
+    if (restoring) return;
+    var v = currentView(), rec = { view: v, t: Date.now() };
+    if (READABLE[v]) {
+      // mid page-turn the text under the corner belongs to another page; wait for it to settle
+      if (isSlide() && Math.abs(view.scrollLeft - page * step) > 4) { clearTimeout(posTimer); posTimer = setTimeout(savePos, 300); return; }
+      var pt = topPoint();
+      if (pt.sec) { rec.sec = pt.sec.id; rec.off = pt.off; }
+    } else rec.y = Math.round(scrollY);
+    SB.store.set(POS_KEY, rec);
+  }
+  // screen box of the character at a saved offset
+  function rectAt(sec, off) {
+    var nodes = textNodes(sec), acc = 0;
+    for (var i = 0; i < nodes.length; i++) {
+      if (acc + nodes[i].length > off || i === nodes.length - 1) {
+        var r = document.createRange(), o = Math.min(Math.max(0, off - acc), nodes[i].length);
+        r.setStart(nodes[i], o);
+        r.setEnd(nodes[i], Math.min(o + 1, nodes[i].length));
+        var b = r.getClientRects()[0] || r.getBoundingClientRect();
+        if (b && (b.width || b.height)) return b;
+        var pb = nodes[i].parentNode.getBoundingClientRect(); // text inside something now closed: fall back to the chapter
+        return pb.width || pb.height ? pb : sec.getBoundingClientRect();
+      }
+      acc += nodes[i].length;
+    }
+    return sec.getBoundingClientRect();
+  }
+  function restorePos(pos) {
+    var go = function () {
+      var sec = pos.sec && document.getElementById(pos.sec);
+      if (READABLE[pos.view]) {
+        if (isSlide()) {
+          measure();
+          if (sec) {
+            var b = rectAt(sec, pos.off || 0), x = b.left - view.getBoundingClientRect().left + view.scrollLeft;
+            page = Math.max(0, Math.min(pages - 1, Math.floor((x + 2) / step)));
+          } else page = 0;
+          goTo(page, true);
+        } else {
+          // land the saved line just above the probe point topPoint() uses, so refreshing never creeps upward
+          if (sec) scrollTo(0, Math.max(0, scrollY + rectAt(sec, pos.off || 0).top - headerH() - 12));
+          else scrollTo(0, 0);
+          update();
+        }
+      } else scrollTo(0, pos.y || 0);
+    };
+    restoring = true;
+    if (currentView() !== pos.view) { pendingJump = go; location.hash = "#" + pos.view; }
+    else go();
+    setTimeout(function () { restoring = false; }, 500);
+    // web fonts can arrive after this and move the text; settle again unless the reader has already moved on
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (!userMoved) soon(go); });
+    return true;
+  }
+  // open where the reader left off unless the address asks for a specific place (a chapter link, a tab link)
+  function shouldResume(pos) {
+    if (!pos || !pos.view || VIEWS.indexOf(pos.view) < 0) return false;
+    var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    var again = nav && (nav.type === "reload" || nav.type === "back_forward");
+    var h = location.hash.slice(1);
+    return again || !h || h === pos.view;
+  }
+  addEventListener("pagehide", savePos);
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") savePos(); });
+  var posTimer;
+  addEventListener("scroll", function () { clearTimeout(posTimer); posTimer = setTimeout(savePos, 400); }, { passive: true });
+
   function start() {
     syncPaged();
+    var pos = SB.store.get(POS_KEY, null);
+    if (shouldResume(pos) && restorePos(pos)) return;
     if (isSlide()) {
       measure();
       var t = anchorTarget();
@@ -872,5 +969,5 @@
     } else update();
   }
   start();
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(reflow);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (!restoring) reflow(); });
 })();
