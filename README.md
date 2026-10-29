@@ -11,7 +11,7 @@ The **Aa** button opens the preferences panel. It slides in from the right on wi
 - **Themes:** Light, Dark, Sepia, Navy, Charcoal, Sage. In every theme, body text has a contrast ratio of at least 9:1 and secondary text at least 4.5:1.
 - **Match system light/dark:** follows the device setting. The sun/moon button in the header switches between light and dark.
 - **High contrast:** shows secondary text at full strength and makes rules heavier.
-- **Font size, font, bold text, justify text**
+- **Font size** (the current size shows as a badge beside the label, and in a bubble over the slider while you drag), **font, bold text, justify text**. Changing the size is live and smooth, and the line you are reading stays in place while the text grows or shrinks.
 - **Line, character and word spacing; page width** (page width shows on wide screens only)
 
 Settings are saved in the browser on each device.

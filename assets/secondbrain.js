@@ -50,7 +50,8 @@
     return mq.matches ? prefs.lastDark || "dark" : prefs.lastLight || "sepia";
   }
 
-  function apply() {
+  // quiet: restyle only (used every frame while a slider is dragged); the full "sb:apply" follows when it settles
+  function apply(quiet) {
     var theme = resolveTheme();
     root.setAttribute("data-theme", theme);
     root.setAttribute("data-mode", isDark(theme) ? "dark" : "light");
@@ -66,9 +67,9 @@
     s.setProperty("--ws", prefs.ws / 100 + "em");
     s.setProperty("--measure", prefs.width + "px");
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.content = getComputedStyle(root).getPropertyValue("--bg").trim();
+    if (meta && !quiet) meta.content = getComputedStyle(root).getPropertyValue("--bg").trim();
     syncSheet();
-    document.dispatchEvent(new CustomEvent("sb:apply"));
+    if (!quiet) document.dispatchEvent(new CustomEvent("sb:apply"));
   }
 
   function fontFor(name) {
@@ -76,10 +77,33 @@
   }
 
   function save() {
+    clearTimeout(settleTimer);
+    live = false;
     prefs.theme = resolveTheme();
     prefs.fontStack = fontFor(prefs.font).stack;
     store.set(KEY, prefs);
+    document.dispatchEvent(new CustomEvent("sb:beforeapply")); // lets the reader note the line on screen first
     apply();
+  }
+
+  // Sliders and the A−/A+ buttons: restyle once per frame while the value is moving, and do the heavy work
+  // (saving, re-paging the book) once, when it settles.
+  var live = false, frame = 0, settleTimer;
+  function preview() {
+    if (!live) { live = true; document.dispatchEvent(new CustomEvent("sb:beforeapply")); }
+    if (!frame) {
+      // next frame, or a short timer when the browser is throttling frames
+      var go = function () {
+        if (!frame) return;
+        frame = 0;
+        apply(true);
+        document.dispatchEvent(new CustomEvent("sb:preview"));
+      };
+      frame = requestAnimationFrame(go) || 1;
+      setTimeout(go, 50);
+    }
+    clearTimeout(settleTimer);
+    settleTimer = setTimeout(save, 260);
   }
 
   function pickTheme(id) {
@@ -213,12 +237,13 @@
       '<div class="sb-group" style="margin-top:14px">' +
       switchRow("auto", "◐", "Match system light/dark") +
       switchRow("contrast", "◑", "High contrast") + "</div>" +
-      '<span class="sb-label" id="sb-size-l">Font size</span>' +
+      '<div class="sb-label-row"><span class="sb-label" id="sb-size-l">Font size</span>' +
+      '<output class="sb-size-v" id="sb-size-v" for="sb-size" aria-live="polite"></output></div>' +
       '<div class="sb-size"><span class="lim" aria-hidden="true">' + RANGES.size.min + '</span>' +
       '<button class="sm" data-step="-1" aria-label="Smaller text">A</button>' +
-      '<input class="sb-range" type="range" data-range="size" aria-labelledby="sb-size-l" min="' + RANGES.size.min + '" max="' + RANGES.size.max + '" step="1">' +
+      '<span class="sb-size-track"><input class="sb-range" id="sb-size" type="range" data-range="size" aria-labelledby="sb-size-l" min="' + RANGES.size.min + '" max="' + RANGES.size.max + '" step="1">' +
+      '<span class="sb-bubble" aria-hidden="true"></span></span>' +
       '<button class="lg" data-step="1" aria-label="Larger text">A</button><span class="lim" aria-hidden="true">' + RANGES.size.max + "</span></div>" +
-      '<p class="sb-note" id="sb-size-v" aria-live="polite"></p>' +
       '<span class="sb-label">Text</span><div class="sb-group">' +
       '<button class="sb-row" data-fonts-toggle aria-expanded="false" aria-controls="sb-fonts"><span class="ic" aria-hidden="true">Aa</span><span class="grow">Font</span><span class="val" id="sb-font-v"></span>' +
       '<svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>' +
@@ -239,7 +264,7 @@
       if (!t) return;
       if (t.dataset.themeId) return pickTheme(t.dataset.themeId);
       if (t.dataset.font) { prefs.font = t.dataset.font; return save(); }
-      if (t.dataset.step) { prefs.size = clamp(prefs.size + +t.dataset.step, RANGES.size); return save(); }
+      if (t.dataset.step) { prefs.size = clamp(prefs.size + +t.dataset.step, RANGES.size); flashBubble(); return preview(); }
       if (t.hasAttribute("data-fonts-toggle")) {
         var open = t.getAttribute("aria-expanded") !== "true";
         t.setAttribute("aria-expanded", open);
@@ -253,9 +278,13 @@
     });
     body.addEventListener("input", function (e) {
       var k = e.target.dataset.range;
-      if (k) { prefs[k] = +e.target.value; save(); }
+      if (!k) return;
+      prefs[k] = +e.target.value;
+      syncRange(e.target); // the number and the bubble keep up with the finger, even between frames
+      preview();
     });
     body.addEventListener("change", function (e) {
+      if (e.target.dataset.range) return save(); // slider released: settle now
       var k = e.target.dataset.switch;
       if (!k) return;
       prefs[k] = e.target.checked;
@@ -272,6 +301,26 @@
 
   function clamp(v, r) { return Math.min(r.max, Math.max(r.min, v)); }
 
+  // one slider's value, fill, number and (for font size) the bubble over its handle
+  function syncRange(inp) {
+    var k = inp.dataset.range, r = RANGES[k], f = (prefs[k] - r.min) / (r.max - r.min);
+    if (+inp.value !== prefs[k]) inp.value = prefs[k];
+    inp.style.setProperty("--fill", f * 100 + "%");
+    inp.setAttribute("aria-valuetext", r.fmt(prefs[k]));
+    var out = sheet.querySelector("#sb-" + k + "-v");
+    if (out) out.textContent = r.fmt(prefs[k]);
+    var track = inp.closest(".sb-size-track");
+    if (track) { track.style.setProperty("--f", f); track.querySelector(".sb-bubble").textContent = prefs[k]; }
+  }
+  var bubbleTimer;
+  function flashBubble() {
+    var t = sheet && sheet.querySelector(".sb-size-track");
+    if (!t) return;
+    t.classList.add("show");
+    clearTimeout(bubbleTimer);
+    bubbleTimer = setTimeout(function () { t.classList.remove("show"); }, 900);
+  }
+
   function syncSheet() {
     if (!sheet) return;
     var theme = resolveTheme();
@@ -286,14 +335,7 @@
       b.tabIndex = on ? 0 : -1;
     });
     sheet.querySelector("#sb-font-v").textContent = prefs.font;
-    sheet.querySelectorAll("[data-range]").forEach(function (inp) {
-      var k = inp.dataset.range, r = RANGES[k];
-      inp.value = prefs[k];
-      inp.style.setProperty("--fill", ((prefs[k] - r.min) / (r.max - r.min)) * 100 + "%");
-      inp.setAttribute("aria-valuetext", r.fmt(prefs[k]));
-      var out = sheet.querySelector("#sb-" + k + "-v");
-      if (out) out.textContent = k === "size" ? "Text size " + r.fmt(prefs[k]) : r.fmt(prefs[k]);
-    });
+    sheet.querySelectorAll("[data-range]").forEach(syncRange);
     sheet.querySelectorAll("[data-switch]").forEach(function (inp) { inp.checked = !!prefs[inp.dataset.switch]; });
   }
 

@@ -244,12 +244,55 @@
   }
   // re-flow after a resize or a type change, keeping the reader on the same part of the section
   function reflow() {
+    if (anchor) return settleAnchor();
     if (!isSlide()) return update();
     var sec = currentSection(), delta = sec ? page - pageOf(sec) : page;
     measure();
     page = sec ? pageOf(sec) + Math.max(0, delta) : page;
     goTo(page, true);
   }
+
+  // Changing the text: the line at the top of the page is noted before the change ("sb:beforeapply") and held in
+  // place on every frame while a slider moves ("sb:preview", cheap: no re-paging), then the book is re-paged once
+  // when the change settles ("sb:apply").
+  var anchor = null, following = false;
+  function anchorPage() {
+    var b = rectAt(anchor.sec, anchor.off), x = b.left - view.getBoundingClientRect().left + view.scrollLeft;
+    return Math.floor((x + 2) / step);
+  }
+  function followAnchor() {
+    following = false;
+    if (!anchor || !READABLE[currentView()]) return;
+    if (isSlide()) {
+      var gap = parseFloat(getComputedStyle(view).columnGap) || 0;
+      step = view.clientWidth + gap;
+      pages = Math.max(1, Math.ceil((view.scrollWidth + gap) / step - 0.01));
+      page = Math.max(0, Math.min(pages - 1, anchorPage()));
+      view.scrollLeft = page * step;
+      count.textContent = "Page " + (page + 1) + " of " + pages;
+    } else {
+      scrollTo(0, Math.max(0, scrollY + rectAt(anchor.sec, anchor.off).top - anchor.y)); // same spot on screen
+    }
+  }
+  function settleAnchor() {
+    var a = anchor;
+    anchor = null;
+    if (!READABLE[currentView()]) return update();
+    if (isSlide()) {
+      measure(); // re-pages, keeps headings with their text, renumbers the contents
+      anchor = a; page = Math.max(0, Math.min(pages - 1, anchorPage())); anchor = null;
+      goTo(page, true);
+    } else {
+      scrollTo(0, Math.max(0, scrollY + rectAt(a.sec, a.off).top - a.y));
+      update();
+    }
+  }
+  document.addEventListener("sb:beforeapply", function () {
+    if (anchor || !READABLE[currentView()] || restoring) return;
+    var pt = topPoint();
+    if (pt.sec) { anchor = pt; anchor.y = rectAt(pt.sec, pt.off).top; } // Scroll mode keeps the line at this height
+  });
+  document.addEventListener("sb:preview", function () { if (!following) { following = true; followAnchor(); } });
   // text selection or keyboard focus can nudge the hidden scroller; settle back onto a page edge
   var settle;
   onReadable("scroll", function () {
@@ -993,24 +1036,50 @@
   if ("scrollRestoration" in history) history.scrollRestoration = "manual"; // we restore it ourselves
   ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (t) { addEventListener(t, function () { userMoved = true; }, { passive: true, capture: true }); });
 
-  function caretAt(x, y) {
-    if (document.caretRangeFromPoint) { var r = document.caretRangeFromPoint(x, y); return r && { node: r.startContainer, off: r.startOffset }; }
-    if (document.caretPositionFromPoint) { var c = document.caretPositionFromPoint(x, y); return c && { node: c.offsetNode, off: c.offset }; }
-    return null;
+  // The first readable character at the top of the page (Slide) or just under the header (Scroll), found from the
+  // text's own layout rather than by hit-testing a point, so open panels and their backdrop do not get in the way.
+  function charRect(t, o) {
+    var r = document.createRange();
+    r.setStart(t, o);
+    r.setEnd(t, Math.min(o + 1, t.length));
+    return r.getClientRects()[0] || null;
   }
-  // the first readable character at the top of the page (or screen)
   function topPoint() {
-    var r = view.getBoundingClientRect(), x = r.left + 12, y;
-    y = isSlide() ? r.top + (parseFloat(getComputedStyle(view).paddingTop) || 0) + 8 : headerH() + 20;
-    for (var i = 0; i < 12; i++, y += 28) {
-      var c = caretAt(x, y), el = c && (c.node.nodeType === 3 ? c.node.parentNode : c.node);
-      var sec = el && el.closest && el.closest("section.topic");
-      if (!sec || !view.contains(sec)) { if (el && el.closest && el.closest(".bk-contents, .bk-part, .kicker, h1, .lede")) return { sec: null, off: 0 }; continue; }
-      var off = offsetOf(sec, c.node, c.off);
-      if (off >= 0) return { sec: sec, off: off };
+    var sec = currentSection();
+    if (!sec) return { sec: null, off: 0 };
+    var paged = isSlide(), edge = paged ? view.getBoundingClientRect().left - 1 : headerH() + 14;
+    var past = function (b) { return paged ? b.left >= edge : b.bottom > edge; };
+    // a page can open with the end of the previous chapter: hold on to that line, not the new chapter's start
+    var lastPast = function (s) {
+      var ns = textNodes(s);
+      for (var k = ns.length - 1; k >= 0; k--) {
+        if (!/\S/.test(ns[k].data) || !ns[k].parentNode.getClientRects().length) continue;
+        var b = charRect(ns[k], ns[k].length - 1);
+        return !!b && past(b);
+      }
+      return false;
+    };
+    var si = sections.indexOf(sec);
+    while (si > 0 && lastPast(sections[si - 1])) si--;
+    sec = sections[si] || sec;
+    var nodes = textNodes(sec), acc = 0;
+    for (var i = 0; i < nodes.length; i++) {
+      var t = nodes[i], rs = t.length && /\S/.test(t.data) ? t.parentNode.getClientRects() : [];
+      if (rs.length) {
+        var last = charRect(t, t.length - 1);
+        if (last && past(last)) {
+          // this node reaches the page: find its first character that is on it
+          var lo = 0, hi = t.length - 1;
+          while (lo < hi) {
+            var mid = (lo + hi) >> 1, b = charRect(t, mid);
+            if (b && past(b)) hi = mid; else lo = mid + 1;
+          }
+          return { sec: sec, off: acc + lo };
+        }
+      }
+      acc += t.length;
     }
-    var s = currentSection();
-    return s ? { sec: s, off: 0 } : { sec: null, off: 0 };
+    return { sec: sec, off: 0 };
   }
   function savePos() {
     if (restoring) return;
