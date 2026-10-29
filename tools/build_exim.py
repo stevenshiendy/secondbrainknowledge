@@ -98,6 +98,15 @@ for s in sections:
     s["html"] = s["html"].replace(
         "Test yourself with the companion page: <b>Export-Import Practice</b> (quiz, flashcards and a mock midterm with answer key).",
         'Test yourself in this notebook\'s <a href="#quiz">Quiz</a>, <a href="#flashcards">Flashcards</a> and <a href="#mock-exam">Mock exam</a> tabs (with answer key).')
+# ---------- additions written for this notebook (tools/exim-additions/) ----------
+# Each is placed straight after a fixed spot in the pack's text, so rebuilding from a newer pack keeps it.
+ADD = SITE / "tools" / "exim-additions"
+mnemonic = re.sub(r"<!--.*?-->\s*", "", (ADD / "general-prohibitions-mnemonic.html").read_text(), flags=re.S).strip()
+g1 = next(s for s in sections if s["id"] == "g1")
+at = g1["html"].index("<h3>The 10 General Prohibitions</h3>")
+end = g1["html"].index("</table></div>", at) + len("</table></div>")
+g1["html"] = g1["html"][:end] + "\n" + mnemonic + g1["html"][end:]
+
 learn_html = render("learn", "Walkthrough", eyebrow, h1,
                     '<p class="lede">%s</p><p class="ex-meta">%s</p>' % (lede, meta), sections, foot.group(1).strip() if foot else "", "Start here")
 n_learn = len(sections)
@@ -150,6 +159,13 @@ pj, n = re.subn(r"l\.href='#glossary';l\.textContent='Glossary';l\.addEventListe
                 "l.href='#g-'+g.id;l.textContent='Glossary';l.addEventListener('click',function(){tip.hidden=true});tip.appendChild(l);", pj, flags=re.S)
 assert n == 1, "tip glossary link"
 pj = fix_classes(pj) + "renderQuiz();buildDeck();renderMock();drawT();\n['v-quiz','v-flashcards','v-mock-exam'].forEach(function(id){abbrify(document.getElementById(id))});\n"
+# flashcards for the memory aids above (appended last, so saved card marks keep their positions)
+pj += """CARDS.push(
+  {d:'w6',f:'Mnemonic for the order of the 10 General Prohibitions',b:'Can Dogs Dig Deep? Every Elephant Probably Tramples Very Knowingly. 1 Controlled items to listed countries, 2 De minimis US content, 3 Direct product of US technology, 4 Denial Order, 5 End use or end user, 6 Embargoed destinations, 7 Proliferation of weapons, 8 Transit through prohibited countries, 9 Violating licence terms or orders, 10 Knowledge of a violation.'},
+  {d:'w6',f:'The four questions behind the 10 General Prohibitions (What, Who, How, Know)',b:'What is it, and how American is it? (1–3). Who gets it, for what use, and where? (4–6). How is it used or routed? (7–8). What do I know, and am I following the rules? (9–10).'}
+);
+buildDeck();
+"""
 # search hook: assets/reader.js lists and opens flashcards through window.SB_CARDS
 pj += """window.SB_CARDS={view:'flashcards',
   list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b}})},

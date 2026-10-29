@@ -221,3 +221,15 @@ td.s { color: var(--seller); font-weight: 600; } td.b { color: var(--buyer); fon
 .scen h4 { margin: 0 0 6px; font-size: .92rem; }
 .scen p { margin: 0; font-size: .86rem; }
 :root[data-paged] [data-readable] :is(.def, .scen > div, .ladder) { break-inside: avoid; }
+
+/* ---------- memory aids (tools/exim-additions/) ---------- */
+.mn { margin: 28px 0 8px; padding: 14px 0 10px; border-top: 2px solid var(--accent); border-bottom: 1px solid var(--line); }
+.mn-k { margin: 0 0 4px; font: 700 .66rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.mn h4 { margin: 0 0 10px; font-size: 1.05rem; }
+[data-readable] section.topic .mn > p { margin: 0 0 .6em; text-indent: 0; }
+.mn-line { margin: 12px 0 14px !important; text-align: center !important; font: italic 1.25rem/1.4 var(--display); }
+.mn-line b, .mn td b { color: var(--accent); font-style: normal; font-weight: 700; }
+.mn-q { margin: 6px 0 4px; padding-left: 1.4em; }
+.mn-q li { margin: 4px 0; }
+.mn-r { color: var(--muted); font-size: .88em; white-space: nowrap; }
+:root[data-paged] [data-readable] :is(.mn-line, .mn-q li) { break-inside: avoid; }
