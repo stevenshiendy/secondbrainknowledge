@@ -72,3 +72,9 @@
 :root[data-paged] .bk-contents-list a { break-inside: avoid; }
 :root[data-paged] .bk-part { break-before: column; break-after: column; margin: 0; padding: min(26vh, 220px) 0 0; border: 0; }
 :root[data-paged] .bk-part::after { content: ""; display: block; width: 72px; margin: 22px auto 0; border-top: 1px solid var(--fg); }
+/* Slide mode on phones: a page is one narrow column, so tables wrap to fit it instead of running off the page edge */
+@media (max-width: 759px) {
+  :root[data-paged] [data-readable] .tbl table { min-width: 0 !important; }
+  :root[data-paged] [data-readable] .tbl :is(th, td) { padding: 6px 6px; overflow-wrap: anywhere; }
+  :root[data-paged] [data-readable] .tbl table { table-layout: fixed; width: 100%; }
+}

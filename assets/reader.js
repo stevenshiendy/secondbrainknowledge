@@ -88,15 +88,72 @@
     '<span class="rd-where"></span>' +
     '<div class="rd-pager">' +
     '<button class="sb-icon" data-page="-1" aria-label="Previous page"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5L7 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
-    '<span class="rd-count" aria-live="polite"></span>' +
+    '<button class="rd-count" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="rd-jump" title="Go to a page"></button>' +
     '<button class="sb-icon" data-page="1" aria-label="Next page"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
     "</div>" +
-    '<span class="rd-pct"></span>';
+    '<span class="rd-pct"></span>' +
+    '<div class="rd-jump" id="rd-jump" role="dialog" aria-label="Go to page" hidden>' +
+    '<label class="rd-jump-row"><span>Go to page</span><input class="rd-jump-n" type="number" inputmode="numeric" min="1"><span class="rd-jump-of"></span></label>' +
+    '<input class="rd-jump-r sb-range" type="range" min="1" aria-label="Page">' +
+    '<p class="rd-jump-where" aria-live="polite"></p>' +
+    '<div class="rd-jump-go"><button class="sb-btn" type="button" data-jump="cancel">Cancel</button><button class="sb-btn primary" type="button" data-jump="go">Go</button></div>' +
+    "</div>";
   document.body.appendChild(foot);
   foot.addEventListener("click", function (e) {
     var b = e.target.closest("[data-page]");
     if (b) goTo(page + +b.dataset.page);
+    if (e.target.closest(".rd-count")) return jumpBox.hidden ? openJump() : closeJump();
+    var j = e.target.closest("[data-jump]");
+    if (j) { if (j.dataset.jump === "go") jumpGo(); else closeJump(); }
   });
+
+  /* ---------- go to page: tap "Page N of M" ---------- */
+  var jumpBox = foot.querySelector(".rd-jump"), jumpN = foot.querySelector(".rd-jump-n"), jumpR = foot.querySelector(".rd-jump-r");
+  var jumpWhere = foot.querySelector(".rd-jump-where"), countBtn = foot.querySelector(".rd-count");
+  // chapter that page n (1-based) falls in, for the preview line
+  function chapterAt(n) {
+    var cur = null;
+    sections.forEach(function (s) { if (pageOf(s) <= n - 1) cur = s; });
+    if (!cur) return NAMES[currentView()] ? NAMES[currentView()] + " · title and contents" : "Title and contents";
+    var k = chapterNo(cur);
+    return (currentView() === "kisi" ? tagOf(cur).split("·")[0].trim() : k ? "Chapter " + k : "Appendix") + " · " + titleOf(cur);
+  }
+  function setJump(n, from) {
+    n = Math.max(1, Math.min(pages, Math.round(+n || 1)));
+    if (from !== "n") jumpN.value = n;
+    jumpR.value = n;
+    jumpR.style.setProperty("--fill", (pages > 1 ? (n - 1) / (pages - 1) * 100 : 100) + "%");
+    jumpWhere.textContent = chapterAt(n);
+    return n;
+  }
+  function openJump() {
+    if (!isSlide()) return;
+    jumpN.max = jumpR.max = pages;
+    foot.querySelector(".rd-jump-of").textContent = "of " + pages;
+    setJump(page + 1);
+    jumpBox.hidden = false;
+    countBtn.setAttribute("aria-expanded", "true");
+    jumpN.focus();
+    jumpN.select();
+  }
+  function closeJump(refocus) {
+    if (jumpBox.hidden) return;
+    jumpBox.hidden = true;
+    countBtn.setAttribute("aria-expanded", "false");
+    if (refocus !== false) countBtn.focus({ preventScroll: true });
+  }
+  function jumpGo() {
+    var n = setJump(jumpN.value);
+    closeJump();
+    goTo(n - 1, true); // a jump, not a page turn: land straight on the page
+  }
+  jumpN.addEventListener("input", function () { if (jumpN.value !== "") setJump(jumpN.value, "n"); });
+  jumpR.addEventListener("input", function () { setJump(jumpR.value); });
+  jumpBox.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") { e.preventDefault(); jumpGo(); }
+    if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); closeJump(); }
+  });
+  document.addEventListener("mousedown", function (e) { if (!jumpBox.hidden && !foot.contains(e.target)) closeJump(false); });
 
   /* ---------- pagination ---------- */
   var page = 0, pages = 1, step = 1;
@@ -113,7 +170,7 @@
     return Math.max(0, Math.min(pages - 1, Math.floor((x + 2) / step)));
   }
   function goTo(p, instant) {
-    if (!isSlide()) return;
+    if (!isSlide()) return closeJump(false);
     page = Math.max(0, Math.min(pages - 1, p));
     view.scrollTo({ left: page * step, behavior: instant || reduce.matches ? "auto" : "smooth" });
     hidePop();

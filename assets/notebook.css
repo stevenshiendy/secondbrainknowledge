@@ -254,7 +254,28 @@ details.mock[open] summary::before { content: "－ "; }
 .rd-pager .sb-icon { width: 34px; height: 34px; border: 0; background: none; }
 .rd-pager .sb-icon:hover:not(:disabled) { background: var(--sunk); }
 .rd-pager .sb-icon:disabled { opacity: .35; cursor: default; }
-.rd-count { min-width: 112px; text-align: center; font-weight: 700; color: var(--fg); font-variant-numeric: tabular-nums; }
+.rd-count {
+  min-width: 112px; height: 34px; padding: 0 10px; border: 0; border-radius: 999px; background: none; cursor: pointer;
+  font: 700 13px var(--ui); color: var(--fg); text-align: center; font-variant-numeric: tabular-nums;
+  text-decoration: underline dotted var(--line-strong); text-underline-offset: 4px;
+}
+.rd-count:hover, .rd-count[aria-expanded="true"] { background: var(--sunk); text-decoration-color: var(--accent); }
+.rd-jump {
+  position: absolute; left: 50%; bottom: calc(100% + 4px); transform: translateX(-50%); width: min(340px, calc(100vw - 24px));
+  display: grid; gap: 12px; padding: 14px 16px; background: var(--sheet); color: var(--fg);
+  border: 1px solid var(--line-strong); border-radius: 14px; box-shadow: var(--shadow); font: 14px var(--ui);
+}
+.rd-jump[hidden] { display: none; }
+.rd-jump-row { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.rd-jump-n {
+  width: 76px; height: 38px; padding: 0 10px; border: 1px solid var(--line-strong); border-radius: 8px;
+  background: var(--panel); color: var(--fg); font: 700 15px var(--ui); text-align: center; font-variant-numeric: tabular-nums;
+}
+.rd-jump-n:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.rd-jump-of { color: var(--muted); }
+.rd-jump-where { margin: -4px 0 0; min-height: 2.6em; font: italic 14px/1.35 var(--display); color: var(--muted); }
+.rd-jump-go { display: flex; justify-content: flex-end; gap: 8px; }
+.rd-jump-go .sb-btn { padding: 8px 16px; }
 @media (max-width: 599px) { .rd-where, .rd-pct { display: none; } :root[data-paged] .rd-foot { justify-content: center; } }
 
 /* ---------- highlights ---------- */
