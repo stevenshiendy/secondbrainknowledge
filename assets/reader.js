@@ -42,6 +42,39 @@
   function titleOf(sec) { var h = sec && sec.querySelector("h2"); return h ? h.textContent : ""; }
   function tagOf(sec) { var t = sec && sec.querySelector(".tag"); return t ? t.textContent : ""; }
 
+  /* ---------- book contents page (after each view's title page) ---------- */
+  function chapterNo(sec) {
+    if (!sec || sec.classList.contains("bk-back")) return 0;
+    return sectionsOf(sec.closest("[data-readable]")).filter(function (s) { return !s.classList.contains("bk-back"); }).indexOf(sec) + 1;
+  }
+  Object.keys(READABLE).forEach(function (k) {
+    var el = READABLE[k];
+    if (el.querySelector(".kq-toc, .bk-contents")) return;
+    var first = el.querySelector(":scope > section.topic, :scope > .bk-part");
+    if (!first) return;
+    var items = Array.prototype.map.call(el.querySelectorAll(":scope > section.topic, :scope > .bk-part"), function (c) {
+      if (c.classList.contains("bk-part")) {
+        return '<li class="bk-c-part">' + Array.prototype.map.call(c.children, function (x) { return esc(x.textContent.trim()); }).filter(Boolean).join(" · ") + "</li>";
+      }
+      var back = c.classList.contains("bk-back");
+      return '<li' + (back ? ' class="bk-c-back"' : "") + '><a href="#' + c.id + '"><span class="bk-c-n">' + (back ? "" : chapterNo(c)) +
+        '</span><span class="bk-c-t">' + esc(titleOf(c)) + '</span><span class="bk-c-dots" aria-hidden="true"></span><span class="bk-c-pg" data-pg-for="' + c.id + '"></span></a></li>';
+    }).join("");
+    var nav = document.createElement("nav");
+    nav.className = "bk-contents";
+    nav.setAttribute("aria-label", "Contents of " + (NAMES[k] || k));
+    nav.innerHTML = '<h2 class="bk-contents-h">Contents</h2><ol class="bk-contents-list">' + items + "</ol>";
+    el.insertBefore(nav, first);
+  });
+  // Slide mode: write each chapter's page number into the contents, like a printed book
+  function numberContents() {
+    var paged = isSlide();
+    view.querySelectorAll("[data-pg-for]").forEach(function (pg) {
+      var sec = paged && document.getElementById(pg.dataset.pgFor);
+      pg.textContent = sec ? pageOf(sec) + 1 : "";
+    });
+  }
+
   /* ---------- page footer (slide mode) ---------- */
   var foot = document.createElement("div");
   foot.className = "rd-foot";
@@ -67,6 +100,7 @@
     if (scrollY) scrollTo(0, 0); // the page itself never scrolls in slide mode
     step = view.clientWidth + gap;
     pages = Math.max(1, Math.ceil((view.scrollWidth + gap) / step - 0.01));
+    numberContents();
   }
   function pageOf(el) {
     var x = el.getBoundingClientRect().left - view.getBoundingClientRect().left + view.scrollLeft;
@@ -130,7 +164,10 @@
     }
     if (bar) bar.style.setProperty("--p", pct);
     var sec = currentSection();
-    where.textContent = sec ? tagOf(sec).split("·")[0].trim() : NAMES[currentView()] || "Introduction";
+    var n = chapterNo(sec);
+    where.textContent = !sec ? NAMES[currentView()] || "Introduction"
+      : currentView() === "kisi" ? tagOf(sec).split("·")[0].trim() + " · " + titleOf(sec)
+      : (n ? "Chapter " + n : "Appendix") + " · " + titleOf(sec);
     pctEl.textContent = Math.round(pct * 100) + "% read";
     markToc(sec);
     clearTimeout(saveTimer);
@@ -160,7 +197,7 @@
     syncPaged();
     requestAnimationFrame(function () {
       if (isSlide()) { measure(); goTo(sec ? pageOf(sec) : 0, true); }
-      else { if (sec) sec.scrollIntoView(); else scrollTo(0, 0); update(); }
+      else { numberContents(); if (sec) sec.scrollIntoView(); else scrollTo(0, 0); update(); }
     });
   }
   seg.forEach(function (b) { b.addEventListener("click", function () { setLayout(b.dataset.layoutSet); }); });
@@ -504,9 +541,10 @@
   refreshHlList();
 
   /* ---------- wiring ---------- */
+  // any element inside a readable view (a topic, a glossary entry…) that the hash points at
   function anchorTarget() {
     var el = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
-    return el && el.matches("[data-readable] section.topic") ? el : null;
+    return el && !el.matches("[data-readable]") && el.closest("[data-readable]") ? el : null;
   }
   addEventListener("hashchange", function () {
     syncPaged();
@@ -523,6 +561,7 @@
   var rT;
   addEventListener("resize", function () { clearTimeout(rT); rT = setTimeout(reflow, 120); });
   document.addEventListener("sb:apply", function () { requestAnimationFrame(reflow); });
+  document.addEventListener("sb:reflow", function () { requestAnimationFrame(reflow); }); // page content changed size
 
   /* ---------- kisi-kisi: answer toggles, copy, self-checks ---------- */
   var CHECK_KEY = "sb-check:" + book;

@@ -1,0 +1,74 @@
+/* Book layer for every notebook's reading views ([data-readable]): title page, contents page, part pages,
+   numbered chapters and figures, book paragraphs, and an end-of-chapter mark. Loaded last on notebook pages.
+   Contents page numbers are filled in by reader.js in Slide mode. */
+
+/* ---------- title page ---------- */
+[data-readable] > :is(.kicker, h1, .lede, .ex-meta) { text-align: center; margin-inline: auto; }
+[data-readable] > .kicker { margin-top: clamp(16px, 6vh, 64px); letter-spacing: .14em; }
+[data-readable] > h1 { font-size: clamp(2rem, 5vw, 2.7rem); font-weight: 500; line-height: 1.12; margin-block: 10px 16px; }
+[data-readable] > h1::after { content: ""; display: block; width: 72px; margin: 18px auto 0; border-top: 1px solid var(--fg); }
+[data-readable] > .lede { max-width: 58ch; font-style: italic; }
+[data-readable] > .ex-meta { max-width: 64ch; }
+:root[data-justify] [data-readable] > .lede { text-align: center; }
+
+/* ---------- contents page ---------- */
+.bk-contents { max-width: 640px; margin: 40px auto 8px; }
+.bk-contents-h { margin: 0 0 18px; text-align: center; font-size: 1.05rem; font-weight: 500; letter-spacing: .28em; text-transform: uppercase; }
+.bk-contents-list { list-style: none; margin: 0; padding: 0; }
+.bk-contents-list li { margin: 0; }
+.bk-contents-list a { display: flex; align-items: baseline; gap: 10px; padding: 4px 0; color: var(--fg); text-decoration: none; line-height: 1.35; }
+.bk-contents-list a:hover .bk-c-t { color: var(--accent); }
+.bk-c-n { flex: none; min-width: 1.8em; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+.bk-c-t { flex: 0 1 auto; min-width: 0; }
+.bk-c-dots { flex: 1 0 1.5em; border-bottom: 1px dotted var(--line-strong); transform: translateY(-.3em); }
+.bk-c-pg { flex: none; min-width: 1.6em; text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+:root:not([data-paged]) .bk-c-dots { visibility: hidden; }
+.bk-c-part { margin: 18px 0 4px; font: 700 .68rem var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.bk-c-part:first-child { margin-top: 0; }
+.bk-c-back .bk-c-t { font-style: italic; }
+
+/* ---------- part pages ---------- */
+.bk-part { margin: 72px 0 8px; padding: 40px 0; text-align: center; border-block: 1px solid var(--line); }
+.bk-part-n { display: block; font: 500 1.9rem/1.1 var(--reader); letter-spacing: .2em; margin-right: -.2em; text-transform: uppercase; }
+.bk-part-t { display: block; max-width: 40ch; margin: 12px auto 0; font: 700 .7rem/1.6 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+
+/* ---------- chapters and figures are numbered like a book ---------- */
+[data-readable] { counter-reset: bk-ch; }
+[data-readable] > section.topic { counter-reset: bk-fig; }
+[data-readable] > section.topic:not(.bk-back) { counter-increment: bk-ch; }
+[data-readable]:not(#v-kisi) > section.topic:not(.bk-back) > .tag::before { content: "Chapter " counter(bk-ch) " · "; }
+[data-readable] > section.topic.bk-back > .tag::before { content: "Appendix · "; }
+[data-readable] section.topic :is(figure, .fig) { counter-increment: bk-fig; }
+[data-readable] section.topic:not(.bk-back) :is(figure > figcaption, .fig > .cap:not(.fig-key))::before {
+  content: "Figure " counter(bk-ch) "." counter(bk-fig) "  ";
+  font: 700 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); white-space: pre;
+}
+
+/* ---------- book paragraphs: no gap, first-line indent; drop cap opens each chapter ---------- */
+[data-readable] section.topic > p { margin: 0; }
+[data-readable] section.topic > p + p { text-indent: 1.5em; }
+[data-readable] section.topic > :not(p, .tag, h2) + p { margin-top: .8em; }
+[data-readable] section.topic > p + :not(p) { margin-top: .9em; }
+[data-readable]:not(#v-kisi) section.topic:not(.bk-back) > :is(h2 + p, h2 + .explain > p:first-of-type, .chain + .explain > p:first-of-type)::first-letter {
+  float: left; margin: .06em .1em 0 0; font-size: 3.15em; line-height: .82; font-weight: 500; color: var(--accent);
+}
+
+/* ---------- end of chapter ---------- */
+[data-readable] > section.topic::after {
+  content: "*   *   *"; display: block; clear: both; margin: 30px 0 4px; text-align: center; white-space: pre;
+  color: var(--muted); letter-spacing: .2em; font-size: .9rem;
+}
+
+/* ---------- quieter page furniture: figures, tables and summaries sit on the page, not in app cards ---------- */
+[data-readable] .fig { background: none; border: 0; border-block: 1px solid var(--line); border-radius: 0; padding: 16px 0 8px; }
+[data-readable] .tbl { background: none !important; border: 0 !important; border-block: 1.5px solid var(--fg) !important; border-radius: 0 !important; }
+[data-readable] .tbl th { background: none !important; border-bottom: 1px solid var(--fg); }
+[data-readable] :is(.summary, .scen, .defs) > div { background: none; border: 0; border-top: 2px solid var(--accent); border-radius: 0; padding: 10px 2px 0; }
+
+/* ---------- Slide mode: title, contents and part titles get pages of their own ---------- */
+:root[data-paged] [data-readable] > .kicker { margin-top: min(18vh, 150px); }
+:root[data-paged] [data-readable] > section.topic::after { display: none; } /* the page break already ends the chapter */
+:root[data-paged] .bk-contents { break-before: column; margin-top: 0; }
+:root[data-paged] .bk-contents-list a { break-inside: avoid; }
+:root[data-paged] .bk-part { break-before: column; break-after: column; margin: 0; padding: min(26vh, 220px) 0 0; border: 0; }
+:root[data-paged] .bk-part::after { content: ""; display: block; width: 72px; margin: 22px auto 0; border-top: 1px solid var(--fg); }
