@@ -236,6 +236,52 @@ if (TRAIL / "the-paper-trail-player.html").exists():
     out_dir.mkdir(exist_ok=True)
     for name in ("the-paper-trail-player.html", "narration.mp3"):
         shutil.copyfile(TRAIL / name, out_dir / name)
+    # Patch the copy. The pack's .big{display:flex} beats [hidden], so the play overlay stayed up while
+    # playing. Also add a Full screen button: real full screen where the browser allows it, otherwise
+    # (iPhone Safari) the screen fills the window and the notebook page lets the iframe fill the window too.
+    player = out_dir / "the-paper-trail-player.html"
+    p = player.read_text()
+    p = p.replace("</head>", """<style>/* added by SECONDBRAIN's build_exim.py */
+.big[hidden]{display:none!important}
+#fsbtn{margin-left:auto}
+.screen:fullscreen{width:100%;height:100%;max-width:none;aspect-ratio:auto;border-radius:0;box-shadow:none;background:#141311}
+.screen:-webkit-full-screen{width:100%;height:100%;max-width:none;aspect-ratio:auto;border-radius:0;box-shadow:none;background:#141311}
+.screen.fake-fs{position:fixed;inset:0;z-index:1000;width:100%;height:100%;max-width:none;aspect-ratio:auto;border-radius:0;box-shadow:none;background:#141311}
+.fs-x{display:none;position:absolute;top:12px;right:12px;z-index:110;width:44px;height:44px;align-items:center;justify-content:center;border:0;border-radius:50%;background:rgba(20,19,17,.72);color:#fff;font:600 20px/1 sans-serif;cursor:pointer}
+.screen:fullscreen .fs-x{display:flex}
+.screen:-webkit-full-screen .fs-x{display:flex}
+.screen.fake-fs .fs-x{display:flex}
+</style>
+</head>""", 1)
+    p = p.replace("</body>", """<script>/* added by SECONDBRAIN's build_exim.py: full screen */
+(function(){
+ const scr=document.getElementById('screen'),st=document.getElementById('stage'),ctrls=document.querySelector('.ctrls');
+ if(!scr||!st||!ctrls)return;
+ const native=!!(document.fullscreenEnabled||document.webkitFullscreenEnabled);
+ const fsEl=()=>document.fullscreenElement||document.webkitFullscreenElement;
+ const isFs=()=>fsEl()===scr||scr.classList.contains('fake-fs');
+ // runs after the player's own fit(); in full screen the 16:9 stage is letterboxed and centred
+ function fit(){const w=scr.clientWidth,h=scr.clientHeight;
+  if(isFs()){const s=Math.min(w/1920,h/1080);st.style.transform='translate('+(w-1920*s)/2+'px,'+(h-1080*s)/2+'px) scale('+s+')'}
+  else st.style.transform='scale('+(w/1920)+')'}
+ new ResizeObserver(fit).observe(scr);
+ const btn=document.createElement('button');btn.className='ctl alt';btn.id='fsbtn';btn.type='button';btn.textContent='Full screen';ctrls.appendChild(btn);
+ const x=document.createElement('button');x.className='fs-x';x.type='button';x.setAttribute('aria-label','Exit full screen');x.textContent='\\u2715';scr.appendChild(x);
+ function sync(){btn.textContent=isFs()?'Exit full screen':'Full screen';fit()}
+ function fake(on){scr.classList.toggle('fake-fs',on);if(window.parent!==window)window.parent.postMessage({paperTrail:'fullscreen',on:on},'*');sync()}
+ // some embedded browsers neither grant nor refuse the request: fall back if nothing happened within a second
+ function enter(){if(!native)return fake(true);let done=false;const ok=()=>{done=true},no=()=>{if(!done&&!fsEl()){done=true;fake(true)}};
+  const r=scr.requestFullscreen?scr.requestFullscreen():scr.webkitRequestFullscreen();if(r&&r.then)r.then(ok,no);setTimeout(no,1000)}
+ function exit(){if(fsEl())(document.exitFullscreen||document.webkitExitFullscreen).call(document);else fake(false)}
+ btn.onclick=()=>isFs()?exit():enter();
+ x.onclick=e=>{e.stopPropagation();exit()};
+ document.addEventListener('fullscreenchange',sync);document.addEventListener('webkitfullscreenchange',sync);
+ document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT')return;
+  if(e.key==='f'||e.key==='F'){isFs()?exit():enter()}else if(e.key==='Escape'&&scr.classList.contains('fake-fs'))fake(false)});
+})();
+</script>
+</body>""", 1)
+    player.write_text(p)
     watch_html = ('<div id="v-watch" data-view hidden>\n<h1>The Paper Trail</h1>\n'
                   '<p class="sub">The laws behind every export and import, and how the paperwork flows: a narrated explainer for '
                   'Weeks 1 to 7 (10:32), with chapters and captions in the player. The narration is a synthetic voice. '
@@ -277,9 +323,20 @@ function route(){
 function stopWatching(){
   const f=document.querySelector("#v-watch iframe");
   if(!f)return;
+  watchFill(false);
   try{f.contentDocument.querySelectorAll("audio,video").forEach(m=>m.pause());}
   catch(e){f.src=f.src;} // opened from disk the player counts as another origin: reload it to silence it
 }
+// where the browser can't put the player into real full screen (iPhone), it asks the page to let the frame fill the window
+function watchFill(on){
+  const box=document.querySelector("#v-watch .watch-frame");
+  if(box)box.classList.toggle("is-fs",on);
+  document.documentElement.classList.toggle("watch-fs",on);
+}
+addEventListener("message",e=>{
+  const f=document.querySelector("#v-watch iframe");
+  if(f&&e.source===f.contentWindow&&e.data&&e.data.paperTrail==="fullscreen")watchFill(!!e.data.on);
+});
 addEventListener("hashchange",route);
 route();
 """

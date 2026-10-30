@@ -2772,9 +2772,20 @@ function route(){
 function stopWatching(){
   const f=document.querySelector("#v-watch iframe");
   if(!f)return;
+  watchFill(false);
   try{f.contentDocument.querySelectorAll("audio,video").forEach(m=>m.pause());}
   catch(e){f.src=f.src;} // opened from disk the player counts as another origin: reload it to silence it
 }
+// where the browser can't put the player into real full screen (iPhone), it asks the page to let the frame fill the window
+function watchFill(on){
+  const box=document.querySelector("#v-watch .watch-frame");
+  if(box)box.classList.toggle("is-fs",on);
+  document.documentElement.classList.toggle("watch-fs",on);
+}
+addEventListener("message",e=>{
+  const f=document.querySelector("#v-watch iframe");
+  if(f&&e.source===f.contentWindow&&e.data&&e.data.paperTrail==="fullscreen")watchFill(!!e.data.on);
+});
 addEventListener("hashchange",route);
 route();
 </script>
