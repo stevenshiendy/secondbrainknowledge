@@ -74,11 +74,14 @@
   });
   // Slide mode: write each chapter's page number into the contents, like a printed book
   function numberContents() {
-    var paged = isSlide();
-    view.querySelectorAll("[data-pg-for]").forEach(function (pg) {
+    var paged = isSlide(), cells = Array.prototype.slice.call(view.querySelectorAll("[data-pg-for]"));
+    // measure every chapter first, then write: the contents page is part of the book, so each write would make the
+    // browser lay out the whole book again before the next measurement
+    var nums = cells.map(function (pg) {
       var sec = paged && document.getElementById(pg.dataset.pgFor);
-      pg.textContent = sec ? pageOf(sec) + 1 : "";
+      return sec ? String(pageOf(sec) + 1) : "";
     });
+    cells.forEach(function (pg, i) { if (pg.textContent !== nums[i]) pg.textContent = nums[i]; });
   }
 
   /* ---------- page footer (slide mode) ---------- */
@@ -184,19 +187,7 @@
     var pitch = (view.clientWidth + gap) / cols;
     var colOf = function (r) { return Math.floor((r.left - view.getBoundingClientRect().left + view.scrollLeft + 2) / pitch); };
     var heads = headingsOf(view), tried = [];
-    for (var guard = 0; guard < 80; guard++) {
-      var hit = null;
-      for (var i = 0; i < heads.length && !hit; i++) {
-        var h = heads[i];
-        if (tried.indexOf(h) >= 0) continue;
-        var n = h.nextElementSibling;
-        while (n && !(n.textContent.trim() || n.querySelector("svg, img"))) n = n.nextElementSibling;
-        if (!n) continue;
-        var a = visibleRects(h), b = visibleRects(n);
-        if (a.length && b.length && colOf(a[a.length - 1]) !== colOf(b[0])) hit = h;
-      }
-      if (!hit) break;
-      tried.push(hit);
+    var unitOf = function (hit) {
       // Move the whole unit the heading opens. Climb while the target is the first thing in its parent (so a step's
       // heading takes its list and the label above it), and take any headings or lead-in lines just before it along.
       var target = hit, prev;
@@ -206,11 +197,30 @@
         if (!target.previousElementSibling && par && !par.matches("section.topic, [data-readable]")) { target = par; continue; }
         break;
       }
-      var grid = target.closest(".cols"); // a page break cannot fall inside a grid cell: move the whole grid
-      if (grid) target = grid;
-      var secEl = target.closest("section.topic");
-      if (secEl && target === secEl.firstElementChild) continue; // chapters already start a page
-      target.classList.add("bk-push");
+      return target.closest(".cols") || target; // a page break cannot fall inside a grid cell: move the whole grid
+    };
+    // Every chapter starts on a fresh page, so a move inside one chapter cannot shift another: each pass fixes the first
+    // stranded heading of every chapter at once, and a whole book settles in a few re-layouts instead of one per heading.
+    for (var pass = 0; pass < 12; pass++) {
+      // measure first (one layout for the whole pass)…
+      var seen = {}, moves = [];
+      for (var i = 0; i < heads.length; i++) {
+        var h = heads[i], group = h.closest("section.topic") || view, key = group.id || "intro";
+        if (seen[key] || tried.indexOf(h) >= 0) continue;
+        var n = h.nextElementSibling;
+        while (n && !(n.textContent.trim() || n.querySelector("svg, img"))) n = n.nextElementSibling;
+        if (!n) continue;
+        var a = visibleRects(h), b = visibleRects(n);
+        if (!(a.length && b.length && colOf(a[a.length - 1]) !== colOf(b[0]))) continue;
+        tried.push(h);
+        var target = unitOf(h), secEl = target.closest("section.topic");
+        if (secEl && target === secEl.firstElementChild) continue; // chapters already start a page
+        seen[key] = true;
+        moves.push(target);
+      }
+      if (!moves.length) break;
+      // …then move every chapter's first stranded heading at once
+      moves.forEach(function (t) { t.classList.add("bk-push"); });
     }
     view.dataset.bkSig = layoutSig();
   }
@@ -232,8 +242,11 @@
     pages = Math.max(1, Math.ceil((view.scrollWidth + gap) / step - 0.01));
     numberContents();
   }
+  // The page an element starts on. A chapter spread over many pages has a costly box (the browser joins every page it
+  // covers), so measure where it starts: its first line, the chapter label.
   function pageOf(el) {
-    var x = el.getBoundingClientRect().left - view.getBoundingClientRect().left + view.scrollLeft;
+    var probe = el.matches && el.matches("section.topic") && el.firstElementChild ? el.firstElementChild : el;
+    var x = probe.getBoundingClientRect().left - view.getBoundingClientRect().left + view.scrollLeft;
     return Math.max(0, Math.min(pages - 1, Math.floor((x + 2) / step)));
   }
   function goTo(p, instant) {
@@ -482,7 +495,7 @@
     var t = String(html).replace(/<[^>]+>/g, " ").toLowerCase().match(/[a-z][a-z0-9-]{2,}/g) || [];
     return t.filter(function (w) { return !STOP[w]; }).map(function (w) { return w.replace(/(ies|es|s)$/, ""); });
   }
-  function weekOf(sec) { var m = /week\s*(\d+)/i.exec(tagOf(sec)); return m ? +m[1] : null; }
+  function weekOf(sec) { if (sec.dataset.week) return +sec.dataset.week; var m = /week\s*(\d+)/i.exec(tagOf(sec)); return m ? +m[1] : null; }
   function buildPopQuizzes() {
     var quiz = window.SB_QUIZ ? window.SB_QUIZ.list() : [], deck = window.SB_CARDS ? window.SB_CARDS.list() : [];
     if (!quiz.length && !deck.length) return;

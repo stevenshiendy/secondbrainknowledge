@@ -10,7 +10,10 @@ The pack's wording and data are kept; its colours are mapped onto the site theme
 The practice page's own glossary tab and the FOB page's mini glossary repeat entries from the report's
 glossary, so only the report's copy is kept and every abbreviation tip links to it.
 """
+import html
+import json
 import re
+import shutil
 import sys
 import pathlib
 
@@ -62,6 +65,28 @@ def split_sections(body, default_tag, id_prefix="", rename=None):
 
 BACK_MATTER = {"glossary", "fx-glossary"}  # reference sections: no chapter number
 
+# The practice quiz numbers its extra sets as weeks 8, 9… ("Laws & flows (video)", "Regulations by level"); the report's
+# parts carry the same names. Matching them lets a chapter's Check-yourself box draw on its own set.
+QUIZ_SETS = {re.sub(r"\s*\(.*?\)", "", html.unescape(lbl)).strip().lower(): int(v)
+             for v, lbl in re.findall(r'<option value="(\d+)">([^<]+)</option>', prac) if int(v) > 7}
+DECK_WEEK = {v: QUIZ_SETS[re.sub(r"\s*\(.*?\)", "", html.unescape(lbl)).strip().lower()]
+             for v, lbl in re.findall(r'<option value="([a-z]+)">([^<]+)</option>', prac)
+             if re.sub(r"\s*\(.*?\)", "", html.unescape(lbl)).strip().lower() in QUIZ_SETS}
+
+
+def _words(t):
+    return {w.rstrip("s") for w in re.findall(r"[a-z&]+", html.unescape(t).lower())}
+
+
+def week_of(tag):
+    m = re.search(r"WEEK\s+(\d+)", tag, re.I)
+    if m:
+        return int(m.group(1))
+    # a part matches a set when every word of the set's name appears in the part's label ("Regulations by level" ↔
+    # "Part K · Every regulation by level …")
+    tw = _words(tag)
+    return next((v for name, v in QUIZ_SETS.items() if name and _words(name) <= tw), None)
+
 
 def render(view, title, kicker, h1, intro_html, sections, foot, default_tag):
     out = ['<div id="v-%s" data-view data-readable data-title="%s"%s>' % (view, title, "" if view == "learn" else " hidden"),
@@ -75,8 +100,9 @@ def render(view, title, kicker, h1, intro_html, sections, foot, default_tag):
                        % (bits[0], " · ".join(bits[1:])))
         part = s["tag"]
         extra = '<p class="ex-foot">%s</p>' % foot if foot and i == len(sections) - 1 else ""
-        out.append('<section class="topic%s" id="%s"><span class="tag">%s</span><h2>%s</h2>%s%s</section>'
-                   % (" bk-back" if s["id"] in BACK_MATTER else "", s["id"], s["tag"], s["title"], fix_classes(s["html"].strip()), extra))
+        wk = week_of(s["tag"])
+        out.append('<section class="topic%s" id="%s"%s><span class="tag">%s</span><h2>%s</h2>%s%s</section>'
+                   % (" bk-back" if s["id"] in BACK_MATTER else "", s["id"], ' data-week="%d"' % wk if wk else "", s["tag"], s["title"], fix_classes(s["html"].strip()), extra))
     out.append("</div>")
     return "\n".join(out)
 
@@ -89,6 +115,8 @@ h1 = one(r"<h1>(.*?)</h1>", hero).group(1).strip()
 lede = one(r'<p class="lede">(.*?)</p>', hero).group(1).strip()
 meta = re.sub(r"</?span>", "", one(r'<div class="meta">(.*?)</div>', hero).group(1)).strip()
 body = main[main.index("</header>") + 9:]
+KQ = re.compile(r"(?<![\w-])kq(?=-|\b)")
+body = KQ.sub("rq", body)
 foot = re.search(r"<footer>(.*?)</footer>", body, re.S)
 if foot:
     body = body[: foot.start()]
@@ -98,6 +126,8 @@ for s in sections:
     s["html"] = s["html"].replace(
         "Test yourself with the companion page: <b>Export-Import Practice</b> (quiz, flashcards and a mock midterm with answer key).",
         'Test yourself in this notebook\'s <a href="#quiz">Quiz</a>, <a href="#flashcards">Flashcards</a> and <a href="#mock-exam">Mock exam</a> tabs (with answer key).')
+    # the pack's separate FOB and CIF page is this notebook's FOB & CIF tab
+    s["html"] = re.sub(r'The companion page <b>(.*?)</b> in this study pack', r'The <a href="#fobcif">\1</a> tab in this notebook', s["html"])
 # ---------- additions written for this notebook (tools/exim-additions/) ----------
 # Each is placed straight after a fixed spot in the pack's text, so rebuilding from a newer pack keeps it.
 ADD = SITE / "tools" / "exim-additions"
@@ -133,10 +163,16 @@ fj = found_js[0]
 fj = fj.replace("document.querySelectorAll('.gl-row')", "document.querySelectorAll('#glossary .gl-row')")
 fj = fj.replace("document.querySelectorAll('.gloss')", "document.querySelectorAll('#glossary .gloss')")
 fj = fj.replace("none.hidden=n>0;", "none.hidden=n>0;document.dispatchEvent(new CustomEvent('sb:reflow'));")
-# the practice script's abbreviation tip covers the whole notebook, so drop the report's copy
+# the practice script's abbreviation tip covers the whole notebook, so drop the report's copy (and keep what follows it)
 cut = fj.index("  var tip=document.createElement('div')")
-fj = fj[:cut] + "})();\n"
+fj = fj[:cut] + fj[fj.index("\n})();", cut) + 1:]
+fj = KQ.sub("rq", fj)
 assert fj.count("#glossary .gl-row") == 1 and "sb:reflow" in fj
+# its stylesheet, renamed the same way; the pack's colour names are mapped onto the site themes in exim.css
+rq_css = ""
+for st in re.findall(r"<style>(.*?)</style>", found, re.S):
+    if "/* Regulation quiz" in st:
+        rq_css = KQ.sub("rq", st[st.index("/* Regulation quiz"):]).strip()
 
 # ---------- FOB & CIF explainer ----------
 fm = fob[fob.index("<main>") + 6: fob.index("</main>")]
@@ -183,13 +219,29 @@ buildDeck();
 """
 # search hook: assets/reader.js lists and opens flashcards through window.SB_CARDS
 # (and chapter "Check yourself" boxes draw on the quiz and cards through window.SB_QUIZ / SB_CARDS)
+pj += "var DECK_WEEK=%s;\n" % json.dumps(DECK_WEEK)
 pj += """window.SB_CARDS={view:'flashcards',
-  list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b,week:/^w\\d$/.test(c.d)?+c.d.slice(1):null,quizzable:c.d!=='ab'}})},
+  list:function(){return CARDS.map(function(c){return {deck:WEEKS[c.d],front:c.f,back:c.b,week:DECK_WEEK[c.d]||(/^w\\d$/.test(c.d)?+c.d.slice(1):null),quizzable:c.d!=='ab'}})},
   open:function(i,back){var d=document.getElementById('fc-deck');d.value=CARDS[i].d==='ab'?'ab':'all';buildDeck();
     order=[i].concat(order.filter(function(x){return x!==i}));pos=0;showCard();var c=document.getElementById('fc-card');if(back)c.classList.add('flipped');return c;},
   mark:function(i,knew){marks[i]=knew?'k':'r';store.set('eip-marks2',marks);tally();}};
 window.SB_QUIZ={list:function(){return QUIZ.map(function(q){return {q:q.q,o:q.o,a:q.a,e:q.e,week:q.w}})}};
 """
+
+# ---------- The Paper Trail: the pack's narrated explainer, in a Watch tab ----------
+TRAIL = PACK / "the-paper-trail"
+watch_html = ""
+if (TRAIL / "the-paper-trail-player.html").exists():
+    out_dir = SITE / "notes" / "paper-trail"
+    out_dir.mkdir(exist_ok=True)
+    for name in ("the-paper-trail-player.html", "narration.mp3"):
+        shutil.copyfile(TRAIL / name, out_dir / name)
+    watch_html = ('<div id="v-watch" data-view hidden>\n<h1>The Paper Trail</h1>\n'
+                  '<p class="sub">The laws behind every export and import, and how the paperwork flows: a narrated explainer for '
+                  'Weeks 1 to 7 (10:32), with chapters and captions in the player. The narration is a synthetic voice. '
+                  '<a href="paper-trail/the-paper-trail-player.html" target="_blank" rel="noopener">Open it on its own page</a>.</p>\n'
+                  '<div class="watch-frame"><iframe src="paper-trail/the-paper-trail-player.html" title="The Paper Trail: narrated explainer" '
+                  'loading="lazy" allow="autoplay; fullscreen"></iframe></div>\n</div>')
 
 # ---------- assemble on the GSCM page shell ----------
 shell = (SITE / "notes" / "gscm-midterm.html").read_text()
@@ -199,23 +251,34 @@ head = re.sub(r'<meta name="description" content="[^"]*">',
               '<meta name="description" content="Export-import midterm notebook (Weeks 1–7): illustrated walkthrough with calculators and glossary, FOB and CIF explainer, quiz, flashcards and a mock midterm.">', head)
 head = head.replace("family=Gelasio", "family=IBM+Plex+Sans:wght@400;600;700&family=Gelasio")
 head = head.replace('<link rel="stylesheet" href="../assets/book.css">',
-                    '<link rel="stylesheet" href="../assets/exim.css">\n<link rel="stylesheet" href="../assets/book.css">')
+                    '<link rel="stylesheet" href="../assets/exim.css">\n<link rel="stylesheet" href="../assets/book.css">'
+                    + ("\n<style>/* Part K regulation quiz, from the study pack (kq renamed rq) */\n%s\n</style>" % rq_css if rq_css else ""))
 header = shell[shell.index("<header"): shell.index("</header>") + 9].replace("GSCM Midterm</span>", "Export-Import</span>")
 header = re.sub(r'<nav class="sb-nav".*?</nav>',
-                '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    <a href="#learn">Walkthrough</a><a href="#fobcif">FOB &amp; CIF</a><a href="#assign">Assignments</a><a href="#quiz">Quiz</a>'
+                '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    <a href="#learn">Walkthrough</a><a href="#fobcif">FOB &amp; CIF</a><a href="#watch">Watch</a><a href="#assign">Assignments</a><a href="#quiz">Quiz</a>'
                 '<a href="#flashcards">Flashcards</a><a href="#mock-exam">Mock exam</a><a href="#glossary">Glossary</a>\n  </nav>', header, flags=re.S)
 
 router = """
 /* ---------- routing: a view name, or an anchor inside a readable view ---------- */
-const views=["learn","fobcif","assign","quiz","flashcards","mock-exam"];
+const views=["learn","fobcif","watch","assign","quiz","flashcards","mock-exam"];
+let lastView=null;
 function route(){
   const h=(location.hash||"#learn").slice(1);
   const t=views.includes(h)?null:document.getElementById(h);
   const home=t&&t.closest("[data-readable]");
   const v=views.includes(h)?h:home?home.id.slice(2):"learn";
+  if(lastView==="watch"&&v!=="watch")stopWatching();
+  lastView=v;
   document.querySelectorAll("[data-view]").forEach(el=>el.hidden=el.id!=="v-"+v);
   document.querySelectorAll("#nav a").forEach(a=>a.setAttribute("aria-current",a.getAttribute("href")==="#"+v||(h==="glossary"&&a.getAttribute("href")==="#glossary")?"page":"false"));
   if(home)t.scrollIntoView();else window.scrollTo(0,0);
+}
+// leaving the Watch tab stops the narration (a hidden player would keep talking)
+function stopWatching(){
+  const f=document.querySelector("#v-watch iframe");
+  if(!f)return;
+  try{f.contentDocument.querySelectorAll("audio,video").forEach(m=>m.pause());}
+  catch(e){f.src=f.src;} // opened from disk the player counts as another origin: reload it to silence it
 }
 addEventListener("hashchange",route);
 route();
@@ -224,6 +287,7 @@ route();
 page = (head + '<body data-book="export-import">\n\n' + header + '\n\n<main class="wrap" id="main">\n\n'
         + "<!-- ================= WALKTHROUGH (export-import-foundations.html) ================= -->\n" + learn_html
         + "\n\n<!-- ================= FOB & CIF (fob-cif.html) ================= -->\n" + fob_html
+        + "\n\n<!-- ================= WATCH (the-paper-trail/) ================= -->\n" + watch_html
         + "\n\n<!-- ================= ASSIGNMENTS (tools/exim-additions/assignments/) ================= -->\n" + assign_html
         + "\n\n<!-- ================= PRACTICE (export-import-practice.html) ================= -->\n" + practice_html.strip()
         + "\n\n</main>\n\n<script>\n" + fj.strip() + "\n" + fob_js[0].strip() + "\n</script>\n<script>\n" + pj.strip() + "\n" + router + "</script>\n"

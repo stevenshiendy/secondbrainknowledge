@@ -11,11 +11,11 @@
   // notebook reading mode: two-page "slide" spreads on wide screens, "scroll" on phones, until the reader picks one
   var layout = p.layout || (window.innerWidth >= 1024 ? "slide" : "scroll");
   var h = location.hash.slice(1);
-  var reading = /^(kisi|fobcif|assign|cards|quiz|mock|flashcards|mock-exam)$/.test(h) ? h : /^q(\d\d|-map)$/.test(h) ? "kisi" : "learn";
+  var reading = /^(kisi|fobcif|assign|watch|cards|quiz|mock|flashcards|mock-exam)$/.test(h) ? h : /^q(\d\d|-map)$/.test(h) ? "kisi" : "learn";
   d.setAttribute("data-layout", layout);
   d.setAttribute("data-reading", reading);
   // data-paged: the open view is shown as pages (keep in step with syncPaged() in reader.js)
-  if (layout === "slide" && !/^(cards|quiz|mock|flashcards|mock-exam)$/.test(reading)) d.setAttribute("data-paged", ""); // practice tabs scroll
+  if (layout === "slide" && !/^(cards|quiz|mock|flashcards|mock-exam|watch)$/.test(reading)) d.setAttribute("data-paged", ""); // practice tabs scroll
   if (p.bold) d.setAttribute("data-bold", "");
   if (p.justify) d.setAttribute("data-justify", "");
   if (p.contrast) d.setAttribute("data-contrast", "high");
