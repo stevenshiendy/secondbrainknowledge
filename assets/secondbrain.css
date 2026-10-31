@@ -336,6 +336,7 @@ input[type="range"].sb-range {
   text-decoration: none;
 }
 .cover.c-sea { background: #1F4A5E; }
+.cover.c-plum { background: #5B2D4A; }
 .cover .code { font: 700 9.5px var(--ui); letter-spacing: .14em; opacity: .85; }
 .cover .t { margin-top: auto; font: 500 15px/1.15 var(--display); overflow-wrap: normal; }
 .cover .rule { height: 1px; background: currentColor; opacity: .5; margin: 8px 0 6px; }

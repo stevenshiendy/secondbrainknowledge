@@ -41,9 +41,23 @@ The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questi
 - **GSCM Midterm** (`notes/gscm-midterm.html`): walkthrough, kisi-kisi, flashcards, quiz, mock exam.
 - **Export-Import Midterm** (`notes/export-import.html`), ENPR6304032, Weeks 1–7. It has 52 chapters in parts A–K. These include Part J "Laws & flows" (the regulations behind the video, and the export and import flows step by step) and Part K "Regulations by level" (with its own regulation quiz). It also has the recordkeeping-fine and de minimis calculators and a searchable 146-term glossary as an appendix. The other tabs are a FOB & CIF explainer, a **Watch** tab that plays the narrated explainer *The Paper Trail* (`notes/paper-trail/`) with its chapters and captions and pauses when you leave the tab. Its **Full screen** button (or the F key) fills the screen; where a browser won't do that for part of a page, as on iPhone, the player fills the browser window instead, and ✕ or Esc goes back. The build script adds the Full screen button to the copied player, and also fixes the pack's play overlay so it hides once the narration starts. The notebook also has an Assignments tab, a 92-question quiz, 163 flashcards plus a 146-card Abbreviations deck, and a timed mock midterm. A dotted underline marks an abbreviation: tap it for the full form and a link to the glossary. To rebuild it from a new version of the study pack, run `python3 -I tools/build_exim.py <path to export-import-study-pack>`. `assets/exim.css` holds its content styles. Material written for this notebook rather than taken from the pack lives in `tools/exim-additions/`. So far that is the mnemonic for the 10 General Prohibitions (Chapter 27), which the build script adds again on every rebuild along with its two Week 6 flashcards. The **Assignments** tab holds the four course assignments as chapters, each linked from the walkthrough chapter it draws on. Their source files are in `tools/exim-additions/assignments/`, and they carry no names or student numbers. Where the study pack shows that a cited regulation has since been amended or replaced, an "Update since submission" note sits beside the original text.
 
+- **International New Venture** (`notes/international-new-venture.html`), ENPR6306032, Sessions 1–14. It has 30 chapters in parts A–G, including the EuroDisneyland, LocalBite and FreshMart cases, and three appendices (glossary, key lists, numbers sheet). Practice comes as 233 flashcards plus 41 abbreviations, an 89-question quiz and a six-question case-based mock exam whose model answers link back to the chapters they draw on. It was built from the study pack in `packs/international-new-venture/`; that folder's `sources.md` records the sources, gaps, conflicts and update notes.
+
 ## Adding a notebook
 
-To turn a new course's materials into a notebook, give Claude [`tools/notebook-brief.md`](tools/notebook-brief.md) along with the materials. The brief sets out the study pack it should write: a book-style walkthrough in this site's markup, flashcards, a quiz, a mock exam, optional worked exam questions, and a source map. Then bring the pack here to be built into a notebook. The steps for doing that by hand:
+To turn a new course's materials into a notebook, give Claude [`tools/notebook-brief.md`](tools/notebook-brief.md) along with the materials. The brief sets out the study pack it should write: a book-style walkthrough in this site's markup, flashcards, a quiz, a mock exam, optional worked exam questions, and a source map. Then:
+
+1. Copy the pack folder to `packs/<slug>/`, using the `slug` from its `notebook.json`.
+2. Run the command below. It checks the pack (forbidden markup, duplicate ids, broken links, practice items that name a missing chapter). If the checks pass, it writes `notes/<slug>.html` with Walkthrough, Flashcards, Quiz and Mock exam tabs, and adds or refreshes the notebook's card on the home page. Run it again after changing the pack.
+3. Open the notebook in Scroll and Slide mode and check it before pushing.
+
+```bash
+python3 -I tools/build_notebook.py packs/<slug>
+```
+
+`exam-questions.md` (a Kisi-kisi view) is not built automatically yet. The script points it out when a pack has one.
+
+The steps for building a notebook entirely by hand:
 
 1. Copy `notes/gscm-midterm.html` to `notes/<name>.html`.
 2. Replace everything inside `<main>`, plus the flashcard/quiz/mock data in the inline `<script>`.
@@ -57,6 +71,7 @@ Shared files:
 - `assets/exim.css`: Export-Import notebook content
 - `assets/book.css`: book layout for every reading view
 - `tools/build_exim.py`: rebuilds the Export-Import notebook from the study pack
+- `tools/build_notebook.py`: builds any notebook from a pack written to `tools/notebook-brief.md`
 - `assets/secondbrain.js`: preferences, side panels, shelf progress
 - `assets/reader.js`: Scroll/Slide modes, contents, highlights, reading progress
 - `assets/boot.js`: applies saved settings before the page draws

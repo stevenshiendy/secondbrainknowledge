@@ -330,4 +330,4 @@ Go through every line before handing the pack back.
 
 ## 9. After Cowork
 
-Bring the finished pack folder to Claude Code in the SECONDBRAIN repo and ask it to add the pack as a new notebook. Claude Code places the walkthrough in a copy of the notebook page, converts `practice.json` into the flashcard, quiz and mock-exam tabs, turns `exam-questions.md` into a Kisi-kisi chapter, adds the shelf card from `notebook.json`, and checks the result in Scroll and Slide modes.
+Bring the finished pack folder to Claude Code in the SECONDBRAIN repo and ask it to add the pack as a new notebook. The pack is copied to `packs/<slug>/` and built with `tools/build_notebook.py`. That script checks the pack, turns `practice.json` into the Flashcards, Quiz and Mock exam tabs, and adds the shelf card from `notebook.json`. The result is then checked in Scroll and Slide modes. An `exam-questions.md` is still turned into a Kisi-kisi chapter by hand.

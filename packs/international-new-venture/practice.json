@@ -1,0 +1,3214 @@
+{
+ "decks": {
+  "review": "Course map and synthesis",
+  "w1": "Week 1 · Understanding international entrepreneurship",
+  "w2": "Week 2 · Preparing for the global entrepreneurial journey",
+  "w3": "Week 3 · Opportunity recognition and ideation",
+  "w4": "Week 4 · Industry and market analysis",
+  "w5": "Week 5 · Business models",
+  "w6": "Week 6 · Prototyping and validation",
+  "w7": "Week 7 · Legal protection abroad",
+  "abbreviations": "Abbreviations"
+ },
+ "flashcards": [
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The two course intended learning outcomes (CILOs) of International New Venture",
+   "back": "CILO 1: identify international market opportunities and the international business environment (Weeks 1–5). CILO 2: analyze a business model and strategic plan suitable for international expansion (Weeks 6–7)."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The seven weekly topics in order",
+   "back": "(1) Understanding international entrepreneurship; (2) preparing for the global entrepreneurial journey; (3) global opportunity recognition and ideation; (4) industry and market analysis; (5) business models for international markets; (6) prototyping and validation across cultures; (7) legal consideration and asset protection abroad."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The three cases and the week each sits beside",
+   "back": "EuroDisneyland (Week 1, a proven model failing abroad); LocalBite (Week 2, a student founder held back by myths); FreshMart (Week 5, separating business model from value proposition and choosing a model change)."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The format of case work shown by the FreshMart case",
+   "back": "A short case followed by three questions worth 30, 40 and 30 points: the business model, value creation and capture, and business model development with a risk and a test."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "Main textbook behind the slide decks",
+   "back": "Launching New Ventures (Chapters 1, 2, 3, 5 and 7), supported by Entrepreneurship: Theory, Process, Practice."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "Why the order of the weeks matters",
+   "back": "Each week supplies what the next needs: a framed problem (Week 3) before industry and market tests (Week 4), those before the business model (Week 5), a validated product (Week 6) before protecting it (Week 7)."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "Stevenson's definition of entrepreneurship",
+   "back": "\"The process by which individuals, either on their own or inside organizations, pursue opportunities without regard to the resources they currently control.\""
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "The four traits of the entrepreneurial way of thinking",
+   "back": "Opportunity-focused, risk-taking, innovative and growth-oriented."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "Phase 1 of the entrepreneurial process",
+   "back": "Find a significant problem or need; do preliminary research on the industry, market and any intellectual property, regulatory or product development issues; develop hypotheses."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "Phase 2 of the entrepreneurial process",
+   "back": "Validate the hypotheses about the customer, the solution and the business model; the results show potential revenue sources and major cost drivers."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "Phase 3 of the entrepreneurial process",
+   "back": "Once Phases 1 and 2 give sufficient confidence, design the business and plan execution: the right team and partners, and the best time to launch."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "The five environmental variables a new venture keeps responding to",
+   "back": "The economic environment, competition, new laws and regulations, labor supply, and sources of capital."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "front": "Why the entrepreneurial process is called a dynamic system",
+   "back": "It is not linear: phases loop back when hypotheses fail, and testing continues after launch because the environment keeps changing."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "Four signals that lead to technological change",
+   "back": "New customer segments emerging; new customer needs; existing needs not satisfied; new ways of manufacturing and distributing products and services."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "How new industries are born",
+   "back": "When technological change produces a novel opportunity that enterprising entrepreneurs seize."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "The Week 1 description of the industry life cycle",
+   "back": "Industries are born, grow, decline and die, like humans."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "The three Global Entrepreneurship Monitor (GEM) economy types",
+   "back": "Factor-driven (unskilled labor, natural resources, necessity entrepreneurship), efficiency-driven (improving production and quality), innovation-driven (compete on innovation and entrepreneurship)."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "Why factor-driven economies show very high entrepreneurial activity",
+   "back": "Businesses are often created out of necessity."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "The age group with the most intention to start a business (GEM)",
+   "back": "People aged 25 to 34, across all types of economies."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "front": "Three characteristics of high-impact ventures",
+   "back": "Innovative (something new), value-creating (new jobs not drawn from existing firms; unserved needs), growth-oriented (regional, national or global ambition)."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "The fuzzy front end",
+   "back": "The period before launch and startup, when activities are unclear and change as more information is obtained; much new venture risk sits here."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "Three things nascent entrepreneurs estimate in the fuzzy front end",
+   "back": "The probability of success; what success means as a return on time, money and effort; the risk or cost of failure."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "How entrepreneurs reduce subjective risk estimates",
+   "back": "Gather sufficient information and test the business model."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "Four reasons new businesses fail",
+   "back": "A solution looking for a problem; a \"me-too\" solution that is not unique; value proposition not communicated effectively; no tested business model that works."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "When \"entrepreneur\" came into popular use in the United States",
+   "back": "The 1980s, called the decade of entrepreneurship."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "The four trends of the 2016 textbook edition",
+   "back": "Digital anonymity, domestic manufacturing, big data and the lean startup movement."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "Three technology trend headings for 2018 and beyond",
+   "back": "Intelligent technology (artificial intelligence), the digital environment (immersive experiences, digital twins), and disruption (synthetic biology and genomics, quantum computing)."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "front": "A digital twin",
+   "back": "A digital replica of a human or real-world entity, fed by connected sensors, allowing advanced simulation, operation and analysis."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "EuroDisneyland's first-year headline numbers",
+   "back": "Net loss of FFr188 million for fiscal 1992; about $500 million cumulative losses by April 1993; about 10 million visitors against an 11 million target; French only 29% of visitors (forecast 50%); hotel occupancy 37%."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "Why EuroDisney lost money despite beating its stated break-even",
+   "back": "The 7–8 million visitor break-even was set for the $1 billion plan; construction cost estimates rose to $4.4 billion and the break-even was never updated."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "Spend-to-admission ratio: EuroDisney versus Tokyo",
+   "back": "EuroDisney $37.50 ÷ $47 ≈ 0.80×; Tokyo $77.50 ÷ $38 ≈ 2.04×. EuroDisney charged the highest ticket but collected the lowest total spend."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "How Disney's deal differed in Tokyo and Paris",
+   "back": "Tokyo: no equity, a license paying 10% of admissions, 5% of food and merchandise, plus fees. Paris: 49% equity for $160 million, management control, the same royalties plus management fees and 49% of profits."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "Why Disney earned while EuroDisney shareholders lost",
+   "back": "Royalties (10% admissions, 5% food, merchandise and hotels) and base management fees were charged on revenue, not profit."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "Three cultural misfits in EuroDisneyland",
+   "back": "No alcohol in a wine-drinking country; mainly American food; a strict United States appearance code challenged under French labor law. Intellectuals called it a \"cultural Chernobyl.\""
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "The recommended turnaround sequence (Option E)",
+   "back": "Fix the financial model first (capital, debt rescheduling, freeze Phase Two), then fix the product (prices, wine and beer, menus), then reinvest in a major new attraction."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "Why Tokyo Disneyland succeeded as a copy of Anaheim",
+   "back": "Japanese visitors wanted the \"real thing\" American experience; 30 million people lived within 30 miles; omiage gift-giving drove spending (over $1 billion in 1988)."
+  },
+  {
+   "deck": "w1",
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "front": "Five lessons from EuroDisneyland for international ventures",
+   "back": "Product-market fit first; past success does not travel automatically; recalculate break-even on the latest cost; set price to the segment; heavy debt plus high operating cost is risky."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "What research says about the \"entrepreneur type\"",
+   "back": "No psychological or sociological characteristics predict with any certainty who will become an entrepreneur or who will succeed."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "The six myths of entrepreneurship",
+   "back": "(1) It takes a lot of money; (2) it takes a great idea; (3) the bigger the risk, the bigger the reward; (4) a business plan is required for success; (5) entrepreneurship is for the young and reckless; (6) entrepreneurship cannot be taught."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "Reality behind Myth 2 (it takes a great idea)",
+   "back": "Most businesses successful for 50+ years started with a great team wanting an enduring company; usually the execution plan, not the idea, makes the business a success."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "Reality behind Myth 3 (bigger risk, bigger reward)",
+   "back": "Risk is relative; entrepreneurs and investors aim to reduce it. Investors expect founders to test the market, acquire the first customer and invest their own capital."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "Current thinking that replaces Myth 4 (business plan required)",
+   "back": "(1) Get in front of customers to test the idea, and (2) have a plan in order to grow the business."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "Drucker's quotation against Myth 6",
+   "back": "\"It's not magic, it's not mysterious, and it has nothing to do with the genes. It is a discipline. And, like any discipline, it can be learned.\""
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-myths",
+   "front": "Reality behind Myth 5 (young and reckless)",
+   "back": "Entrepreneurs' ages are fairly evenly distributed across all decades; entrepreneurship can be a lifetime endeavor."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "Two basic motives for starting a business",
+   "back": "Necessity or opportunity."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "Four conditions under which people choose the startup process",
+   "back": "Low industry entry barriers; uncertainty in the job market; plentiful investment capital; a breakthrough or disruptive technology that will make previous technology obsolete."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "Serial versus portfolio entrepreneur",
+   "back": "Serial: starts one business, then moves on to start another. Portfolio: owns minority or majority stakes in several ventures at once."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "The profit rule for nonprofit ventures",
+   "back": "They can and should make a profit, but the profit must stay within the organization rather than go to owners."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "The four corporate entrepreneurship models in order",
+   "back": "Opportunistic (waits for champions), enabler (spreads resources with clear selection criteria), advocate (assigns ownership plus modest seed funding), producer (formal unit, dedicated funds, autonomy; once called a skunkworks)."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "Three things corporate entrepreneurs need to do",
+   "back": "Align with key decision makers; work with only the best, most motivated people; do any job needed to make the project work."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "Share of small businesses that were home-based (Small Business Administration, 2014)",
+   "back": "52 percent."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-paths",
+   "front": "Five challenges of the entrepreneurial career (any five)",
+   "back": "Finding the right opportunity; long unpaid hours; uncertainty and high risk; decisions affecting others; relying on others; no previous experience; facing failure; finding the right people; raising capital; isolation and disillusionment."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "The six steps to prepare for entrepreneurship",
+   "back": "Find a mentor; build a professional network; learn about entrepreneurs; understand personality and business preferences; improve or acquire critical skills; study an industry."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "Three reasons startups expose founders to more risk",
+   "back": "They are typically undercapitalized, poorly managed and undifferentiated from competitors."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "Definition of networking",
+   "back": "The exchange of information and resources among individuals, groups or organizations whose common goals are to mutually benefit and create value for the members."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "Strong ties versus weak ties",
+   "back": "Strong ties: close friends and family. Weak ties: acquaintances and business contacts, who are not biased by prior history and so give objective advice that helps entrepreneurs move faster."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "Network brokers",
+   "back": "Opinion leaders who exert influence between groups and serve as gateways to other networks."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "Six barriers to becoming self-employed",
+   "back": "Lack of confidence; financial needs; startup logistics; personal or family issues; time constraints; lack of skills."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "The two groups of critical entrepreneurial skills",
+   "back": "Analysis and critical thinking (calculated risk taking, embracing uncertainty, opportunity creation, organization and time management, resource gathering); written and oral communication (storytelling, vision, persuasion and negotiation, decision making, leadership)."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-preparing",
+   "front": "Why studying an industry is the best route to opportunity",
+   "back": "The best opportunities come from experience and knowledge of an industry, and opportunities can be found anywhere along its value chain, not only in products."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "LocalBite's three key concerns",
+   "back": "He thinks he needs a large amount of money; he feels the idea must be completely unique; he has no business experience and fears failure."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "LocalBite's recommended first step",
+   "back": "Test the product with 30–50 customers before investing more money."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "The four pieces of support and advice in the LocalBite case",
+   "back": "Find a mentor; build a network with entrepreneurs and potential customers; study the food industry and develop digital marketing skills; test the market before writing a detailed business plan."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "Which myths LocalBite's worries match",
+   "back": "Money: Myth 1. Unique idea: Myth 2. Fear of failure without experience: Myths 3 and 6. Testing before a detailed plan reflects Myth 4."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "Suggested starting approach for LocalBite",
+   "back": "Start from home and sell through Instagram, TikTok and online marketplaces, using savings of 5 million Indonesian rupiah."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "TAM, SAM and SOM in the LocalBite blueprint",
+   "back": "Total addressable market Rp 848.9 trillion; serviceable available market Rp 394.3 billion; serviceable obtainable market Rp 101.2 million (about 0.026% of SAM), limited by production capacity."
+  },
+  {
+   "deck": "w2",
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "front": "The blueprint's three-month launch sequence",
+   "back": "Month 1: zero-commission channels (WhatsApp, Instagram, TikTok); month 2: delivery apps; month 3 onward: e-commerce and local supermarket consignment. Projected total profit Rp 5,832,000."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "Idea versus opportunity",
+   "back": "Ideas are a commodity everyone has; an opportunity is an idea with commercial potential that can turn into a business. Opportunity is the intersection of an idea and a customer."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "Definition of design thinking",
+   "back": "A process and approach that looks at the world from the customer's perspective, moving from inspiration (creativity) to ideation (opportunity development) to implementation (innovation and commercialization)."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "Four things design thinking does",
+   "back": "Define a problem; create and consider multiple options; refine them through iteration; settle on a winning solution."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "The heart of design thinking",
+   "back": "Empathy: a deep understanding of what customers want, gained by embedding in their world."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "Four characteristics of design thinkers besides empathy",
+   "back": "Integrative thinking, optimism, experimentation and collaboration."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "Tools of the innovation/implementation group",
+   "back": "Rapid prototyping, hypothesis testing and launch to learn."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "front": "Questions asked in the opportunity/ideation group",
+   "back": "What is possible? What problem is being solved? Are there customers for a solution?"
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Creativity, invention and innovation",
+   "back": "Creativity: using imagination to produce original ideas. Invention: discovering something that did not exist. Innovation: a new way to do something or an improvement to an existing product or service."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Wallas's four stages of the creative process",
+   "back": "Preparation; incubation; illumination; verification."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Seeff's seven stages of the creative process",
+   "back": "Hearing the call; fear and resistance; resolution; turning point; creation; manifestation; fulfillment."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Two types of roadblock to creativity, with an example of each",
+   "back": "Environmental (multitasking lowers productivity) and personal (needing ideas to seem acceptable or rational to others)."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Three actions to build creative confidence",
+   "back": "Set manageable goals for small wins; learn everything about the idea; know when to stop improving and move into action mode."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Four rules of thumb for generating ideas",
+   "back": "Generate individually first in a group; quantity over quality at first; capture every idea; piggyback on ideas only after individual generation."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Brainwriting",
+   "back": "Brainstorming in which everyone writes ideas on sticky notes, which are organized into themes and unusual combinations, so all members feel comfortable contributing."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "Journey mapping",
+   "back": "Depicting all touch points a company has with a customer, from awareness of need and purchase through use, service and final disposal."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-creativity",
+   "front": "The five ways to develop creative skills",
+   "back": "Design a creative environment; log ideas; put the familiar in a new context; use your personal network; visualize something."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Discovery theory of opportunity",
+   "back": "Opportunities arise from shifts in external factors (regulation, technology, customer preferences); entrepreneurs spot them through alertness."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Three attributes that make up entrepreneurial alertness",
+   "back": "Risk preference; cognitive differences; information asymmetries."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Creation theory of opportunity",
+   "back": "Entrepreneurs create opportunities through actions, reactions and experiments; there are no seeds in the market, and any seeds lie within the entrepreneur."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Affirmative judgment",
+   "back": "Looking for the strengths or positive aspects of a problem first, instead of killing \"crazy\" ideas quickly."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Four components of an effective problem statement",
+   "back": "A \"how\" question; who is responsible for dealing with the problem; an action verb for the positive course of action; the target or desired outcome."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Final problem statement in the mobile ultrasound device example",
+   "back": "\"How can we speed up our product development process?\" (reached by asking why five times from \"How can we sell more mobile ultrasound devices?\")."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Attribute identification versus force fitting",
+   "back": "Attribute identification breaks a problem into elements and modifies each; force fitting applies the characteristics of a random object to the problem."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "front": "Explicit versus implicit criteria for solutions",
+   "back": "Explicit: formal, such as time limits and budgets. Implicit: unstated, such as intuition, team culture, preferences, prejudices and experience-based perspectives."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-innovation",
+   "front": "Schumpeter's five categories of innovation",
+   "back": "A new product or substantial change; a new process; a new market; new sources of supply; changes in industrial organization."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-innovation",
+   "front": "Definition of commercialization",
+   "back": "The process that moves an innovation from the laboratory to the market by executing a business strategy."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-innovation",
+   "front": "Six research areas that start commercialization",
+   "back": "The industry; the target market; intellectual property and regulatory requirements; the customer; the business model; the business design."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-innovation",
+   "front": "The outcomes and execution decisions of commercialization",
+   "back": "Outcomes: startup capital requirements, revenue sources and cost drivers. Execution: makeup of the management team and market timing."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-innovation",
+   "front": "Incremental versus disruptive innovation, with examples",
+   "back": "Incremental improves an existing base to differentiate (Apple iPad). Disruptive or radical makes previous technology obsolete (the Internet, the birth control pill, artificial intelligence)."
+  },
+  {
+   "deck": "w3",
+   "week": 3,
+   "chapter": "w3-innovation",
+   "front": "Eight sources of innovation",
+   "back": "Customers; online news and magazines; observation; demographic shifts; new laws and regulations; emerging industries; trends; business operations."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "Industry versus market",
+   "back": "An industry is defined by a product or service (businesses in a common value chain or channel); a market is defined by customers, those who pay for the benefits."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "Primary market",
+   "back": "The customers with the most need for what the venture offers; identifying it and the first customer is a key feasibility task."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "Two reasons to study the industry",
+   "back": "It is the business's external environment, which no business is independent of; and it shows whether a profit can be made and whether it is worth the effort."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "Gross margin formula and meaning",
+   "back": "Gross profit ÷ sales; it shows how much is left to pay overhead and make a profit, so how much room there is for mistakes."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "Why primary field data are needed after secondary research",
+   "back": "Secondary sources rarely give the most current information because of the lead time from data gathering to print."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "Six sources of primary industry data",
+   "back": "Industry observers and analysts; suppliers and distributors; customers; employees of key firms; professionals from service organizations; trade shows."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "The six stages of the industry life cycle",
+   "back": "Emerging; growth; differentiation; shakeout; maturity; decline."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "What happens in the shakeout stage",
+   "back": "Dominant firms emerge as weaker firms leave."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "front": "The value chain and why it matters",
+   "back": "All companies contributing to the development and distribution of an industry's products; locating the venture on it shows who pays whom and helps set costs and prices."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "Porter's five forces",
+   "back": "Barriers to entry (threat of new entrants); threat of substitutes; buyers' bargaining power; suppliers' bargaining power; rivalry among existing firms."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "Seven barriers to entry",
+   "back": "Economies of scale; brand loyalty; capital requirements; switching costs for the buyer; access to distribution channels; proprietary factors; government regulations."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "Forward integration by suppliers",
+   "back": "Suppliers buying the outlets for their goods and services, so they control the final selling price."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "Three ways suppliers exert power",
+   "back": "Threatening to raise prices; limiting quality or quantity supplied; changing the quality of products supplied (and integrating forward)."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "Profile of an attractive industry",
+   "back": "High barriers to entry; weak supplier and buyer power; few substitutes; not highly competitive."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "How a new venture should enter a highly competitive market",
+   "back": "Identify a niche that serves an unmet customer need and enter quietly to gain a foothold, avoiding price wars and costly advertising battles."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "front": "Porter's basic premise",
+   "back": "Sustaining high performance requires a well-thought-out strategy and implementation plan based on how the industry works and how attractive its markets are."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "Three goals of market research for a new company",
+   "back": "Identify and profile the first customer; estimate their potential demand; identify subsequent segments for growth."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "The first customer",
+   "back": "The customer with a significant problem the venture can solve; often an unserved niche rather than the biggest market."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "The four-step process for gathering market data",
+   "back": "Assess information needs; research secondary sources first; measure the target market with primary research; forecast demand."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "The customer discovery hierarchy",
+   "back": "Gatekeepers (control access and information); influencers (approval often required); deciders (final decision, usually on budget); purchasers (authority to buy); users (ultimate beneficiaries)."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "Four ways to collect primary customer data",
+   "back": "Ethnographic observation; interviews; informal focus groups; online or in-person surveys."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "Five steps of the ethnographic approach for entrepreneurs",
+   "back": "Learn from observation; explain what was observed; develop a hypothesis; test the theory; draw conclusions."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "Five advantages of personal interviews",
+   "back": "More clarification and discussion; nonverbal cues show truthfulness; high response rate; open-ended questions for depth; networking and contacts."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "Four rules for questionnaire design",
+   "back": "Keep it short with white space; no leading or biased questions; easy questions first; demographic questions last."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "front": "Why survey samples should be random",
+   "back": "To avoid bias: the researcher should have as little control as possible over who is selected."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "What a customer matrix lays out for each segment",
+   "back": "Pain, benefit, distribution channel, product or service and potential competition."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Six items in a customer profile",
+   "back": "Age; income level; education; buying habits (when, where, how much); where they find such products; how they would like to buy them."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Why demand questions should seek outcomes",
+   "back": "Customers describe problems and desired outcomes well but solutions poorly, so outcome questions lead to better solution design."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Four reasons entrepreneurs underestimate competition",
+   "back": "Incomplete information; underestimating resources and skills needed; missing roadblocks; not knowing what they do not know."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Three types of competitor",
+   "back": "Direct (same needs, same resources); indirect or substitute (same needs, different resources or channels); emerging or potential (could move in quickly)."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Good versus bad competition",
+   "back": "Good: competitors performing badly with unhappy customers, an opening. Bad: competitors doing everything right with happy customers, hard to displace."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Three checks for threats from outside the industry",
+   "back": "What the competitor must do to succeed in its core business; whether it has a competency in your area; which core competencies transfer to your business."
+  },
+  {
+   "deck": "w4",
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "front": "Four ways to find competitor information",
+   "back": "Visit websites and outlets; buy their products; read customer comments online; use Hoover's Online, the Securities and Exchange Commission and OneSource for public companies."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "Drucker's five business model questions",
+   "back": "What is our mission? Who is our customer? What does our customer value? What are our results? What is our plan?"
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "The essence of a business model",
+   "back": "The strategic decisions and trade-offs entrepreneurs make to earn a profit (also described as a blueprint or an analytical device for evaluation and action)."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "Value proposition",
+   "back": "The benefit the customer derives, the reason they will buy: the unique mix of product, price, service, relationship and image, explaining what the company does better or differently."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "Features versus benefits",
+   "back": "Benefits are intangibles (better health, saving time and money, reliability); features are product attributes (design, physical characteristics, functions)."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "Segmenting a market",
+   "back": "Dividing it into meaningful and measurable parts based on needs, buyer behaviors and demographics."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "Three advantages of selling direct to the customer",
+   "back": "Large upside potential; control over branding, pricing and relationship; management of user data and experience."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "Three advantages of selling through an intermediary",
+   "back": "Partner does the build-out and capital investment; partner handles billing and service; more predictable cash flow with a licensing agreement."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "The most common type of strategic partnership",
+   "back": "The buyer–supplier relationship, used to cut costs or share facilities such as manufacturing or warehousing."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-business-model",
+   "front": "The blocks of the entrepreneur's business model canvas",
+   "back": "Problem; solution; key metrics; unique value proposition; unfair advantage; channels and strategic partners; customer segments; cost structure; revenue streams."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "Five revenue models",
+   "back": "Subscription or membership; volume or unit-based; licensing and syndication; transaction fee; advertising."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "What makes a revenue model healthy",
+   "back": "Revenue from multiple types of customers and multiple products and services."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "Three kinds of cost driver",
+   "back": "Fixed (rent), variable (manufacturing), nonrecurring (one-time expense)."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "Five cost structures",
+   "back": "Marketing or advertising; inventory; office or retail space; support center; direct cost structure."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "Cost-driven versus value-driven model",
+   "back": "Cost-driven keeps costs as low as possible because margins are narrow; value-driven creates premium experiences with personalized service and luxury facilities."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "Five ways business models change",
+   "back": "Incremental expansion (geography, markets, pricing, lines, channels); revitalizing an established model; taking a model into new areas; adding models by acquisition; building new models on core competencies."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "front": "Break-even units formula",
+   "back": "Fixed costs ÷ (price − variable cost per unit)."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "Definition of feasibility analysis",
+   "back": "The testing, evaluation and validation of a proposed business model for a new venture; a tool to assess and reduce risk at startup."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "Four things to understand when assessing an opportunity",
+   "back": "Your capabilities; competitors' capabilities and intentions; customers' needs and desires; your bargaining power in the value chain."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "The four areas of feasibility analysis",
+   "back": "Industry and market/customer; product/service; founding team; financial needs assessment."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "Six steps to validate a business model",
+   "back": "Develop hypotheses for each component; design an experiment for each; test with customers in the field; consider the impact on all components; change the model; retest until fully validated."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "Three critical success factors tested in feasibility analysis",
+   "back": "Is the market big enough to be viable and grow? Do capital requirements to reach positive cash flow make sense? Can an appropriate founding team be assembled?"
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "Three groups of macro environmental factors",
+   "back": "Industry factors and trends; market factors and trends; global economic factors."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "Taleb's antifragile business",
+   "back": "One that guards what it cannot afford to lose (about 90 percent) and takes risks with about 10 percent, benefiting from positive uncertainty without suffering the negative side."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "front": "The waiting-in-line app's initial unvalidated model",
+   "back": "Value proposition: save time, avoid lines; segment: students; channel: direct; partners: concession stands, food trucks; revenue: advertising and partner subscriptions; costs: software development, sales force."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "front": "Blue ocean strategy",
+   "back": "Kim and Mauborgne's idea of seeking white spaces where no one is playing, at the intersection of value and cost."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "front": "The four blue ocean actions",
+   "back": "Eliminate something the industry has always done; reduce something below the standard; raise something above the standard; create something the industry has never done."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "front": "Two contexts with challenging business models",
+   "back": "Where the customer does not want to pay, and where the startup faces dominant players."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "front": "Three ways to monetize a platform whose users will not pay",
+   "back": "Advertising (under attack from advertisers and users); freemium (basic free, paid enhanced features); sponsorship (an entity funds free access)."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "front": "Two-sided platform",
+   "back": "A platform acting as intermediary where users upload and share content and so become the content providers who add to its value."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "front": "How startups facing dominant players often compete",
+   "back": "By acquiring intellectual property and know-how they control and developing it until it is attractive to a dominant firm."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "FreshMart's main business model",
+   "back": "A store-based omnichannel reseller living on margin: buy well (bulk, own brand), place stock close to demand (25 stores, three channels), sell volume."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "FreshMart's three problems",
+   "back": "High delivery cost on small orders; unsold fresh food; customers switching for discounts."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "FreshMart's value proposition versus business model",
+   "back": "Value proposition (the promise): affordable, close and convenient, rewarding. Business model (the machine): purchasing creates, channels deliver, revenue captures value."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "Target segment chosen in the FreshMart analysis, and why",
+   "back": "Young working adults: steadier income, they buy time rather than discounts, and the case names their need for ready-to-eat meals."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "Break-even delivery basket at FreshMart",
+   "back": "Rp 12,000 per trip ÷ 25% gross margin = Rp 48,000; smaller delivered orders lose money."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "FreshMart Plus offer",
+   "back": "Rp 29,000 a month; free 30-minute delivery on orders from Rp 75,000 within about 3 km; member meal prices; double points on own brand; non-members pay delivery, minimum Rp 50,000."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "The biggest risk of FreshMart Plus and its effect",
+   "back": "Members move store trips into free delivery: a Rp 100,000 basket earns Rp 25,000 walked in but Rp 13,000 delivered, so profit roughly halves."
+  },
+  {
+   "deck": "w5",
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "front": "FreshMart Plus test plan",
+   "back": "Weeks 1–2 fake-door test; weeks 3–10 pilot in 2 stores with 2 control stores; week 11 decide to scale, adjust or stop."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Goal of the product development process",
+   "back": "Bring new products to market at the right time and cost, so customers pay a price reflecting the value they perceive."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Definition of product design",
+   "back": "The activity that transforms a set of requirements into an integrated whole or system."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "The seven elements of the product design system",
+   "back": "Form; texture; color; fit; user interfaces; production and assembly processes; methods for joining the parts."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Share of final cost determined by design",
+   "back": "As much as 80 percent."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Failure rate of new consumer products, and the principal reason",
+   "back": "Between 70 and 90 percent; the principal reason is lack of good market and industry analysis."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Creating versus capturing value",
+   "back": "Innovators may create value for customers but, unless they capture enough that customers will pay for, imitators and complementary providers take the returns."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Industry architecture as a cause of failure",
+   "back": "Firms that offer only part of a solution (system integrators, such as independent film studios) may see the product earn money while they do not, because they do not own content or proprietary technology."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-product-design",
+   "front": "Five problems caused by too few new product development resources",
+   "back": "Poor execution; longer time to market; missed first-to-market opportunities; projects simplified; declining team morale."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "The three categories of the product development cycle and their questions",
+   "back": "Customer identification or discovery (who is the customer, what do they need?); customer validation and design (how to design, develop and test product, market and model?); business creation (what launch strategy?)."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "The eight product development tasks",
+   "back": "Discovery; opportunity recognition; feasibility; intellectual property and regulatory requirements; prototype development; market and customer tests; launch strategy; execution plan."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Six questions when validating a solution",
+   "back": "Does it already exist? Does it solve the problem? Can it be produced? Can it be protected? What will it cost? How long to market?"
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Four sections of the new product checklist",
+   "back": "The market; strengths, weaknesses, opportunities and threats; design, development and manufacturing; financial."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Three uses of physical prototypes",
+   "back": "Communicate form, fit and function to customers; give a vendor an example to quote on; allow quick design changes."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Prototypes for non-manufacturing businesses",
+   "back": "A design, storyboard or flowchart of how the business will deliver its service or product."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Four ways to commercialize a technology",
+   "back": "License it; start a business to make and distribute it; sell it; form a joint venture with a company that has the resources."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Five factors traded off in product development",
+   "back": "Product features; cost; capital expenditures; development costs; timing."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "front": "Features versus product cost trade-off advice",
+   "back": "Put most product cost into the features that matter most to customers and cut features that add no value."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "Definition of a minimum viable product (MVP)",
+   "back": "The version of a product with just enough functionality and value proposition to attract early adopters who give feedback and help develop the final mass-market product."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "Goal of the MVP versus goal of the final product",
+   "back": "MVP: attract initial customers who guide the product. Final product: attract passionate users who refer it to others."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "MVP approach at the incremental end of the innovation spectrum",
+   "back": "Customers have real problems and alternatives from major players, so build more than a simple MVP; a complete product may make more sense."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "MVP approach at the disruptive end of the innovation spectrum",
+   "back": "No direct competition and customers forgive flaws, so build the MVP in stages based on customer feedback."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "What produces a viable product, according to the slides",
+   "back": "Not the number of MVP iterations, but how well you recognize when customers tell you the product is viable."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "Gains from outsourcing product development",
+   "back": "Risk, cost and cycle time can fall by 60 to 90 percent, plus access to a network of expertise a young firm could not afford."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "Three rules of thumb for development service firms",
+   "back": "Do not give design and development to the same firm unless it specializes in both; spend enough time on design before building; break development into parts for cheap early tests."
+  },
+  {
+   "deck": "w6",
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "front": "Four cautions on outsourcing",
+   "back": "Never choose on price alone; keep core research and development close to the customer; distance management is harder and costlier; intellectual property is hard to protect where piracy is rampant."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "Three categories of knowledge",
+   "back": "Intellectual capital (tacit knowledge from daily work); intellectual assets (explicit, documented knowledge); intellectual property (exclusive legal rights)."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "Four examples of intellectual property every business has",
+   "back": "A trademark on its name or brand; copyrights on advertising design; patents on an invented device; trade secrets such as the customer list."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "How intellectual property resembles and differs from personal property",
+   "back": "Like property, it can be bought, sold, donated, licensed or exchanged and must be defended; unlike it, it is intangible, a right under law that must be put into physical form to be exercised."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "The intellectual property pyramid from least to most protection",
+   "back": "Trade secrets; copyrights; trademarks; patents."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "Trade secret definition (Uniform Trade Secrets Act)",
+   "back": "A formula, device, idea, process, pattern or compilation of information that gives a competitive advantage, is not common knowledge, and is kept reasonably confidential."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "Five examples of trade secrets",
+   "back": "Pollsters' survey methods; customer lists; source codes for computer chips; customer discounts; inventions that will not be patented."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "front": "How trade secrets are protected, and the remedies",
+   "back": "Only by confidentiality agreements or contracts; remedies are injunctive relief, damages and attorney's fees, within a statute of limitations that varies by state."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Definition of a trademark, with three examples",
+   "back": "A symbol, logo, word, sound, color, design or other device identifying a business or product in commerce: FedEx logo, L'Oréal \"Because you're worth it,\" Coca-Cola bottle shape."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "When a color can be trademarked",
+   "back": "When it has secondary meaning (people associate it with a specific product, such as pink insulation); a logo's background color alone cannot be."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "How long a trademark lasts, and how it is lost",
+   "back": "As long as it is actively used and renewal fees are paid; lost if it becomes generic (aspirin, thermos)."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Three kinds of mark that cannot be trademarked",
+   "back": "Immoral or deceptive marks; official symbols such as flags; a person's name or likeness without permission."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Trademark dilution versus counterfeiting",
+   "back": "Dilution: the mark's value is substantially reduced through competition or likely confusion. Counterfeiting: deliberate copying, subject to civil and criminal penalties."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Four steps to register a trademark",
+   "back": "Search existing marks; pick a mark that is not common or closely descriptive; test its translation in target languages; choose product and service categories."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Six rights of a copyright owner (as taught)",
+   "back": "Reproduction; derivative works; distribution; public performance; public display; digital transmission performance."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Copyright terms taught in the course",
+   "back": "Life of the copyright holder plus 70 years (Copyright Extension Act of 1998); works for hire and anonymous works 95 years from publication; Berne Convention minimum life of the author plus 50 years."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Doctrine of Fair Use",
+   "back": "Reproduction is \"fair\" for criticism, comment, news reporting, teaching, scholarship and research."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Digital Millennium Copyright Act (1998)",
+   "back": "Bans falsifying or removing copyright management data and circumventing encryption, and making tools to do so; a safe harbor protects Internet service providers that infringe unknowingly."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "front": "Three parts of a copyright notice",
+   "back": "The word \"copyright\" or ©; the year of first publication; the owner's full name."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "What a patent gives its holder",
+   "back": "The exclusionary right to stop others making, using, offering for sale or selling the invention, usually for 20 years from application; then it enters the public domain."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Four signals that a patent may be needed",
+   "back": "Solves a significant problem and changes how things are done; falls under Food and Drug Administration regulation; revenues exceed enforcement cost; a plan to license it."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Economic life and the patent decision",
+   "back": "The period the invention can generate revenue; in fast-changing fields a patent may outlive it, but for long, regulated development patents are essential."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Four criteria for patentability",
+   "back": "Fits a statutory class; has utility; is novel (no prior art); is not obvious to someone of ordinary skill."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "The four statutory classes",
+   "back": "Machine; process or method; article of manufacture; composition of matter."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Three patent types and their terms (as taught)",
+   "back": "Utility: 20 years from application. Plant: 20 years from filing. Design: 14 years from issuance (15 years from grant for applications since May 2015)."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Provisional patent application",
+   "back": "A lower-cost first filing allowing \"patent pending\" for 12 months (no extension); the nonprovisional must follow, and the 12 months do not count toward the 20-year term."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Effect of the America Invents Act",
+   "back": "The United States became first-inventor-to-file: the filing date, not the date of conception, decides between two inventors."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Patent publication and maintenance timing",
+   "back": "Most applications are published 18 months after filing; maintenance fees are due 3½, 7½ and 11½ years after grant."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-patents",
+   "front": "Doctrine of equivalents",
+   "back": "Protects inventors against infringers who make small, insignificant changes to the claims."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "front": "Why patents are the most time-sensitive form of protection",
+   "back": "Under first-to-file, the longer an entrepreneur waits, the greater the chance the invention is no longer novel."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "front": "Who wins a trademark dispute under intent-to-use filing",
+   "back": "Usually the party with the earliest intent-to-use filing date; the first to file holds the presumptive right."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "front": "Three patent strategies",
+   "back": "Proprietary (acquire patents to cover the opportunity and defend position); defensive (design around patents or build a portfolio for cross-licensing); leveraging (when freedom to operate or proprietary protection is not critical)."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "front": "Reach of a United States patent",
+   "back": "Only within United States borders; it has no effect in any foreign country."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "front": "Patent Cooperation Treaty deadlines",
+   "back": "File the international application within 12 months of the first filing to keep that date; enter the national phase in chosen countries within 30 months."
+  },
+  {
+   "deck": "w7",
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "front": "How a trademark is protected abroad",
+   "back": "Register in each target market (the home registration helps), test the mark's translation, and record it with customs to block counterfeit imports."
+  },
+  {
+   "deck": "review",
+   "week": 7,
+   "chapter": "synthesis",
+   "front": "The seven-step answer chain for a case question",
+   "back": "Opportunity; industry and market; business model; feasibility; prototype or MVP; protect; recommend."
+  },
+  {
+   "deck": "review",
+   "week": 7,
+   "chapter": "synthesis",
+   "front": "Two habits that lift a case answer from adequate to excellent",
+   "back": "Quantifying with case numbers or calculations, and sequencing the recommendation with a reason for the order."
+  },
+  {
+   "deck": "review",
+   "week": 7,
+   "chapter": "synthesis",
+   "front": "The recurring message of the course",
+   "back": "Test before you scale: a model that works at home is only a hypothesis abroad."
+  },
+  {
+   "deck": "review",
+   "week": 7,
+   "chapter": "synthesis",
+   "front": "Sequencing examples from the three cases",
+   "back": "EuroDisney: cash, then product, then reinvestment. FreshMart: 2 stores before 25. LocalBite: 30–50 customers before a detailed plan."
+  },
+  {
+   "deck": "review",
+   "week": 7,
+   "chapter": "synthesis",
+   "front": "Factors that change a business model abroad",
+   "back": "Culture, climate, income and leisure budgets, holiday patterns, language and law."
+  },
+  {
+   "deck": "review",
+   "week": 7,
+   "chapter": "synthesis",
+   "front": "How to open a decision answer",
+   "back": "Answer the question directly in the first two lines (\"Yes, but only after…\"), then build the framework chain."
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "3D",
+   "back": "Three-dimensional: used of printing technology and of physical prototypes",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "AI",
+   "back": "Artificial intelligence: machine-learning solutions that complete specific tasks and augment human decisions",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "AIA",
+   "back": "America Invents Act: United States law that made the country first-inventor-to-file (effective 16 March 2013)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "B2B",
+   "back": "Business-to-business: sales to organizations rather than consumers",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "BINUS",
+   "back": "Bina Nusantara: the university running the course (BINUS University, BINUS Higher Education)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "BPOM",
+   "back": "Badan Pengawas Obat dan Makanan: Indonesia's food and drug authority, which registers packaged food",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "BRIC",
+   "back": "Brazil, Russia, India and China: large emerging economies",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "CEO",
+   "back": "Chief executive officer",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "CGT",
+   "back": "Confédération Générale du Travail: the communist-led French labor federation in the EuroDisneyland case",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "CILO",
+   "back": "Course intended learning outcome: CILO 1 identify international market opportunities and the business environment; CILO 2 analyze a business model and strategic plan for international expansion",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "COGS",
+   "back": "Cost of goods sold: the direct cost of producing what is sold",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "CRISPR",
+   "back": "Clustered regularly interspaced short palindromic repeats: a gene-editing technology for changing the genome of living cells",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "DC",
+   "back": "District of Columbia: Washington, DC, home of the Copyright Office of the Library of Congress",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "DMCA",
+   "back": "Digital Millennium Copyright Act (1998): bans removing copyright management data and circumventing encryption; safe harbor for Internet service providers",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "FDA",
+   "back": "Food and Drug Administration: the United States regulator of food, drugs and medical devices",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "FFr",
+   "back": "French francs: France's currency before the euro, used in the EuroDisneyland case",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "GEM",
+   "back": "Global Entrepreneurship Monitor: annual study that groups countries as factor-, efficiency- or innovation-driven economies",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "IDR",
+   "back": "Indonesian rupiah (currency code); also written Rp",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "IEEE",
+   "back": "Institute of Electrical and Electronics Engineers: publisher of the systematic review on cultural-based product business models",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "IoT",
+   "back": "Internet of Things: everyday devices connected to the Internet",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "IP",
+   "back": "Intellectual property: legally protected intangible assets (trade secrets, copyrights, trademarks, patents)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "MVP",
+   "back": "Minimum viable product: the version with just enough functionality and value to attract early adopters who give feedback",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "NPD",
+   "back": "New product development",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "PCT",
+   "back": "Patent Cooperation Treaty: lets one international application cover all member countries; file within 12 months of the first filing, national phase by month 30",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "PIRT",
+   "back": "Pangan Industri Rumah Tangga: Indonesian permit for home-industry food production",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "PO",
+   "back": "Pre-order: an order placed and usually paid before the product is made",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "PTAB",
+   "back": "Patent Trial and Appeal Board: the USPTO appeal body since 2012, replacing the Board of Patent Appeals and Interferences",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "R&D",
+   "back": "Research and development",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "Rp",
+   "back": "Rupiah: Indonesian currency (code IDR)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SAM",
+   "back": "Serviceable available market: the part of the total market the venture can reach",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SBA",
+   "back": "Small Business Administration: United States agency that reported 52 percent of small businesses were home-based (2014)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SEC",
+   "back": "Securities and Exchange Commission: United States regulator whose filings give information on public companies",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SKU",
+   "back": "Stock-keeping unit: one distinct product variant held in stock",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SM",
+   "back": "Service mark: symbol used after a service brand before it is registered",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SOM",
+   "back": "Serviceable obtainable market: the share of the serviceable market the venture can realistically win",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "SWOT",
+   "back": "Strengths, weaknesses, opportunities and threats",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "TAM",
+   "back": "Total addressable market: total demand for the product category",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "TM",
+   "back": "Trademark: symbol used after a brand before it is registered (® after registration)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "USPTO",
+   "back": "United States Patent and Trademark Office",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "VAT",
+   "back": "Value added tax: cut from 18.6% to 7% on EuroDisneyland tickets",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "glossary",
+   "front": "WIPO",
+   "back": "World Intellectual Property Organization: the United Nations agency that administers the PCT",
+   "quizzable": false
+  }
+ ],
+ "quiz": [
+  {
+   "week": 1,
+   "chapter": "start-here",
+   "q": "Which pair of weeks serves CILO 2 (analyzing a business model and strategic plan for international expansion)?",
+   "options": [
+    "Weeks 1 and 2",
+    "Weeks 6 and 7",
+    "Weeks 3 and 4",
+    "Weeks 4 and 5"
+   ],
+   "answer": 1,
+   "why": "Weeks 1–5 serve CILO 1; Prototyping and Validation (Week 6) and Legal Consideration and Asset Protection Abroad (Week 7) serve CILO 2."
+  },
+  {
+   "week": 1,
+   "chapter": "start-here",
+   "q": "Which case is set beside Week 5 to test business model concepts?",
+   "options": [
+    "FreshMart",
+    "EuroDisneyland",
+    "LocalBite",
+    "Astro"
+   ],
+   "answer": 0,
+   "why": "FreshMart asks students to separate business model from value proposition and choose a model change. Astro is only a benchmark inside the FreshMart analysis."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "q": "In Stevenson's definition, entrepreneurs pursue opportunities…",
+   "options": [
+    "only after securing the resources they need",
+    "only when working on their own",
+    "only inside large organizations",
+    "without regard to the resources they currently control"
+   ],
+   "answer": 3,
+   "why": "The definition stresses opportunity first and resources second, and it covers people working alone or inside organizations."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "q": "In which phase of the entrepreneurial process are hypotheses about the customer, solution and business model tested?",
+   "options": [
+    "Phase 1",
+    "Phase 3",
+    "Phase 2",
+    "After launch only"
+   ],
+   "answer": 2,
+   "why": "Phase 1 forms the hypotheses; Phase 2 validates them and reveals revenue sources and cost drivers; Phase 3 designs and plans execution."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-what-is-entrepreneurship",
+   "q": "Which is NOT one of the environmental variables the slides say a new venture keeps responding to?",
+   "options": [
+    "Labor supply",
+    "Brand loyalty",
+    "Sources of capital",
+    "New laws and regulations"
+   ],
+   "answer": 1,
+   "why": "The five variables are the economy, competition, new laws and regulations, labor supply and sources of capital. Brand loyalty is a barrier to entry in Porter's model."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "q": "Technological change happens when an entrepreneur identifies all of the following EXCEPT…",
+   "options": [
+    "a competitor's falling share price",
+    "new customer segments that appear to be emerging",
+    "existing customer needs that have not been satisfied",
+    "new ways of manufacturing and distributing"
+   ],
+   "answer": 0,
+   "why": "The four signals are customer-side: emerging segments, new needs, unsatisfied needs and new ways to make and distribute."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "q": "In which Global Entrepreneurship Monitor (GEM) economy type are businesses most often created out of necessity?",
+   "options": [
+    "Efficiency-driven",
+    "Innovation-driven",
+    "Knowledge-driven",
+    "Factor-driven"
+   ],
+   "answer": 3,
+   "why": "Factor-driven economies rely on unskilled labor and natural resources, so necessity drives very high entrepreneurial activity. \"Knowledge-driven\" is not a GEM category."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-economy-and-tech",
+   "q": "A venture that creates jobs not drawn from existing businesses and serves currently unserved needs shows which high-impact trait?",
+   "options": [
+    "Innovative",
+    "Growth-oriented",
+    "Value-creating",
+    "Necessity-driven"
+   ],
+   "answer": 2,
+   "why": "Value-creating is defined by new jobs that do not draw from existing firms and by serving unserved needs; innovative means bringing something new, growth-oriented means regional to global ambition."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "q": "What is the \"fuzzy front end\"?",
+   "options": [
+    "The first year after launch, when cash flow is uncertain",
+    "The period before launch, when activities are unclear and change as information arrives",
+    "The decline stage of the industry life cycle",
+    "The point at which investors join the venture"
+   ],
+   "answer": 1,
+   "why": "The fuzzy front end precedes launch and startup; it is where much new venture risk sits."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "q": "A founder builds an app nobody asked for and no customer will pay for. Which failure reason is this?",
+   "options": [
+    "A solution looking for a problem",
+    "A \"me-too\" solution",
+    "Poor communication of the value proposition",
+    "Too much early market testing"
+   ],
+   "answer": 0,
+   "why": "A \"me-too\" solution copies what exists; here there is no real need at all, which is the first failure reason."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-risk-and-trends",
+   "q": "According to the slides, when did the word \"entrepreneur\" come into popular use in the United States?",
+   "options": [
+    "The 1960s",
+    "The 1970s",
+    "The 2000s",
+    "The 1980s"
+   ],
+   "answer": 3,
+   "why": "The 1980s are called the decade of entrepreneurship; the 1960s were \"bigger is better.\""
+  },
+  {
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "q": "EuroDisneyland drew about 10 million visitors, above its 7–8 million break-even, yet lost money. The best explanation is that…",
+   "options": [
+    "attendance fell short of the break-even in the first year",
+    "Disney took no royalties from the park",
+    "the break-even was set for the $1 billion plan and never updated as costs rose to $4.4 billion",
+    "the French government withdrew its loans"
+   ],
+   "answer": 2,
+   "why": "Attendance exceeded the stated break-even, so the stale break-even calculation is the key; Disney did take royalties, and the loans were provided."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "q": "EuroDisney's spend-to-admission ratio was about 0.80×, against Tokyo's 2.04×. What does this show?",
+   "options": [
+    "EuroDisney charged the lowest ticket of all Disney parks",
+    "Visitors paid the highest ticket but spent the least in total",
+    "Tokyo visitors paid more for admission than EuroDisney visitors",
+    "EuroDisney's visitors spent more on food than on tickets"
+   ],
+   "answer": 1,
+   "why": "Adult tickets: EuroDisney $47, Tokyo $38; total spend EuroDisney $30–45, Tokyo $70–85."
+  },
+  {
+   "week": 1,
+   "chapter": "w1-eurodisney-case",
+   "q": "Why could Disney earn money from EuroDisneyland while other shareholders lost money?",
+   "options": [
+    "Its royalties and management fees were charged on revenue, not profit",
+    "It owned 100% of the park",
+    "It sold its stake before opening",
+    "French law guaranteed Disney a minimum profit"
+   ],
+   "answer": 0,
+   "why": "Disney held 49%, and its 10% admission and 5% food and merchandise royalties plus fees came off revenue."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-myths",
+   "q": "What do the slides say research has found about the \"typical entrepreneur\"?",
+   "options": [
+    "Most successful entrepreneurs share a high tolerance for risk",
+    "Entrepreneurs are usually aged 18 to 25",
+    "Successful entrepreneurs usually come from business families",
+    "No psychological or sociological traits predict with certainty who will become or succeed as an entrepreneur"
+   ],
+   "answer": 3,
+   "why": "Research has failed to identify a stereotypical entrepreneur; the other options are exactly the stereotypes the week dismisses."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-myths",
+   "q": "A founder says: \"I cannot start until I have a perfect, formal business plan.\" Which myth is this, and what is the current thinking?",
+   "options": [
+    "Myth 1: raise more money before planning",
+    "Myth 3: take bigger risks for bigger rewards",
+    "Myth 4: first get in front of customers to test the idea, then have a plan to grow",
+    "Myth 6: hire someone who already knows entrepreneurship"
+   ],
+   "answer": 2,
+   "why": "Myth 4 says a plan is required for success; the slides say test with customers first, then plan for growth."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-myths",
+   "q": "Peter Drucker is quoted against which myth?",
+   "options": [
+    "It takes a lot of money to start a business",
+    "Entrepreneurship cannot be taught",
+    "Entrepreneurship is for the young and reckless",
+    "The bigger the risk, the bigger the reward"
+   ],
+   "answer": 1,
+   "why": "Drucker: \"It is a discipline. And, like any discipline, it can be learned.\""
+  },
+  {
+   "week": 2,
+   "chapter": "w2-paths",
+   "q": "A company assigns ownership of a new business idea to a manager and gives modest seed funding to test it. Which corporate entrepreneurship model is this?",
+   "options": [
+    "Advocate model",
+    "Opportunistic model",
+    "Enabler model",
+    "Producer model"
+   ],
+   "answer": 0,
+   "why": "The advocate acts as evangelist with ownership and modest seed money; the producer sets up a formal unit with dedicated funds and autonomy."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-paths",
+   "q": "What distinguishes a portfolio entrepreneur from a serial entrepreneur?",
+   "options": [
+    "A portfolio entrepreneur only invests and never manages",
+    "A serial entrepreneur runs several businesses at the same time",
+    "A serial entrepreneur only works inside corporations",
+    "A portfolio entrepreneur holds stakes in several ventures at once"
+   ],
+   "answer": 3,
+   "why": "Serial entrepreneurs start one business after another; portfolio entrepreneurs own minority or majority stakes in several ventures simultaneously."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-paths",
+   "q": "Which statement about nonprofit ventures matches the slides?",
+   "options": [
+    "They are not allowed to make any profit",
+    "Their profit is distributed to donors",
+    "They can and should make a profit, but the profit stays in the organization",
+    "They cannot seek tax-exempt status"
+   ],
+   "answer": 2,
+   "why": "Contrary to popular belief, nonprofits can profit; the profit is retained, not distributed to owners."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-preparing",
+   "q": "Why do entrepreneurs rely on weak ties for advice?",
+   "options": [
+    "Weak ties are usually wealthier than strong ties",
+    "Weak ties are not biased by a prior history with the entrepreneur, so their advice is more objective",
+    "Strong ties refuse to give advice",
+    "Weak ties are bound by confidentiality agreements"
+   ],
+   "answer": 1,
+   "why": "Weak ties (acquaintances, contacts) offer objective advice that helps entrepreneurs move faster; strong ties share a history that colors their view."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-preparing",
+   "q": "In networking, what is a broker?",
+   "options": [
+    "An opinion leader who acts as a gateway between groups or networks",
+    "A close family member who funds the venture",
+    "A lawyer who drafts partnership agreements",
+    "An investor who buys shares in the venture"
+   ],
+   "answer": 0,
+   "why": "Brokers exert influence between networks and connect the entrepreneur to new ones."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-preparing",
+   "q": "Which is one of the six barriers that keep people from becoming self-employed?",
+   "options": [
+    "Too many mentors",
+    "An overly large network",
+    "Excessive industry knowledge",
+    "Startup logistics"
+   ],
+   "answer": 3,
+   "why": "The six barriers: lack of confidence, financial needs, startup logistics, personal or family issues, time constraints and lack of skills."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "q": "What does the LocalBite case recommend as the first step?",
+   "options": [
+    "Write a detailed business plan before selling anything",
+    "Raise a large amount of capital from investors",
+    "Test the product with 30–50 customers before investing more money",
+    "Develop a completely unique snack before launching"
+   ],
+   "answer": 2,
+   "why": "The case recommends a small market test first; the other options repeat the founder's myths."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "q": "The LocalBite founder believes his idea must be completely unique. Which Week 2 lesson answers this?",
+   "options": [
+    "Unique ideas reduce the need for customers",
+    "Execution, usually led by a strong team, matters more than a great idea",
+    "Only patented ideas can succeed",
+    "Investors fund only unique ideas"
+   ],
+   "answer": 1,
+   "why": "Myth 2: great businesses usually started with a great team and an execution plan, not a great idea."
+  },
+  {
+   "week": 2,
+   "chapter": "w2-localbite-case",
+   "q": "In the LocalBite blueprint, why is the serviceable obtainable market (SOM) only about 0.026% of the serviceable available market (SAM)?",
+   "options": [
+    "It is limited by the solo founder's production capacity, not by demand",
+    "Demand for snacks in Bandung is very low",
+    "Delivery apps refuse to list the product",
+    "The product is sold only to high school students"
+   ],
+   "answer": 0,
+   "why": "The blueprint states that capacity, not demand, sets the SOM of Rp 101.2 million."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "q": "According to the course, what turns an idea into an opportunity?",
+   "options": [
+    "Writing it down in a journal",
+    "Patenting it",
+    "Sharing it with friends and family",
+    "Matching it to a customer, so it has commercial potential"
+   ],
+   "answer": 3,
+   "why": "Opportunity is the intersection of an idea and a customer; ideas alone are a commodity."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "q": "What is at the heart of design thinking?",
+   "options": [
+    "Cost reduction",
+    "Rapid scaling",
+    "Empathy with what customers want",
+    "Competitive rivalry"
+   ],
+   "answer": 2,
+   "why": "Design thinking requires embedding in the customer's world to see needs from their perspective."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-design-thinking",
+   "q": "Rapid prototyping and hypothesis testing belong to which group of design thinking activity?",
+   "options": [
+    "Creativity / inspiration",
+    "Innovation / implementation",
+    "Opportunity / ideation",
+    "Observation / research"
+   ],
+   "answer": 1,
+   "why": "Implementation asks how we know and how we can test; its tools are rapid prototyping, hypothesis testing and launch to learn."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-creativity",
+   "q": "In Wallas's model, which stage involves letting the problem lie in the subconscious?",
+   "options": [
+    "Incubation",
+    "Preparation",
+    "Illumination",
+    "Verification"
+   ],
+   "answer": 0,
+   "why": "Preparation views the problem from many angles; incubation lets it rest; illumination finds the solution; verification brings it to an outcome."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-creativity",
+   "q": "When generating ideas in a group, the slides advise that you should…",
+   "options": [
+    "start by combining others' ideas",
+    "judge each idea for quality as it is suggested",
+    "discard outlandish ideas early to save time",
+    "generate ideas individually first, then combine them"
+   ],
+   "answer": 3,
+   "why": "The rules are individual first, quantity over quality, capture everything, and piggyback only after individual generation."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-creativity",
+   "q": "Which tool depicts all touch points a company has with a customer, from purchase to end of product life?",
+   "options": [
+    "Brainwriting",
+    "Force fitting",
+    "Journey mapping",
+    "Attribute identification"
+   ],
+   "answer": 2,
+   "why": "Journey mapping traces touch points from awareness of need to final disposal."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "q": "Creation theory holds that opportunities…",
+   "options": [
+    "arise from shifts in regulation and technology",
+    "are created by the entrepreneur's own actions and experiments",
+    "are found by reading industry reports",
+    "exist only in mature industries"
+   ],
+   "answer": 1,
+   "why": "Discovery theory points to external shifts; creation theory says any seeds lie within the entrepreneur."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "q": "Which is NOT one of the four components of an effective problem statement?",
+   "options": [
+    "A budget limit",
+    "A \"how\" question",
+    "An action verb",
+    "The target or desired outcome"
+   ],
+   "answer": 0,
+   "why": "The four are a how question, who is responsible, an action verb and the target outcome. A budget is a solution criterion."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-opportunity-problem",
+   "q": "Intuition, team culture and preferences used to judge solutions are examples of…",
+   "options": [
+    "explicit criteria",
+    "affirmative judgment",
+    "information asymmetries",
+    "implicit criteria"
+   ],
+   "answer": 3,
+   "why": "Explicit criteria are formal (time limits, budgets); implicit ones are known but unstated."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-innovation",
+   "q": "Which of these is one of Schumpeter's five categories of innovation?",
+   "options": [
+    "Lower advertising spend",
+    "Higher share price",
+    "New sources of supply",
+    "Larger management team"
+   ],
+   "answer": 2,
+   "why": "Schumpeter: new product, new process, new market, new sources of supply and changes in industrial organization."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-innovation",
+   "q": "The slides give the Apple iPad as an example of…",
+   "options": [
+    "disruptive innovation",
+    "incremental innovation",
+    "creation theory",
+    "a statutory class"
+   ],
+   "answer": 1,
+   "why": "The iPad improved on an existing product base; the Internet and artificial intelligence are the disruptive examples."
+  },
+  {
+   "week": 3,
+   "chapter": "w3-innovation",
+   "q": "Commercialization research guides which two critical execution decisions?",
+   "options": [
+    "The makeup of the management team and market timing",
+    "The company logo and slogan",
+    "The office location and dress code",
+    "The share price and dividend policy"
+   ],
+   "answer": 0,
+   "why": "Research outcomes drive capital needs, revenue sources and cost drivers; execution decisions are team and timing."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "q": "How does the course distinguish an industry from a market?",
+   "options": [
+    "An industry is local; a market is global",
+    "An industry includes only manufacturers; a market includes only retailers",
+    "They are two names for the same thing",
+    "An industry is defined by a product or service; a market is defined by customers who pay for its benefits"
+   ],
+   "answer": 3,
+   "why": "Industry analysis looks at businesses in a value chain; market research looks at the customers."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "q": "A retailer buys an item at $10 and sells it at $19.95. What is its gross margin?",
+   "options": [
+    "About 99.5%",
+    "About 50.1%",
+    "About 49.9%",
+    "About 33.3%"
+   ],
+   "answer": 2,
+   "why": "Gross margin = gross profit ÷ sales = $9.95 ÷ $19.95 ≈ 49.9%. Dividing by cost (99.5%) gives the markup, and 50.1% is the cost share of the price; both are common mistakes."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-industry-analysis",
+   "q": "In which life-cycle stage do dominant firms emerge as weaker firms leave?",
+   "options": [
+    "Emerging",
+    "Shakeout",
+    "Growth",
+    "Decline"
+   ],
+   "answer": 1,
+   "why": "Emerging has many entrants and no dominant players; shakeout is where dominance appears; decline has falling demand."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "q": "Which is NOT one of the barriers to entry listed in the slides?",
+   "options": [
+    "A large number of substitutes",
+    "Economies of scale",
+    "Switching costs for the buyer",
+    "Government regulations"
+   ],
+   "answer": 0,
+   "why": "Substitutes are a separate force; the seven barriers are scale, brand loyalty, capital, switching costs, distribution access, proprietary factors and regulation."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "q": "A supplier buys the shops that sell its goods to control final prices. This is…",
+   "options": [
+    "backward integration",
+    "a substitute threat",
+    "dilution",
+    "forward integration"
+   ],
+   "answer": 3,
+   "why": "Suppliers integrating forward purchase their outlets and so control the prices at which output is sold."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-five-forces",
+   "q": "Which profile describes an attractive industry under the five forces?",
+   "options": [
+    "Low entry barriers, strong buyers, many substitutes",
+    "High rivalry and many substitutes",
+    "High entry barriers, weak buyer and supplier power, few substitutes, mild rivalry",
+    "Strong suppliers and weak barriers"
+   ],
+   "answer": 2,
+   "why": "An attractive industry protects profit potential on every force; the other options describe unattractive features."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "q": "In the customer discovery hierarchy, who makes the final purchase decision, usually based on a budget?",
+   "options": [
+    "Gatekeepers",
+    "Deciders",
+    "Influencers",
+    "Users"
+   ],
+   "answer": 1,
+   "why": "Gatekeepers control access, influencers affect the decision, deciders make it, purchasers buy and users benefit."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "q": "Which questionnaire practice do the slides recommend?",
+   "options": [
+    "Ask demographic questions last",
+    "Ask demographic questions first",
+    "Use leading questions to save time",
+    "Make the questionnaire long and detailed"
+   ],
+   "answer": 0,
+   "why": "Keep it short, avoid leading questions, start easy and put demographics last when attention may have waned."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-customer-discovery",
+   "q": "Why might the first customer NOT be the biggest potential market?",
+   "options": [
+    "Large markets never buy new products",
+    "The first customer is always a government agency",
+    "Large markets are illegal to target first",
+    "It may be an unserved niche that allows entry without direct competition for a time"
+   ],
+   "answer": 3,
+   "why": "The first customer has a significant problem the venture can solve, often in an unserved niche."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "q": "A firm not serving your customers today, but with the resources to move in quickly, is…",
+   "options": [
+    "a direct competitor",
+    "an indirect competitor",
+    "an emerging or potential competitor",
+    "good competition"
+   ],
+   "answer": 2,
+   "why": "Direct competitors use the same resources for the same need; indirect ones use different resources; emerging ones could enter fast."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "q": "\"Good competition\" in the course means competitors that…",
+   "options": [
+    "are profitable and well run",
+    "perform badly and leave customers unhappy",
+    "are small and local",
+    "sell substitute products"
+   ],
+   "answer": 1,
+   "why": "Good competition is an opening; bad competition is firms doing everything right with happy customers."
+  },
+  {
+   "week": 4,
+   "chapter": "w4-segmentation-competition",
+   "q": "Why should demand questions ask about outcomes rather than solutions?",
+   "options": [
+    "Customers describe problems and desired outcomes well but solutions poorly",
+    "Outcomes are easier to patent",
+    "Customers refuse to talk about problems",
+    "Solutions questions are illegal in surveys"
+   ],
+   "answer": 0,
+   "why": "Outcome questions (\"How do you want to use…?\") lead to better solution design and better demand data."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-business-model",
+   "q": "Which is one of Drucker's five business model questions?",
+   "options": [
+    "What is our share price?",
+    "Who are our suppliers?",
+    "What is our logo?",
+    "What does our customer value?"
+   ],
+   "answer": 3,
+   "why": "The five: mission, customer, what the customer values, results and plan."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-business-model",
+   "q": "\"Saves two hours a week\" is an example of a…",
+   "options": [
+    "feature",
+    "channel",
+    "benefit",
+    "cost driver"
+   ],
+   "answer": 2,
+   "why": "Benefits are intangibles such as saving time or money; features are product attributes like design or functions."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-business-model",
+   "q": "Which is an advantage of selling through an intermediary rather than direct?",
+   "options": [
+    "The entrepreneur controls branding and pricing",
+    "The partner does the build-out and capital investment",
+    "The entrepreneur owns the user data",
+    "The entrepreneur keeps the full upside"
+   ],
+   "answer": 1,
+   "why": "Going indirect shifts investment, billing and service to the partner but gives up upside, control and data."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "q": "A software firm charges users a monthly fee for access. Which revenue model is this?",
+   "options": [
+    "Subscription or membership",
+    "Volume or unit-based",
+    "Transaction fee",
+    "Licensing and syndication"
+   ],
+   "answer": 0,
+   "why": "A recurring access fee is subscription; per-unit sales are volume-based; a charge per transaction is a transaction fee."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "q": "Rent is an example of which kind of cost?",
+   "options": [
+    "Variable",
+    "Nonrecurring",
+    "Direct marketing",
+    "Fixed"
+   ],
+   "answer": 3,
+   "why": "The slides give rent as fixed, manufacturing as variable and one-time expenses as nonrecurring."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-revenue-costs",
+   "q": "A business offering personalized service and luxury facilities follows a…",
+   "options": [
+    "cost-driven model",
+    "freemium model",
+    "value-driven model",
+    "leveraging strategy"
+   ],
+   "answer": 2,
+   "why": "Value-driven models create premium experiences; cost-driven models keep costs low because margins are narrow."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "q": "Which is NOT one of the three critical success factors tested in feasibility analysis?",
+   "options": [
+    "Whether the market is large enough to be viable and grow",
+    "Whether the founder has a registered patent",
+    "Whether capital requirements to reach positive cash flow make sense",
+    "Whether an appropriate founding team can be assembled"
+   ],
+   "answer": 1,
+   "why": "The three are market, capital and team; patents are a product and intellectual property question."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "q": "In Taleb's barbell, an antifragile business…",
+   "options": [
+    "guards about 90 percent of the business and takes risks with about 10 percent",
+    "takes large risks with the whole business",
+    "avoids all risk",
+    "splits the business evenly between safe and risky activities"
+   ],
+   "answer": 0,
+   "why": "The barbell plays safe where losses would be catastrophic and makes small bets to catch positive surprises."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-feasibility",
+   "q": "After testing a hypothesis with customers in the field, what is the next step in validating the business model?",
+   "options": [
+    "Launch the full business immediately",
+    "Write the final business plan",
+    "Design a new logo",
+    "Consider the impact of the results on all components of the model"
+   ],
+   "answer": 3,
+   "why": "The six steps: hypothesize, design experiments, test, consider impact on all components, change the model, retest."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "q": "Which is one of Kim and Mauborgne's four blue ocean actions?",
+   "options": [
+    "Copy the market leader",
+    "Cut prices below cost",
+    "Create something the industry has never done",
+    "Merge with a competitor"
+   ],
+   "answer": 2,
+   "why": "The four actions are eliminate, reduce, raise and create."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "q": "A platform offers basic features free and charges a subscription for enhanced features. This is…",
+   "options": [
+    "a sponsorship model",
+    "a freemium model",
+    "an advertising model",
+    "a licensing model"
+   ],
+   "answer": 1,
+   "why": "Freemium mixes free basic use with paid upgrades; sponsorship has an outside entity fund free access."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-bm-innovation",
+   "q": "Startups facing dominant players often focus on…",
+   "options": [
+    "acquiring intellectual property and know-how attractive to a dominant firm",
+    "starting price wars",
+    "building the largest factory",
+    "avoiding all partnerships"
+   ],
+   "answer": 0,
+   "why": "With little negotiating power, startups build controllable assets a dominant firm will want."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "q": "In the FreshMart analysis, what is the break-even basket for delivery?",
+   "options": [
+    "Rp 12,000",
+    "Rp 25,000",
+    "Rp 75,000",
+    "Rp 48,000"
+   ],
+   "answer": 3,
+   "why": "Rp 12,000 delivery cost ÷ 25% gross margin = Rp 48,000. Rp 75,000 is the member minimum order, set above break-even."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "q": "Why does the analysis choose young working adults as FreshMart's target?",
+   "options": [
+    "They buy the smallest baskets",
+    "They are the largest group near campuses",
+    "They have steadier income and pay to save time rather than hunting discounts",
+    "They prefer near-expiry discounts"
+   ],
+   "answer": 2,
+   "why": "Students buy small baskets and switch for deals; working adults score 21 of 25 and match the ready-meal line."
+  },
+  {
+   "week": 5,
+   "chapter": "w5-freshmart-case",
+   "q": "What is the biggest risk named for FreshMart Plus?",
+   "options": [
+    "Students cancel their free membership",
+    "Members move store trips into free delivery, halving profit on those baskets",
+    "Suppliers refuse own-brand orders",
+    "Delivery partners raise their fees to zero"
+   ],
+   "answer": 1,
+   "why": "A Rp 100,000 basket earns Rp 25,000 walked in but Rp 13,000 delivered free, so cannibalization is the key risk."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-product-design",
+   "q": "According to the slides, design determines as much as what share of a product's final cost?",
+   "options": [
+    "80 percent",
+    "20 percent",
+    "50 percent",
+    "95 percent"
+   ],
+   "answer": 0,
+   "why": "Design decides features, reliability, price and appeal, and up to 80 percent of final cost."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-product-design",
+   "q": "What is the principal reason for new product failure, according to research cited in the slides?",
+   "options": [
+    "Poor packaging design",
+    "Too many patents",
+    "Excessive customer testing",
+    "Lack of good market and industry analysis"
+   ],
+   "answer": 3,
+   "why": "Failure rates run 70–90 percent, mainly because of weak market and industry analysis."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-product-design",
+   "q": "Which is one of the five problems caused by a lack of new product development resources?",
+   "options": [
+    "Higher team morale",
+    "Shorter time to market",
+    "Missed first-to-market opportunities",
+    "More complex projects"
+   ],
+   "answer": 2,
+   "why": "Resource shortfalls cause poor execution, longer time to market, missed first-to-market chances, simpler projects and declining morale."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "q": "Prototype development belongs to which category of the product development cycle?",
+   "options": [
+    "Customer identification or discovery",
+    "Customer validation and design",
+    "Business creation",
+    "Post-launch review"
+   ],
+   "answer": 1,
+   "why": "Validation and design covers feasibility, intellectual property and regulation, prototype development and market tests."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "q": "Which is NOT one of the four ways to commercialize a technology listed in the slides?",
+   "options": [
+    "Give it away to competitors",
+    "License it to another company",
+    "Start a business to make and distribute it",
+    "Form a joint venture"
+   ],
+   "answer": 0,
+   "why": "The four: license, start a business, sell the technology, or joint venture."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-development-cycle",
+   "q": "For a service business, the prototype is usually…",
+   "options": [
+    "a three-dimensional physical model",
+    "a patent application",
+    "a finished product sold at full price",
+    "a design, storyboard or flowchart of how the service is delivered"
+   ],
+   "answer": 3,
+   "why": "Non-manufacturing businesses still prototype, but not always physically."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "q": "For a product near the incremental end of the innovation spectrum, the slides suggest…",
+   "options": [
+    "building a very minimal MVP in stages",
+    "skipping customer feedback entirely",
+    "building more than a simple MVP, perhaps a complete product, because customers have alternatives",
+    "waiting for competitors to launch first"
+   ],
+   "answer": 2,
+   "why": "Incremental products face strong rivals and customers who quickly judge solutions; staged MVPs suit disruptive products."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "q": "Outsourcing product development can cut risk, cost and cycle time by up to…",
+   "options": [
+    "5 to 10 percent",
+    "60 to 90 percent",
+    "20 to 30 percent",
+    "100 percent"
+   ],
+   "answer": 1,
+   "why": "The slides cite reductions by factors of 60 to 90 percent."
+  },
+  {
+   "week": 6,
+   "chapter": "w6-mvp-outsourcing",
+   "q": "Which outsourcing rule appears in the slides?",
+   "options": [
+    "Never choose an outsourced partner based solely on price",
+    "Always give design and development to the same firm",
+    "Keep research and development far from customers",
+    "Outsource first, design later"
+   ],
+   "answer": 0,
+   "why": "The slides warn that the lowest prices often carry the highest risk, and advise splitting design and development unless one firm specializes in both."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "q": "Documented, explicit knowledge that is easy to share is called…",
+   "options": [
+    "intellectual capital",
+    "intellectual property",
+    "trade secrets",
+    "intellectual assets"
+   ],
+   "answer": 3,
+   "why": "Intellectual capital is tacit; intellectual assets are explicit; intellectual property carries legal rights."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "q": "Which form of intellectual property sits at the base of the pyramid, with the least protection?",
+   "options": [
+    "Patents",
+    "Trademarks",
+    "Trade secrets",
+    "Copyrights"
+   ],
+   "answer": 2,
+   "why": "The pyramid rises from trade secrets through copyrights and trademarks to patents."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-knowledge-ip",
+   "q": "How are trade secrets protected, according to the slides?",
+   "options": [
+    "By registering them with the patent office",
+    "Only through confidentiality agreements or contracts",
+    "By trademark registration",
+    "Automatically for 20 years"
+   ],
+   "answer": 1,
+   "why": "No patent or trademark law covers trade secrets; contracts are the only route."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "q": "Why can \"aspirin\" no longer be trademarked?",
+   "options": [
+    "It has become part of the generic language",
+    "It was never used in commerce",
+    "Its renewal fees were too high",
+    "It uses an official state symbol"
+   ],
+   "answer": 0,
+   "why": "A trademark lasts while used and renewed, unless it becomes generic."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "q": "Which step in registering a trademark matters most for an international venture?",
+   "options": [
+    "Choosing a descriptive name",
+    "Using the ® symbol before registration",
+    "Stockpiling marks to sell later",
+    "Testing the mark's translation in the languages of target countries"
+   ],
+   "answer": 3,
+   "why": "Descriptive marks are weak, ® is only for registered marks and marks cannot be stockpiled."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "q": "Under the Berne Convention, member countries must protect authors' works for at least…",
+   "options": [
+    "20 years from filing",
+    "14 years from issuance",
+    "the life of the author plus 50 years",
+    "the life of the author plus 10 years"
+   ],
+   "answer": 2,
+   "why": "The Berne minimum is life plus 50; the United States term taught is life plus 70."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-trademarks-copyrights",
+   "q": "What does a copyright protect?",
+   "options": [
+    "The idea itself",
+    "The tangible form in which an idea is expressed",
+    "A functional invention",
+    "A brand name"
+   ],
+   "answer": 1,
+   "why": "Copyright protects the form, not the idea; inventions are patents and brands are trademarks."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-patents",
+   "q": "Which is one of the four USPTO criteria for patentability?",
+   "options": [
+    "The invention must not be obvious to someone with ordinary skill in the field",
+    "The invention must already be on sale",
+    "The invention must be registered as a trademark",
+    "The invention must be at least 20 years old"
+   ],
+   "answer": 0,
+   "why": "The four: statutory class, utility, novelty (no prior art) and nonobviousness. USPTO is the United States Patent and Trademark Office."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-patents",
+   "q": "A provisional patent application lasts…",
+   "options": [
+    "20 years",
+    "18 months and can be renewed",
+    "14 years from issuance",
+    "12 months and cannot be extended"
+   ],
+   "answer": 3,
+   "why": "The provisional allows \"patent pending\" for 12 months; the nonprovisional must follow."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-patents",
+   "q": "Since the America Invents Act, which date decides between two inventors of the same invention?",
+   "options": [
+    "The date of conception",
+    "The date of the first sale",
+    "The filing date of the patent application",
+    "The date of publication"
+   ],
+   "answer": 2,
+   "why": "The United States moved from first-to-invent to first-inventor-to-file."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "q": "A firm builds a patent portfolio to use as bargaining chips in cross-licensing. Which strategy is this?",
+   "options": [
+    "Proprietary",
+    "Defensive",
+    "Leveraging",
+    "Opportunistic"
+   ],
+   "answer": 1,
+   "why": "Proprietary acquires patents to defend market position; defensive designs around or cross-licenses; leveraging applies when protection is not critical."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "q": "Under the Patent Cooperation Treaty, how long after the first filing does an applicant have to enter the national phase?",
+   "options": [
+    "30 months",
+    "12 months",
+    "18 months",
+    "20 years"
+   ],
+   "answer": 0,
+   "why": "File the international application within 12 months; choose national-phase countries within 30 months."
+  },
+  {
+   "week": 7,
+   "chapter": "w7-ip-strategy",
+   "q": "Within which borders does a United States patent give protection?",
+   "options": [
+    "In all Patent Cooperation Treaty countries automatically",
+    "In all World Trade Organization countries",
+    "Worldwide",
+    "Only within the United States"
+   ],
+   "answer": 3,
+   "why": "Patent rights stop at the border; foreign protection needs foreign filing, for example via the Patent Cooperation Treaty."
+  },
+  {
+   "week": 7,
+   "chapter": "synthesis",
+   "q": "A case asks whether a venture should expand abroad. According to the synthesis chapter, how should the answer open?",
+   "options": [
+    "With a list of every framework from the course",
+    "With the venture's history",
+    "With a direct decision in the first lines, then the framework chain",
+    "With a definition of entrepreneurship"
+   ],
+   "answer": 2,
+   "why": "Examiners reward a decision with reasons over a survey of frameworks without a verdict."
+  },
+  {
+   "week": 7,
+   "chapter": "synthesis",
+   "q": "Which sequencing lesson is common to all three cases?",
+   "options": [
+    "Raise capital before testing",
+    "Test small before scaling",
+    "Patent before talking to customers",
+    "Expand to many markets at once"
+   ],
+   "answer": 1,
+   "why": "EuroDisney (cash before growth), FreshMart (2 stores before 25) and LocalBite (30–50 customers first) all test before scaling."
+  }
+ ],
+ "mock_exam": {
+  "minutes": 120,
+  "instructions": "Answer all six questions. Marks are shown for each question and total 100. Use the course's frameworks by name, support claims with figures from the cases, and draw a diagram where it helps your answer. This paper follows the case-based style of the course; the real exam's format was not given in the course materials.",
+  "sections": [
+   {
+    "id": "A",
+    "title": "Section A · Concepts (30 marks)",
+    "questions": [
+     {
+      "q": "Define entrepreneurship using Stevenson's definition and explain why the course describes the entrepreneurial process as a dynamic system rather than a linear sequence. Refer to the three phases and to the environment a new venture operates in.",
+      "marks": 15,
+      "model_answer": "Howard Stevenson defines entrepreneurship as \"the process by which individuals, either on their own or inside organizations, pursue opportunities without regard to the resources they currently control.\" Three parts of the definition matter. It is a process that unfolds over time, not a single decision. It can happen inside existing organizations as well as in startups. And it starts from the opportunity: entrepreneurs do not limit themselves to the money, people and equipment they already have, but gather resources once the opportunity is clear. The course adds that entrepreneurship is also a mindset, opportunity-focused, risk-taking, innovative and growth-oriented, and a set of behaviors that follow from it.\n\nThe entrepreneurial process runs in three phases. In Phase 1 the entrepreneur finds a significant problem or need, researches the industry, the market and any intellectual property, regulatory or product development issues, and turns what was learned into hypotheses. In Phase 2 those hypotheses about the customer, the solution and the business model are tested, which reveals the likely revenue sources and the major cost drivers. Only when Phases 1 and 2 give sufficient confidence that the business is feasible does Phase 3 begin: designing the business, putting the right team and partners in place, and choosing the time to launch.\n\nThe process is dynamic rather than linear for two reasons. First, the phases loop back on each other. Most hypotheses are proven wrong when tested with real customers, so a failed test in Phase 2 sends the entrepreneur back to reframe the problem or the customer in Phase 1, and the cycle may repeat several times. Second, testing does not end at launch. The new venture lives in an environment it cannot control: the economic environment, competition, new laws and regulations, labor supply and sources of capital. When any of these shifts, the business must test and adapt again. A diagram of three boxes linked by forward arrows, with a return arrow from Phase 2 to Phase 1 and the whole set inside a box labeled with the five environmental variables, captures this. EuroDisneyland illustrates the cost of treating the process as linear: a model validated in Anaheim and Tokyo was carried to France without retesting its price and cultural assumptions, and the venture lost money from its first year.",
+      "chapters": [
+       "w1-what-is-entrepreneurship",
+       "w1-risk-and-trends"
+      ]
+     },
+     {
+      "q": "Apply Porter's five forces to FreshMart's industry (neighborhood grocery retail with app pickup and delivery). Rate each force and conclude whether the industry is attractive for a new entrant, and how such an entrant should compete.",
+      "marks": 15,
+      "model_answer": "Porter argues that five forces set an industry's long-run profit potential, so a venture's strategy must be based on how the industry works. Applied to neighborhood grocery retail with app ordering, the picture is as follows.\n\nThreat of new entrants: medium. Opening a single store or a delivery-only service needs modest capital, but scale economies in purchasing, brand loyalty built through membership points, and access to good locations near homes and campuses are real barriers. FreshMart's own analysis notes that its proximity and own brand are easy to copy, which suggests barriers are not high. Threat of substitutes: high. Customers can meet the same need through traditional markets, supermarkets, minimarket chains and quick-commerce apps that deliver in minutes, or by cooking less and ordering ready meals elsewhere. Buyer power: high. Individual customers buy small amounts, but switching costs are close to zero and the case states that customers switch for discounts, so buyers can force price promotions. Supplier power: low to medium. Fresh food and household goods are available from many suppliers, and FreshMart reduces dependence further with own-brand products, although large branded suppliers retain some power. Rivalry among existing firms: high. Minimarket chains and quick-commerce firms compete on price, promotions and speed; the analysis cites Paris dark stores that needed about 1,500 orders a day to break even but averaged 150 to 250, a sign of intense, loss-making competition.\n\nOn the course's profile, an attractive industry has high entry barriers, weak buyers and suppliers, few substitutes and mild rivalry. Grocery retail shows the opposite on three of the four, so it is unattractive for a newcomer that tries to compete head-on on price. The course's advice for such markets is to avoid price wars and costly advertising battles and instead find a niche that serves an unmet need and enter quietly to gain a foothold. For a grocery entrant, that niche could be time-pressed young working adults who value fast, reliable ready meals more than discounts, the same segment the FreshMart analysis selects, served with differentiated products such as own-brand ready meals that are harder for rivals to copy than prices.",
+      "chapters": [
+       "w4-five-forces",
+       "w5-freshmart-case"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "B",
+    "title": "Section B · Case: EuroDisneyland (40 marks)",
+    "questions": [
+     {
+      "q": "Using the exhibits in the EuroDisneyland case, explain why the park lost money in its first year even though attendance of about 10 million exceeded the stated break-even of 7 to 8 million visitors. Support at least three causes with calculations or figures.",
+      "marks": 20,
+      "model_answer": "EuroDisneyland opened near Paris in April 1992 and reported a net loss of FFr188 million for fiscal 1992, with cumulative losses of about $500 million by April 1993. The apparent paradox, attendance above break-even yet a loss, dissolves once the exhibits are read together. Four causes stand out.\n\nFirst, the break-even target was out of date. Exhibit 5 shows construction cost estimates rising from $1.0 billion in 1985 to $4.4 billion in 1991 and $4.4 to 4.5 billion in 1992, an increase of about 4.4 times. The 7 to 8 million visitor break-even belonged to the original $1 billion plan and was never recalculated. Contributing factors in the case include construction costs about 20% above comparable United States jobs, six coats of paint on facades against one in the United States parks, $8 to 10 million of extras on Le Visionarium, and delays and modifications. In effect the project became unprofitable during construction.\n\nSecond, visitors spent too little once inside. Exhibit 6 shows EuroDisney charged the highest adult ticket of the four parks ($47) but collected the lowest total spend per person ($30 to 45). Using midpoints, the spend-to-admission ratio was $37.50 ÷ $47 ≈ 0.80×, against Tokyo's $77.50 ÷ $38 ≈ 2.04×, Anaheim's 1.81× and Orlando's 1.50×. A gap of about $40 per person against Tokyo across 10 million visitors is roughly $400 million a year, close to the cumulative loss. The likely mechanism is that an expensive ticket used up the visitor's budget before food and merchandise.\n\nThird, the price did not fit European budgets and holiday habits. Exhibit 10 shows French income per head of $23,026 with 4.6% available for leisure, a budget of about $1,059 a year. A day at the park plus a hotel night of about $177 takes roughly 16.7% of that budget. French workers also take about five weeks of holiday, typically in long blocks spent traveling away from home, while Japanese and United States visitors take two to three weeks and favor short trips. Tokyo also had 30 million people within 30 miles and the omiage gift-giving custom; EuroDisney's market of 300 million was a day's travel away, so transport costs ate into in-park spending. The hotels' 37% occupancy shows the result.\n\nFourth, the deal paid Disney before profit was measured. Exhibit 8 shows Disney received 10% of admissions, 5% of food, merchandise and hotel revenue, and base management fees of 3% of revenues for five years, all charged on revenue, plus 49% of net income. Disney earned even as other shareholders lost, and cash left the business when it was most needed.\n\nCultural misfit reinforced all four: no alcohol in a wine-drinking country, mainly American food, a United States appearance code challenged under French labor law, and a winter climate (Paris averages 32–42°F in January against Orlando's 49–70°F) that shortened the season. Tokyo had wanted an American copy; France called the park a \"cultural Chernobyl.\" A diagram with four cause boxes (costs, low spend, price misfit, fees on revenue) all pointing to one loss box summarizes the diagnosis.",
+      "chapters": [
+       "w1-eurodisney-case"
+      ]
+     },
+     {
+      "q": "As Philippe Bourguignon, recommend a turnaround plan for EuroDisneyland. Compare at least three options, choose one, and justify the order in which its actions should be taken.",
+      "marks": 20,
+      "model_answer": "Five options are available. Option A is to do nothing and wait, following Michael Eisner's view that the park will grow into the culture over time. It costs nothing now, but with cash of about FFr1.1 billion in May 1993, heavy debt and Phase Two estimated at FFr8 to 10 billion, waiting risks running out of money before the culture changes. Option B fixes the financial model: new capital, rescheduled debt and a pause on Phase Two. It buys time but leaves the product misfit untouched, so losses would return. Option C fixes the product: lower prices, wine and beer, cheaper menus and an offer adapted to European habits. It addresses the root of the low spend-to-admission ratio, but without new cash the park may not survive long enough to see the benefit. Option D sells or licenses the park, copying the Tokyo arrangement in which Disney took no equity and earned fees. It limits Disney's exposure but abandons a $160 million investment and the long-term upside, and a buyer would demand a deep discount. Option E combines B, then C, then reinvestment.\n\nOption E is recommended because it treats both the cash crisis and its cause. The order matters, consistent with retrenchment-then-recovery turnaround thinking used in the class analysis: a firm must stop the bleeding before it can grow, and reversing the order is a common reason turnarounds fail. It also follows the course's message from feasibility analysis that a business model must be retested and changed when it meets the market.\n\nStep 1, stabilize cash. Ask Disney to waive royalties and management fees for a period, since these are charged on revenue and drain cash regardless of profit. Use the fact that Disney risked only $160 million while lenders and French authorities had far more at stake as leverage to reschedule debt and raise new capital. Freeze Phase Two without cancelling it, to preserve it as a future attraction. Step 2, fix the offer. Cut adult ticket and hotel prices and introduce winter pricing to fit a 4.6% leisure budget and the Paris climate; serve wine and beer and add cheaper menus to remove cultural friction and raise spend per visitor; adapt employment practices so the appearance code complies with French law. Rename and market the park around its real asset, Paris, 20 miles away with 300 million people within a day's travel. Step 3, reinvest. Once cash flow is stable and spend per visitor is rising, build a major new attraction, for example from the frozen Phase Two plans, to give visitors a reason to return.\n\nSuccess should be measured with the case's own indicators: spend-to-admission ratio moving from 0.80× toward the 1.5× to 2× range of other parks, hotel occupancy rising from 37%, French share of visitors rising from 29%, and a break-even recalculated on the actual $4.4 billion cost. The lesson for an international new venture is that a proven model is only a hypothesis in a new country, and price, product and financial structure must be tested against the local customer before scaling.",
+      "chapters": [
+       "w1-eurodisney-case",
+       "w5-feasibility",
+       "w5-revenue-costs"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "C",
+    "title": "Section C · Validation and protection abroad (30 marks)",
+    "questions": [
+     {
+      "q": "After a successful home launch, LocalBite plans to sell its frozen chili-level snack in Malaysia and Singapore. Design a validation plan before full expansion. Use feasibility analysis, the innovation spectrum and the MVP concept, and state the riskiest assumption as a testable hypothesis.",
+      "marks": 15,
+      "model_answer": "Feasibility analysis tests, evaluates and validates a proposed business model to reduce risk before committing resources, and the course's rule is that a model proven at home is only a hypothesis abroad. LocalBite should therefore treat each block of its business model in the new markets as a hypothesis to test.\n\nThe first task is to restate the model for the new markets. The value proposition (traditional Indonesian flavor, modern presentation, customer-chosen chili level) may travel, but segments, channels, prices and costs will change. Young professionals were the primary segment at home; in Kuala Lumpur and Singapore the first customer might instead be Indonesian students and workers living abroad, a niche with a strong existing need. Channels change too: frozen food needs cold-chain delivery and local platforms, and import and food registration rules apply in each country. The three critical success questions must be answered for each market: is the segment large enough to be viable and grow, do the capital needs to reach positive cash flow make sense, and can a team or partner be assembled locally?\n\nOn the innovation spectrum the product is incremental: frozen snacks are known and rivals exist, so customers can compare and have alternatives. The course advises that near the incremental end a very simple MVP will not produce useful feedback; the test product should be close to complete, with real packaging, price and delivery. The MVP should therefore be a small, real offer rather than a mock-up: a limited batch sold through one channel in one city.\n\nThe riskiest assumption is demand at a price that covers the higher cost of export and cold-chain delivery. As a testable hypothesis: \"We believe Indonesian students and young professionals in Kuala Lumpur will buy at least two packs a month at a price that gives at least our home gross margin after shipping and platform fees.\" The experiment runs in two stages, mirroring FreshMart's approach. In weeks 1 to 2, a fake-door test: an order page and pre-order (PO) list promoted through Indonesian student associations, counting sign-ups before shipping anything. In weeks 3 to 10, a pilot: one shipment sold through direct orders and one local delivery platform, with Singapore held back as the comparison market. The measures are conversion from sign-up to purchase, repeat purchase in month two, and contribution per pack after shipping and commission. The pass condition is positive contribution per pack and a majority of buyers reordering. Following the six-step validation loop, the results are then traced across the whole model (for example, a weak margin may require a higher price or a local co-packer), the model is changed, and the test is rerun before entering Singapore. This keeps most of the business safe, in line with Taleb's barbell, while a small bet tests the upside.",
+      "chapters": [
+       "w5-feasibility",
+       "w6-mvp-outsourcing",
+       "w2-localbite-case"
+      ]
+     },
+     {
+      "q": "Advise LocalBite on protecting its brand, recipe and packaging design as it expands to Malaysia and Singapore. Identify the appropriate form of intellectual property for each asset, explain the timing issues, and say whether a patent is worthwhile.",
+      "marks": 15,
+      "model_answer": "The course ranks intellectual property (IP) by degree of protection in a pyramid: trade secrets at the base, then copyrights, trademarks and patents. Each LocalBite asset fits a different level, and each has its own timing rule.\n\nThe recipe and process, including the method of mixing chili into the dough and the portioning that creates eleven chili levels from one batch, are best protected as trade secrets. Under the Uniform Trade Secrets Act definition taught in the course, a trade secret is a formula, process or compilation of information that gives a competitive advantage, is not common knowledge and is kept reasonably confidential. There is no registration; protection comes only from confidentiality agreements or contracts. LocalBite should therefore have any co-packer, distributor or employee in Malaysia or Singapore sign confidentiality agreements before seeing the recipe, and limit who knows the full process. If a signatory misappropriates it, remedies include injunctive relief, damages and attorney's fees. Week 6's caution applies: outsourcing production to places where enforcement is weak makes secrets harder to protect.\n\nThe brand name and logo should be protected as trademarks. A trademark identifies a business or product in commerce and lasts as long as it is used and renewed. Registration gives enhanced rights, and because the first to file generally holds the presumptive right to a mark, LocalBite should file in Malaysia and Singapore before launching there; its home registration helps applications abroad. Before filing, it should search existing marks, check that the name is distinctive rather than merely descriptive, test the name's translation and connotations in Malay, Chinese and Tamil, and choose the product categories to protect, such as frozen snacks. After registration it can record the mark with customs authorities to block counterfeit imports.\n\nThe packaging artwork, photographs and social media content are protected by copyright, which covers the tangible form of original work rather than the idea. Protection exists once the work is fixed, and the Berne Convention means member countries protect works from other members for at least the life of the author plus 50 years. LocalBite should still mark its packaging with ©, the year and the owner's name, keep records of creation, and use cease and desist letters against copiers.\n\nA patent is unlikely to be worthwhile. The course's signals for patenting are an invention that solves a significant problem and changes how things are done, falls under food and drug regulation, earns more than enforcement would cost, or will be licensed. A snack recipe change is probably not novel or nonobvious enough to meet the patentability criteria, the product's economic life in a fast-moving snack market may be short, and filing would publish the method, destroying its value as a trade secret. If LocalBite did develop a genuinely new process, the timing rule is strict: under first-to-file, it should file promptly, and to cover Malaysia and Singapore it would file a Patent Cooperation Treaty application within 12 months of its first filing and enter the national phase in chosen countries by month 30. In strategy terms, LocalBite fits a leveraging approach to patents, where proprietary patent protection is not critical, while relying on trade secrets for the recipe and trademarks for the brand.",
+      "chapters": [
+       "w7-knowledge-ip",
+       "w7-trademarks-copyrights",
+       "w7-patents",
+       "w7-ip-strategy"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
