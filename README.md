@@ -43,6 +43,8 @@ The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questi
 
 ## Adding a notebook
 
+To turn a new course's materials into a notebook, give Claude [`tools/notebook-brief.md`](tools/notebook-brief.md) along with the materials. The brief sets out the study pack it should write: a book-style walkthrough in this site's markup, flashcards, a quiz, a mock exam, optional worked exam questions, and a source map. Then bring the pack here to be built into a notebook. The steps for doing that by hand:
+
 1. Copy `notes/gscm-midterm.html` to `notes/<name>.html`.
 2. Replace everything inside `<main>`, plus the flashcard/quiz/mock data in the inline `<script>`.
 3. Set `data-book="<name>"` on `<body>`, which keys the reading-progress tracking.
