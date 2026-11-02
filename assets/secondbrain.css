@@ -172,6 +172,10 @@ body::before { /* fills the notch area on phones */
 @media (max-width: 420px) { .sb-nav a { padding: 7px 10px; font-size: 13.5px; } }
 .sb-nav a:hover { color: var(--fg); background: var(--sunk); }
 .sb-nav a[aria-current="page"] { background: var(--accent-soft); color: var(--accent); }
+.sb-lang { flex: none; display: inline-flex; margin-left: 10px; padding: 2px; border: 1px solid var(--line); border-radius: 999px; }
+.sb-lang button { min-height: 0; padding: 3px 9px; border: 0; border-radius: 999px; background: none; color: var(--muted); font: 700 12px var(--ui); letter-spacing: .04em; cursor: pointer; }
+.sb-lang button:hover { color: var(--fg); }
+.sb-lang button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
 .sb-tools { grid-area: tools; display: flex; gap: 6px; align-items: center; }
 .sb-icon {
   display: inline-flex; align-items: center; justify-content: center; flex: none; width: 38px; height: 38px; padding: 0;
@@ -337,6 +341,7 @@ input[type="range"].sb-range {
 }
 .cover.c-sea { background: #1F4A5E; }
 .cover.c-plum { background: #5B2D4A; }
+.cover.c-clay { background: #7A3E22; }
 .cover .code { font: 700 9.5px var(--ui); letter-spacing: .14em; opacity: .85; }
 .cover .t { margin-top: auto; font: 500 15px/1.15 var(--display); overflow-wrap: normal; }
 .cover .rule { height: 1px; background: currentColor; opacity: .5; margin: 8px 0 6px; }

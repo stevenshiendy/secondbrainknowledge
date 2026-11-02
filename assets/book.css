@@ -44,6 +44,11 @@
   font: 700 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); white-space: pre;
 }
 
+/* the same labels in an Indonesian notebook */
+:root[lang="id"] [data-readable]:not(#v-kisi) > section.topic:not(.bk-back) > .tag::before { content: "Bab " counter(bk-ch) " · "; }
+:root[lang="id"] [data-readable] > section.topic.bk-back > .tag::before { content: "Lampiran · "; }
+:root[lang="id"] [data-readable] section.topic:not(.bk-back) :is(figure > figcaption, .fig > .cap:not(.fig-key))::before { content: "Gambar " counter(bk-ch) "." counter(bk-fig) "  "; }
+
 /* ---------- book paragraphs: no gap, first-line indent; drop cap opens each chapter ---------- */
 [data-readable] section.topic > p { margin: 0; }
 [data-readable] section.topic > p + p { text-indent: 1.5em; }

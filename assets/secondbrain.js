@@ -361,11 +361,18 @@
   /* ---------- library shelf progress ---------- */
   document.querySelectorAll("[data-progress-for]").forEach(function (el) {
     var p = store.get("sb-progress:" + el.dataset.progressFor, null);
+    var alt = el.dataset.progressAlso && store.get("sb-progress:" + el.dataset.progressAlso, null); // the same notebook in another language
+    if (alt && (!p || alt.t > p.t)) p = alt; else alt = null;
     var fill = el.querySelector(".bar span"), txt = el.querySelector(".prog-text"), link = el.querySelector("[data-resume]");
     if (!p) return;
     if (fill) fill.style.width = p.pct + "%";
     if (txt) txt.textContent = p.pct + "% read · last at “" + p.title + "”";
-    if (link && p.id) { link.hidden = false; link.href = link.dataset.resume; } // the notebook reopens at the exact spot
+    if (link && p.id) { link.hidden = false; link.href = alt ? "notes/" + el.dataset.progressAlso + ".html" : link.dataset.resume; } // the notebook reopens at the exact spot
+  });
+
+  // a language link on the shelf also sets the language the notebook opens in from now on
+  document.querySelectorAll("[data-lang-pick]").forEach(function (a) {
+    a.addEventListener("click", function () { try { localStorage.setItem("sb-lang:" + a.dataset.langKey, a.dataset.langPick); } catch (e) {} });
   });
 
   // shared with reader.js

@@ -21,6 +21,7 @@
   var bar = document.querySelector(".sb-progress");
   var reduce = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
   var esc = SB.esc;
+  var ID = root.lang === "id", W_CH = ID ? "Bab " : "Chapter ", W_APP = ID ? "Lampiran" : "Appendix", W_TOC = ID ? "Daftar isi" : "Contents"; // book labels; the reader's tools stay in English
 
   // keep in step with route() in the page and boot.js: a view name, or an anchor inside a readable view
   // next frame, or a short timer when frames are throttled (background tabs, some embedded web views)
@@ -69,7 +70,7 @@
     var nav = document.createElement("nav");
     nav.className = "bk-contents";
     nav.setAttribute("aria-label", "Contents of " + (NAMES[k] || k));
-    nav.innerHTML = '<h2 class="bk-contents-h">Contents</h2><ol class="bk-contents-list">' + items + "</ol>";
+    nav.innerHTML = '<h2 class="bk-contents-h">' + W_TOC + '</h2><ol class="bk-contents-list">' + items + "</ol>";
     el.insertBefore(nav, first);
   });
   // Slide mode: write each chapter's page number into the contents, like a printed book
@@ -119,7 +120,7 @@
     sections.forEach(function (s) { if (pageOf(s) <= n - 1) cur = s; });
     if (!cur) return NAMES[currentView()] ? NAMES[currentView()] + " · title and contents" : "Title and contents";
     var k = chapterNo(cur);
-    return (currentView() === "kisi" ? tagOf(cur).split("·")[0].trim() : k ? "Chapter " + k : "Appendix") + " · " + titleOf(cur);
+    return (currentView() === "kisi" ? tagOf(cur).split("·")[0].trim() : k ? W_CH + k : W_APP) + " · " + titleOf(cur);
   }
   function setJump(n, from) {
     n = Math.max(1, Math.min(pages, Math.round(+n || 1)));
@@ -353,7 +354,7 @@
     var n = chapterNo(sec);
     where.textContent = !sec ? NAMES[currentView()] || "Introduction"
       : currentView() === "kisi" ? tagOf(sec).split("·")[0].trim() + " · " + titleOf(sec)
-      : (n ? "Chapter " + n : "Appendix") + " · " + titleOf(sec);
+      : (n ? W_CH + n : W_APP) + " · " + titleOf(sec);
     pctEl.textContent = Math.round(pct * 100) + "% read";
     markToc(sec);
     clearTimeout(saveTimer);
@@ -464,7 +465,7 @@
           esc(tagOf(s)) + "</small>" + esc(titleOf(s)) + "</span></button>";
       }).join("") + "</div>";
   }
-  SB.panel("toc", "Contents", function (body) {
+  SB.panel("toc", W_TOC, function (body) {
     // practice tabs are the header tabs that are not readable views
     var practice = Array.prototype.filter.call(document.querySelectorAll(".sb-nav a[href^='#']"), function (a) { return !READABLE[a.getAttribute("href").slice(1)]; });
     body.innerHTML = Object.keys(READABLE).map(tocGroup).join("") +
@@ -908,7 +909,7 @@
         sectionsOf(el).forEach(function (s) {
           var n = chapterNo(s);
           units.push({ view: v, el: s, group: tabName(v),
-            label: v === "kisi" ? tagOf(s).split("·")[0].trim() : n ? "Chapter " + n : "Appendix", title: titleOf(s) });
+            label: v === "kisi" ? tagOf(s).split("·")[0].trim() : n ? W_CH + n : W_APP, title: titleOf(s) });
         });
       } else {
         Array.prototype.forEach.call(el.querySelectorAll(".qitem, .q, details.mock, .gl-row"), function (q, i) {

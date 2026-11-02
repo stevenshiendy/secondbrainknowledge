@@ -6,7 +6,11 @@
 The pack folder holds notebook.json, walkthrough.html and practice.json (sources.md is kept
 for reference). Writes notes/<slug>.html on the GSCM page shell, with Walkthrough, Flashcards,
 Quiz and Mock exam tabs, and adds or refreshes the notebook's card on the home page shelf.
+Without a practice.json the page has the Walkthrough only, for notes meant just for reading.
 A "video" entry in notebook.json adds a Watch tab; its files live in notes/<video folder>/.
+"tabs" adds more reading tabs, as [{"id", "label", "file"}], and "tab_label" renames the first.
+"lang" and "languages" ({"en": slug, "id": slug}) pair two packs of one notebook with an EN/ID switch;
+the first language listed holds the shelf card.
 Keep a copy of the pack in packs/<slug>/ so the notebook can be rebuilt.
 """
 import html, json, re, sys
@@ -18,7 +22,13 @@ if len(sys.argv) != 2:
 PACK = Path(sys.argv[1]).resolve()
 meta = json.loads((PACK / "notebook.json").read_text())
 walk = (PACK / "walkthrough.html").read_text().strip()
-prac = json.loads((PACK / "practice.json").read_text())
+extra_tabs = meta.get("tabs", [])
+for tab in extra_tabs:
+    tab["html"] = (PACK / tab["file"]).read_text().strip()
+walk_all = "\n".join([walk] + [tab["html"] for tab in extra_tabs])
+lang, languages = meta.get("lang", "en"), meta.get("languages", {})
+has_practice = (PACK / "practice.json").exists()
+prac = json.loads((PACK / "practice.json").read_text()) if has_practice else {}
 slug = meta["slug"]
 if not re.fullmatch(r"[a-z0-9-]+", slug):
     sys.exit("notebook.json: slug must be lowercase letters, digits and hyphens")
@@ -29,13 +39,13 @@ esc = lambda s: html.escape(str(s), quote=True)
 # ---------- check the walkthrough against the brief ----------
 problems = []
 for bad in ("<style", "<script", "<html", "<body", 'fill="#', 'stroke="#', "<img", "foreignObject"):
-    if bad.lower() in walk.lower():
+    if bad.lower() in walk_all.lower():
         problems.append("walkthrough.html contains " + bad)
-ids = re.findall(r'\bid="([^"]+)"', walk)
+ids = re.findall(r'\bid="([^"]+)"', walk_all)
 problems += ["duplicate id: " + i for i in sorted({i for i in ids if ids.count(i) > 1})]
-problems += ["broken link: #" + h for h in sorted(set(re.findall(r'href="#([^"]+)"', walk)) - set(ids))]
+problems += ["broken link: #" + h for h in sorted(set(re.findall(r'href="#([^"]+)"', walk_all)) - set(ids))]
 chapters = {m.group(1): re.sub(r"<[^>]+>", "", m.group(2))
-            for m in re.finditer(r'<section class="topic[^"]*" id="([^"]+)"[^>]*>.*?<h2>(.*?)</h2>', walk, re.S)}
+            for m in re.finditer(r'<section class="topic[^"]*" id="([^"]+)"[^>]*>.*?<h2>(.*?)</h2>', walk_all, re.S)}
 cards, quiz, mock = prac.get("flashcards", []), prac.get("quiz", []), prac.get("mock_exam", {})
 for kind, items in (("flashcard", cards), ("quiz item", quiz)):
     for n, it in enumerate(items):
@@ -75,10 +85,21 @@ title, short = meta.get("title", slug), meta.get("short_title", meta.get("title"
 head = re.sub(r"<title>.*?</title>", lambda m: "<title>%s · SECONDBRAIN</title>" % esc(title), head)
 head = re.sub(r'<meta name="description" content="[^"]*">',
               lambda m: '<meta name="description" content="%s">' % esc(meta.get("shelf_blurb", title)), head)
+head = head.replace('<html lang="en">', '<html lang="%s">' % esc(lang))
+if languages:
+    primary, first = next(iter(languages.values())), next(iter(languages))
+    if lang == first:  # the shelf links here; go straight to the language this reader chose last time
+        redirect = "".join('if(l===%s)location.replace(%s+location.hash);' % (json.dumps(k), json.dumps(v + ".html")) for k, v in languages.items() if k != first)
+        head = head.replace("</head>", '<script>try{var l=localStorage.getItem("sb-lang:%s");%s}catch(e){}</script>\n</head>' % (primary, redirect))
 header = shell[shell.index("<header"): shell.index("</header>") + 9]
 header = header.replace("GSCM Midterm</span>", esc(short) + "</span>")
+lang_switch = ""
+if languages:
+    lang_switch = '<span class="sb-lang" role="group" aria-label="Language">' + "".join(
+        '<button type="button" lang="%s" data-lang-to="%s" aria-pressed="%s">%s</button>' % (k, esc(v), "true" if k == lang else "false", k.upper())
+        for k, v in languages.items()) + '</span>'
 header = re.sub(r'<nav class="sb-nav".*?</nav>', '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    '
-                '<a href="#learn">Walkthrough</a>' + ('<a href="#watch">Watch</a>' if video else '') + '<a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>\n  </nav>',
+                '<a href="#learn">' + esc(meta.get("tab_label", "Walkthrough")) + '</a>' + "".join('<a href="#%s">%s</a>' % (esc(t["id"]), esc(t["label"])) for t in extra_tabs) + ('<a href="#watch">Watch</a>' if video else '') + ('<a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>' if has_practice else '') + lang_switch + '\n  </nav>',
                 header, flags=re.S)
 
 n_q = len(quiz)
@@ -104,9 +125,18 @@ if video:
 <div class="watch-chapters">{chapter_buttons}</div>
 </div>'''
 
-views = f'''<div id="v-learn" data-view data-readable>
+tab_views = "".join('''
+
+<!-- ================= %s (%s/%s) ================= -->
+<div id="v-%s" data-view data-readable data-title="%s" hidden>
+%s
+</div>''' % (esc(t["label"]).upper(), esc(PACK.name), esc(t["file"]), esc(t["id"]), esc(t["label"]), t["html"]) for t in extra_tabs)
+learn_title = ' data-title="%s"' % esc(meta["tab_label"]) if meta.get("tab_label") else ""
+views = f'''<div id="v-learn" data-view data-readable{learn_title}>
 {walk}
-</div>{watch}
+</div>{tab_views}{watch}'''
+if has_practice:
+    views += f'''
 
 <!-- ================= FLASHCARDS ================= -->
 <div id="v-cards" data-view hidden>
@@ -232,14 +262,28 @@ window.SB_QUIZ={list:()=>QUIZ.map(q=>({q:htmlText(q.q),o:q.o.map(htmlText),a:q.a
 
 buildDeck(true);buildQuiz();route();
 """ % data_js
+if not has_practice:  # only the routing is needed
+    script = "\n" + script[script.index("/* ---------- routing"): script.index("/* ---------- flashcards")] + "route();\n"
+tabs = ["learn"] + [t["id"] for t in extra_tabs] + ["watch"] * bool(video) + ["cards", "quiz", "mock"] * has_practice
+script = script.replace('["learn","cards","quiz","mock"]', json.dumps(tabs, separators=(",", ":")))
 if video:
-    script = script.replace('["learn","cards","quiz","mock"]', '["learn","watch","cards","quiz","mock"]')
     script += """
 /* ---------- watch: chapter buttons; leaving the tab pauses the video ---------- */
 const vid=document.getElementById("watchvideo");
 document.querySelectorAll(".watch-chapters button").forEach(b=>b.onclick=()=>{vid.currentTime=+b.dataset.t;vid.play()});
 addEventListener("hashchange",()=>{if(document.getElementById("v-watch").hidden)vid.pause()});
 """
+
+if languages:
+    script += """
+/* ---------- language switch: keeps the chapter being read and remembers the choice ---------- */
+document.querySelectorAll("[data-lang-to]").forEach(b=>b.onclick=()=>{
+  try{localStorage.setItem("sb-lang:%s",b.lang)}catch(e){}
+  const open=document.querySelector("[data-view]:not([hidden])");
+  const here=[...open.querySelectorAll("section.topic")].filter(s=>{const r=s.getBoundingClientRect();return r.left<innerWidth/2&&r.top<innerHeight/2}).pop();
+  location.href=b.dataset.langTo+".html#"+(here?here.id:open.id.slice(2));
+});
+""" % next(iter(languages.values()))
 
 page = (head + '<body data-book="%s" data-progress-view="v-learn">\n\n' % slug + header
         + '\n\n<main class="wrap" id="main">\n\n<!-- ================= WALKTHROUGH (%s/walkthrough.html) ================= -->\n'
@@ -248,18 +292,25 @@ page = (head + '<body data-book="%s" data-progress-view="v-learn">\n\n' % slug +
 (SITE / "notes" / (slug + ".html")).write_text(page)
 
 # ---------- shelf card on the home page ----------
-n_back = len(re.findall(r'<section class="topic[^"]*\bbk-back\b', walk))
+n_back = len(re.findall(r'<section class="topic[^"]*\bbk-back\b', walk_all))
 n_abbr = sum(1 for c in cards if c["deck"] == "abbreviations")
 stats = ["<li><b>%d</b> chapters</li>" % (len(chapters) - n_back)]
 if n_back:
     stats.append("<li><b>%d</b> appendices</li>" % n_back)
-stats.append("<li><b>%d</b> flashcards%s</li>" % (len(cards) - n_abbr, " + <b>%d</b> abbreviations" % n_abbr if n_abbr else ""))
-stats.append("<li><b>%d</b> quiz questions</li>" % n_q)
+if has_practice:
+    stats.append("<li><b>%d</b> flashcards%s</li>" % (len(cards) - n_abbr, " + <b>%d</b> abbreviations" % n_abbr if n_abbr else ""))
+    stats.append("<li><b>%d</b> quiz questions</li>" % n_q)
 if data["mock"]:
     stats.append("<li><b>%d</b> mock-exam questions</li>" % len(data["mock"]))
 href = "notes/%s.html" % slug
 meta_line = " · ".join(filter(None, [meta.get("lecturer"), meta.get("course_name"), meta.get("covers")]))
-card = f'''<article class="book" data-progress-for="{slug}">
+practice_links = "\n          ".join(f'<a href="{href}#{esc(t["id"])}">{esc(t["label"])}</a>' for t in extra_tabs)
+for code, other in languages.items():
+    if code != lang:
+        practice_links += f'\n          <a href="notes/{esc(other)}.html" data-lang-pick="{esc(code)}" data-lang-key="{esc(slug)}" lang="{esc(code)}">{esc(meta.get("language_names", {}).get(code, code.upper()))}</a>'
+practice_links += f'<a href="{href}#cards">Flashcards</a>\n          <a href="{href}#quiz">Quiz</a>\n          <a href="{href}#mock">Mock exam</a>' if has_practice else ""
+also = "".join(' data-progress-also="%s"' % esc(v) for k, v in languages.items() if k != lang)
+card = f'''<article class="book" data-progress-for="{slug}"{also}>
       <a class="cover {esc(meta.get("cover", "c-plum"))}" href="{href}" aria-hidden="true" tabindex="-1">
         <span class="code">{esc(meta.get("course_code", ""))}</span>
         <span class="t">{esc(meta.get("course_name", title))}</span>
@@ -278,15 +329,15 @@ card = f'''<article class="book" data-progress-for="{slug}">
         </div>
         <div class="jump">
           <a data-resume="{href}" hidden>Resume</a>
-          {f'<a href="{href}#watch">Watch</a>' if video else ""}<a href="{href}#cards">Flashcards</a>
-          <a href="{href}#quiz">Quiz</a>
-          <a href="{href}#mock">Mock exam</a>
+          {f'<a href="{href}#watch">Watch</a>' if video else ""}{practice_links}
         </div>
       </div>
     </article>'''
 index = (SITE / "index.html").read_text()
-mine = re.compile(r'<article class="book" data-progress-for="%s">.*?</article>' % re.escape(slug), re.S)
-if mine.search(index):
+mine = re.compile(r'<article class="book" data-progress-for="%s"[^>]*>.*?</article>' % re.escape(slug), re.S)
+if languages and lang != next(iter(languages)):
+    pass  # the shelf card belongs to the notebook's first language
+elif mine.search(index):
     index = mine.sub(lambda m: card, index)
 else:  # after the last book on the shelf
     last = list(re.finditer(r'<article class="book".*?</article>', index, re.S))[-1]

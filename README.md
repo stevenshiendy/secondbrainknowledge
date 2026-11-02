@@ -43,6 +43,8 @@ The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questi
 
 - **International New Venture** (`notes/international-new-venture.html`), ENPR6306032, Sessions 1–14. It has 30 chapters in parts A–G, including the EuroDisneyland, LocalBite and FreshMart cases, and three appendices (glossary, key lists, numbers sheet). A **Watch** tab plays *From Idea to Market* (`notes/international-new-venture-video/`), a 13:17 3D animated explainer with captions in the picture and chapter buttons, and pauses when you leave the tab. The exam is two essay case questions, and each case chapter keeps the student's own assignment answer in a separate section that marks where it went wrong. Practice comes as 230 flashcards plus 41 abbreviations, an 88-question quiz and a six-question case-based mock exam whose model answers link back to the chapters they draw on. It was built from the study pack in `packs/international-new-venture/`; that folder's `sources.md` records the sources, gaps, conflicts and update notes.
 
+- **Crisis Communication** (`notes/crisis-communication.html`, in Bahasa Indonesia `notes/crisis-communication-id.html`): notes on two open-access papers, for summary and understanding, so there are no flashcards, quiz or mock exam. The **Overview** tab shows how the papers connect and compares them, and holds the glossary and references. The **Paper 1** tab covers Youk & Park (2023), an experiment on why adding a scapegoat to an apology backfires. The **Paper 2** tab covers Elgueta-Ruiz et al. (2026), a 24-year review of crisis communication research in *Public Relations Review*. Each paper's tab opens with a chapter that tells the whole article as one story, works through its numbers and lists common misreadings. The **EN / ID** switch in the header changes language, stays on the chapter being read, and is remembered on that device. The Indonesian text and figures are written by meaning and context, not translated word for word; the reader's own tools (Scroll, Slide, search and so on) stay in English. Highlights and reading position are kept separately for each language. It is built from `packs/crisis-communication/` and `packs/crisis-communication-id/`, and the first of those has a `sources.md` that lists number conflicts to check against the papers.
+
 ## Adding a notebook
 
 To turn a new course's materials into a notebook, give Claude [`tools/notebook-brief.md`](tools/notebook-brief.md) along with the materials. The brief sets out the study pack it should write: a book-style walkthrough in this site's markup, flashcards, a quiz, a mock exam, optional worked exam questions, and a source map. Then:
@@ -54,6 +56,10 @@ To turn a new course's materials into a notebook, give Claude [`tools/notebook-b
 ```bash
 python3 -I tools/build_notebook.py packs/<slug>
 ```
+
+For notes meant only for reading, leave out `practice.json`: the notebook then has the Walkthrough alone, with no Flashcards, Quiz or Mock exam tabs.
+
+To add more reading tabs, add `"tabs": [{"id", "label", "file"}]` to `notebook.json`, with each file written like `walkthrough.html`; `"tab_label"` renames the first tab. To offer a second language, make a second pack with the same chapter ids and set `"lang"` and `"languages": {"en": "<slug>", "id": "<slug>-id"}` in both `notebook.json` files. Build both. The first language listed holds the shelf card, and the header gets a language switch.
 
 To add a **Watch** tab, put the video in `notes/<folder>/` and add a `"video"` entry to `notebook.json` with `folder`, `file`, and optionally `poster`, `title`, `blurb` and `chapters` as `[seconds, "name"]` pairs. Keep the file under GitHub's 100 MB limit.
 

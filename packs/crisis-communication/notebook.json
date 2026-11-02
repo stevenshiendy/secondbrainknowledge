@@ -1,0 +1,32 @@
+{
+  "languages": {
+    "en": "crisis-communication",
+    "id": "crisis-communication-id"
+  },
+  "language_names": {
+    "id": "Bahasa Indonesia",
+    "en": "English"
+  },
+  "course_code": "ARTICLE NOTES",
+  "cover": "c-clay",
+  "slug": "crisis-communication",
+  "lang": "en",
+  "title": "Crisis Communication",
+  "short_title": "Crisis Communication",
+  "course_name": "Crisis Commu­nication",
+  "covers": "Youk & Park (2023) · Elgueta-Ruiz et al. (2026)",
+  "tab_label": "Overview",
+  "tabs": [
+    {
+      "id": "paper1",
+      "label": "Paper 1",
+      "file": "paper1.html"
+    },
+    {
+      "id": "paper2",
+      "label": "Paper 2",
+      "file": "paper2.html"
+    }
+  ],
+  "shelf_blurb": "Two open-access papers on crisis communication: one experiment on why adding a scapegoat to an apology backfires, and a 24-year review of the field in Public Relations Review, with a tab for each paper, in English or Bahasa Indonesia."
+}
