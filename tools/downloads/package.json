@@ -1,0 +1,7 @@
+{
+  "name": "secondbrain-downloads",
+  "private": true,
+  "description": "Builds what the site offers for download: each notebook as a PDF, and The Paper Trail as an MP4",
+  "scripts": { "pdf": "node build_pdf.js", "paper-trail": "node render_paper_trail.js" },
+  "dependencies": { "pdfjs-dist": "^4.10.38", "puppeteer-core": "^23.11.1" }
+}

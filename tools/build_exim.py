@@ -348,7 +348,7 @@ page = (head + '<body data-book="export-import">\n\n' + header + '\n\n<main clas
         + "\n\n<!-- ================= ASSIGNMENTS (tools/exim-additions/assignments/) ================= -->\n" + assign_html
         + "\n\n<!-- ================= PRACTICE (export-import-practice.html) ================= -->\n" + practice_html.strip()
         + "\n\n</main>\n\n<script>\n" + fj.strip() + "\n" + fob_js[0].strip() + "\n</script>\n<script>\n" + pj.strip() + "\n" + router + "</script>\n"
-        + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n</body>\n</html>\n')
+        + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n<script src="../assets/downloads-data.js"></script>\n<script src="../assets/downloads.js"></script>\n</body>\n</html>\n')
 
 ids = re.findall(r'\bid="([^"]+)"', page)
 dups = sorted({i for i in ids if ids.count(i) > 1})

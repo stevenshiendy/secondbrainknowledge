@@ -36,6 +36,18 @@ Every reading view is laid out as a book (`assets/book.css`): a title page, a co
 
 The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questions, each worked through the same way (what the question asks, a numbered reasoning staircase, the diagram with a "draw this in the exam" tip, a model answer hidden behind **Show answer**, and common mistakes). Tick "I can explain this without looking" on each question to track what you've mastered. It works with Slide mode, Contents and highlights just like the walkthrough. It was built from `Steven_Shiendy_GSCM_KisiKisi_Report/REPORT.md`, keeping its wording, with the figures drawn in the page's theme colours.
 
+## Downloads
+
+The **download** button in a notebook's toolbar opens the Downloads panel. It offers the whole notebook as an A4 PDF (contents, answers and model answers included), any video, narration and poster from its Watch tab, and every illustration as a PNG or SVG in the current theme's colours. The same PNG and SVG buttons sit under each illustration, the Watch tab has its own download buttons, and each home-page card has a **Download PDF** link. The Indonesian edition of Crisis Communication has no PDF of its own yet.
+
+The PDFs live in `notes/pdf/` and the list of files in `assets/downloads-data.js`. To refresh them after a notebook changes, run this (it needs Google Chrome, and `npm install` in `tools/downloads/` the first time; leave out the name to rebuild every notebook):
+
+```bash
+node tools/downloads/build_pdf.js <slug>
+```
+
+`tools/downloads/render_paper_trail.js` records the Paper Trail player as the MP4 in `notes/paper-trail/`.
+
 ## Notebooks on the shelf
 
 - **GSCM Midterm** (`notes/gscm-midterm.html`): walkthrough, kisi-kisi, flashcards, quiz, mock exam.
@@ -82,6 +94,8 @@ Shared files:
 - `assets/book.css`: book layout for every reading view
 - `tools/build_exim.py`: rebuilds the Export-Import notebook from the study pack
 - `tools/build_notebook.py`: builds any notebook from a pack written to `tools/notebook-brief.md`
+- `tools/downloads/`: builds the PDFs and the list of downloads
+- `assets/downloads.js`: the Downloads panel and the download buttons
 - `assets/secondbrain.js`: preferences, side panels, shelf progress
 - `assets/reader.js`: Scroll/Slide modes, contents, highlights, reading progress
 - `assets/boot.js`: applies saved settings before the page draws

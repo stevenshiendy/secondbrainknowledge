@@ -1,0 +1,130 @@
+/* The printed book: A4 pages, running heads, and paper versions of the notebook's on-screen parts.
+   Added on top of the site's stylesheets by build_pdf.js. Every chapter gets its own named @page (see assemble.js)
+   so the running head at the top right names it. */
+@page {
+  size: A4; margin: 23mm 21mm 21mm;
+  @top-left { font: 400 8.5pt "Nunito Sans", sans-serif; color: #55534E; vertical-align: bottom; padding-bottom: 5mm; }
+  @top-right { font: 400 8.5pt "Nunito Sans", sans-serif; color: #55534E; vertical-align: bottom; padding-bottom: 5mm; }
+  @bottom-center { content: counter(page); font: 400 9.5pt Palatino, "Palatino Linotype", Georgia, serif; color: #1B1B1A; vertical-align: top; padding-top: 5mm; }
+}
+@page cover { margin: 0; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } }
+@page plain { @top-left { content: none; } @top-right { content: none; } }
+
+:root { --fs: 10.8pt; --lh: 1.45; --measure: none; --bg: #fff; --panel: #fff; --header-h: 0px; }
+html, body { background: #fff !important; margin: 0; padding: 0; overflow: visible !important; }
+#main { display: block; max-width: none; margin: 0; padding: 0; width: auto; }
+[data-view] { display: block; max-width: none; margin: 0; padding: 0; }
+abbr, abbr[title] { text-decoration: none !important; border: 0 !important; cursor: auto; }
+a { color: inherit; text-decoration: none; }
+p, li, dd, td { orphans: 2; widows: 2; }
+h1, h2, h3, h4, .kq-h, .kq-step, .explain > span, .tag, .pq-h, .pq-sub { break-after: avoid; }
+
+/* ---------- cover ---------- */
+.pdf-cover {
+  page: cover; display: flex; flex-direction: column; box-sizing: border-box; width: 210mm; height: 297mm; break-after: page; overflow: hidden;
+  padding: 26mm 24mm 22mm 34mm; background: #2F4A2B; color: #F6EEDC;
+  box-shadow: inset 8mm 0 0 rgba(0, 0, 0, .22), inset 8.4mm 0 0 rgba(255, 255, 255, .12);
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.pdf-cover.c-sea { background: #1F4A5E; }
+.pdf-cover.c-plum { background: #5B2D4A; }
+.pdf-cover-code { font: 700 11pt "Nunito Sans", sans-serif; letter-spacing: .16em; opacity: .85; }
+.pdf-cover-t { margin-top: auto; font: 500 40pt/1.1 var(--display); }
+.pdf-cover-rule { height: 1px; background: currentColor; opacity: .5; margin: 9mm 0 6mm; }
+.pdf-cover-by { font: 400 13pt/1.35 "Nunito Sans", sans-serif; opacity: .9; }
+.pdf-cover-meta { margin-top: 2mm; font: 400 11pt/1.4 "Nunito Sans", sans-serif; opacity: .8; }
+.pdf-cover-brand { margin-top: auto; font: 500 13pt var(--display); letter-spacing: .16em; opacity: .85; }
+.pdf-cover-brand i { font-style: normal; }
+
+/* ---------- contents ---------- */
+.pdf-contents { page: plain; break-after: page; margin: 0; }
+.pdf-contents .bk-contents-h { margin: 8mm 0 8mm; }
+.pdf-contents .bk-c-dots { visibility: visible !important; }
+.pdf-contents .bk-contents-list { margin-bottom: 7mm; }
+.pdf-contents .bk-contents-list li { break-inside: avoid; }
+.pdf-contents .bk-contents-list a { padding: 1.5pt 0; font-size: .93rem; }
+.pdf-contents .bk-c-pg { color: var(--fg); }
+.pdf-c-head a { font-weight: 600; font-family: var(--display); font-size: 1.08rem !important; border-bottom: 1px solid var(--fg); margin-bottom: 2mm; padding-bottom: 3pt !important; }
+.pdf-c-head .bk-c-dots { visibility: hidden !important; }
+.bk-c-part { break-after: avoid; }
+
+/* ---------- title page of each tab, parts, chapters ---------- */
+[data-view] { break-before: page; }
+[data-readable] > .kicker { margin-top: 48mm; }
+[data-readable] > h1 { font-size: 30pt; }
+[data-readable] > section.topic { break-before: page; padding: 0; border: 0; margin: 0; }
+[data-readable] > section.topic::after { display: none; }
+.bk-part { break-before: page; break-after: page; margin: 0; padding: 92mm 0 0; border: 0; }
+.bk-part-n { margin-right: 0; }
+.bk-part::after { content: ""; display: block; width: 72px; margin: 22px auto 0; border-top: 1px solid var(--fg); }
+section.topic h2 { margin-top: .2em; }
+
+/* ---------- figures and tables fit the page ---------- */
+figure, .fig { break-inside: avoid; }
+.figscroll, .fig, .tbl, .formula { overflow: visible !important; }
+.dg, .fig svg, .fig.wide svg { min-width: 0 !important; max-width: 100%; max-height: 215mm; }
+.tbl table { min-width: 0 !important; width: 100%; }
+.tbl :is(th, td) { overflow-wrap: break-word; padding: 4pt 5pt; }
+.tbl tr, table tr { break-inside: avoid; }
+thead { display: table-header-group; }
+:is(.trap, .tip, .summary, .scen, .defs, .chain, .cols, .trio, .ex-why, .note, .calc, .mn) { break-inside: avoid; }
+.kq-answer { border-radius: 2px; }
+.kq-answer-body { border-top: 0; }
+.pdf-model-h { margin: 0; padding: 7pt 10pt 0; font: 700 .68rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.gl-row { break-inside: avoid; }
+
+/* ---------- check yourself ---------- */
+.pq { margin-top: 7mm; }
+.pdf-key { break-before: avoid; }
+.pq-item { break-inside: avoid; margin-bottom: 8pt; }
+.pq-stem { margin-bottom: 3pt; }
+.pdf-opts { list-style: upper-alpha; margin: 0; padding-left: 1.5em; font-size: .94em; }
+.pdf-opts > li { margin: 1pt 0; padding-left: 2pt; }
+.pdf-opts > li::marker { font-family: "Nunito Sans", sans-serif; font-size: .85em; font-weight: 700; color: var(--muted); }
+.pdf-key { margin: 6pt 0 0; padding-top: 5pt; border-top: 1px solid var(--line); font-size: .78rem; line-height: 1.4; color: var(--muted); text-indent: 0 !important; }
+.pdf-key b { color: var(--fg); }
+
+/* ---------- calculators ---------- */
+.pdf-val { display: block; margin-top: 2pt; font-weight: 700; }
+.rq-sheet summary { list-style: none; }
+.rq-sheet summary::-webkit-details-marker { display: none; }
+.pdf-calc-note { margin: 5pt 0 0; font-size: .76rem; font-style: italic; color: var(--muted); text-indent: 0 !important; }
+
+/* ---------- flashcards ---------- */
+.pdf-deck { margin: 7mm 0 2mm; font: 500 1.15rem/1.25 var(--display); break-after: avoid; }
+.pdf-deck small { font: 400 .72rem "Nunito Sans", sans-serif; color: var(--muted); margin-left: 4pt; }
+.pdf-cards { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .86rem; line-height: 1.36; }
+.pdf-cards td { width: 50%; padding: 4.5pt 6pt; vertical-align: top; border-top: 1px solid var(--line); }
+.pdf-cards tr:last-child td { border-bottom: 1px solid var(--line); }
+.pdf-cards td:first-child { font-weight: 600; border-right: 1px solid var(--line); }
+
+/* ---------- quiz and mock exam ---------- */
+.pdf-quiz { margin: 0; padding-left: 1.9em; }
+.pdf-quiz > li { break-inside: avoid; margin: 0 0 9pt; }
+.pdf-quiz > li::marker { font-weight: 700; color: var(--accent); }
+.pdf-stem { margin: 0 0 3pt; font-weight: 600; }
+.pdf-answers-h { break-before: page; margin: 0 0 5mm; font: 500 1.6rem/1.2 var(--display); }
+.pdf-explain { margin: 0; padding-left: 1.9em; font-size: .92rem; }
+.pdf-explain > li { margin: 0 0 5pt; break-inside: avoid; }
+.pdf-mq { break-inside: avoid; margin: 0 0 11pt; font-weight: 600; }
+.pdf-mq .pts { font-weight: 400; color: var(--muted); margin-left: 5pt; white-space: nowrap; }
+.pdf-ans-q { margin: 6mm 0 1.5mm; font: 700 .9rem var(--display); color: var(--accent); break-after: avoid; }
+.pdf-model .why { font-size: .86rem; color: var(--muted); }
+.pdf-model a { color: var(--accent); }
+#v-mock-exam .q, #v-mock .q { break-inside: avoid; background: none; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 7pt 0; margin: 0; }
+#v-mock-exam .ex-opt { display: flex; gap: 6pt; padding: 1pt 0; border: 0; background: none; min-height: 0; }
+#v-mock-exam .ex-opt .l { font-weight: 700; color: var(--muted); }
+#v-mock-exam .exam-head { background: none; }
+#v-mock-exam > h2 { margin-top: 8mm; }
+#v-mock-exam > .pdf-answers-h { margin-top: 0; }
+.key-tbl table { width: 100%; border-collapse: collapse; font-size: .84rem; }
+.key-tbl :is(th, td) { padding: 3pt; border: 1px solid var(--line); text-align: center; }
+
+/* ---------- watch ---------- */
+.pdf-poster { margin: 6mm 0; }
+.pdf-poster img { display: block; width: 100%; border: 1px solid var(--line); }
+.pdf-chapters { list-style: none; margin: 0 0 5mm; padding: 0; columns: 2; column-gap: 8mm; font-size: .92rem; }
+.pdf-chapters li { margin: 0 0 2pt; break-inside: avoid; }
+.pdf-chapters b { display: inline-block; min-width: 3em; font-variant-numeric: tabular-nums; }
+.pdf-watch-note { font-size: .9rem; color: var(--muted); }
+.pdf-watch-note a { color: var(--accent); text-decoration: underline; }

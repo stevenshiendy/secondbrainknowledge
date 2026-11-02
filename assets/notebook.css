@@ -441,3 +441,36 @@ mark.sr-hit.cur { background: var(--accent); color: var(--on-accent); }
 .watch-chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 40px; }
 .watch-chapters button { text-align: left; }
 .watch-chapters b { font-variant-numeric: tabular-nums; margin-right: 4px; }
+
+/* ---------- downloads (assets/downloads.js) ---------- */
+.dl-fig { display: flex; justify-content: flex-end; gap: 4px; margin-top: 4px; }
+main .dl-fig button, .sb-sheet .dl-fig button {
+  display: inline-flex; align-items: center; gap: 3px; min-height: 0; height: 26px; padding: 0 8px 0 5px; margin: 0;
+  border: 1px solid transparent; border-radius: 999px; background: none; color: var(--muted);
+  font: 700 10.5px var(--ui); letter-spacing: .04em; cursor: pointer;
+}
+.dl-fig button::after { content: attr(data-label); }
+.dl-fig button svg { width: 14px; height: 14px; }
+main .dl-fig button:hover, .sb-sheet .dl-fig button:hover { border-color: var(--line-strong); color: var(--accent); }
+.dl-fig button[aria-busy] { opacity: .5; }
+.sb-sheet .dl-fig { flex: none; margin: 0; }
+.sb-sheet .dl-fig button { border-color: var(--line); height: 30px; }
+.dl-row { color: var(--fg); text-decoration: none; }
+.dl-row:hover { color: var(--accent); }
+.dl-row > svg { flex: none; width: 18px; height: 18px; color: var(--accent); }
+.dl-row small, .dl-figrow small { display: block; margin-bottom: 1px; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.dl-row .grow { display: flex; flex-direction: column-reverse; }
+.dl-figrow { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-top: 1px solid var(--line); line-height: 1.3; }
+.dl-figrow:first-child { border-top: 0; }
+.dl-figrow .grow { flex: 1; min-width: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
+.sb-note.dl-note { margin-top: -2px; }
+.dl-sub { display: block; margin: 14px 2px 6px; font-size: 13px; font-weight: 700; }
+.dl-watch { display: flex; flex-wrap: wrap; gap: 8px; margin: -2px 0 22px; }
+.watch-frame + .dl-watch { margin-top: -28px; margin-bottom: 40px; }
+.dl-link {
+  display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px 8px 10px; border: 1px solid var(--line-strong); border-radius: 999px;
+  background: var(--panel); color: var(--fg); font: 600 13.5px var(--ui); text-decoration: none;
+}
+.dl-link:hover { border-color: var(--accent); color: var(--accent); }
+.dl-link svg { flex: none; width: 17px; height: 17px; }
+.dl-link small { margin-left: 3px; font-weight: 400; font-size: 12px; color: var(--muted); }

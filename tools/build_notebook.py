@@ -362,7 +362,7 @@ document.querySelectorAll("[data-lang-to]").forEach(b=>b.onclick=()=>{
 page = (head + '<body data-book="%s" data-progress-view="v-learn">\n\n' % slug + header
         + '\n\n<main class="wrap" id="main">\n\n<!-- ================= WALKTHROUGH (%s/walkthrough.html) ================= -->\n'
         % esc(PACK.name) + views + "\n\n</main>\n\n<script>" + script + "</script>\n"
-        + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n</body>\n</html>\n')
+        + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n<script src="../assets/downloads-data.js"></script>\n<script src="../assets/downloads.js"></script>\n</body>\n</html>\n')
 (SITE / "notes" / (slug + ".html")).write_text(page)
 
 # ---------- shelf card on the home page ----------
@@ -421,3 +421,4 @@ else:  # after the last book on the shelf
 (SITE / "index.html").write_text(index)
 print("built %s: %d chapters, %d flashcards, %d quiz questions, %d mock questions"
       % (href, len(chapters) - n_back, len(cards), n_q, len(data["mock"])))
+print("then refresh its PDF and downloads: node tools/downloads/build_pdf.js %s" % slug)
