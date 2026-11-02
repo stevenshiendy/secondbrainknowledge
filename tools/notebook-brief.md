@@ -6,7 +6,7 @@ Give this file to Claude together with a course's study materials (slides, lectu
 
 ## The request
 
-> Read every file in the course folder I've given you. Then write a SECONDBRAIN study pack for this course, following this brief exactly: the folder layout, the HTML and JSON formats, the writing rules and the final checklist. The walkthrough must read like a well-edited textbook, not like a chat reply. Cover everything the materials teach, and add nothing they don't support. Where the materials are unclear, contradict each other or look out of date, say so in `sources.md` instead of guessing.
+> Read every file in the course folder I've given you. Then write a SECONDBRAIN study pack for this course, following this brief exactly: the folder layout, the HTML and JSON formats, the writing rules and the final checklist. The walkthrough must read like a well-edited textbook, not like a chat reply. Cover everything the materials teach. Say what the authors and lecturers wrote and explain their points and reasoning, but add nothing of your own: no outside facts, calculations, advice or conclusions they did not give. Where the materials are unclear, contradict each other or look out of date, say so in `sources.md` instead of guessing or correcting them in the book.
 
 ---
 
@@ -55,9 +55,9 @@ Leave out any field you can't find in the materials rather than inventing it.
 The file is an HTML **fragment**: no `<html>`, `<head>`, `<body>`, `<style>` or `<script>`. It runs top to bottom in this order:
 
 1. **Title block.** A kicker line, the `h1` and a lede paragraph (see the example in 3.6).
-2. **"Start here" chapter.** A map of the whole course: how the topics connect, in the order they're taught, with one figure. Its tag must contain the words `Start here`.
+2. **"Start here" chapter.** A map of the whole course: the topics in the order they're taught, and the connections the materials make between them, with one figure. Its tag must contain the words `Start here`.
 3. **Parts.** One part per week or teaching block. Each part opens with a part-title divider, followed by its chapters.
-4. **Synthesis chapter** (recommended). How the topics combine in a typical exam answer.
+4. **Synthesis chapter** (only if the materials support one). How the topics combine in an exam answer, as the materials show it. Leave it out if they don't join the topics themselves.
 5. **Appendices.** At least a glossary of every abbreviation. Other reference tables are welcome, such as formula sheets, a list of laws, or a timeline.
 
 The site numbers chapters, figures and appendices by itself, and builds the contents page and page numbers. So **never write "Chapter 3", "Figure 2.1" or a table of contents yourself.**
@@ -91,11 +91,13 @@ Every chapter is one `<section>`:
 A chapter body follows this **teaching order**, so that every chapter reads the same way:
 
 1. **The chain**: four short cells covering Problem, Big idea, How (tools) and Result. One or two sentences each.
-2. **In plain words**: two to four paragraphs explaining the idea as a good tutor would, with a concrete example from the course's own context.
-3. **At least one figure** that shows the mechanism: a flow, a cycle, a matrix, a timeline or a comparison. See 3.5.
+2. **In plain words**: two to four paragraphs explaining the idea and the reasoning behind it as a good tutor would, using examples the materials themselves give.
+3. **At least one figure** that shows the mechanism as the materials describe it: a flow, a cycle, a matrix, a timeline or a comparison. See 3.5.
 4. **The details to memorise**: definitions, lists, steps, tables and formulas, each under an `h3` subheading.
-5. **An exam tip** wherever the materials show how the topic is examined.
-6. **A link to the next chapter**: one line explaining why the next topic follows from this one. Leave it off the last chapter of the book.
+5. **An exam tip** only where the materials show how the topic is examined.
+6. **A link to the next chapter**: one line giving the connection the materials make to the next topic. Leave it off where they make none, and on the last chapter of the book.
+
+All of these, including the chain, captions and link lines, follow the rule in 5.2.
 
 ### 3.4 Building blocks
 
@@ -109,10 +111,10 @@ Use only these blocks. They are already styled in all six reading themes, so add
 | Steps | `<ol class="steps"><li><b>Name</b>what it means</li>…</ol>` | Ordered stages and processes (two to eight items) |
 | Two columns | `<div class="cols"><div>…</div><div>…</div></div>` | Side-by-side lists, such as "A vs B" |
 | Table | `<div class="tbl"><table><tr><th>…</th></tr><tr><td>…</td></tr></table></div>` | Comparisons and classifications (three or more rows) |
-| Exam tip | `<div class="tip"><b>Exam tip:</b> …</div>` | How a question on this is asked and answered |
-| Update note | `<div class="tip"><b>Update:</b> …</div>` | A source that is out of date (see 5.4) |
+| Exam tip | `<div class="tip"><b>Exam tip:</b> …</div>` | How the materials say a question on this is asked and answered |
+| Update note | `<div class="tip"><b>Update:</b> …</div>` | A change the materials themselves report (see 5.4) |
 | Mnemonic | `<span class="mnemo">TIM WOODS</span>`, inside a heading or sentence | Memory aids, followed by what each letter stands for |
-| Formula | `<div class="formula">EOQ = √(2DS / H)` ⏎ `D = 1,200 units, S = 50, H = 3 → EOQ ≈ 200</div>` | Formulas, each with a worked example on the next line. ⏎ means a real line break; the box keeps line breaks exactly as typed, so keep each line short |
+| Formula | `<div class="formula">EOQ = √(2DS / H)` ⏎ `D = 1,200 units, S = 50, H = 3 → EOQ ≈ 200</div>` | Formulas, with the materials' worked example on the next line if they print one. ⏎ means a real line break; the box keeps line breaks exactly as typed, so keep each line short |
 | Next link | `<p class="next"><b>Link to next topic →</b> …</p>` | The final line of a chapter |
 | Lists | plain `<ul>`/`<ol>`; start each item with `<b>Term</b>:` | Definitions and must-know facts |
 
@@ -196,7 +198,7 @@ Sort the glossary alphabetically. It must list **every** abbreviation used anywh
       "q": "Which is NOT one of the three key flows in supply chain management (SCM)?",
       "options": ["Physical materials", "Data and information", "Resources such as finance and people", "Advertising campaigns"],
       "answer": 3,
-      "why": "The slides list materials, information and resources; advertising is a marketing activity, not a flow." }
+      "why": "The slides list materials, information and resources; advertising is not among them." }
   ],
   "mock_exam": {
     "minutes": 120,
@@ -216,8 +218,8 @@ Sort the glossary alphabetically. It must list **every** abbreviation used anywh
 - **Every item names its `week` and `chapter`** (a chapter `id` from the walkthrough). The site uses these to place two questions and one recall card in a "Check yourself" box at the end of each chapter, so each chapter needs **at least 2 quiz questions and 2 flashcards**.
 - **Flashcards:** 6–15 per chapter. Put one fact, definition, list or contrast on each card, and write the front as a prompt rather than a yes/no question. Optionally add a separate `"abbreviations"` deck with one card per glossary entry, marked `"quizzable": false`.
 - **Quiz:** 8–15 questions per week, each with four options. `answer` is the 0-based position of the correct option. Spread the right answers across all four positions. Wrong options must be plausible: things a confused student would choose, never jokes. Use `why` to explain the right answer and, where useful, why the most tempting wrong one fails.
-- **Mock exam:** mirror the real exam's format, length and mark split if the materials show it (a past paper, a lecturer's hint, the course outline). Otherwise, write a balanced paper across all weeks. Model answers are written at full-marks standard, in complete paragraphs, using the course's own terms and frameworks, with the diagram described where one would earn marks.
-- Base every item on the walkthrough. A student who has read the book can answer everything.
+- **Mock exam:** mirror the real exam's format, length and mark split if the materials show it (a past paper, a lecturer's hint, the course outline). Otherwise, write a balanced paper across all weeks. Model answers are written at full-marks standard, in complete paragraphs, using the course's own terms and frameworks and only what the materials say, with the diagram described where one would earn marks.
+- Base every item on the walkthrough. A student who has read the book can answer everything. Only wrong quiz options may go beyond the materials, and a `why` may not.
 
 ---
 
@@ -234,9 +236,11 @@ Sort the glossary alphabetically. It must list **every** abbreviation used anywh
 ### 5.2 Accuracy
 
 - **Cover everything the materials teach**: every session, slide deck, reading and worked example. If a topic appears only once, it still gets a place, as a short chapter, a subsection or a box.
-- **Add nothing the materials don't support.** General background is allowed only to explain something the materials do say, and must not contradict them.
+- **Say what the authors and lecturers wrote, and add nothing of your own.** Explaining what they said and their reasoning is allowed, and every claim must trace to the materials. That rules out outside background, calculations they did not print, advice, invented "common mistakes", and conclusions joining sources unless a source joins them itself.
 - **Keep the lecturer's terms, frameworks, numbering and lists exactly** (for example "7 Rights", "FP1–FP6", the order of a model's steps), because the exam marks against them.
-- Work every formula with numbers. Quote laws and regulations with their number and year (for example "Permendag No. 25 of 2021"), with an English gloss on first use when the official name is in another language.
+- **Mark where a point comes from a student's or user's notes** rather than from the paper's author or the lecturer.
+- Show a formula's worked numbers only if the materials print them. Quote laws and regulations with their number and year (for example "Permendag No. 25 of 2021"), with an English gloss on first use when the official name is in another language.
+- **Problems you find in a source**, such as a table that does not add up, go in `sources.md` and your hand-back message, not in the reading text.
 
 ### 5.3 Abbreviations
 
@@ -246,7 +250,8 @@ Sort the glossary alphabetically. It must list **every** abbreviation used anywh
 ### 5.4 Out-of-date or conflicting sources
 
 - If one source contradicts another, follow the most authoritative or most recent one. Note the conflict in `sources.md`.
-- If the materials cite a rule or figure that you know has since been amended or replaced, keep what the course teaches, because that is what the exam marks. Add an `<b>Update:</b>` tip box saying what changed and when. List it in `sources.md` too.
+- If the materials cite a rule or figure that you know has since been amended or replaced, keep what the course teaches, because that is what the exam marks. Put what you know in `sources.md` only, not in the book.
+- Use an `<b>Update:</b>` tip box only when the materials themselves report the change. List it in `sources.md` too.
 
 ### 5.5 Privacy
 
@@ -281,7 +286,7 @@ A description of the diagram to sketch (boxes, arrows, labels), plus the walkthr
 A full-marks answer in paragraphs, written as a strong student would write it in the exam.
 
 ### Common mistakes
-- Mistake → why it loses marks.
+- Mistake → why it loses marks. Include only mistakes the materials name; otherwise leave this section out.
 ```
 
 ---
@@ -302,7 +307,10 @@ Topics listed in the course outline but missing from the materials.
 Where sources disagree, and which one the pack follows.
 
 ## Updates
-Cited rules or figures that have since changed, and where the Update note sits.
+Cited rules or figures that have since changed. Say whether the materials report the change (and where the Update note sits) or it comes from outside them (kept out of the book).
+
+## Source problems
+Errors found in a source, such as a table that does not add up. Kept out of the book.
 
 ## Not used
 Files that were skipped, and why (duplicate, unreadable, off-topic).
@@ -316,7 +324,8 @@ Go through every line before handing the pack back.
 
 - [ ] Every session, slide deck and reading in the folder is covered, and `sources.md` maps each chapter to its sources.
 - [ ] `walkthrough.html` is a fragment with no `<style>`, `<script>`, `<html>` or colour values. All chapter ids and marker ids are unique.
-- [ ] Every chapter has a tag, an h2, the four-cell chain, an "In plain words" box, at least one figure with a caption, and (except the last) a "Link to next topic" line.
+- [ ] Every chapter has a tag, an h2, the four-cell chain, an "In plain words" box and at least one figure with a caption. It has a "Link to next topic" line wherever the materials connect it to the next chapter.
+- [ ] Every claim traces to the materials, including chains, captions, link lines, `why` text and model answers. Nothing of your own was added, and points from a student's or user's notes are marked as such.
 - [ ] No "Chapter N", "Figure N" or table of contents is written by hand.
 - [ ] Every abbreviation is spelled out on first use in each chapter and listed in the glossary.
 - [ ] Every flashcard and quiz item has a `week` and a valid `chapter` id, and each chapter has at least 2 of each.
@@ -324,7 +333,7 @@ Go through every line before handing the pack back.
 - [ ] The mock exam has model answers written at full-marks standard.
 - [ ] No chatty phrasing anywhere: search for "Let's", "Here's", "I ", "you'll love", "!" and rewrite any hits.
 - [ ] No student names or student numbers anywhere.
-- [ ] Gaps, conflicts and updates are listed in `sources.md`, not guessed at.
+- [ ] Gaps, conflicts, updates and source problems are listed in `sources.md`, not guessed at or corrected in the book.
 
 ---
 
