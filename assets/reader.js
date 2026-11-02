@@ -460,7 +460,7 @@
     return '<span class="sb-label">' + NAMES[name] + '</span><div class="sb-group rd-toc">' +
       '<button class="sb-row" data-goto="_' + name + '"><span class="grow"><small>Start</small>' + esc(h1 ? h1.textContent : NAMES[name]) + "</span></button>" +
       sectionsOf(el).map(function (s, i) {
-        var num = name === "kisi" ? (/^q\d/.test(s.id) ? "Q" + (+s.id.slice(1)) : "") : i + 1;
+        var num = name === "kisi" ? (/^q\d/.test(s.id) ? "Q" + s.id.slice(1).replace(/^0+/, "").toUpperCase() : "") : i + 1;
         return '<button class="sb-row" data-goto="' + s.id + '"><span class="num" aria-hidden="true">' + num + '</span><span class="grow"><small>' +
           esc(tagOf(s)) + "</small>" + esc(titleOf(s)) + "</span></button>";
       }).join("") + "</div>";

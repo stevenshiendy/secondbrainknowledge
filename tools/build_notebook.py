@@ -11,6 +11,7 @@ A "video" entry in notebook.json adds a Watch tab; its files live in notes/<vide
 "tabs" adds more reading tabs, as [{"id", "label", "file"}], and "tab_label" renames the first.
 "lang" and "languages" ({"en": slug, "id": slug}) pair two packs of one notebook with an EN/ID switch;
 the first language listed holds the shelf card.
+An exam-questions.md adds a Kisi-kisi tab with show-answer boxes and "I can explain this" self-checks.
 Keep a copy of the pack in packs/<slug>/ so the notebook can be rebuilt.
 """
 import html, json, re, sys
@@ -26,26 +27,99 @@ extra_tabs = meta.get("tabs", [])
 for tab in extra_tabs:
     tab["html"] = (PACK / tab["file"]).read_text().strip()
 walk_all = "\n".join([walk] + [tab["html"] for tab in extra_tabs])
+CHAPTER = re.compile(r'<section class="topic(?! kq)[^"]*" id="([^"]+)"[^>]*>.*?<h2>(.*?)</h2>', re.S)
 lang, languages = meta.get("lang", "en"), meta.get("languages", {})
 has_practice = (PACK / "practice.json").exists()
 prac = json.loads((PACK / "practice.json").read_text()) if has_practice else {}
 slug = meta["slug"]
 if not re.fullmatch(r"[a-z0-9-]+", slug):
     sys.exit("notebook.json: slug must be lowercase letters, digits and hyphens")
-if (PACK / "exam-questions.md").exists():
-    print("note: exam-questions.md is not built yet; add it as a Kisi-kisi view by hand")
 esc = lambda s: html.escape(str(s), quote=True)
+
+# ---------- exam-questions.md becomes the Kisi-kisi tab ----------
+def kisi_view(md):
+    titles = {m.group(1): re.sub(r"<[^>]+>", "", m.group(2)) for m in CHAPTER.finditer(walk_all)}
+    def inline(t):
+        t = esc(t).replace("&#x27;", "'").replace("&quot;", '"')
+        t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
+        t = re.sub(r"\*(.+?)\*", r"<i>\1</i>", t)
+        t = re.sub(r"(https?://[^\s<]+[^\s<.,;)])", r'<a href="\1">\1</a>', t)
+        def chapter(m):
+            if m.group(1) not in titles:
+                problems.append("exam-questions.md names unknown chapter " + m.group(1))
+            return '<a href="#%s">%s</a>' % (m.group(1), titles.get(m.group(1), m.group(1)))
+        return re.sub(r"`([^`]+)`", chapter, t)
+    def paras(text):
+        out = []
+        for block in re.split(r"\n\s*\n", text.strip()):
+            out.append(block.strip() if block.lstrip().startswith("<figure") else "<p>%s</p>" % inline(block.strip()))
+        return "".join(out)
+    items = lambda text: [re.sub(r"^(- |\d+\. )", "", l.strip()) for l in text.strip().splitlines() if l.strip()]
+    block = lambda n, head, body: '<div class="kq-block kq-%d"><h3 class="kq-h">%s</h3>%s</div>' % (n, head, body)
+
+    h1 = re.search(r"^# (.+)$", md, re.M).group(1)
+    parts = re.split(r"^## ", md, flags=re.M)
+    intro = [p.strip() for p in re.sub(r"^# .+$", "", parts[0], flags=re.M).split("---")[0].split("\n\n") if p.strip()]
+    sections, toc, refs = [], [], ""
+    for part in parts[1:]:
+        first, _, body = part.partition("\n")
+        body = body.replace("\n---\n", "\n").strip()
+        if first.strip() == "References":
+            refs = ('<section class="topic kq bk-back" id="q-refs"><span class="tag">References · Kisi-kisi</span><h2>References</h2>%s</section>' % paras(body))
+            continue
+        m = re.match(r"Q(\d+)([A-Z]?)\.\s*(.+)", first)
+        if not m:
+            problems.append("exam-questions.md: heading not understood: " + first[:60])
+            continue
+        num, sid = m.group(1) + m.group(2), "q%02d%s" % (int(m.group(1)), m.group(2).lower())
+        title = re.search(r"^\*\*Title:\*\*\s*(.+)$", body, re.M)
+        title = title.group(1).strip() if title else re.split(r"(?<=[.?!:])\s", m.group(3))[0]
+        weight = re.search(r"^\*\*Weight / CILO:\*\*\s*(.+)$", body, re.M)
+        sub = dict(re.findall(r"^### (.+?)\n(.*?)(?=^### |\Z)", body, re.M | re.S))
+        need = [k for k in ("What the question is really asking", "Reasoning staircase", "Model answer") if k not in sub]
+        problems.extend("exam-questions.md: Q%s has no %s" % (num, k) for k in need)
+        if need:
+            continue
+        html_ = ['<section class="topic kq" id="%s"><span class="tag">Question %s · Kisi-kisi</span><h2>%s</h2>' % (sid, num, inline(title))]
+        html_.append(block(1, "The question", '<p class="kq-lead">%s</p>%s' % (inline(m.group(3)), '<p class="kq-keys">%s</p>' % inline(weight.group(1)) if weight else "")))
+        html_.append(block(1, "What the question is really asking", paras(sub["What the question is really asking"])))
+        if "Key terms" in sub:
+            html_.append(block(2, "Key terms", "<ul>%s</ul>" % "".join("<li>%s</li>" % inline(i) for i in items(sub["Key terms"]))))
+        steps = "".join('<li><span class="kq-n" aria-hidden="true">%d</span><span class="sr">Step %d: </span><p>%s</p></li>' % (i + 1, i + 1, inline(t)) for i, t in enumerate(items(sub["Reasoning staircase"])))
+        html_.append(block(2, "Reasoning staircase", '<ol class="kq-steps">%s</ol>' % steps))
+        if "Draw this in the exam" in sub:
+            html_.append(block(3, "Draw this in the exam", paras(sub["Draw this in the exam"])))
+        html_.append(block(4, "Model answer", '<div class="kq-answer"><div class="kq-answer-bar"><button class="kq-reveal" data-reveal aria-expanded="false" aria-controls="%s-ans">Show answer</button><button class="kq-copy" data-copy="%s-ans">Copy</button></div><div class="kq-answer-body" id="%s-ans" hidden>%s</div></div>' % (sid, sid, sid, paras(sub["Model answer"]))))
+        if "Common mistakes" in sub:
+            html_.append(block(5, "Common mistakes", '<ul class="kq-mistakes">%s</ul>' % "".join("<li>%s</li>" % inline(i) for i in items(sub["Common mistakes"]))))
+        html_.append('<label class="kq-check"><input type="checkbox" data-selfcheck="%s"><span>I can explain this without looking</span></label></section>' % sid)
+        sections.append("".join(html_))
+        toc.append('<a href="#%s"><b>Q%s</b> %s</a>' % (sid, num, inline(title)))
+    how = "".join("<p>%s</p>" % inline(p) for p in intro[1:])
+    return "\n".join(filter(None, [
+        '<p class="kicker">%s · Kisi-kisi</p>' % esc(meta.get("course_code", "")),
+        "<h1>%s</h1>" % esc(h1),
+        '<p class="lede">%s</p>' % inline(intro[0]) if intro else "",
+        '<div class="kq-how">%s</div>' % how if how else "",
+        '<div class="kq-bar"><span class="kq-count"><b data-check-count>0</b> of %d marked “I can explain this”</span><button class="kq-all" data-reveal-all aria-pressed="false">Show all answers</button></div>' % len(sections),
+        '<nav class="kq-toc" aria-label="Kisi-kisi questions">%s</nav>' % "".join(toc),
+        *sections, refs]))
 
 # ---------- check the walkthrough against the brief ----------
 problems = []
+n_kisi = 0
+if (PACK / "exam-questions.md").exists():
+    kisi = kisi_view((PACK / "exam-questions.md").read_text())
+    n_kisi = kisi.count('class="topic kq" id="q')
+    extra_tabs.insert(0, {"id": "kisi", "label": "Kisi-kisi", "file": "exam-questions.md", "html": kisi})
+    walk_all += "\n" + kisi
 for bad in ("<style", "<script", "<html", "<body", 'fill="#', 'stroke="#', "<img", "foreignObject"):
     if bad.lower() in walk_all.lower():
         problems.append("walkthrough.html contains " + bad)
 ids = re.findall(r'\bid="([^"]+)"', walk_all)
 problems += ["duplicate id: " + i for i in sorted({i for i in ids if ids.count(i) > 1})]
 problems += ["broken link: #" + h for h in sorted(set(re.findall(r'href="#([^"]+)"', walk_all)) - set(ids))]
-chapters = {m.group(1): re.sub(r"<[^>]+>", "", m.group(2))
-            for m in re.finditer(r'<section class="topic[^"]*" id="([^"]+)"[^>]*>.*?<h2>(.*?)</h2>', walk_all, re.S)}
+chapters = {m.group(1): re.sub(r"<[^>]+>", "", m.group(2)) for m in CHAPTER.finditer(walk_all)}
 cards, quiz, mock = prac.get("flashcards", []), prac.get("quiz", []), prac.get("mock_exam", {})
 for kind, items in (("flashcard", cards), ("quiz item", quiz)):
     for n, it in enumerate(items):
@@ -292,7 +366,7 @@ page = (head + '<body data-book="%s" data-progress-view="v-learn">\n\n' % slug +
 (SITE / "notes" / (slug + ".html")).write_text(page)
 
 # ---------- shelf card on the home page ----------
-n_back = len(re.findall(r'<section class="topic[^"]*\bbk-back\b', walk_all))
+n_back = len(re.findall(r'<section class="topic(?! kq)[^"]*\bbk-back\b', walk_all))
 n_abbr = sum(1 for c in cards if c["deck"] == "abbreviations")
 stats = ["<li><b>%d</b> chapters</li>" % (len(chapters) - n_back)]
 if n_back:
@@ -302,6 +376,8 @@ if has_practice:
     stats.append("<li><b>%d</b> quiz questions</li>" % n_q)
 if data["mock"]:
     stats.append("<li><b>%d</b> mock-exam questions</li>" % len(data["mock"]))
+if n_kisi:
+    stats.append("<li><b>%d</b> worked exam answers</li>" % n_kisi)
 href = "notes/%s.html" % slug
 meta_line = " · ".join(filter(None, [meta.get("lecturer"), meta.get("course_name"), meta.get("covers")]))
 practice_links = "\n          ".join(f'<a href="{href}#{esc(t["id"])}">{esc(t["label"])}</a>' for t in extra_tabs)

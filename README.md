@@ -45,12 +45,14 @@ The GSCM notebook also has a **Kisi-kisi** chapter: the lecturer's 14 UTS questi
 
 - **Crisis Communication** (`notes/crisis-communication.html`, in Bahasa Indonesia `notes/crisis-communication-id.html`): notes on two open-access papers, for summary and understanding, so there are no flashcards, quiz or mock exam. The **Overview** tab shows how the papers connect and compares them, and holds the glossary and references. The **Paper 1** tab covers Youk & Park (2023), an experiment on why adding a scapegoat to an apology backfires. The **Paper 2** tab covers Elgueta-Ruiz et al. (2026), a 24-year review of crisis communication research in *Public Relations Review*. Each paper's tab opens with a chapter that tells the whole article as one story and sets out the authors' own reasoning. The text says what the authors and the study notes say, explains it, and adds nothing else. The **EN / ID** switch in the header changes language, stays on the chapter being read, and is remembered on that device. The Indonesian text and figures are written by meaning and context, not translated word for word; the reader's own tools (Scroll, Slide, search and so on) stay in English. Highlights and reading position are kept separately for each language. It is built from `packs/crisis-communication/` and `packs/crisis-communication-id/`, and the first of those has a `sources.md` that lists number conflicts to check against the papers.
 
+- **Entrepreneurship: A Global Perspective** (`notes/entrepreneurship-global-perspective.html`), ENPR6303032, Sessions 1–5 and 7. The course folder has no Session 6 deck, so the book does not cover it. It has 19 chapters and three appendices (glossary, key lists, numbers sheet). The **Kisi-kisi** tab works through the lecturer's mock midterm (Questions 1–3 and both choices of Question 4); points taken from outside the slides are marked "[outside the slides]" and appear only there. Practice comes as 200 flashcards plus 29 abbreviations, a 66-question quiz and a new mock paper in the same format. It was built from the study pack in `packs/entrepreneurship-global-perspective/`; the exam diagrams were drawn for this site and live in that pack's `exam-questions.md`. Its `sources.md` records the sources, gaps, conflicts and source problems.
+
 ## Adding a notebook
 
 To turn a new course's materials into a notebook, give Claude [`tools/notebook-brief.md`](tools/notebook-brief.md) along with the materials. The brief sets out the study pack it should write: a book-style walkthrough in this site's markup, flashcards, a quiz, a mock exam, optional worked exam questions, and a source map. Then:
 
 1. Copy the pack folder to `packs/<slug>/`, using the `slug` from its `notebook.json`.
-2. Run the command below. It checks the pack (forbidden markup, duplicate ids, broken links, practice items that name a missing chapter). If the checks pass, it writes `notes/<slug>.html` with Walkthrough, Flashcards, Quiz and Mock exam tabs, and adds or refreshes the notebook's card on the home page. Run it again after changing the pack.
+2. Run the command below. It checks the pack (forbidden markup, duplicate ids, broken links, practice items that name a missing chapter). If the checks pass, it writes `notes/<slug>.html` with Walkthrough, Kisi-kisi (when the pack has exam questions), Flashcards, Quiz and Mock exam tabs, and adds or refreshes the notebook's card on the home page. Run it again after changing the pack.
 3. Open the notebook in Scroll and Slide mode and check it before pushing.
 
 ```bash
@@ -63,7 +65,7 @@ To add more reading tabs, add `"tabs": [{"id", "label", "file"}]` to `notebook.j
 
 To add a **Watch** tab, put the video in `notes/<folder>/` and add a `"video"` entry to `notebook.json` with `folder`, `file`, and optionally `poster`, `title`, `blurb` and `chapters` as `[seconds, "name"]` pairs. Keep the file under GitHub's 100 MB limit.
 
-`exam-questions.md` (a Kisi-kisi view) is not built automatically yet. The script points it out when a pack has one.
+If the pack has an `exam-questions.md`, the script also builds a **Kisi-kisi** tab from it: each question with its reasoning staircase, diagram, a model answer behind **Show answer**, and an "I can explain this without looking" tick.
 
 The steps for building a notebook entirely by hand:
 

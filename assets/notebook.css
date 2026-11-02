@@ -124,6 +124,7 @@ main button.primary { background: var(--accent); border-color: var(--accent); co
 
 /* flashcards */
 .deck-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.deck-bar select { max-width: 100%; } /* long deck names must not widen the page on phones */
 .counter { font: 600 .8rem var(--mono); color: var(--muted); margin-left: auto; }
 .card {
   background: var(--panel); border: 1px solid var(--line); border-radius: 14px; min-height: 240px; padding: 28px 24px;

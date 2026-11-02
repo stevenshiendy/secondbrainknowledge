@@ -267,6 +267,8 @@ When the lecturer has shared likely exam questions (a kisi-kisi, review sheet or
 ```markdown
 ## Q3. <the question, word for word>
 
+**Title:** A short chapter title for this question, under about 60 characters
+
 **Weight / CILO:** 15 marks · CILO 2   ← if known
 
 ### What the question is really asking
@@ -280,7 +282,8 @@ One short paragraph that restates it in plain words and names the topic it tests
 2. … each step builds on the last (4–6 steps).
 
 ### Draw this in the exam
-A description of the diagram to sketch (boxes, arrows, labels), plus the walkthrough figure it matches (chapter id).
+An SVG `<figure>` of the diagram, following the figure rules in section 3 and with no blank lines inside it, then a blank line.
+A description of the diagram to sketch (boxes, arrows, labels), plus the walkthrough figure it matches (chapter id in backticks, which becomes a link to that chapter).
 
 ### Model answer
 A full-marks answer in paragraphs, written as a strong student would write it in the exam.
@@ -339,4 +342,4 @@ Go through every line before handing the pack back.
 
 ## 9. After Cowork
 
-Bring the finished pack folder to Claude Code in the SECONDBRAIN repo and ask it to add the pack as a new notebook. The pack is copied to `packs/<slug>/` and built with `tools/build_notebook.py`. That script checks the pack, turns `practice.json` into the Flashcards, Quiz and Mock exam tabs, and adds the shelf card from `notebook.json`. The result is then checked in Scroll and Slide modes. An `exam-questions.md` is still turned into a Kisi-kisi chapter by hand.
+Bring the finished pack folder to Claude Code in the SECONDBRAIN repo and ask it to add the pack as a new notebook. The pack is copied to `packs/<slug>/` and built with `tools/build_notebook.py`. That script checks the pack, turns `exam-questions.md` into a Kisi-kisi tab and `practice.json` into the Flashcards, Quiz and Mock exam tabs, and adds the shelf card from `notebook.json`. The result is then checked in Scroll and Slide modes.
