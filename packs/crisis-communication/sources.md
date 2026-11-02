@@ -1,6 +1,6 @@
 # Sources
 
-Everything in this pack was built from one file, `Crisis Communication_ Two Papers.html`: article notes on the two papers below. The papers themselves were not supplied, so the pack was not checked against the PDFs.
+Everything in this pack was built from one file, `Crisis Communication_ Two Papers.html`: article notes on the two papers below. On 2 November 2026 the pack was checked against the full text of both papers (the Paper 1 EPUB and the Paper 2 PDF). The notes' figures were found to be accurate; the results are under Conflicts.
 
 - Youk, S., & Park, H. S. (2023). *Frontiers in Psychology, 13*, 1082152. "Paper 1".
 - Elgueta-Ruiz, Á., Sadi, G., Gonçalves, G., & Martínez-Ortiz, J. (2026). *Public Relations Review, 52*, 102685. "Paper 2".
@@ -44,13 +44,26 @@ Inside Paper 2, as the notes record (kept in chapter `p2-read`):
 - "SCCT n = 142" is the theory's count in one place and the count of Coombs citations without the theory in another. The pack follows 92 for "SCCT used".
 - Result-theme percentages have no coding table, so the pack calls them approximate.
 
-Found while building this pack (neither is flagged in the notes), then checked on 2 November 2026:
+Settled by reading the full papers:
 
-- **Symmetry values on the slope chart: settled.** The notes label the lines "16th percentile (symmetry −1.49), 50th (0.17), 84th (1.17)", which cannot be raw scores given a mean of 1.49. Paper 1 states that "The moderator, symmetry in communicative responsibility, was mean-centered", and its Table 2 gives the same three values and drops (−0.88, −1.19, −1.38). The labels are kept, with an explanatory box in `p1-results`. The raw equivalents in that box (0 and about 2.66) are this pack's arithmetic. Source: the Frontiers full text.
-- **Yearly article totals: still open.** The per-year totals in the notes' growth chart add to 1,886, while the stated total is 1,906. The crisis counts do add to 391. The Paper 2 abstract confirms "n = 391 of a total of 1906 articles", so the stated totals are right and the question is which yearly figures differ by 20 in all. The yearly figures are kept as the notes give them. The full text could not be read: ScienceDirect and SSRN refused automated and browser access, and the university repository copy sits behind a bot check. Comparing the chart with the PDF will settle it.
-- **386 in the introduction: a likely explanation.** A search summary of the SSRN preprint's abstract gives n = 386 of 1906, so the 386 may be left over from an earlier version. This is an inference, and the preprint page itself could not be opened.
+- **Yearly article totals: an error in the paper, not in the notes.** Every yearly figure in the notes matches Table 1 of Paper 2. Its rows add to 1,886, but its TOTAL row prints 1,906, as does the abstract. The crisis column adds to 391. The figures are kept as printed, and the mismatch is explained in `p2-design` and `p2-read`. Which rows are short cannot be told from the paper.
+- **Symmetry values on the slope chart: confirmed.** Paper 1 states that "The moderator, symmetry in communicative responsibility, was mean-centered", and its Table 2 gives the same three values and drops (−0.88, −1.19, −1.38). The raw equivalents in `p1-results` (0 and about 2.66) are this pack's arithmetic. The labels 2.39, 2.05 and 1.83 are not printed in the paper; they come from the notes and agree with its Fig. 2 and tables.
+- **The two meanings of 142: refined.** SCCT's n = 142 fits applied + named (92 + 50), as Image Repair Theory's n = 102 fits 47 + 55; the paper does not spell out this sum. The paper separately says Coombs is cited without the theory in "142 additional studies". That the two match may be chance or a slip; the paper does not say. The notes treated the first as the conflict, so the wording in `p2-story` and `p2-read` was corrected. 92 remains the figure for "SCCT used".
 
-Paper 1 also reports no indirect-effect estimates, only that appropriateness "fully mediated" the relationship, so the reputation figures in `p1-story` are this pack's own calculation, as that chapter says.
+Corrected against the papers:
+
+- **Paraphrases shown as quotes.** The notes quoted "Your new car's seat belts have been malfunctioning" and "We will compensate the victims". Paper 1 reports these only in description, so the quotation marks were removed. "We apologize for the incident regarding the seat belt malfunction" is a true quotation.
+- **A hedge restored.** Paper 1 says the expectation of collective responsibility "may also apply" to crises caused by subcontractors, so `p1-read` now says "may".
+- **A limit added.** Paper 2 also names the deliberate exclusion of crisis management as a limitation. Its exclusion of disaster and public-health crises comes from the introduction's statement of scope.
+- **A chart described more exactly.** The "borrowed theories" chart in `p2-theory` is a selection from the "Other" list, which is led by broader labels such as social media (74).
+
+Other points for anyone quoting these papers:
+
+- In Paper 1, "no apology-only control" and "vignettes measure reactions on paper" are the notes' own critique, not limitations the authors state.
+- In Paper 2, the 386 is printed in the introduction. A search summary of the SSRN preprint gives n = 386 of 1906, so it may be left over from an earlier version.
+- Paper 2 has further small slips that the notebook does not rely on: "83 articles on crisis communication and social media" beside 85 in Table 5; corporate social responsibility 22 in the text and 25 in Table 5; Tennessee 16 and later 15; and crisis communication theories n = 158, below the 142 + 102 given for its two main theories.
+
+Paper 1 reports no indirect-effect estimates, so the reputation figures in `p1-story` are this pack's own calculation, as that chapter says.
 
 ## Updates
 
