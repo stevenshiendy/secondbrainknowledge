@@ -8,11 +8,11 @@ All files come from the course folder "International New Venture" (ENPR6306032, 
 | w1-what-is-entrepreneurship | Week 1, Sessions 1–2 slides 4–7 (definition, entrepreneurial process, Figure 1.1) |
 | w1-economy-and-tech | Week 1 slides 8–11 (technological change, industry life cycle, GEM, high-impact ventures) |
 | w1-risk-and-trends | Week 1 slides 12–19 (risk, fuzzy front end, failure, history, decades figure, trends) |
-| w1-eurodisney-case | Case Week 1.pdf (Thunderbird case TB0195, EuroDisneyland, pp. 1–14 including Exhibits 1–10); Study Case for EuroDisneyland.pdf (class case analysis: numbers, causes, options A–E, lessons) |
+| w1-eurodisney-case | Case Week 1.pdf (Thunderbird case TB0195, EuroDisneyland, pp. 1–14 including Exhibits 1–10); Study Case for EuroDisneyland.pdf (student assignment, kept in a separate section) |
 | w2-myths | Week 2, Sessions 3–4 slides 4–11 |
 | w2-paths | Week 2 slides 12–21 (paths, corporate models, Table 2.1) |
 | w2-preparing | Week 2 slides 22–33 (Figure 2.1, mentor, networks, Figure 2.2, barriers, Table 2.3, industry) |
-| w2-localbite-case | Case Week 2.png (LocalBite: From Idea to Action); LocalBite_Strategic_Blueprint-compressed.pdf (15-page blueprint in Indonesian, used as a worked extension) |
+| w2-localbite-case | Case Week 2.png (LocalBite: From Idea to Action); LocalBite_Strategic_Blueprint-compressed.pdf (student assignment in Indonesian, kept in a separate section) |
 | w3-design-thinking | Week 3, Sessions 5–6 slides 4–8 (Figure 3.1) |
 | w3-creativity | Week 3 slides 9–17 (Wallas, Figure 3.2, Table 3.1, tools, Figure 3.3) |
 | w3-opportunity-problem | Week 3 slides 18–27 (discovery and creation theory, problem framing, Table 3.2, solutions) |
@@ -25,7 +25,7 @@ All files come from the course folder "International New Venture" (ENPR6306032, 
 | w5-revenue-costs | Week 5 slides 16–20 (revenue models, cost drivers, business model change) |
 | w5-feasibility | Week 5 slides 21–36 and 43 (Table 5.2, Figures 5.3–5.6, conclusions) |
 | w5-bm-innovation | Week 5 slides 37–42 (blue ocean, two-sided platforms, Figure 5.7) |
-| w5-freshmart-case | FreshMart Retail Business Model Case.png (case and three questions); FreshMart_Case_Analysis.pptx (22-slide worked analysis) |
+| w5-freshmart-case | FreshMart Retail Business Model Case.png (case and three questions); FreshMart_Case_Analysis.pptx (student assignment, 22 slides, kept in a separate section) |
 | w6-product-design | Week 6, Sessions 11–12 slides 4–12 (Figure 6.1) |
 | w6-development-cycle | Week 6 slides 13–26 (Figure 6.2, Table 6.1, prototypes, launch, Table 6.2) |
 | w6-mvp-outsourcing | Week 6 slides 27–37 (MVP, Figure 6.3, outsourcing) |
@@ -40,7 +40,7 @@ All files come from the course folder "International New Venture" (ENPR6306032, 
 
 ## Gaps
 
-- **Lecturer name and exam details.** No deck names a lecturer, and no file gives the exam type, length, date, mark split or a kisi-kisi. `notebook.json` leaves out `lecturer` and `exam`, no `exam-questions.md` was written, and the mock exam's 120 minutes and 100 marks are an assumption modelled on the FreshMart case's 30/40/30 point format.
+- **Lecturer name and exam details.** No deck names a lecturer, so `notebook.json` leaves out `lecturer`. On 2026-11-02 the student reported the exam format: two essay case questions, answered with the theories given or with practical or proven methods. `notebook.json` now records that type; no length, date, mark split or kisi-kisi is known, so no `exam-questions.md` was written. The mock exam's 120 minutes and 100 marks remain an assumption.
 - **Readings named on reference slides but not in the folder:** "The Global Entrepreneur" (HBR, 2008); "15 Steps Entrepreneurs Must Take Before Going Global" (Forbes, 2022); "How to Identify Business Opportunities" (HBS Online); "Systematic Review on Business Model of Cultural-Based Product Business" (IEEE, cited in Weeks 5 and 6); "Protecting your assets abroad" (Boyletts Law, Week 7). Only their titles are used. The pack does not cover their contents.
 - **International content is thin in places.** The Week 1, 6 and 7 deck titles say "international", "across cultures" and "abroad", but the slides mostly teach general entrepreneurship and United States law. International points in the pack come from the slides that exist (PCT, Berne Convention, foreign trademark registration, translation testing, offshore outsourcing) and from the cases. Nothing was added from outside sources.
 - **Image-only slides.** Some figures are images (Figures 1.1, 3.4, 5.2 and Table 4.2). Figure 5.2, the customer segmentation matrix for a diabetes device, cannot be read at slide resolution, so the pack teaches the matrix idea without its cell contents. Figures 1.1 and 3.4 are the same image (the entrepreneurial process grid).
@@ -58,6 +58,16 @@ All files come from the course folder "International New Venture" (ENPR6306032, 
 - **LocalBite blueprint channel payouts.** For a Rp 33,000 pack, the blueprint says direct orders return Rp 26,897 "with no deductions", which is less than the price. It also gives Rp 26,400 for a 20% commission app. These figures do not reconcile. The pack shows only the 20% commission calculation.
 - **LocalBite scope.** The case describes modern Indonesian snacks sold online in general. The blueprint narrows this to frozen cireng in Bandung with chili levels. The pack presents the blueprint as one possible extension, not as the case facts.
 - **Spelling.** The slides use American spelling and the FreshMart analysis uses British spelling. The pack follows the slides.
+
+## Student work kept separate (revised 2026-11-02)
+
+Three files in the course folder are the student's own submitted assignments, not course material: "Study Case for EuroDisneyland.pdf" (answers Case Week 1), "LocalBite_Strategic_Blueprint-compressed.pdf" (answers Case Week 2) and "FreshMart_Case_Analysis.pptx" (answers the FreshMart case). They can contain mistakes, so the pack no longer teaches them as course content.
+
+- **Case chapters** (`w1-eurodisney-case`, `w2-localbite-case`, `w5-freshmart-case`) now rest on the case sheets and exhibits. Each ends with a section headed "Your assignment answer (student work, kept separate)" that summarizes the assignment and lists what was checked as wrong. The full check, with open-access sources, is the assignment review at https://claude.ai/artifact/71TQbdXPXnUwT2k6G9w8xy.
+- **Corrections made in the EuroDisney chapter and mock exam:** the spend column in Exhibit 6 is in-park spend, which excludes the ticket. The revenue gap against Tokyo is about $310 million a year, not $400 million. "Class analysis" wording is removed. Disney's stake is described as $160 million of direct capital, and Exhibit 1 shows $539.5 million.
+- **Practice set:** three flashcards and one quiz item built only on the LocalBite blueprint or the FreshMart Plus offer were removed (274 to 271 flashcards, 89 to 88 quiz items). The remaining items that use the assignments are labelled as examples.
+- Mock exam Section C still uses an imagined frozen chili-level snack for LocalBite. That scenario comes from the student blueprint and is practice only.
+- The unedited pack is kept in `international-new-venture-study-pack-backup-2026-11-02/`.
 
 ## Updates
 

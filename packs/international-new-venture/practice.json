@@ -226,7 +226,7 @@
    "week": 1,
    "chapter": "w1-eurodisney-case",
    "front": "Spend-to-admission ratio: EuroDisney versus Tokyo",
-   "back": "EuroDisney $37.50 ÷ $47 ≈ 0.80×; Tokyo $77.50 ÷ $38 ≈ 2.04×. EuroDisney charged the highest ticket but collected the lowest total spend."
+   "back": "EuroDisney $37.50 ÷ $47 ≈ 0.80×; Tokyo $77.50 ÷ $38 ≈ 2.04×. EuroDisney charged the highest ticket but collected the lowest in-park spend (Exhibit 6's spend column excludes the ticket)."
   },
   {
    "deck": "w1",
@@ -253,7 +253,7 @@
    "deck": "w1",
    "week": 1,
    "chapter": "w1-eurodisney-case",
-   "front": "The recommended turnaround sequence (Option E)",
+   "front": "One defensible turnaround sequence for EuroDisney (Option E)",
    "back": "Fix the financial model first (capital, debt rescheduling, freeze Phase Two), then fix the product (prices, wine and beer, menus), then reinvest in a major new attraction."
   },
   {
@@ -465,20 +465,6 @@
    "chapter": "w2-localbite-case",
    "front": "Suggested starting approach for LocalBite",
    "back": "Start from home and sell through Instagram, TikTok and online marketplaces, using savings of 5 million Indonesian rupiah."
-  },
-  {
-   "deck": "w2",
-   "week": 2,
-   "chapter": "w2-localbite-case",
-   "front": "TAM, SAM and SOM in the LocalBite blueprint",
-   "back": "Total addressable market Rp 848.9 trillion; serviceable available market Rp 394.3 billion; serviceable obtainable market Rp 101.2 million (about 0.026% of SAM), limited by production capacity."
-  },
-  {
-   "deck": "w2",
-   "week": 2,
-   "chapter": "w2-localbite-case",
-   "front": "The blueprint's three-month launch sequence",
-   "back": "Month 1: zero-commission channels (WhatsApp, Instagram, TikTok); month 2: delivery apps; month 3 onward: e-commerce and local supermarket consignment. Projected total profit Rp 5,832,000."
   },
   {
    "deck": "w3",
@@ -1163,28 +1149,21 @@
    "deck": "w5",
    "week": 5,
    "chapter": "w5-freshmart-case",
-   "front": "Break-even delivery basket at FreshMart",
+   "front": "Break-even delivery basket (FreshMart example, assuming a 25% margin and Rp 12,000 per trip)",
    "back": "Rp 12,000 per trip ÷ 25% gross margin = Rp 48,000; smaller delivered orders lose money."
   },
   {
    "deck": "w5",
    "week": 5,
    "chapter": "w5-freshmart-case",
-   "front": "FreshMart Plus offer",
-   "back": "Rp 29,000 a month; free 30-minute delivery on orders from Rp 75,000 within about 3 km; member meal prices; double points on own brand; non-members pay delivery, minimum Rp 50,000."
-  },
-  {
-   "deck": "w5",
-   "week": 5,
-   "chapter": "w5-freshmart-case",
-   "front": "The biggest risk of FreshMart Plus and its effect",
+   "front": "Main risk of a free-delivery membership for a store-based grocer (FreshMart example)",
    "back": "Members move store trips into free delivery: a Rp 100,000 basket earns Rp 25,000 walked in but Rp 13,000 delivered, so profit roughly halves."
   },
   {
    "deck": "w5",
    "week": 5,
    "chapter": "w5-freshmart-case",
-   "front": "FreshMart Plus test plan",
+   "front": "A test plan before expanding a new membership (example from your FreshMart assignment)",
    "back": "Weeks 1–2 fake-door test; weeks 3–10 pilot in 2 stores with 2 control stores; week 11 decide to scale, adjust or stop."
   },
   {
@@ -1996,7 +1975,7 @@
     "Astro"
    ],
    "answer": 0,
-   "why": "FreshMart asks students to separate business model from value proposition and choose a model change. Astro is only a benchmark inside the FreshMart analysis."
+   "why": "FreshMart asks students to separate business model from value proposition and choose a model change. Astro is only a benchmark inside your FreshMart assignment."
   },
   {
    "week": 1,
@@ -2134,12 +2113,12 @@
    "q": "EuroDisney's spend-to-admission ratio was about 0.80×, against Tokyo's 2.04×. What does this show?",
    "options": [
     "EuroDisney charged the lowest ticket of all Disney parks",
-    "Visitors paid the highest ticket but spent the least in total",
+    "Visitors paid the highest ticket but spent the least inside the park",
     "Tokyo visitors paid more for admission than EuroDisney visitors",
     "EuroDisney's visitors spent more on food than on tickets"
    ],
    "answer": 1,
-   "why": "Adult tickets: EuroDisney $47, Tokyo $38; total spend EuroDisney $30–45, Tokyo $70–85."
+   "why": "Adult tickets: EuroDisney $47, Tokyo $38; in-park spend (excluding the ticket) EuroDisney $30–45, Tokyo $70–85."
   },
   {
    "week": 1,
@@ -2296,19 +2275,6 @@
    ],
    "answer": 1,
    "why": "Myth 2: great businesses usually started with a great team and an execution plan, not a great idea."
-  },
-  {
-   "week": 2,
-   "chapter": "w2-localbite-case",
-   "q": "In the LocalBite blueprint, why is the serviceable obtainable market (SOM) only about 0.026% of the serviceable available market (SAM)?",
-   "options": [
-    "It is limited by the solo founder's production capacity, not by demand",
-    "Demand for snacks in Bandung is very low",
-    "Delivery apps refuse to list the product",
-    "The product is sold only to high school students"
-   ],
-   "answer": 0,
-   "why": "The blueprint states that capacity, not demand, sets the SOM of Rp 101.2 million."
   },
   {
    "week": 3,
@@ -2781,7 +2747,7 @@
   {
    "week": 5,
    "chapter": "w5-freshmart-case",
-   "q": "In the FreshMart analysis, what is the break-even basket for delivery?",
+   "q": "In the FreshMart example, with an assumed 25% gross margin and Rp 12,000 per delivery trip, what is the break-even basket for delivery?",
    "options": [
     "Rp 12,000",
     "Rp 25,000",
@@ -2789,7 +2755,7 @@
     "Rp 48,000"
    ],
    "answer": 3,
-   "why": "Rp 12,000 delivery cost ÷ 25% gross margin = Rp 48,000. Rp 75,000 is the member minimum order, set above break-even."
+   "why": "Rp 12,000 delivery cost ÷ 25% gross margin = Rp 48,000. Smaller delivered orders lose money."
   },
   {
    "week": 5,
@@ -2807,7 +2773,7 @@
   {
    "week": 5,
    "chapter": "w5-freshmart-case",
-   "q": "What is the biggest risk named for FreshMart Plus?",
+   "q": "Your FreshMart assignment proposes a paid membership with free delivery. What is the biggest risk of that kind of offer?",
    "options": [
     "Students cancel their free membership",
     "Members move store trips into free delivery, halving profit on those baskets",
@@ -3132,7 +3098,7 @@
  ],
  "mock_exam": {
   "minutes": 120,
-  "instructions": "Answer all six questions. Marks are shown for each question and total 100. Use the course's frameworks by name, support claims with figures from the cases, and draw a diagram where it helps your answer. This paper follows the case-based style of the course; the real exam's format was not given in the course materials.",
+  "instructions": "Answer all six questions. Marks are shown for each question and total 100. Use the course's frameworks by name, support claims with figures from the cases, and draw a diagram where it helps your answer. The real exam is two essay case questions. Sections B and C are the best practice for it: answer each with a named theory from the slides, apply it to the case with evidence, and add a practical or proven method such as a test card, a pilot or a break-even calculation.",
   "sections": [
    {
     "id": "A",
@@ -3165,7 +3131,7 @@
      {
       "q": "Using the exhibits in the EuroDisneyland case, explain why the park lost money in its first year even though attendance of about 10 million exceeded the stated break-even of 7 to 8 million visitors. Support at least three causes with calculations or figures.",
       "marks": 20,
-      "model_answer": "EuroDisneyland opened near Paris in April 1992 and reported a net loss of FFr188 million for fiscal 1992, with cumulative losses of about $500 million by April 1993. The apparent paradox, attendance above break-even yet a loss, dissolves once the exhibits are read together. Four causes stand out.\n\nFirst, the break-even target was out of date. Exhibit 5 shows construction cost estimates rising from $1.0 billion in 1985 to $4.4 billion in 1991 and $4.4 to 4.5 billion in 1992, an increase of about 4.4 times. The 7 to 8 million visitor break-even belonged to the original $1 billion plan and was never recalculated. Contributing factors in the case include construction costs about 20% above comparable United States jobs, six coats of paint on facades against one in the United States parks, $8 to 10 million of extras on Le Visionarium, and delays and modifications. In effect the project became unprofitable during construction.\n\nSecond, visitors spent too little once inside. Exhibit 6 shows EuroDisney charged the highest adult ticket of the four parks ($47) but collected the lowest total spend per person ($30 to 45). Using midpoints, the spend-to-admission ratio was $37.50 ÷ $47 ≈ 0.80×, against Tokyo's $77.50 ÷ $38 ≈ 2.04×, Anaheim's 1.81× and Orlando's 1.50×. A gap of about $40 per person against Tokyo across 10 million visitors is roughly $400 million a year, close to the cumulative loss. The likely mechanism is that an expensive ticket used up the visitor's budget before food and merchandise.\n\nThird, the price did not fit European budgets and holiday habits. Exhibit 10 shows French income per head of $23,026 with 4.6% available for leisure, a budget of about $1,059 a year. A day at the park plus a hotel night of about $177 takes roughly 16.7% of that budget. French workers also take about five weeks of holiday, typically in long blocks spent traveling away from home, while Japanese and United States visitors take two to three weeks and favor short trips. Tokyo also had 30 million people within 30 miles and the omiage gift-giving custom; EuroDisney's market of 300 million was a day's travel away, so transport costs ate into in-park spending. The hotels' 37% occupancy shows the result.\n\nFourth, the deal paid Disney before profit was measured. Exhibit 8 shows Disney received 10% of admissions, 5% of food, merchandise and hotel revenue, and base management fees of 3% of revenues for five years, all charged on revenue, plus 49% of net income. Disney earned even as other shareholders lost, and cash left the business when it was most needed.\n\nCultural misfit reinforced all four: no alcohol in a wine-drinking country, mainly American food, a United States appearance code challenged under French labor law, and a winter climate (Paris averages 32–42°F in January against Orlando's 49–70°F) that shortened the season. Tokyo had wanted an American copy; France called the park a \"cultural Chernobyl.\" A diagram with four cause boxes (costs, low spend, price misfit, fees on revenue) all pointing to one loss box summarizes the diagnosis.",
+      "model_answer": "EuroDisneyland opened near Paris in April 1992 and reported a net loss of FFr188 million for fiscal 1992, with cumulative losses of about $500 million by April 1993. The apparent paradox, attendance above break-even yet a loss, dissolves once the exhibits are read together. Four causes stand out.\n\nFirst, the break-even target was out of date. Exhibit 5 shows construction cost estimates rising from $1.0 billion in 1985 to $4.4 billion in 1991 and $4.4 to 4.5 billion in 1992, an increase of about 4.4 times. The 7 to 8 million visitor break-even belonged to the original $1 billion plan and was never recalculated. Contributing factors in the case include construction costs about 20% above comparable United States jobs, six coats of paint on facades against one in the United States parks, $8 to 10 million of extras on Le Visionarium, and delays and modifications. In effect the project became unprofitable during construction.\n\nSecond, visitors spent too little once inside. Exhibit 6 shows EuroDisney charged the highest adult ticket of the four parks ($47) but collected the lowest in-park spend per person ($30 to 45, a column that excludes the ticket). Using midpoints, the spend-to-admission ratio was $37.50 ÷ $47 ≈ 0.80×, against Tokyo's $77.50 ÷ $38 ≈ 2.04×, Anaheim's 1.81× and Orlando's 1.50×. Counting the ticket as well, a EuroDisney visitor brought in about $84.50 against about $115.50 in Tokyo; a gap of about $31 across 10 million visitors is roughly $310 million of revenue a year. That is lost revenue rather than lost profit, but it is large next to a loss of about $500 million. The likely mechanism is that an expensive ticket used up the visitor's budget before food and merchandise.\n\nThird, the price did not fit European budgets and holiday habits. Exhibit 10 shows French income per head of $23,026 with 4.6% available for leisure, a budget of about $1,059 a year. A day at the park plus a hotel night of about $177 takes roughly 16.7% of that budget. French workers also take about five weeks of holiday, typically in long blocks spent traveling away from home, while Japanese and United States visitors take two to three weeks and favor short trips. Tokyo also had 30 million people within 30 miles and the omiage gift-giving custom; EuroDisney's market of 300 million was a day's travel away, so transport costs ate into in-park spending. The hotels' 37% occupancy shows the result.\n\nFourth, the deal paid Disney before profit was measured. Exhibit 8 shows Disney received 10% of admissions, 5% of food, merchandise and hotel revenue, and base management fees of 3% of revenues for five years, all charged on revenue, plus 49% of net income. Disney earned even as other shareholders lost, and cash left the business when it was most needed.\n\nCultural misfit reinforced all four: no alcohol in a wine-drinking country, mainly American food, a United States appearance code challenged under French labor law, and a winter climate (Paris averages 32–42°F in January against Orlando's 49–70°F) that shortened the season. Tokyo had wanted an American copy; France called the park a \"cultural Chernobyl.\" A diagram with four cause boxes (costs, low spend, price misfit, fees on revenue) all pointing to one loss box summarizes the diagnosis.",
       "chapters": [
        "w1-eurodisney-case"
       ]
@@ -3173,7 +3139,7 @@
      {
       "q": "As Philippe Bourguignon, recommend a turnaround plan for EuroDisneyland. Compare at least three options, choose one, and justify the order in which its actions should be taken.",
       "marks": 20,
-      "model_answer": "Five options are available. Option A is to do nothing and wait, following Michael Eisner's view that the park will grow into the culture over time. It costs nothing now, but with cash of about FFr1.1 billion in May 1993, heavy debt and Phase Two estimated at FFr8 to 10 billion, waiting risks running out of money before the culture changes. Option B fixes the financial model: new capital, rescheduled debt and a pause on Phase Two. It buys time but leaves the product misfit untouched, so losses would return. Option C fixes the product: lower prices, wine and beer, cheaper menus and an offer adapted to European habits. It addresses the root of the low spend-to-admission ratio, but without new cash the park may not survive long enough to see the benefit. Option D sells or licenses the park, copying the Tokyo arrangement in which Disney took no equity and earned fees. It limits Disney's exposure but abandons a $160 million investment and the long-term upside, and a buyer would demand a deep discount. Option E combines B, then C, then reinvestment.\n\nOption E is recommended because it treats both the cash crisis and its cause. The order matters, consistent with retrenchment-then-recovery turnaround thinking used in the class analysis: a firm must stop the bleeding before it can grow, and reversing the order is a common reason turnarounds fail. It also follows the course's message from feasibility analysis that a business model must be retested and changed when it meets the market.\n\nStep 1, stabilize cash. Ask Disney to waive royalties and management fees for a period, since these are charged on revenue and drain cash regardless of profit. Use the fact that Disney risked only $160 million while lenders and French authorities had far more at stake as leverage to reschedule debt and raise new capital. Freeze Phase Two without cancelling it, to preserve it as a future attraction. Step 2, fix the offer. Cut adult ticket and hotel prices and introduce winter pricing to fit a 4.6% leisure budget and the Paris climate; serve wine and beer and add cheaper menus to remove cultural friction and raise spend per visitor; adapt employment practices so the appearance code complies with French law. Rename and market the park around its real asset, Paris, 20 miles away with 300 million people within a day's travel. Step 3, reinvest. Once cash flow is stable and spend per visitor is rising, build a major new attraction, for example from the frozen Phase Two plans, to give visitors a reason to return.\n\nSuccess should be measured with the case's own indicators: spend-to-admission ratio moving from 0.80× toward the 1.5× to 2× range of other parks, hotel occupancy rising from 37%, French share of visitors rising from 29%, and a break-even recalculated on the actual $4.4 billion cost. The lesson for an international new venture is that a proven model is only a hypothesis in a new country, and price, product and financial structure must be tested against the local customer before scaling.",
+      "model_answer": "Five options are available. Option A is to do nothing and wait, following Michael Eisner's view that the park will grow into the culture over time. It costs nothing now, but with cash of about FFr1.1 billion in May 1993, heavy debt and Phase Two estimated at FFr8 to 10 billion, waiting risks running out of money before the culture changes. Option B fixes the financial model: new capital, rescheduled debt and a pause on Phase Two. It buys time but leaves the product misfit untouched, so losses would return. Option C fixes the product: lower prices, wine and beer, cheaper menus and an offer adapted to European habits. It addresses the root of the low spend-to-admission ratio, but without new cash the park may not survive long enough to see the benefit. Option D sells or licenses the park, copying the Tokyo arrangement in which Disney took no equity and earned fees. It limits Disney's exposure but abandons its investment ($160 million of direct capital; $539.5 million on Disney's books in Exhibit 1) and the long-term upside, and a buyer would demand a deep discount. Option E combines B, then C, then reinvestment.\n\nOption E is recommended because it treats both the cash crisis and its cause. The order matters, consistent with retrenchment-then-recovery turnaround thinking: a firm must stop the cash drain before it can grow, because a firm that invests while still losing cash risks running out of it. It also follows the course's message from feasibility analysis that a business model must be retested and changed when it meets the market.\n\nStep 1, stabilize cash. Ask Disney to waive royalties and management fees for a period, since these are charged on revenue and drain cash regardless of profit. Use the fact that Disney put in only $160 million of direct capital while lenders and French authorities had far more at stake as leverage to reschedule debt and raise new capital. Freeze Phase Two without cancelling it, to preserve it as a future attraction. Step 2, fix the offer. Cut adult ticket and hotel prices and introduce winter pricing to fit a 4.6% leisure budget and the Paris climate; serve wine and beer and add cheaper menus to remove cultural friction and raise spend per visitor; adapt employment practices so the appearance code complies with French law. Rename and market the park around its real asset, Paris, 20 miles away with 300 million people within a day's travel. Step 3, reinvest. Once cash flow is stable and spend per visitor is rising, build a major new attraction, for example from the frozen Phase Two plans, to give visitors a reason to return.\n\nSuccess should be measured with the case's own indicators: spend-to-admission ratio moving from 0.80× toward the 1.5× to 2× range of other parks, hotel occupancy rising from 37%, French share of visitors rising from 29%, and a break-even recalculated on the actual $4.4 billion cost. The lesson for an international new venture is that a proven model is only a hypothesis in a new country, and price, product and financial structure must be tested against the local customer before scaling.",
       "chapters": [
        "w1-eurodisney-case",
        "w5-feasibility",

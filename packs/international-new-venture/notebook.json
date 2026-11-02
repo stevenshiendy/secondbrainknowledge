@@ -6,5 +6,8 @@
   "course_name": "International New Venture",
   "institution": "BINUS University",
   "covers": "Sessions 1–14",
-  "shelf_blurb": "All fourteen sessions of International New Venture, from entrepreneurship and opportunity recognition to business models, prototyping and protecting intellectual property abroad, with the EuroDisneyland, LocalBite and FreshMart cases, 274 flashcards, an 89-question quiz and a case-based mock exam."
+  "exam": {
+    "type": "Essay: two case questions, answered with course theories and practical or proven methods"
+  },
+  "shelf_blurb": "All fourteen sessions of International New Venture, from entrepreneurship and opportunity recognition to business models, prototyping and protecting intellectual property abroad, with the EuroDisneyland, LocalBite and FreshMart cases, 271 flashcards, an 88-question quiz and a case-based mock exam."
 }
