@@ -44,10 +44,13 @@ Inside Paper 2, as the notes record (kept in chapter `p2-read`):
 - "SCCT n = 142" is the theory's count in one place and the count of Coombs citations without the theory in another. The pack follows 92 for "SCCT used".
 - Result-theme percentages have no coding table, so the pack calls them approximate.
 
-Found while building this pack (neither is flagged in the notes):
+Found while building this pack (neither is flagged in the notes), then checked on 2 November 2026:
 
-- **Yearly article totals.** The per-year totals in the notes' growth chart add to 1,886, while the stated total is 1,906. The crisis counts do add to 391. The yearly figures are kept as given in `p2-design`, and 1,906 is used as the total. Which of the two is wrong needs checking against the paper.
-- **Symmetry values on the slope chart.** The notes label the three lines "16th percentile (symmetry −1.49), 50th (0.17), 84th (1.17)". Read as raw scores, these cannot sit with a mean of 1.49 and only 7.9% of people below zero. They fit as mean-centred values: −1.16 + (−0.19 × −1.49) ≈ −0.88 and −1.16 + (−0.19 × 1.17) ≈ −1.38, which are the drops the notes report. This is an inference from the arithmetic, not a statement in the notes. The labels are kept, with an explanatory box in `p1-results`.
+- **Symmetry values on the slope chart: settled.** The notes label the lines "16th percentile (symmetry −1.49), 50th (0.17), 84th (1.17)", which cannot be raw scores given a mean of 1.49. Paper 1 states that "The moderator, symmetry in communicative responsibility, was mean-centered", and its Table 2 gives the same three values and drops (−0.88, −1.19, −1.38). The labels are kept, with an explanatory box in `p1-results`. The raw equivalents in that box (0 and about 2.66) are this pack's arithmetic. Source: the Frontiers full text.
+- **Yearly article totals: still open.** The per-year totals in the notes' growth chart add to 1,886, while the stated total is 1,906. The crisis counts do add to 391. The Paper 2 abstract confirms "n = 391 of a total of 1906 articles", so the stated totals are right and the question is which yearly figures differ by 20 in all. The yearly figures are kept as the notes give them. The full text could not be read: ScienceDirect and SSRN refused automated and browser access, and the university repository copy sits behind a bot check. Comparing the chart with the PDF will settle it.
+- **386 in the introduction: a likely explanation.** A search summary of the SSRN preprint's abstract gives n = 386 of 1906, so the 386 may be left over from an earlier version. This is an inference, and the preprint page itself could not be opened.
+
+Paper 1 also reports no indirect-effect estimates, only that appropriateness "fully mediated" the relationship, so the reputation figures in `p1-story` are this pack's own calculation, as that chapter says.
 
 ## Updates
 
