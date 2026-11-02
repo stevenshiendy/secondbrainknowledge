@@ -73,6 +73,7 @@
 /* ---------- Slide mode: title, contents and part titles get pages of their own ---------- */
 :root[data-paged] [data-readable] > .kicker { margin-top: min(18vh, 150px); }
 :root[data-paged] [data-readable] > section.topic::after { display: none; } /* the page break already ends the chapter */
+:root[data-paged] [data-readable] section.topic > h2 { break-inside: avoid; } /* a title too long to share a page with its box stays whole */
 :root[data-paged] .bk-contents { break-before: column; margin-top: 0; }
 :root[data-paged] .bk-contents-list a { break-inside: avoid; }
 :root[data-paged] .bk-part { break-before: column; break-after: column; margin: 0; padding: min(26vh, 220px) 0 0; border: 0; }
