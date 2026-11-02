@@ -6,6 +6,7 @@
 The pack folder holds notebook.json, walkthrough.html and practice.json (sources.md is kept
 for reference). Writes notes/<slug>.html on the GSCM page shell, with Walkthrough, Flashcards,
 Quiz and Mock exam tabs, and adds or refreshes the notebook's card on the home page shelf.
+A "video" entry in notebook.json adds a Watch tab; its files live in notes/<video folder>/.
 Keep a copy of the pack in packs/<slug>/ so the notebook can be rebuilt.
 """
 import html, json, re, sys
@@ -46,6 +47,12 @@ for n, q in enumerate(quiz):
 if problems:
     sys.exit("pack problems:\n  " + "\n  ".join(problems))
 
+video = meta.get("video")
+if video:
+    for name in (video["file"], video.get("poster")):
+        if name and not (SITE / "notes" / video["folder"] / name).exists():
+            sys.exit("notebook.json: video file not found: notes/%s/%s" % (video["folder"], name))
+
 # ---------- practice data, in the shape the page script below reads ----------
 decks = prac.get("decks", {})
 data = {
@@ -71,7 +78,7 @@ head = re.sub(r'<meta name="description" content="[^"]*">',
 header = shell[shell.index("<header"): shell.index("</header>") + 9]
 header = header.replace("GSCM Midterm</span>", esc(short) + "</span>")
 header = re.sub(r'<nav class="sb-nav".*?</nav>', '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    '
-                '<a href="#learn">Walkthrough</a><a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>\n  </nav>',
+                '<a href="#learn">Walkthrough</a>' + ('<a href="#watch">Watch</a>' if video else '') + '<a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>\n  </nav>',
                 header, flags=re.S)
 
 n_q = len(quiz)
@@ -81,9 +88,25 @@ mock_lede = " ".join(filter(None, [
     esc(mock.get("instructions", "")),
     "Write your answer on paper first, then open the model answer and compare. Each question links to the chapters it draws on.",
 ]))
+watch = ""
+if video:
+    src = esc(video["folder"]) + "/"
+    poster = ' poster="%s%s"' % (src, esc(video["poster"])) if video.get("poster") else ""
+    stamp = lambda t: "%d:%02d" % (t // 60, t % 60)
+    chapter_buttons = "".join('<button data-t="%s"><b>%s</b> %s</button>' % (t, stamp(int(t)), esc(n)) for t, n in video.get("chapters", []))
+    watch = f'''
+
+<!-- ================= WATCH ({esc(video["folder"])}/) ================= -->
+<div id="v-watch" data-view hidden>
+<h1>{esc(video.get("title", "Watch"))}</h1>
+<p class="lede">{esc(video.get("blurb", ""))}</p>
+<div class="watch-video"><video id="watchvideo" controls playsinline preload="metadata"{poster} src="{src}{esc(video["file"])}"></video></div>
+<div class="watch-chapters">{chapter_buttons}</div>
+</div>'''
+
 views = f'''<div id="v-learn" data-view data-readable>
 {walk}
-</div>
+</div>{watch}
 
 <!-- ================= FLASHCARDS ================= -->
 <div id="v-cards" data-view hidden>
@@ -209,6 +232,14 @@ window.SB_QUIZ={list:()=>QUIZ.map(q=>({q:htmlText(q.q),o:q.o.map(htmlText),a:q.a
 
 buildDeck(true);buildQuiz();route();
 """ % data_js
+if video:
+    script = script.replace('["learn","cards","quiz","mock"]', '["learn","watch","cards","quiz","mock"]')
+    script += """
+/* ---------- watch: chapter buttons; leaving the tab pauses the video ---------- */
+const vid=document.getElementById("watchvideo");
+document.querySelectorAll(".watch-chapters button").forEach(b=>b.onclick=()=>{vid.currentTime=+b.dataset.t;vid.play()});
+addEventListener("hashchange",()=>{if(document.getElementById("v-watch").hidden)vid.pause()});
+"""
 
 page = (head + '<body data-book="%s" data-progress-view="v-learn">\n\n' % slug + header
         + '\n\n<main class="wrap" id="main">\n\n<!-- ================= WALKTHROUGH (%s/walkthrough.html) ================= -->\n'
@@ -247,7 +278,7 @@ card = f'''<article class="book" data-progress-for="{slug}">
         </div>
         <div class="jump">
           <a data-resume="{href}" hidden>Resume</a>
-          <a href="{href}#cards">Flashcards</a>
+          {f'<a href="{href}#watch">Watch</a>' if video else ""}<a href="{href}#cards">Flashcards</a>
           <a href="{href}#quiz">Quiz</a>
           <a href="{href}#mock">Mock exam</a>
         </div>

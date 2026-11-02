@@ -9,5 +9,46 @@
   "exam": {
     "type": "Essay: two case questions, answered with course theories and practical or proven methods"
   },
-  "shelf_blurb": "All fourteen sessions of International New Venture, from entrepreneurship and opportunity recognition to business models, prototyping and protecting intellectual property abroad, with the EuroDisneyland, LocalBite and FreshMart cases, 271 flashcards, an 88-question quiz and a case-based mock exam."
+  "shelf_blurb": "All fourteen sessions of International New Venture, from entrepreneurship and opportunity recognition to business models, prototyping and protecting intellectual property abroad, with the EuroDisneyland, LocalBite and FreshMart cases, 271 flashcards, an 88-question quiz and a case-based mock exam.",
+  "video": {
+    "folder": "international-new-venture-video",
+    "file": "From_Idea_to_Market_3D.mp4",
+    "poster": "poster.jpg",
+    "title": "From Idea to Market",
+    "blurb": "A 3D animated explainer (13:17): the EuroDisney story, entrepreneurship, business models, new product development and Raka’s worked example. Captions are built into the picture.",
+    "chapters": [
+      [
+        0,
+        "Paris, 1992"
+      ],
+      [
+        79.8,
+        "The Opportunity"
+      ],
+      [
+        188.4,
+        "The Problem"
+      ],
+      [
+        255.1,
+        "The Market"
+      ],
+      [
+        310.8,
+        "The Machine"
+      ],
+      [
+        487.9,
+        "The Product"
+      ],
+      [
+        607.9,
+        "Raka"
+      ],
+      [
+        724.8,
+        "Back to Paris"
+      ]
+    ]
+  }
 }

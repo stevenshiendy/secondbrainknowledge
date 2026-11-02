@@ -20,7 +20,7 @@
 <header class="sb-top"><div class="wrap">
   <a class="sb-brand" href="../index.html"><svg class="sb-mark" viewBox="0 0 64 64" aria-hidden="true"><rect class="m-bg" width="64" height="64" rx="14"/><path class="m-pg" d="M14 18c7-2 13-1 18 3v28c-5-4-11-5-18-3zM50 18c-7-2-13-1-18 3v28c5-4 11-5 18-3z"/></svg><span class="sb-word">SECOND<i>BRAIN</i></span><span class="sb-crumb">New Venture</span></a>
   <nav class="sb-nav" id="nav" aria-label="Notebook sections">
-    <a href="#learn">Walkthrough</a><a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>
+    <a href="#learn">Walkthrough</a><a href="#watch">Watch</a><a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>
   </nav>
   <div class="sb-tools">
     <div class="rd-seg" role="radiogroup" aria-label="Reading mode">
@@ -2624,6 +2624,14 @@ National phase decisions by: 1 September 2028 (month 30)</div>
 <p>Abbreviations in this sheet: SAM is serviceable available market, SOM is serviceable obtainable market, and PCT is the Patent Cooperation Treaty.</p></section>
 </div>
 
+<!-- ================= WATCH (international-new-venture-video/) ================= -->
+<div id="v-watch" data-view hidden>
+<h1>From Idea to Market</h1>
+<p class="lede">A 3D animated explainer (13:17): the EuroDisney story, entrepreneurship, business models, new product development and Raka’s worked example. Captions are built into the picture.</p>
+<div class="watch-video"><video id="watchvideo" controls playsinline preload="metadata" poster="international-new-venture-video/poster.jpg" src="international-new-venture-video/From_Idea_to_Market_3D.mp4"></video></div>
+<div class="watch-chapters"><button data-t="0"><b>0:00</b> Paris, 1992</button><button data-t="79.8"><b>1:19</b> The Opportunity</button><button data-t="188.4"><b>3:08</b> The Problem</button><button data-t="255.1"><b>4:15</b> The Market</button><button data-t="310.8"><b>5:10</b> The Machine</button><button data-t="487.9"><b>8:07</b> The Product</button><button data-t="607.9"><b>10:07</b> Raka</button><button data-t="724.8"><b>12:04</b> Back to Paris</button></div>
+</div>
+
 <!-- ================= FLASHCARDS ================= -->
 <div id="v-cards" data-view hidden>
 <h1>Flashcards</h1>
@@ -2671,7 +2679,7 @@ const DECKS=Object.assign({All:"All decks"},DATA.decks), CARDS=DATA.cards, QUIZ=
 const htmlText=t=>String(t).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"})[c]);
 
 /* ---------- routing: a view name, or an anchor inside the walkthrough ---------- */
-const views=["learn","cards","quiz","mock"];
+const views=["learn","watch","cards","quiz","mock"];
 function route(){
   const h=(location.hash||"#learn").slice(1);
   const t=views.includes(h)?null:document.getElementById(h);
@@ -2749,6 +2757,11 @@ window.SB_CARDS={view:"cards",
 window.SB_QUIZ={list:()=>QUIZ.map(q=>({q:htmlText(q.q),o:q.o.map(htmlText),a:q.a,e:htmlText(q.e),week:q.w}))};
 
 buildDeck(true);buildQuiz();route();
+
+/* ---------- watch: chapter buttons; leaving the tab pauses the video ---------- */
+const vid=document.getElementById("watchvideo");
+document.querySelectorAll(".watch-chapters button").forEach(b=>b.onclick=()=>{vid.currentTime=+b.dataset.t;vid.play()});
+addEventListener("hashchange",()=>{if(document.getElementById("v-watch").hidden)vid.pause()});
 </script>
 <script src="../assets/secondbrain.js"></script>
 <script src="../assets/reader.js"></script>

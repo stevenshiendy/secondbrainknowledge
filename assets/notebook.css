@@ -433,3 +433,10 @@ mark.sr-hit.cur { background: var(--accent); color: var(--on-accent); }
 .sr-bar-n { flex: none; margin: 0 6px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .sr-bar .sb-icon { width: 34px; height: 34px; border: 0; background: none; }
 .sr-bar .sb-icon:hover { background: var(--sunk); }
+
+/* Watch tab */
+.watch-video { margin: 8px 0 14px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #06070c; }
+.watch-video video { display: block; width: 100%; aspect-ratio: 16 / 9; }
+.watch-chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-bottom: 40px; }
+.watch-chapters button { text-align: left; }
+.watch-chapters b { font-variant-numeric: tabular-nums; margin-right: 4px; }
