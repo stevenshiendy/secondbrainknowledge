@@ -8,6 +8,7 @@ for reference). Writes notes/<slug>.html on the GSCM page shell, with Walkthroug
 Quiz and Mock exam tabs, and adds or refreshes the notebook's card on the home page shelf.
 Without a practice.json the page has the Walkthrough only, for notes meant just for reading.
 A "video" entry in notebook.json adds a Watch tab; its files live in notes/<video folder>/.
+A memorize.json in the pack adds a Memorize tab: one endless quiz per exam question (assets/memorize.js).
 "tabs" adds more reading tabs, as [{"id", "label", "file"}], and "tab_label" renames the first.
 "lang" and "languages" ({"en": slug, "id": slug}) pair two packs of one notebook with an EN/ID switch;
 the first language listed holds the shelf card.
@@ -133,6 +134,7 @@ for n, q in enumerate(quiz):
 if problems:
     sys.exit("pack problems:\n  " + "\n  ".join(problems))
 
+memorize = json.loads((PACK / "memorize.json").read_text()) if (PACK / "memorize.json").exists() else None
 video = meta.get("video")
 if video:
     for name in (video["file"], video.get("poster")):
@@ -175,7 +177,7 @@ if languages:
         '<button type="button" lang="%s" data-lang-to="%s" aria-pressed="%s">%s</button>' % (k, esc(v), "true" if k == lang else "false", k.upper())
         for k, v in languages.items()) + '</span>'
 header = re.sub(r'<nav class="sb-nav".*?</nav>', '<nav class="sb-nav" id="nav" aria-label="Notebook sections">\n    '
-                '<a href="#learn">' + esc(meta.get("tab_label", "Walkthrough")) + '</a>' + "".join('<a href="#%s">%s</a>' % (esc(t["id"]), esc(t["label"])) for t in extra_tabs) + ('<a href="#watch">Watch</a>' if video else '') + ('<a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>' if has_practice else '') + lang_switch + '\n  </nav>',
+                '<a href="#learn">' + esc(meta.get("tab_label", "Walkthrough")) + '</a>' + "".join('<a href="#%s">%s</a>' % (esc(t["id"]), esc(t["label"])) for t in extra_tabs) + ('<a href="#memorize">Memorize</a>' if memorize else '') + ('<a href="#watch">Watch</a>' if video else '') + ('<a href="#cards">Flashcards</a><a href="#quiz">Quiz</a><a href="#mock">Mock exam</a>' if has_practice else '') + lang_switch + '\n  </nav>',
                 header, flags=re.S)
 
 n_q = len(quiz)
@@ -207,10 +209,27 @@ tab_views = "".join('''
 <div id="v-%s" data-view data-readable data-title="%s" hidden>
 %s
 </div>''' % (esc(t["label"]).upper(), esc(PACK.name), esc(t["file"]), esc(t["id"]), esc(t["label"]), t["html"]) for t in extra_tabs)
+memorize_view = ""
+if memorize:
+    memorize_view = '''
+
+<!-- ================= MEMORIZE (%s/memorize.json) ================= -->
+<div id="v-memorize" data-view data-no-print hidden>
+<h1>Memorize</h1>
+<p class="lede">One endless quiz for each exam question. What you miss comes back soon.</p>
+<div class="mem-tabs" id="mem-tabs" role="group" aria-label="Exam question"></div>
+<div class="mem-stat"><span id="mem-count"></span><span id="mem-known"></span></div>
+<div class="mem-track"><span id="mem-bar"></span></div>
+<div class="mem-card" id="mem-card" aria-live="polite"></div>
+<details class="mem-ask" id="mem-ask"></details>
+<p class="mem-about">These answers are retold in easy English. The memory words and pictures are memory aids, not the authors' wording, and the full answers are in the <a href="#kisi">Kisi-kisi</a>. For Question 4, you only need the topic you choose.</p>
+<button type="button" id="mem-reset" class="mem-reset">Start this quiz again</button>
+<script type="application/json" id="memdata">%s</script>
+</div>''' % (esc(PACK.name), json.dumps(memorize, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"))
 learn_title = ' data-title="%s"' % esc(meta["tab_label"]) if meta.get("tab_label") else ""
 views = f'''<div id="v-learn" data-view data-readable{learn_title}>
 {walk}
-</div>{tab_views}{watch}'''
+</div>{tab_views}{memorize_view}{watch}'''
 if has_practice:
     views += f'''
 
@@ -340,7 +359,7 @@ buildDeck(true);buildQuiz();route();
 """ % data_js
 if not has_practice:  # only the routing is needed
     script = "\n" + script[script.index("/* ---------- routing"): script.index("/* ---------- flashcards")] + "route();\n"
-tabs = ["learn"] + [t["id"] for t in extra_tabs] + ["watch"] * bool(video) + ["cards", "quiz", "mock"] * has_practice
+tabs = ["learn"] + [t["id"] for t in extra_tabs] + ["memorize"] * bool(memorize) + ["watch"] * bool(video) + ["cards", "quiz", "mock"] * has_practice
 script = script.replace('["learn","cards","quiz","mock"]', json.dumps(tabs, separators=(",", ":")))
 if video:
     script += """
@@ -364,7 +383,7 @@ document.querySelectorAll("[data-lang-to]").forEach(b=>b.onclick=()=>{
 page = (head + '<body data-book="%s" data-progress-view="v-learn">\n\n' % slug + header
         + '\n\n<main class="wrap" id="main">\n\n<!-- ================= WALKTHROUGH (%s/walkthrough.html) ================= -->\n'
         % esc(PACK.name) + views + "\n\n</main>\n\n<script>" + script + "</script>\n"
-        + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n<script src="../assets/downloads-data.js"></script>\n<script src="../assets/downloads.js"></script>\n</body>\n</html>\n')
+        + '<script src="../assets/secondbrain.js"></script>\n<script src="../assets/reader.js"></script>\n<script src="../assets/downloads-data.js"></script>\n<script src="../assets/downloads.js"></script>\n' + ('<script src="../assets/memorize.js"></script>\n' if memorize else '') + '</body>\n</html>\n')
 (SITE / "notes" / (slug + ".html")).write_text(page)
 
 # ---------- shelf card on the home page ----------
@@ -380,12 +399,15 @@ if data["mock"]:
     stats.append("<li><b>%d</b> mock-exam questions</li>" % len(data["mock"]))
 if n_kisi:
     stats.append("<li><b>%d</b> worked exam answers</li>" % n_kisi)
+if memorize:
+    stats.append("<li><b>%d</b> endless memory quizzes</li>" % len(memorize["exam"]))
 href = "notes/%s.html" % slug
 meta_line = " · ".join(filter(None, [meta.get("lecturer"), meta.get("course_name"), meta.get("covers")]))
 practice_links = "\n          ".join(f'<a href="{href}#{esc(t["id"])}">{esc(t["label"])}</a>' for t in extra_tabs)
 for code, other in languages.items():
     if code != lang:
         practice_links += f'\n          <a href="notes/{esc(other)}.html" data-lang-pick="{esc(code)}" data-lang-key="{esc(slug)}" lang="{esc(code)}">{esc(meta.get("language_names", {}).get(code, code.upper()))}</a>'
+practice_links += f'\n          <a href="{href}#memorize">Memorize</a>' if memorize else ""
 practice_links += f'<a href="{href}#cards">Flashcards</a>\n          <a href="{href}#quiz">Quiz</a>\n          <a href="{href}#mock">Mock exam</a>' if has_practice else ""
 also = "".join(' data-progress-also="%s"' % esc(v) for k, v in languages.items() if k != lang)
 card = f'''<article class="book" data-progress-for="{slug}"{also}>

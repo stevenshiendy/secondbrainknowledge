@@ -77,3 +77,7 @@ None of the materials reports a change, so the book has no Update notes. The fol
 - `Teori_Internasionalisasi_UKM.pdf` — a classmate's slide deck on small-firm internationalization theories, not the lecturer's. It is left out of the book and the worked answers. One difference to know about: it says born globals earn significant foreign revenue within 3 years of founding, while Tanev (2012), used in `exam-questions.md`, says they typically export within a couple of years.
 - `20250701191017_Session 4.pptx` — an exact duplicate of `20250701191005_Session 4.pptx` (identical file contents). The first copy was used.
 - Mock midterm cover table — student name, student ID, class and signature fields were left out. Only the instructions, learning outcomes, questions, time and exam type were used.
+
+## Memorize tab (added 2026-11-03)
+
+`memorize.json` holds the Memorize tab's answers, memory lines and pictures. At the student's request, its answers retell each model answer from `exam-questions.md` in easy English at about 300 words, so that one fits about 25 minutes of slow handwriting. They add no facts: their numbers and names were checked against the model answers. Some definitions are less exact than the textbook's wording, and the page sends readers to the Kisi-kisi for the full answers. The wrong options in the quiz are other key words from the answers. The pictures are memory aids drawn for this tab, not figures from the slides or textbook, and shapes such as the U curve are not data.

@@ -474,3 +474,35 @@ main .dl-fig button:hover, .sb-sheet .dl-fig button:hover { border-color: var(--
 .dl-link:hover { border-color: var(--accent); color: var(--accent); }
 .dl-link svg { flex: none; width: 17px; height: 17px; }
 .dl-link small { margin-left: 3px; font-weight: 400; font-size: 12px; color: var(--muted); }
+
+/* Memorize tab */
+.mem-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 12px; }
+.mem-tabs button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.mem-stat { display: flex; justify-content: space-between; gap: 12px; font: 600 .78rem var(--ui); color: var(--muted); margin-bottom: 5px; }
+.mem-track { height: 7px; background: var(--sunk); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; margin-bottom: 14px; }
+.mem-track span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+.mem-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; }
+.mem-kind { font: 700 .67rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.mem-prompt { font: var(--w-body) 1.08rem/1.5 var(--reader); margin: 0 0 12px; text-indent: 0; }
+.mem-q { display: block; margin-top: 8px; padding-left: 12px; border-left: 3px solid var(--line-strong); }
+.mem-gap { display: inline-block; min-width: 92px; height: 1.05em; border-bottom: 2px solid var(--fg); vertical-align: baseline; }
+.mem-opts .opt { display: flex; gap: 10px; align-items: baseline; min-height: 44px; }
+.mem-opts .opt:disabled { cursor: default; opacity: 1; color: var(--fg); }
+.mem-n { font: 700 .72rem var(--mono); color: var(--muted); }
+.mem-type { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.mem-type input { flex: 1 1 220px; min-width: 0; min-height: 44px; padding: 8px 12px; font: var(--w-body) 1rem var(--reader); color: var(--fg); background: var(--sunk); border: 1px solid var(--line-strong); border-radius: 8px; }
+.mem-verdict { font: 700 .95rem var(--ui); margin: 12px 0 8px; padding-left: 10px; border-left: 4px solid var(--good); color: var(--good); }
+.mem-verdict.is-wrong { border-left-color: var(--bad); color: var(--bad); }
+.mem-verdict:empty { display: none; }
+.mem-para { font: var(--w-body) .95rem/1.55 var(--reader); margin: 10px 0 6px; text-indent: 0; }
+.mem-para mark { background: var(--accent-soft); color: inherit; font-weight: 700; padding: 0 2px; }
+.mem-stop { font: 700 .72rem var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-right: 4px; }
+.mem-note { font-size: .82rem; color: var(--muted); margin: 0 0 4px; text-indent: 0; }
+.mem-pic { margin: 8px 0 12px; }
+.mem-pic summary, .mem-ask summary { font: 600 .82rem var(--ui); cursor: pointer; color: var(--accent); }
+.mem-pic svg { display: block; width: 100%; max-width: 480px; height: auto; margin: 8px 0 6px; border-radius: 4px; }
+.mem-pic p { font-size: .84rem; color: var(--muted); margin: 0; max-width: 480px; text-indent: 0; }
+.mem-ask { margin-bottom: 14px; font-size: .9rem; }
+.mem-ask p { margin: 8px 0 4px; text-indent: 0; }
+.mem-about { font-size: .84rem; color: var(--muted); margin: 0 0 12px; text-indent: 0; }
+main button.mem-reset { font-size: .75rem; min-height: 34px; padding: 5px 10px; color: var(--muted); margin-bottom: 40px; }

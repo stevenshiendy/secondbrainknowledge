@@ -148,6 +148,7 @@ window.SB_PDF = (function () {
     root.setAttribute("data-layout", "scroll");
     main.className = "";
 
+    $$("[data-no-print]", main).forEach(function (v) { v.remove(); });   // interactive tabs have nothing to print
     var views = $$("[data-view]", main), viewIds = {}, pages = "", blocks = [];
     var navName = {};
     meta.nav.forEach(function (n) { navName[n[0]] = n[1]; });
