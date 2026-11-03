@@ -95,8 +95,8 @@ window.SB_DOWNLOADS = {
    "href": "notes/pdf/entrepreneurship-global-perspective.pdf",
    "name": "Entrepreneurship: A Global Perspective Notebook.pdf",
    "title": "Entrepreneurship: A Global Perspective Notebook",
-   "pages": 173,
-   "bytes": 3038278
+   "pages": 177,
+   "bytes": 3078195
   },
   "media": []
  }

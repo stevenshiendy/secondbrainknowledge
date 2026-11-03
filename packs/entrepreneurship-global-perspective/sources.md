@@ -28,7 +28,7 @@ All lecture files come from the course folder "Entrepreneurship A Global Perspec
 
 **Practice material.** Every flashcard and quiz item is built from the chapter it names. The mock exam in `practice.json` copies the mock midterm's format (four 25-mark essays, 120 minutes, closed book, a choice in Question 4) but asks new questions so that it does not duplicate `exam-questions.md`. Its Question 2 sets an invented scenario (a 30-employee Indonesian food-processing firm) so students can apply the Session 5 theories; the scenario is not in the materials.
 
-**exam-questions.md.** At the student's request, the worked answers to the mock midterm use the course materials first and add three free, open-access sources where the slides do not cover a required part. Each outside point is marked **[outside the slides]** in the file:
+**exam-questions.md.** At the student's request, the worked answers to the mock midterm use the course materials first and add three free, open-access sources where the slides do not cover a required part. Each outside point is marked **[outside the slides]** in the file. Each question's "Remember it as a line" section (the five stops, the one-breath line and the short words such as born, pushed, noticed) is a memory aid written for the student, not the authors' wording; it adds no facts beyond the model answer:
 - Tanev (2012), *Technology Innovation Management Review*, CC BY 3.0: a definition of born-global firms and how they relate to the international new venture label (Question 1 asks for the difference; the slides do not define born globals).
 - Hofstede (2011), *Online Readings in Psychology and Culture*, CC BY-NC-ND 3.0: the sixth dimension, indulgence versus restraint (Question 3).
 - Bosma and Kelley (2019), GEM 2018/2019 Global Report: listed as the open-access original of the GEM 2018 data the slides quote. Its figures were not re-checked against the report; the answers use the figures as the slides give them.
@@ -75,5 +75,6 @@ None of the materials reports a change, so the book has no Update notes. The fol
 
 ## Not used
 
+- `Teori_Internasionalisasi_UKM.pdf` — a classmate's slide deck on small-firm internationalization theories, not the lecturer's. It is left out of the book and the worked answers. One difference to know about: it says born globals earn significant foreign revenue within 3 years of founding, while Tanev (2012), used in `exam-questions.md`, says they typically export within a couple of years.
 - `20250701191017_Session 4.pptx` — an exact duplicate of `20250701191005_Session 4.pptx` (identical file contents). The first copy was used.
 - Mock midterm cover table — student name, student ID, class and signature fields were left out. Only the instructions, learning outcomes, questions, time and exam type were used.

@@ -85,6 +85,8 @@ def kisi_view(md):
         html_.append(block(1, "What the question is really asking", paras(sub["What the question is really asking"])))
         if "Key terms" in sub:
             html_.append(block(2, "Key terms", "<ul>%s</ul>" % "".join("<li>%s</li>" % inline(i) for i in items(sub["Key terms"]))))
+        if "Remember it as a line" in sub:
+            html_.append(block(2, "Remember it as a line", paras(sub["Remember it as a line"])))
         steps = "".join('<li><span class="kq-n" aria-hidden="true">%d</span><span class="sr">Step %d: </span><p>%s</p></li>' % (i + 1, i + 1, inline(t)) for i, t in enumerate(items(sub["Reasoning staircase"])))
         html_.append(block(2, "Reasoning staircase", '<ol class="kq-steps">%s</ol>' % steps))
         if "Draw this in the exam" in sub:

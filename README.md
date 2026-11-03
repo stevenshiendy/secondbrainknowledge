@@ -77,7 +77,7 @@ To add more reading tabs, add `"tabs": [{"id", "label", "file"}]` to `notebook.j
 
 To add a **Watch** tab, put the video in `notes/<folder>/` and add a `"video"` entry to `notebook.json` with `folder`, `file`, and optionally `poster`, `title`, `blurb` and `chapters` as `[seconds, "name"]` pairs. Keep the file under GitHub's 100 MB limit.
 
-If the pack has an `exam-questions.md`, the script also builds a **Kisi-kisi** tab from it: each question with its reasoning staircase, diagram, a model answer behind **Show answer**, and an "I can explain this without looking" tick.
+If the pack has an `exam-questions.md`, the script also builds a **Kisi-kisi** tab from it: each question with an optional "Remember it as a line" memory aid, its reasoning staircase, diagram, a model answer behind **Show answer**, and an "I can explain this without looking" tick.
 
 The steps for building a notebook entirely by hand:
 
