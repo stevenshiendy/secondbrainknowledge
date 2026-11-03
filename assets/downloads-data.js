@@ -96,7 +96,7 @@ window.SB_DOWNLOADS = {
    "name": "Entrepreneurship: A Global Perspective Notebook.pdf",
    "title": "Entrepreneurship: A Global Perspective Notebook",
    "pages": 177,
-   "bytes": 3078195
+   "bytes": 3077837
   },
   "media": []
  }

@@ -28,11 +28,10 @@ All lecture files come from the course folder "Entrepreneurship A Global Perspec
 
 **Practice material.** Every flashcard and quiz item is built from the chapter it names. The mock exam in `practice.json` copies the mock midterm's format (four 25-mark essays, 120 minutes, closed book, a choice in Question 4) but asks new questions so that it does not duplicate `exam-questions.md`. Its Question 2 sets an invented scenario (a 30-employee Indonesian food-processing firm) so students can apply the Session 5 theories; the scenario is not in the materials.
 
-**exam-questions.md.** At the student's request, the worked answers to the mock midterm use the course materials first and add three free, open-access sources where the slides do not cover a required part. Each outside point is marked **[outside the slides]** in the file. Each question's "Remember it as a line" section (the five stops, the one-breath line and the short words such as born, pushed, noticed) is a memory aid written for the student, not the authors' wording; it adds no facts beyond the model answer:
+**exam-questions.md.** At the student's request, the worked answers to the mock midterm use the course materials first and add three free, open-access sources where the slides do not cover a required part. Each outside point is marked **[outside the slides]** in the file. Each question's "Remember it as a line" section is a memory aid written for the student, not the authors' wording; it adds no facts beyond the model answer. Because the exam is closed book and the student must cite from memory, the answers use eleven citations only, as the student asked: the names the questions call for, plus Pruthi and Mitra (2023) for everything else the course takes from that textbook. Scholars the slides quote only in passing (such as Bridge et al., Liberto, Bamford and Bruton, Johnson and Kimmelman, Quan et al., Zhou and Hsu, Saxenian, and the UN and OECD reports) keep their facts in the answers but are cited through the textbook. Outside sources:
 - Tanev (2012), *Technology Innovation Management Review*, CC BY 3.0: a definition of born-global firms and how they relate to the international new venture label (Question 1 asks for the difference; the slides do not define born globals).
-- Hofstede (2011), *Online Readings in Psychology and Culture*, CC BY-NC-ND 3.0: the sixth dimension, indulgence versus restraint (Question 3).
-- Bosma and Kelley (2019), GEM 2018/2019 Global Report: listed as the open-access original of the GEM 2018 data the slides quote. Its figures were not re-checked against the report; the answers use the figures as the slides give them.
-Scholars named on the slides are cited in APA 7th as secondary sources through Pruthi and Mitra (2023), on the assumption, stated on every reference slide, that the decks follow that textbook. None of this outside material is in `walkthrough.html` or `practice.json`.
+- Bosma and Kelley (2019), GEM 2018/2019 Global Report: listed as the open-access original of the GEM 2018 data the slides quote, which the answers cite as GEM (2018). Its figures were not re-checked against the report; the answers use the figures as the slides give them.
+None of this outside material is in `walkthrough.html` or `practice.json`.
 
 ## Gaps
 
@@ -58,9 +57,9 @@ Scholars named on the slides are cited in APA 7th as secondary sources through P
 ## Updates
 
 None of the materials reports a change, so the book has no Update notes. The following come from outside the materials and are kept out of the book:
-- **Hofstede's dimensions.** The slides teach five dimensions (Hofstede, 1991). Hofstede's later work adds a sixth, indulgence versus restraint (Hofstede, 2011). Mentioned only in `exam-questions.md`, marked as outside material.
+- **Hofstede's dimensions.** The slides teach five dimensions (Hofstede, 1991). Hofstede's later work adds a sixth, indulgence versus restraint (Hofstede, 2011). It is left out of the worked answers so there is one citation fewer to memorize, and the question does not ask for it.
 - **Data age.** The statistics are from 2014–2019 (USBA 2018, GEM 2018, NVCA 2019). GEM has published later global reports, and Facebook has since been renamed Meta. The book keeps the course figures, which are what the exam marks.
-- **GEM report year.** The slides cite "Bosma and Kelley (2018)"; the report is the GEM 2018/2019 Global Report, published January 2019. The book keeps "Bosma and Kelley (2018)"; `exam-questions.md` lists it as 2019 in its APA reference list.
+- **GEM report year.** The slides cite "Bosma and Kelley (2018)"; the report is the GEM 2018/2019 Global Report, published January 2019. The book keeps "Bosma and Kelley (2018)"; `exam-questions.md` cites the data as GEM (2018) and lists the report as 2019 in its reference list.
 
 ## Source problems
 
