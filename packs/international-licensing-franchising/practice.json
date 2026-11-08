@@ -1,0 +1,2529 @@
+{
+ "decks": {
+  "review": "Course map and assignments",
+  "s1": "Sessions 1–2 · Market entry",
+  "s3": "Sessions 3–4 · Licensing basics",
+  "s5": "Sessions 5–6 · Strategic licensing",
+  "s7": "Sessions 7–8 · Legal and ethical",
+  "s9": "Sessions 9–10 · Franchising basics",
+  "s11": "Sessions 11–12 · Franchise development",
+  "s13": "Sessions 13–14 · Franchise law",
+  "abbreviations": "Abbreviations"
+ },
+ "flashcards": [
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The three CILOs of the course",
+   "back": "CILO 1: define the foundational principles of international licensing, franchising and strategic alliances. CILO 2: evaluate different market entry strategies and determine when licensing, franchising or alliances are most appropriate. CILO 3: identify legal, financial and operational factors affecting international business collaborations."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "Which session decks serve CILO 3",
+   "back": "Sessions 7–8 (Legal and Ethical Issues in Licensing) and Sessions 13–14 (Franchise Agreements and Legal Frameworks)."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The two lanes of the course after Sessions 1–2",
+   "back": "The licensing lane (Sessions 3–8: fundamentals, strategic use, legal and ethical issues) and the franchising lane (Sessions 9–14: fundamentals, international development, agreements and legal frameworks)."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The two course textbooks",
+   "back": "Sherman (2011), Franchising & Licensing: Two Powerful Ways to Grow Your Business in Any Economy (AMACOM); and Tjemkes, Vos & Burgers (2023), Strategic Alliance Management (Routledge)."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "Where strategic alliances are covered in the course folder",
+   "back": "Only in the Sessions 1–2 overview (definition, advantages, challenges, comparison and the Starbucks + Tata example); no deck treats them on their own."
+  },
+  {
+   "deck": "review",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "The seven deck titles in order",
+   "back": "Introduction to International Market Entry Strategies (1–2); Fundamentals of Licensing (3–4); Strategic Use of Licensing (5–6); Legal and Ethical Issues in Licensing (7–8); Fundamentals of Franchising (9–10); Developing an International Franchise (11–12); Franchise Agreements and Legal Frameworks (13–14)."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "The four reasons to enter international markets",
+   "back": "(1) Access new customers; (2) increase revenue; (3) gain competitive advantage; (4) spread risk across markets."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "The four international entry strategies",
+   "back": "Exporting, licensing, franchising and strategic alliances."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "Exporting: definition, advantages, challenges",
+   "back": "Selling domestic products abroad. Advantages: low risk, easy entry. Challenges: limited control, trade barriers."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "Direct versus indirect exporting",
+   "back": "Direct exporting: the company handles it. Indirect exporting: using intermediaries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "Licensing (Sessions 1–2): definition, advantages, challenges",
+   "back": "Permitting a foreign company to use your intellectual property. Advantages: low cost, fast expansion. Challenges: loss of control, potential IP misuse."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "Franchising (Sessions 1–2): definition, advantages, challenges",
+   "back": "Letting a foreign party run a business under your system and brand. Advantages: scalable, uses local knowledge. Challenges: franchisee quality control, dependency."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "Strategic alliance: definition",
+   "back": "Collaboration between two or more firms to pursue mutual goals while remaining independent."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "front": "Strategic alliance: advantages and challenges",
+   "back": "Advantages: shared cost and risk; access to local market expertise. Challenges: complex coordination; possible conflict."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Investment level of each entry strategy",
+   "back": "Exporting: low. Licensing: low. Franchising: medium. Strategic alliance: medium–high."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Control level of each entry strategy",
+   "back": "Exporting: low. Licensing: low. Franchising: medium. Strategic alliance: shared."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Risk level of each entry strategy",
+   "back": "Exporting: low. Licensing: medium. Franchising: medium. Strategic alliance: medium."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Best use case of each entry strategy",
+   "back": "Exporting: testing foreign demand. Licensing: entering IP-intensive industries. Franchising: service businesses seeking global scale. Strategic alliance: complex markets requiring local support."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Indomie as an entry example",
+   "back": "Exporting: exports instant noodles from Indonesia to 80+ countries without local factories."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Disney as an entry example (Sessions 1–2)",
+   "back": "Licensing: licenses characters to global partners for merchandise production."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "McDonald's as an entry example (Sessions 1–2)",
+   "back": "Franchising: operates globally via franchisees under standard systems."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "front": "Starbucks + Tata as an entry example",
+   "back": "Strategic alliance: formed to enter the Indian market; Tata handles sourcing and operations."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Direct entry versus indirect entry: definitions",
+   "back": "Direct entry: own subsidiaries, local branches. Indirect entry: use agents, distributors or partners."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Direct versus indirect entry on control and cost",
+   "back": "Control: direct high (own operations and decision-making), indirect low (agents or partners). Cost: direct high (setup and operational investment), indirect low (minimal investment)."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Direct versus indirect entry on speed",
+   "back": "Direct: slower, requires physical establishment. Indirect: faster, leverages existing networks."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Direct versus indirect entry on market knowledge",
+   "back": "Direct: high, direct access to consumers and insights. Indirect: low, filtered through intermediaries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Direct versus indirect entry on risk",
+   "back": "Direct: higher, full exposure to local challenges. Indirect: lower, risk is shared or passed to partners."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "The slides' examples of direct and indirect entry",
+   "back": "Direct: Starbucks opening its own stores. Indirect: local distributors selling a domestic product overseas."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Three advantages of direct entry",
+   "back": "High control over operations and branding; strong market presence; direct customer feedback and insight."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "Three disadvantages of indirect entry",
+   "back": "Low control over branding and customer experience; limited market insight; reliance on third parties."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "front": "The four points of the Sessions 1–2 assignment, for each company",
+   "back": "The strategy used; the reason for choosing it; its advantages and disadvantages in the company's context; its result or impact (success or failure, and why)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Licensing: definition (Sessions 3–4)",
+   "back": "A business arrangement where a licensor (IP owner) permits a licensee (foreign firm) to use its intellectual property (trademark, brand, technology) under agreed conditions."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "The legal form of licensing",
+   "back": "Governed by contract law and international IP treaties (e.g., the TRIPS Agreement)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "The strategic purpose of licensing",
+   "back": "Allows expansion with low risk and no capital investment by the licensor."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Industries where licensing is common",
+   "back": "Pharmaceuticals, fashion, media, tech and sports."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "The five types of licensing",
+   "back": "Product, brand/trademark, technology, copyright and merchandise licensing."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Product licensing and its example",
+   "back": "The licensee can produce and sell a product based on the licensor's technology or design. Example: Apple licensing Lightning connector technology."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Brand/trademark licensing and its example",
+   "back": "The licensee uses the brand name or logo for marketing or packaging. Example: McDonald's toys featuring Marvel characters."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Technology licensing and its example",
+   "back": "Allows use of proprietary software, hardware or patents. Example: ARM Holdings licenses chip designs to Samsung."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Copyright licensing and its example",
+   "back": "For content, images, books, music, etc. Example: Spotify licensing music from record labels."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "front": "Merchandise licensing and its example",
+   "back": "Selling goods under another company's branding. Example: FIFA World Cup jerseys and merchandise."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "The eight core clauses of a licensing agreement",
+   "back": "IP scope, territory, exclusivity, duration, royalty terms, quality control, termination, renewal & transferability."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "IP scope and territory clauses",
+   "back": "IP scope: clearly defines what IP is being licensed (e.g., trademark, patent). Territory: limits geographical use (e.g., 'license valid only in Southeast Asia')."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Exclusivity and duration clauses",
+   "back": "Exclusivity: determines if one or many licensees can use the IP in a region. Duration: the agreement period (e.g., 3 years, renewable)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "The three questions under royalty terms",
+   "back": "Percentage of sales or flat fee? Monthly or annual reporting? Audit rights?"
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Quality control and termination clauses",
+   "back": "Quality control: the licensor may inspect operations to maintain brand reputation. Termination: defines breach conditions, exit rights and dispute resolution."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Renewal & transferability clause",
+   "back": "Specifies renewal terms and whether the rights can be sold or transferred."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Benefits of licensing for the licensor",
+   "back": "Quick market entry; low financial risk; revenue via royalties."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Limitations of licensing for the licensor",
+   "back": "Limited control over operations; risk of brand dilution."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Benefits of licensing for the licensee",
+   "back": "Access to a reputable brand or tech; faster time-to-market; support from the licensor (sometimes)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "front": "Limitations of licensing for the licensee",
+   "back": "Dependent on the licensor's terms; royalty costs may reduce profit margin."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "Disney case: type of licensing and licensor",
+   "back": "Brand and merchandise licensing; licensor: The Walt Disney Company."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "Disney case: licensees, scope and royalties",
+   "back": "Licensees: toy companies and apparel producers (e.g., Hasbro, LEGO). Scope: global. Royalties: based on product sales."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "Disney case: three strategic outcomes",
+   "back": "Generated billions in revenue with minimal manufacturing risk; expanded reach into local markets (themed toys, school supplies, clothing); maintains strict quality and branding controls to protect its IP."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "ARM Holdings: what it does instead of making chips",
+   "back": "It designs processor architectures for smartphones, tablets and IoT devices and licenses its IP to companies such as Apple, Qualcomm and Samsung."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "ARM case: type of licensing and revenue model",
+   "back": "Technology licensing; upfront licensing fees plus royalties per chip sold."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "ARM case: scope and named licensees",
+   "back": "Scope: worldwide use in chip design. Licensees: global tech manufacturers (Apple, Broadcom, MediaTek)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "ARM case: three strategic outcomes",
+   "back": "A global standard without owning factories; its architecture powers over 90% of smartphones globally; low capital requirement, high scalability business model."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "front": "The six parts of the Sessions 3–4 licensing assignment",
+   "back": "Company overview; type of licensing used; licensing agreement highlights; strategic rationale; outcomes and challenges; your insights."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "Strategic licensing: definition",
+   "back": "Licensing used as a deliberate strategy to achieve long-term competitive or market objectives, not just as a legal agreement."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "Three key characteristics of strategic licensing",
+   "back": "Part of market entry strategy; focus on brand/IP leverage; long-term business alignment."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "The five strategic objectives of licensing",
+   "back": "Market entry, revenue generation, brand extension, resource leverage, regulatory navigation."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "Market entry and revenue generation objectives",
+   "back": "Market entry: enter new regions with minimal investment. Revenue generation: earn royalties from existing IP/assets."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "Brand extension, resource leverage and regulatory navigation objectives",
+   "back": "Brand extension: expand global visibility through partners. Resource leverage: use the local partner's infrastructure and market knowledge. Regulatory navigation: enter markets with trade or ownership restrictions."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "Licensing as a competitive strategy: the four uses",
+   "back": "Offensive (first-mover advantage, brand dominance); defensive (block competitors, saturate market); cross-licensing (access complementary technology or brand); co-branding (enhance value perception and reach)."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "front": "Strategic use of licensing at each product life cycle stage",
+   "back": "Introduction: fast market entry to build awareness. Growth: rapid scale-up via partners. Maturity: sustain revenue with low investment. Decline: maximize remaining value through partners."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Four strategic criteria for a licensing partner",
+   "back": "Market access and reputation; financial and operational capabilities; cultural and regulatory alignment; track record of compliance and performance."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Two evaluation tools for licensing partners",
+   "back": "SWOT or TOWS analysis; partner scorecards."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "The five strategic risks in licensing",
+   "back": "IP misuse, reputation damage, quality control, loss of market control, legal/compliance risk."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Mitigation for IP misuse",
+   "back": "Strong legal agreements, monitoring."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Mitigation for reputation damage",
+   "back": "Partner vetting, brand guidelines."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Mitigation for quality control risk",
+   "back": "Clear standards, audits."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Mitigation for loss of market control",
+   "back": "Exclusivity terms, joint reviews."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "Mitigation for legal/compliance risk",
+   "back": "Local legal counsel, jurisdiction clauses."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "front": "The four points of the Sessions 5–6 essay (300–500 words)",
+   "back": "Strategic reason for using licensing; partner selection considerations; risks faced and how they were managed; whether the strategy was successful, and why or why not."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "front": "Four reasons legal and ethical issues matter in licensing",
+   "back": "Licensing agreements are legally binding contracts; different countries have different IP laws; legal oversight ensures brand protection and ethical compliance; failure can result in lawsuits, IP theft or reputation damage."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "front": "The four types of IP relevant in licensing",
+   "back": "Trademarks, patents, copyrights, trade secrets."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "front": "Trademarks: what they protect and examples",
+   "back": "Brand names, logos, slogans. Examples: Nike logo, Coca-Cola font."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "front": "Patents: what they protect and an example",
+   "back": "Inventions and technology. Example: smartphone chip design."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "front": "Copyrights: what they protect and examples",
+   "back": "Creative content. Examples: software code, books, music."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "front": "Trade secrets: what they are and an example",
+   "back": "Confidential business information. Example: the Coca-Cola formula."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "Key IP law and governing body for trademarks in the USA",
+   "back": "Lanham Act (1946); USPTO (United States Patent and Trademark Office)."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "What the Lanham Act does",
+   "back": "Enables trademark owners to sue for infringement and protect against unfair competition."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "What the DMCA does, and its date and body",
+   "back": "Protects digital content and service providers, allowing copyright holders to issue takedown notices. 1998; US Copyright Office."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "EU IP law, its body and what it does",
+   "back": "EU IP Directive & Regulations; EUIPO. Centralizes IP protection through unitary systems (fewer national filings), with stronger data protection, design rights and enforcement across member states."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "TRIPS: origin and effective date",
+   "back": "Part of the Uruguay Round of GATT negotiations; effective in 1995 (dated 1994 in the slides' table); governed by the WTO."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "Three things TRIPS ensures countries do",
+   "back": "Provide legal remedies for IP violations; maintain transparent procedures; do not unfairly discriminate between foreign and domestic rights holders."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "TRIPS and developing countries",
+   "back": "It includes flexibilities for developing countries, e.g., transition periods."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "The four key international agreements named in Sessions 7–8",
+   "back": "TRIPS; the Berne Convention (copyright); the Madrid Protocol (trademark registration); WIPO."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "front": "The four key issues international licensing regulations cover",
+   "back": "Scope of rights; territory and duration; royalties and payment terms; dispute resolution mechanism."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "front": "The six legal clauses in licensing contracts (Sessions 7–8)",
+   "back": "Grant of rights, territory and term, royalty clause, quality control, termination clause, jurisdiction/dispute resolution."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "front": "The question each legal clause answers",
+   "back": "Grant of rights: what IP? Territory and term: where and how long? Royalty: how are payments made? Quality control: how is the brand monitored? Termination: conditions for ending. Jurisdiction: which country's law applies?"
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "front": "The four ethical issues in licensing",
+   "back": "Exploitative agreements with low-income countries; misuse of cultural property or indigenous brands; lack of transparency in royalty reporting; licensing to partners involved in unethical labor practices."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "front": "The four ethical principles to follow in licensing",
+   "back": "Fairness, transparency, cultural sensitivity, legal integrity."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "front": "The four points of the Sessions 7–8 country snapshot",
+   "back": "Main types of IP protected; main IP regulatory authority; one key rule or legal distinction differing from or adding to TRIPS or EU/US law; an example of a licensing case."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "front": "The clause that answers 'which country's law applies?'",
+   "back": "Jurisdiction/dispute resolution."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "Apple vs. Qualcomm: the issue",
+   "back": "Disagreement on patent licensing fees: Qualcomm charged royalties based on the full price of the device, not just the chip's value, which Apple called excessive."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "What Apple accused Qualcomm of",
+   "back": "Anti-competitive practices and double-dipping: charging both for chips and for licenses."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "Qualcomm's position in the case",
+   "back": "A leading chipmaker holding key standard-essential patents (SEPs) for mobile communication technologies like 4G LTE."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "Legal actions in Apple vs. Qualcomm",
+   "back": "Apple sued in the US, China, Germany and other countries; Qualcomm counter-sued for patent infringement and demanded product bans; courts in China and Germany temporarily banned some iPhone models; antitrust regulators (US FTC, EU, Korea) investigated."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "Terms of the April 2019 settlement",
+   "back": "Apple paid an undisclosed sum (estimated $4.5–$6 billion); a new six-year licensing agreement with an optional two-year extension; Qualcomm resumed supplying chips for iPhones."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "The four lessons of Apple vs. Qualcomm",
+   "back": "Legal clarity is critical; IP value must be carefully negotiated; global disputes need global awareness; settlements may be more strategic than litigation."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "front": "Why 'global disputes need global awareness'",
+   "back": "IP laws vary by country; what is enforceable in one jurisdiction may be banned in another."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "front": "Franchising: definition (Sessions 9–10)",
+   "back": "A business model where one party (franchisor) grants another (franchisee) the rights to operate under its brand and sell its products or services in exchange for a fee and royalties."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "front": "Three characteristics of franchising",
+   "back": "Shared brand identity; ongoing support and training; fee-based structure (initial and royalty)."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "front": "The two types of franchising",
+   "back": "Product franchising and business format franchising."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "front": "Product franchising and its examples",
+   "back": "Focuses on selling the franchisor's products; the franchisee often gets exclusive rights. Examples: car dealerships (Toyota), soft drink bottlers (Coca-Cola)."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "front": "Business format franchising and its examples",
+   "back": "The franchisee adopts a complete business system including branding, operations and marketing. Examples: McDonald's, Starbucks, 7-Eleven."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "front": "The two fee types in franchising",
+   "back": "An initial fee and royalties."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "Role of the franchisor",
+   "back": "Owns brand, trademarks, business system; provides training, marketing, systems; maintains quality and brand consistency; innovates and updates product/service."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "Role of the franchisee",
+   "back": "Uses the brand to operate a local business; pays fees/royalties and follows guidelines; operates the day-to-day business; implements the system locally."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "Four franchisor responsibilities",
+   "back": "Provide brand standards; offer initial and ongoing training; deliver marketing support; maintain product quality and updates."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "Four franchisee responsibilities",
+   "back": "Pay fees (franchise + royalty); follow operating standards; protect brand reputation; report financials and performance."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "Three benefits of franchising for franchisors",
+   "back": "Rapid market expansion; revenue from franchise fees; lower capital investment."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "Three benefits of franchising for franchisees",
+   "back": "Access to a proven business model; brand recognition; support and training provided."
+  },
+  {
+   "deck": "s9",
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "front": "The Sessions 9–10 assignment",
+   "back": "Choose a franchise brand; identify whether it is a product or business format franchise; list at least 3 duties of the franchisor and 3 of the franchisee; present the findings."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "International franchise development: definition",
+   "back": "Expanding a brand's presence in foreign markets using franchising models."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "Four goals of international franchise development",
+   "back": "Gain international market access; replicate business success abroad; minimize risk and capital investment; adapt to cultural and regulatory conditions."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "The four key franchise development strategies",
+   "back": "Direct franchising, master franchising, area development, joint ventures."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "Direct franchising: description and when to use",
+   "back": "The franchisor signs agreements directly with foreign franchisees. For close control in nearby or similar markets."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "Master franchising: description and when to use",
+   "back": "Grants a country/region-level partner the right to develop sub-franchisees. For markets needing local leadership and scalability."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "Area development: description and when to use",
+   "back": "Grants a partner rights to open multiple units in a defined area. For rapid growth in targeted regions."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "front": "Joint venture (franchising): description and when to use",
+   "back": "Partnering with a local firm to co-own the franchise. In markets with high entry barriers or regulations."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Master franchising: definition",
+   "back": "A franchisor gives one franchisee (the master franchisee) the right to develop and sub-franchise within a territory, usually a country or large region."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Four responsibilities of a master franchisee",
+   "back": "Recruit and train sub-franchisees; provide local support; ensure brand consistency; share revenue with the franchisor."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Brands named as using master franchising",
+   "back": "Subway, Baskin-Robbins, McDonald's (in some markets)."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Area development: definition",
+   "back": "A franchisee is given the right to open and operate multiple franchise outlets within a specific territory (city, state or region) within a set timeframe."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Four features of area development",
+   "back": "No sub-franchising allowed; franchisee owns and manages all outlets; common in early-stage international expansion; used by Starbucks (selected markets) and Domino's Pizza."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Master franchising vs. area development: sub-franchise rights and investment",
+   "back": "Sub-franchise rights: allowed vs. not allowed. Investment scope: medium to high vs. high."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Master franchising vs. area development: speed and control",
+   "back": "Speed of expansion: faster vs. slower. Control by franchisor: lower vs. moderate."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Domino's India case",
+   "back": "Master franchise: Jubilant FoodWorks holds the master franchise rights, is responsible for all stores and sub-franchisees, and its local adaptation led to successful expansion."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "7-Eleven Thailand case",
+   "back": "Area development: one company (CP All) operates all stores in a defined territory, with uniformity in management and growth pacing."
+  },
+  {
+   "deck": "s11",
+   "week": 11,
+   "chapter": "s11-master-area",
+   "front": "Four strategic considerations in choosing a franchise model",
+   "back": "Cultural alignment (partners must understand consumer behavior); legal framework (contract compliance and IP protection); market maturity (advanced markets may support area developers, emerging ones may need master franchising); brand control (more control often means slower expansion)."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "Franchise agreement: definition",
+   "back": "A legally binding contract between a franchisor and a franchisee that outlines rights, responsibilities and operational terms."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "Four purposes of a franchise agreement",
+   "back": "Protect intellectual property; ensure brand consistency; govern the relationship over time; minimize legal disputes."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "The eight standard clauses in franchise agreements",
+   "back": "Grant of rights, territory, term & renewal, fees & royalties, training & support, brand standards, termination & exit, dispute resolution."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "Grant of rights and territory clauses (franchise)",
+   "back": "Grant of rights: defines the franchisee's right to use the brand, logo and system. Territory: specifies the area of operation (exclusive or non-exclusive)."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "Fees & royalties clause",
+   "back": "Outlines the initial franchise fee, ongoing royalties and advertising fees."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "Training & support and brand standards clauses",
+   "back": "Training & support: the franchisor's obligations for training and operational support. Brand standards: ensure quality and consistency in products/services."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "Termination & exit and dispute resolution clauses (franchise)",
+   "back": "Termination & exit: conditions under which the agreement can be ended. Dispute resolution: jurisdiction, arbitration or court selection in case of conflict."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "front": "The Sessions 13–14 assignment",
+   "back": "Review the sample franchise agreement; identify 5 standard clauses; for each, explain its function and the risk if vague, missing or biased; suggest one additional clause or modification."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "FDD: definition",
+   "back": "Franchise disclosure document: a legal disclosure document required in many countries (e.g., USA) that gives prospective franchisees key information about the franchisor and the franchise system."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "Three purposes of an FDD",
+   "back": "Protect prospective franchisees; promote transparency and informed decision-making; comply with franchise laws and regulations."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "The eight key sections of an FDD (slides' numbering)",
+   "back": "1 Franchisor background; 2 Litigation history; 3 Initial and ongoing fees; 4 Estimated initial investment; 5 Obligations of franchisee; 6 Territory rights; 7 Financial performance representations; 8 Financial statements."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "When the FDD must be provided in the USA",
+   "back": "At least 14 days before a franchise agreement is signed."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "FDD sections 7 and 8",
+   "back": "7 Financial performance representations: earnings claims (if provided). 8 Financial statements: audited reports of the franchisor."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "Franchise law and FDD requirement: USA and Indonesia",
+   "back": "USA: Federal Trade Commission (FTC); FDD required. Indonesia: Ministry of Trade, Regulation No. 71/2019; FDD required."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-fdd",
+   "front": "Franchise law and FDD requirement: UK and Australia",
+   "back": "UK: no specific law, follows contract law; FDD not required, voluntary under the BFA. Australia: Franchising Code of Conduct; FDD required."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "front": "Four legal risks in franchise agreements",
+   "back": "Unclear territory boundaries; misrepresentation in the FDD; insufficient dispute resolution mechanisms; lack of enforcement in international jurisdictions."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "front": "Three mitigations for franchise legal risks",
+   "back": "Consult legal experts; use standardized contract templates; follow country-specific disclosure rules."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "front": "Burgerim: the business and its sales",
+   "back": "A US-based fast-food franchise marketing customizable mini-burgers; between 2016 and 2019 it aggressively sold over 1,500 franchise units, including to first-time owners and military veterans."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "front": "What Burgerim omitted from its FDDs",
+   "back": "Financial performance data; realistic costs and failure rates; operating difficulties experienced by prior franchisees."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "front": "The rule Burgerim violated",
+   "back": "The FTC Franchise Rule, which mandates full disclosure before signing a franchise agreement."
+  },
+  {
+   "deck": "s13",
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "front": "The outcome of the Burgerim case",
+   "back": "Numerous franchisees lost thousands of dollars, many without opening a restaurant; in 2021 the FTC sued Burgerim and founder Oren Loni for deceptive business practices; the company later filed for bankruptcy."
+  },
+  {
+   "deck": "review",
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "front": "The basic line of analysis from the Sessions 1–2 assignment",
+   "back": "Strategy used → reason for choosing it → advantages and disadvantages in the company's context → result or impact (success or failure, and why)."
+  },
+  {
+   "deck": "review",
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "front": "Which assignment asks for a rule that differs from TRIPS or EU/US law",
+   "back": "Sessions 7–8: the comparative snapshot of global licensing regulations."
+  },
+  {
+   "deck": "review",
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "front": "Which assignment asks for an alternative franchise model, justified",
+   "back": "Sessions 11–12: identify direct, master or area development, explain why it fit, and suggest an alternative."
+  },
+  {
+   "deck": "review",
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "front": "Which assignment asks for the risk of a vague, missing or biased clause",
+   "back": "Sessions 13–14: review of the sample franchise agreement."
+  },
+  {
+   "deck": "review",
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "front": "Strategies named in the Sessions 3–4 assignment's 'strategic rationale' comparison",
+   "back": "Licensing versus franchising, exporting, a joint venture (JV), etc."
+  },
+  {
+   "deck": "review",
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "front": "Cases presented as successes and as a failure",
+   "back": "Successes: Disney, ARM, Domino's India. Failure: Burgerim."
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "4G",
+   "back": "Fourth generation (of mobile communication technology), as in 4G LTE",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "BFA",
+   "back": "British Franchise Association: under it, franchise disclosure in the UK is voluntary",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "CILO",
+   "back": "Course intended learning outcome: the three outcomes the course is built around",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "DMCA",
+   "back": "Digital Millennium Copyright Act (USA, 1998): protects digital content and service providers; copyright holders can issue takedown notices",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "EU",
+   "back": "European Union",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "EUIPO",
+   "back": "European Union Intellectual Property Office: the governing body for the EU IP Directive and Regulations",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "FDD",
+   "back": "Franchise disclosure document: a legal document giving prospective franchisees key information about the franchisor and the system; in the USA, provided at least 14 days before signing",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "FIFA",
+   "back": "Fédération Internationale de Football Association: its World Cup jerseys and merchandise are the slides' example of merchandise licensing",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "FTC",
+   "back": "Federal Trade Commission (USA): the US franchise authority; it enforces the FTC Franchise Rule and sued Burgerim in 2021",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "GATT",
+   "back": "General Agreement on Tariffs and Trade: TRIPS was part of its Uruguay Round of negotiations",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "IoT",
+   "back": "Internet of Things: one of the device types that use ARM's processor architectures",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "IP",
+   "back": "Intellectual property: trademarks, patents, copyrights and trade secrets; what a licensor permits a licensee to use",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "JV",
+   "back": "Joint venture: partnering with a local firm to co-own the business (in franchising, to co-own the franchise)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "LMS",
+   "back": "Learning management system: where the sample franchise agreement for the Sessions 13–14 assignment is distributed",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "LTE",
+   "back": "Long-Term Evolution, as in 4G LTE: a mobile communication technology for which Qualcomm holds standard-essential patents",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "SEP",
+   "back": "Standard-essential patent: a patent on technology a standard requires, such as Qualcomm's patents for 4G LTE",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "SWOT",
+   "back": "Strengths, weaknesses, opportunities, threats: an analysis used to evaluate a licensing partner",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "TOWS",
+   "back": "Threats, opportunities, weaknesses, strengths: an analysis named with SWOT as a partner evaluation tool",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "TRIPS",
+   "back": "Trade-Related Aspects of Intellectual Property Rights: the 1994 WTO agreement, effective 1995, setting IP rules for member countries",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "UK",
+   "back": "United Kingdom",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "US",
+   "back": "United States",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "USA",
+   "back": "United States of America",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "USPTO",
+   "back": "United States Patent and Trademark Office: the governing body for the Lanham Act",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "WIPO",
+   "back": "World Intellectual Property Organization: listed with TRIPS, the Berne Convention and the Madrid Protocol among key international instruments",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "start-here",
+   "front": "WTO",
+   "back": "World Trade Organization: the governing body for the TRIPS Agreement",
+   "quizzable": false
+  }
+ ],
+ "quiz": [
+  {
+   "week": 1,
+   "chapter": "start-here",
+   "q": "Which course intended learning outcome (CILO) is about identifying legal, financial and operational factors affecting international business collaborations?",
+   "options": [
+    "CILO 1",
+    "CILO 3",
+    "CILO 2",
+    "None; the course has no legal outcome"
+   ],
+   "answer": 1,
+   "why": "CILO 3 covers legal, financial and operational factors and is named in Sessions 7–8 and 13–14. CILO 1 is defining foundational principles; CILO 2 is evaluating entry strategies."
+  },
+  {
+   "week": 1,
+   "chapter": "start-here",
+   "q": "Which entry strategy, though in the course title, has no session deck of its own in the course folder?",
+   "options": [
+    "Strategic alliances",
+    "Licensing",
+    "Franchising",
+    "Master franchising"
+   ],
+   "answer": 0,
+   "why": "Strategic alliances are defined and compared only in the Sessions 1–2 overview; licensing has Sessions 3–8 and franchising Sessions 9–14."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "q": "Which is NOT one of the four reasons the slides give for entering international markets?",
+   "options": [
+    "Access new customers",
+    "Spread risk across markets",
+    "Gain competitive advantage",
+    "Avoid domestic taxes"
+   ],
+   "answer": 3,
+   "why": "The four reasons are access new customers, increase revenue, gain competitive advantage and spread risk across markets. Taxes are not mentioned."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "q": "How do the slides define a strategic alliance?",
+   "options": [
+    "Letting a foreign party run a business under your system and brand",
+    "Permitting a foreign company to use your intellectual property",
+    "Collaboration between two or more firms to pursue mutual goals while remaining independent",
+    "Merging two firms into one company to share markets"
+   ],
+   "answer": 2,
+   "why": "Remaining independent is the key part of the definition. The first two wrong options are the definitions of franchising and licensing."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "q": "Which pair lists the challenges of franchising given in Sessions 1–2?",
+   "options": [
+    "Loss of control and potential IP misuse",
+    "Franchisee quality control and dependency",
+    "Limited control and trade barriers",
+    "Complex coordination and possible conflict"
+   ],
+   "answer": 1,
+   "why": "Franchising's challenges are franchisee quality control and dependency. The others are the challenges of licensing, exporting and strategic alliances."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-four-routes",
+   "q": "Indirect exporting means that the company",
+   "options": [
+    "uses intermediaries to export",
+    "handles exporting itself",
+    "opens its own branches abroad",
+    "licenses its brand to a foreign firm"
+   ],
+   "answer": 0,
+   "why": "Direct exporting is handled by the company itself; indirect exporting uses intermediaries."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "q": "According to the strategy comparison table, which strategy requires a medium–high investment?",
+   "options": [
+    "Exporting",
+    "Licensing",
+    "Franchising",
+    "Strategic alliance"
+   ],
+   "answer": 3,
+   "why": "Investment is low for exporting and licensing, medium for franchising and medium–high for a strategic alliance."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "q": "Which best use case does the comparison table give for exporting?",
+   "options": [
+    "Entering IP-intensive industries",
+    "Service businesses seeking global scale",
+    "Testing foreign demand",
+    "Complex markets requiring local support"
+   ],
+   "answer": 2,
+   "why": "Exporting suits testing foreign demand. The other options are the best use cases of licensing, franchising and alliances."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "q": "In the comparison table, control in a strategic alliance is rated",
+   "options": [
+    "Low",
+    "Shared",
+    "Medium",
+    "High"
+   ],
+   "answer": 1,
+   "why": "Alliance control is shared between the partners. Exporting and licensing are low and franchising is medium; no strategy is rated high."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-comparing-routes",
+   "q": "Which company is the slides' example of a strategic alliance used to enter India?",
+   "options": [
+    "Starbucks + Tata",
+    "Indomie",
+    "McDonald's",
+    "Disney"
+   ],
+   "answer": 0,
+   "why": "Starbucks formed an alliance with Tata to enter India, with Tata handling sourcing and operations. Indomie exports, Disney licenses and McDonald's franchises."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "q": "Which describes indirect entry?",
+   "options": [
+    "Opening own subsidiaries",
+    "Setting up local branches",
+    "Starbucks opening its own stores",
+    "Using agents, distributors or partners"
+   ],
+   "answer": 3,
+   "why": "Indirect entry works through agents, distributors or partners. Own subsidiaries, branches and Starbucks' own stores are direct entry."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "q": "Why is direct entry slower, according to the comparison table?",
+   "options": [
+    "It relies on third parties",
+    "Its market knowledge is filtered through intermediaries",
+    "It requires physical establishment",
+    "Its risk is passed to partners"
+   ],
+   "answer": 2,
+   "why": "Direct entry is slower because the company must establish itself physically. The wrong options describe features of indirect entry."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "q": "Which is a disadvantage of indirect entry?",
+   "options": [
+    "High setup and operational cost",
+    "Limited market insight",
+    "Slower to enter market",
+    "Full exposure to local risks"
+   ],
+   "answer": 1,
+   "why": "Indirect entry gives limited market insight, along with low control and reliance on third parties. The other three are disadvantages of direct entry."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-direct-indirect",
+   "q": "On the criterion of market knowledge, direct entry is rated high because it gives",
+   "options": [
+    "direct access to consumers and insights",
+    "access to existing networks",
+    "risk shared with partners",
+    "minimal investment"
+   ],
+   "answer": 0,
+   "why": "Direct entry means direct access to consumers and insights; under indirect entry, knowledge is filtered through intermediaries."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "q": "In licensing, the licensor is",
+   "options": [
+    "the foreign firm that uses the IP",
+    "the government body that registers the IP",
+    "a distributor that resells the licensee's goods",
+    "the IP owner who permits another firm to use the IP"
+   ],
+   "answer": 3,
+   "why": "The licensor owns the intellectual property; the licensee is the foreign firm permitted to use it."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "q": "Which international treaty do the slides name as governing licensing alongside contract law?",
+   "options": [
+    "The Lanham Act",
+    "The Franchising Code of Conduct",
+    "The TRIPS Agreement",
+    "The Madrid Protocol only"
+   ],
+   "answer": 2,
+   "why": "Licensing is governed by contract law and international IP treaties, e.g., TRIPS. The Lanham Act is a US law and the Franchising Code of Conduct is Australian franchise law."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "q": "Spotify licensing music from record labels is the slides' example of which type of licensing?",
+   "options": [
+    "Brand/trademark licensing",
+    "Copyright licensing",
+    "Merchandise licensing",
+    "Product licensing"
+   ],
+   "answer": 1,
+   "why": "Copyright licensing covers content, images, books and music, such as music licensed from record labels."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-what-is-licensing",
+   "q": "McDonald's toys featuring Marvel characters illustrate",
+   "options": [
+    "brand/trademark licensing",
+    "technology licensing",
+    "copyright licensing",
+    "product franchising"
+   ],
+   "answer": 0,
+   "why": "The licensee uses the brand name or logo (Marvel characters) for marketing or packaging, which is brand/trademark licensing."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "q": "Which clause determines whether one or many licensees can use the IP in a region?",
+   "options": [
+    "Territory",
+    "IP scope",
+    "Renewal & transferability",
+    "Exclusivity"
+   ],
+   "answer": 3,
+   "why": "Exclusivity decides one or many licensees. Territory limits geographical use; IP scope defines what IP is licensed."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "q": "Questions such as '% of sales or flat fee?' and 'Audit rights?' belong to which clause?",
+   "options": [
+    "Quality control",
+    "Duration",
+    "Royalty terms",
+    "Termination"
+   ],
+   "answer": 2,
+   "why": "Royalty terms cover the payment basis, monthly or annual reporting, and audit rights."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "q": "Which is a limitation of licensing for the licensor?",
+   "options": [
+    "Royalty costs may reduce profit margin",
+    "Risk of brand dilution",
+    "Dependent on the licensor's terms",
+    "Slower time-to-market"
+   ],
+   "answer": 1,
+   "why": "For the licensor the limits are limited control and brand dilution. Royalty costs and dependence on terms are limitations for the licensee."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-licensing-agreement",
+   "q": "Which is a benefit of licensing for the licensee?",
+   "options": [
+    "Faster time-to-market",
+    "Revenue via royalties",
+    "Low financial risk from royalties received",
+    "Quick market entry without any payments"
+   ],
+   "answer": 0,
+   "why": "The licensee gains access to a reputable brand or tech, faster time-to-market and sometimes support. Revenue via royalties is the licensor's benefit."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "q": "How are Disney's licensing royalties calculated, according to the case?",
+   "options": [
+    "As a fixed annual fee per character",
+    "As a share of Disney's park revenue",
+    "Per unit manufactured, regardless of sales",
+    "Based on product sales"
+   ],
+   "answer": 3,
+   "why": "The case lists royalties as based on product sales."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "q": "What is ARM Holdings' revenue model?",
+   "options": [
+    "Selling chips it manufactures in its own factories",
+    "A flat annual fee per licensee only",
+    "Upfront licensing fees plus royalties per chip sold",
+    "Royalties on the full price of each smartphone"
+   ],
+   "answer": 2,
+   "why": "ARM earns upfront licensing fees plus royalties per chip sold, and owns no factories."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "q": "Which outcome do the slides report for ARM?",
+   "options": [
+    "It became the largest chip manufacturer by factory output",
+    "Its architecture powers over 90% of smartphones globally",
+    "It generated billions with minimal manufacturing risk from toys",
+    "It lost its licensees after a patent dispute"
+   ],
+   "answer": 1,
+   "why": "ARM became a global standard without owning factories and powers over 90% of smartphones. Billions with minimal manufacturing risk is Disney's outcome."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-disney-arm",
+   "q": "How does Disney protect its IP while licensing worldwide?",
+   "options": [
+    "It maintains strict quality and branding controls",
+    "It manufactures all merchandise in-house",
+    "It licenses only within the United States",
+    "It avoids royalties to keep partners loyal"
+   ],
+   "answer": 0,
+   "why": "The case states Disney maintains strict quality and branding controls to protect its IP; it does not produce all merchandise in-house."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "q": "Strategic licensing is licensing used",
+   "options": [
+    "only as a legal agreement to collect royalties",
+    "only when a product is in decline",
+    "to transfer ownership of IP to the licensee",
+    "as a deliberate strategy for long-term competitive or market objectives"
+   ],
+   "answer": 3,
+   "why": "The slides stress that strategic licensing is a deliberate long-term strategy, not just a legal agreement."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "q": "Which strategic objective means entering markets with trade or ownership restrictions?",
+   "options": [
+    "Resource leverage",
+    "Brand extension",
+    "Regulatory navigation",
+    "Market entry"
+   ],
+   "answer": 2,
+   "why": "Regulatory navigation is entering restricted markets. Market entry is entering new regions with minimal investment; resource leverage uses a partner's infrastructure."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "q": "Blocking competitors and saturating the market describes which competitive use of licensing?",
+   "options": [
+    "Offensive strategy",
+    "Defensive strategy",
+    "Cross-licensing",
+    "Co-branding"
+   ],
+   "answer": 1,
+   "why": "Defensive licensing blocks competitors and saturates the market. Offensive aims at first-mover advantage and brand dominance."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "q": "At which product life cycle stage is licensing used to 'sustain revenue with low investment'?",
+   "options": [
+    "Maturity",
+    "Introduction",
+    "Growth",
+    "Decline"
+   ],
+   "answer": 0,
+   "why": "Introduction: fast entry to build awareness; growth: rapid scale-up; maturity: sustain revenue with low investment; decline: maximize remaining value."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-strategic-licensing",
+   "q": "Gaining access to complementary technology or brand is the aim of",
+   "options": [
+    "co-branding",
+    "offensive licensing",
+    "brand extension",
+    "cross-licensing"
+   ],
+   "answer": 3,
+   "why": "Cross-licensing gives access to complementary technology or brand; co-branding enhances value perception and reach."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "q": "Which is one of the four strategic criteria for selecting a licensing partner?",
+   "options": [
+    "Lowest royalty rate offered",
+    "Same home country as the licensor",
+    "Cultural and regulatory alignment",
+    "Willingness to buy the IP outright"
+   ],
+   "answer": 2,
+   "why": "The four criteria are market access and reputation, financial and operational capabilities, cultural and regulatory alignment, and a track record of compliance and performance."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "q": "Which evaluation tools do the slides name for selecting a licensing partner?",
+   "options": [
+    "Partner scorecards and the FDD",
+    "SWOT or TOWS analysis and partner scorecards",
+    "Product life cycle analysis and royalty audits",
+    "The Lanham Act and the DMCA"
+   ],
+   "answer": 1,
+   "why": "The two tools are SWOT or TOWS analysis and partner scorecards."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "q": "What mitigation do the slides give for the risk of loss of market control?",
+   "options": [
+    "Exclusivity terms, joint reviews",
+    "Clear standards, audits",
+    "Partner vetting, brand guidelines",
+    "Local legal counsel, jurisdiction clauses"
+   ],
+   "answer": 0,
+   "why": "Loss of market control is met with exclusivity terms and joint reviews. The other options mitigate quality control, reputation damage and legal/compliance risk."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-partners-risks",
+   "q": "Strong legal agreements and monitoring mitigate which licensing risk?",
+   "options": [
+    "Reputation damage",
+    "Quality control",
+    "Loss of market control",
+    "IP misuse"
+   ],
+   "answer": 3,
+   "why": "IP misuse is mitigated by strong legal agreements and monitoring."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "q": "Which type of IP protects brand names, logos and slogans?",
+   "options": [
+    "Patents",
+    "Copyrights",
+    "Trademarks",
+    "Trade secrets"
+   ],
+   "answer": 2,
+   "why": "Trademarks protect brand names, logos and slogans, e.g., the Nike logo and the Coca-Cola font."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "q": "The Coca-Cola formula is the slides' example of",
+   "options": [
+    "a patent",
+    "a trade secret",
+    "a trademark",
+    "a copyright"
+   ],
+   "answer": 1,
+   "why": "Trade secrets are confidential business information, like the Coca-Cola formula. The Coca-Cola font is the trademark example."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-basics",
+   "q": "Software code is protected as which type of IP, according to the slides?",
+   "options": [
+    "Copyright",
+    "Patent",
+    "Trademark",
+    "Trade secret"
+   ],
+   "answer": 0,
+   "why": "Copyrights protect creative content: software code, books and music."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "q": "Which body governs the TRIPS Agreement?",
+   "options": [
+    "WIPO",
+    "USPTO",
+    "EUIPO",
+    "WTO"
+   ],
+   "answer": 3,
+   "why": "TRIPS is governed by the World Trade Organization. USPTO goes with the Lanham Act and EUIPO with the EU IP Directive."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "q": "What does the DMCA allow copyright holders to do?",
+   "options": [
+    "Sue for trademark infringement",
+    "Register trademarks internationally",
+    "Issue takedown notices",
+    "File one unitary EU-wide patent"
+   ],
+   "answer": 2,
+   "why": "The DMCA protects digital content and service providers and allows takedown notices. Suing for trademark infringement is the Lanham Act."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "q": "Which is NOT among the things TRIPS ensures countries do?",
+   "options": [
+    "Provide legal remedies for IP violations",
+    "Charge equal royalty rates in every country",
+    "Maintain transparent procedures",
+    "Not unfairly discriminate between foreign and domestic rights holders"
+   ],
+   "answer": 1,
+   "why": "TRIPS ensures remedies, transparency and non-discrimination, with flexibilities for developing countries. Royalty rates are not on the list."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-ip-laws",
+   "q": "The Madrid Protocol is listed in the slides for",
+   "options": [
+    "trademark registration",
+    "copyright",
+    "patent dispute resolution",
+    "franchise disclosure"
+   ],
+   "answer": 0,
+   "why": "The slides list the Berne Convention for copyright and the Madrid Protocol for trademark registration."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "q": "Which legal clause answers 'Which country's law applies?'",
+   "options": [
+    "Grant of rights",
+    "Territory and term",
+    "Termination clause",
+    "Jurisdiction/dispute resolution"
+   ],
+   "answer": 3,
+   "why": "Jurisdiction/dispute resolution decides which country's law applies. Territory and term answer where and for how long."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "q": "Which is listed as an ethical issue in licensing?",
+   "options": [
+    "Charging royalties at all",
+    "Licensing to more than one partner",
+    "Lack of transparency in royalty reporting",
+    "Using contract law for agreements"
+   ],
+   "answer": 2,
+   "why": "The four ethical issues are exploitative agreements with low-income countries, misuse of cultural property or indigenous brands, lack of transparency in royalty reporting, and licensing to partners with unethical labor practices."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-contract-ethics",
+   "q": "Which is NOT one of the four ethical principles to follow in licensing?",
+   "options": [
+    "Fairness",
+    "Exclusivity",
+    "Cultural sensitivity",
+    "Legal integrity"
+   ],
+   "answer": 1,
+   "why": "The principles are fairness, transparency, cultural sensitivity and legal integrity. Exclusivity is a contract clause."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "q": "What was Apple's main objection to Qualcomm's licensing model?",
+   "options": [
+    "Royalties were based on the full price of the device, not just the chip",
+    "Qualcomm refused to license 4G LTE patents to Apple",
+    "Qualcomm charged a flat fee per year",
+    "Qualcomm licensed only within the United States"
+   ],
+   "answer": 0,
+   "why": "Qualcomm charged royalties based on the full device price, which Apple claimed was excessive, and Apple accused it of double-dipping."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "q": "'Double-dipping' in the case means",
+   "options": [
+    "suing in two countries at once",
+    "licensing the same patent to two rivals",
+    "paying royalties twice by mistake",
+    "charging both for chips and for licenses"
+   ],
+   "answer": 3,
+   "why": "Apple accused Qualcomm of double-dipping: charging both for chips and licenses."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "q": "Which was a term of the April 2019 settlement?",
+   "options": [
+    "Qualcomm paid Apple an estimated $4.5–$6 billion",
+    "Qualcomm stopped supplying chips for iPhones",
+    "A new six-year licensing agreement with an optional two-year extension",
+    "A permanent ban on iPhones in Germany"
+   ],
+   "answer": 2,
+   "why": "Apple paid Qualcomm (not the other way round), a six-year agreement with an optional two-year extension was signed, and Qualcomm resumed supplying chips."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-apple-qualcomm",
+   "q": "Which lesson from the case says that prolonged lawsuits can damage both financials and operations?",
+   "options": [
+    "Legal clarity is critical",
+    "Settlements may be more strategic than litigation",
+    "IP value must be carefully negotiated",
+    "Global disputes need global awareness"
+   ],
+   "answer": 1,
+   "why": "That is the explanation given for 'settlements may be more strategic than litigation'."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "q": "In franchising, the franchisee pays the franchisor",
+   "options": [
+    "a fee and royalties",
+    "only a one-off purchase price for the brand",
+    "a share of the franchisor's profits",
+    "nothing, in exchange for exclusive territory"
+   ],
+   "answer": 0,
+   "why": "The definition says the rights are granted in exchange for a fee and royalties; the fee-based structure is initial plus royalty."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "q": "Which is NOT one of the three characteristics of franchising on the slides?",
+   "options": [
+    "Shared brand identity",
+    "Ongoing support and training",
+    "Fee-based structure",
+    "Joint ownership of each outlet"
+   ],
+   "answer": 3,
+   "why": "The three characteristics are shared brand identity, ongoing support and training, and a fee-based structure."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "q": "Toyota car dealerships are the slides' example of",
+   "options": [
+    "business format franchising",
+    "master franchising",
+    "product franchising",
+    "technology licensing"
+   ],
+   "answer": 2,
+   "why": "Product franchising focuses on selling the franchisor's products, e.g., car dealerships (Toyota) and soft drink bottlers (Coca-Cola)."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-what-is-franchising",
+   "q": "In business format franchising, the franchisee",
+   "options": [
+    "only sells the franchisor's products, often exclusively",
+    "adopts a complete business system including branding, operations and marketing",
+    "licenses a single patent",
+    "co-owns the franchise with a local firm"
+   ],
+   "answer": 1,
+   "why": "Business format franchising (McDonald's, Starbucks, 7-Eleven) passes on the whole system; product franchising passes on products."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "q": "Which is a franchisee responsibility?",
+   "options": [
+    "Report financials and performance",
+    "Offer initial and ongoing training",
+    "Deliver marketing support",
+    "Maintain product quality and updates"
+   ],
+   "answer": 0,
+   "why": "The franchisee pays fees, follows standards, protects the brand and reports financials. The other options are franchisor responsibilities."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "q": "Which is a benefit of franchising for the franchisor?",
+   "options": [
+    "Access to a proven business model",
+    "Brand recognition",
+    "Support and training provided",
+    "Lower capital investment"
+   ],
+   "answer": 3,
+   "why": "Franchisors gain rapid expansion, fee revenue and lower capital investment; the other options are franchisee benefits."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "q": "Who 'innovates and updates the product/service' in a franchise?",
+   "options": [
+    "The franchisee",
+    "The master franchisee's sub-franchisees",
+    "The franchisor",
+    "The customers"
+   ],
+   "answer": 2,
+   "why": "The franchisor owns the system and innovates and updates the product or service; the franchisee implements the system locally."
+  },
+  {
+   "week": 9,
+   "chapter": "s9-franchise-roles",
+   "q": "Who 'operates the day-to-day business'?",
+   "options": [
+    "The franchisor",
+    "The franchisee",
+    "The licensor",
+    "The regulator"
+   ],
+   "answer": 1,
+   "why": "The franchisee uses the brand to run the local business day to day."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "q": "Which is one of the four goals of international franchise development?",
+   "options": [
+    "Adapt to cultural and regulatory conditions",
+    "Centralize all outlets under franchisor ownership",
+    "Avoid paying royalties",
+    "Replace local partners with franchisor staff"
+   ],
+   "answer": 0,
+   "why": "The goals are market access, replicating success abroad, minimizing risk and capital investment, and adapting to cultural and regulatory conditions."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "q": "Which strategy suits close control in nearby or similar markets?",
+   "options": [
+    "Master franchising",
+    "Area development",
+    "Joint venture",
+    "Direct franchising"
+   ],
+   "answer": 3,
+   "why": "Direct franchising, where the franchisor signs directly with foreign franchisees, is for close control in nearby or similar markets."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "q": "In which markets do the slides recommend a joint venture?",
+   "options": [
+    "Nearby or similar markets",
+    "Markets needing local leadership and scalability",
+    "Markets with high entry barriers or regulations",
+    "Targeted regions needing rapid growth"
+   ],
+   "answer": 2,
+   "why": "Joint ventures suit high barriers or regulations; the other options match direct franchising, master franchising and area development."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-franchise-development",
+   "q": "Granting a partner the right to open multiple units in a defined area describes",
+   "options": [
+    "master franchising",
+    "area development",
+    "direct franchising",
+    "product franchising"
+   ],
+   "answer": 1,
+   "why": "Area development grants rights to open multiple units in a defined area; master franchising grants rights to develop sub-franchisees."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-master-area",
+   "q": "The key difference between master franchising and area development is that",
+   "options": [
+    "a master franchisee may sub-franchise, while an area developer may not",
+    "an area developer may sub-franchise, while a master franchisee may not",
+    "only area development covers a whole country",
+    "only master franchising requires a franchise agreement"
+   ],
+   "answer": 0,
+   "why": "Sub-franchise rights are allowed in master franchising and not allowed in area development, where the franchisee owns and manages all outlets."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-master-area",
+   "q": "According to the comparison table, control by the franchisor under area development is",
+   "options": [
+    "Lower",
+    "High",
+    "None",
+    "Moderate"
+   ],
+   "answer": 3,
+   "why": "Control is lower under master franchising and moderate under area development."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-master-area",
+   "q": "Who holds the master franchise rights for Domino's in India?",
+   "options": [
+    "CP All",
+    "Tata",
+    "Jubilant FoodWorks",
+    "Burgerim"
+   ],
+   "answer": 2,
+   "why": "Jubilant FoodWorks holds the rights and is responsible for all stores and sub-franchisees; CP All operates 7-Eleven in Thailand."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-master-area",
+   "q": "Which strategic consideration says 'more control often means slower expansion'?",
+   "options": [
+    "Market maturity",
+    "Brand control",
+    "Cultural alignment",
+    "Legal framework"
+   ],
+   "answer": 1,
+   "why": "Brand control: more control often means slower expansion. Market maturity concerns advanced versus emerging markets."
+  },
+  {
+   "week": 11,
+   "chapter": "s11-master-area",
+   "q": "Per the strategic considerations, emerging markets may need",
+   "options": [
+    "master franchising",
+    "area developers",
+    "direct franchising only",
+    "no franchising at all"
+   ],
+   "answer": 0,
+   "why": "Advanced markets may support area developers; emerging ones may need master franchising."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "q": "Which is NOT one of the four purposes of a franchise agreement?",
+   "options": [
+    "Protect intellectual property",
+    "Ensure brand consistency",
+    "Minimize legal disputes",
+    "Guarantee the franchisee's profits"
+   ],
+   "answer": 3,
+   "why": "The purposes are protecting IP, ensuring brand consistency, governing the relationship over time and minimizing legal disputes."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "q": "Which clause outlines the initial franchise fee, ongoing royalties and advertising fees?",
+   "options": [
+    "Grant of rights",
+    "Term & renewal",
+    "Fees & royalties",
+    "Training & support"
+   ],
+   "answer": 2,
+   "why": "Fees & royalties outlines all three; grant of rights defines the right to use the brand, logo and system."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "q": "Jurisdiction, arbitration or court selection in case of conflict is set by",
+   "options": [
+    "termination & exit",
+    "dispute resolution",
+    "territory",
+    "brand standards"
+   ],
+   "answer": 1,
+   "why": "The dispute resolution clause covers jurisdiction, arbitration or court selection."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-franchise-agreement",
+   "q": "The territory clause in a franchise agreement specifies the area of operation, which may be",
+   "options": [
+    "exclusive or non-exclusive",
+    "only exclusive",
+    "only nationwide",
+    "decided after signing"
+   ],
+   "answer": 0,
+   "why": "The territory clause specifies the geographical area of operation, exclusive or non-exclusive."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-fdd",
+   "q": "In the USA, the FDD must be provided at least how long before a franchise agreement is signed?",
+   "options": [
+    "7 days",
+    "30 days",
+    "90 days",
+    "14 days"
+   ],
+   "answer": 3,
+   "why": "The slides note that in the USA the FDD must be provided at least 14 days before signing."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-fdd",
+   "q": "Which FDD section covers past or pending lawsuits involving the franchisor?",
+   "options": [
+    "Franchisor background",
+    "Obligations of franchisee",
+    "Litigation history",
+    "Financial statements"
+   ],
+   "answer": 2,
+   "why": "Section 2 on the slides, litigation history, covers past or pending lawsuits."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-fdd",
+   "q": "Which country's franchise framework has no specific law, with disclosure voluntary under the BFA?",
+   "options": [
+    "USA",
+    "UK",
+    "Indonesia",
+    "Australia"
+   ],
+   "answer": 1,
+   "why": "The UK follows contract law and disclosure is voluntary under the BFA. The USA, Indonesia and Australia require an FDD."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-fdd",
+   "q": "Which regulation do the slides give for franchising in Indonesia?",
+   "options": [
+    "Ministry of Trade, Regulation No. 71/2019",
+    "Franchising Code of Conduct",
+    "FTC Franchise Rule",
+    "Lanham Act (1946)"
+   ],
+   "answer": 0,
+   "why": "Indonesia: Ministry of Trade, Regulation No. 71/2019, with an FDD required. The Franchising Code of Conduct is Australia's."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "q": "Which is one of the four legal risks in franchise agreements?",
+   "options": [
+    "Too many training sessions",
+    "Royalties paid on time",
+    "Use of standardized contract templates",
+    "Unclear territory boundaries"
+   ],
+   "answer": 3,
+   "why": "The risks are unclear territory boundaries, misrepresentation in the FDD, insufficient dispute resolution and lack of international enforcement. Standardized templates are a mitigation."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "q": "Which is a mitigation for legal risks in franchise agreements?",
+   "options": [
+    "Avoid disclosure documents altogether",
+    "Rely on verbal agreements",
+    "Follow country-specific disclosure rules",
+    "Use a different contract for every franchisee"
+   ],
+   "answer": 2,
+   "why": "The three mitigations are consulting legal experts, using standardized contract templates and following country-specific disclosure rules."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "q": "Which rule did Burgerim violate?",
+   "options": [
+    "The Lanham Act",
+    "The FTC Franchise Rule",
+    "The DMCA",
+    "The Franchising Code of Conduct"
+   ],
+   "answer": 1,
+   "why": "Burgerim violated the FTC Franchise Rule, which mandates full disclosure before signing a franchise agreement."
+  },
+  {
+   "week": 13,
+   "chapter": "s13-legal-risks",
+   "q": "Which information did Burgerim omit from its FDDs?",
+   "options": [
+    "Realistic costs and failure rates",
+    "The name of its brand",
+    "Its menu prices",
+    "Its trademark registration number"
+   ],
+   "answer": 0,
+   "why": "It omitted financial performance data, realistic costs and failure rates, and the operating difficulties of prior franchisees."
+  },
+  {
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "q": "Which four points does the Sessions 1–2 assignment ask students to explain for each company?",
+   "options": [
+    "Overview, licensing type, clauses, insights",
+    "IP types, authority, key rule, case",
+    "Clause function, risk if vague, added clause, conclusion",
+    "Strategy used, reason, advantages and disadvantages in context, result or impact"
+   ],
+   "answer": 3,
+   "why": "The Sessions 1–2 assignment asks for strategy, reason, advantages/disadvantages and result. The wrong options summarize the Sessions 3–4, 7–8 and 13–14 assignments."
+  },
+  {
+   "week": 13,
+   "chapter": "synthesis-assignments",
+   "q": "Which assignment asks students to suggest an alternative franchise model and justify it?",
+   "options": [
+    "Sessions 9–10",
+    "Sessions 13–14",
+    "Sessions 11–12",
+    "Sessions 5–6"
+   ],
+   "answer": 2,
+   "why": "Sessions 11–12 ask which of direct, master or area development a brand used, why it fit, and an alternative."
+  }
+ ],
+ "mock_exam": {
+  "minutes": 120,
+  "instructions": "Answer all questions. Marks are shown for each question and total 100. Use the course's own terms, lists and tables by name, support your points with the companies and cases from the slides, and sketch a diagram where it helps your answer. This is a practice paper: the course folder gives no details of the real exam's format.",
+  "sections": [
+   {
+    "id": "A",
+    "title": "Section A · Concepts (50 marks)",
+    "questions": [
+     {
+      "q": "Explain the difference between direct and indirect entry into a foreign market. Compare the two on the five criteria the course uses and give the course's example of each.",
+      "marks": 10,
+      "model_answer": "Direct entry means a company enters a foreign market through its own operations: its own subsidiaries or local branches. Indirect entry means it enters through others: agents, distributors or partners. The course's example of direct entry is Starbucks opening its own stores; its example of indirect entry is local distributors selling a domestic product overseas.\n\nThe two are compared on five criteria. On control, direct entry is high, because the company owns its operations and makes its own decisions, while indirect entry is low, because agents or partners do the work. On cost, direct entry is high, because of setup and operational investment, while indirect entry needs minimal investment. On speed, direct entry is slower, because it requires physical establishment, while indirect entry is faster, because it leverages existing networks. On market knowledge, direct entry is high, with direct access to consumers and insights, while under indirect entry knowledge is low because it is filtered through intermediaries. On risk, direct entry is higher, with full exposure to local challenges, while indirect entry is lower, because risk is shared with or passed to partners.\n\nThe advantages and disadvantages follow from this. Direct entry gives high control over operations and branding, a strong market presence and direct customer feedback, at the cost of high setup and operational cost, slower entry and full exposure to local risks. Indirect entry gives low investment cost, faster market access and lower operational risk, at the cost of low control over branding and customer experience, limited market insight and reliance on third parties.",
+      "marking_points": [
+       "Defines direct entry (own subsidiaries, local branches) and indirect entry (agents, distributors, partners)",
+       "Compares all five criteria: control, cost, speed, market knowledge, risk",
+       "Gives the reason behind each rating",
+       "Starbucks' own stores vs. local distributors as examples"
+      ],
+      "chapters": [
+       "s1-direct-indirect"
+      ]
+     },
+     {
+      "q": "Define licensing as the course defines it, including its legal form and strategic purpose. Then explain the five types of licensing, giving the course's example of each.",
+      "marks": 10,
+      "model_answer": "Licensing is a business arrangement in which a licensor, the owner of intellectual property (IP), permits a licensee, a foreign firm, to use its IP, such as a trademark, a brand or a technology, under agreed conditions. Its legal form is contract law together with international IP treaties such as the TRIPS Agreement. Its strategic purpose is to allow expansion with low risk and no capital investment by the licensor. It is common in pharmaceuticals, fashion, media, technology and sports.\n\nThe five types differ in what is licensed. In product licensing, the licensee produces and sells a product based on the licensor's technology or design; the course's example is Apple licensing its Lightning connector technology. In brand or trademark licensing, the licensee uses the brand name or logo for marketing or packaging, as with McDonald's toys featuring Marvel characters. Technology licensing allows the use of proprietary software, hardware or patents, as when ARM Holdings licenses chip designs to Samsung. Copyright licensing covers content, images, books and music, as with Spotify licensing music from record labels. Merchandise licensing means selling goods under another company's branding, as with FIFA World Cup jerseys and merchandise.",
+      "marking_points": [
+       "Licensor (IP owner) permits licensee (foreign firm) to use IP under agreed conditions",
+       "Legal form: contract law and international IP treaties (TRIPS)",
+       "Purpose: low risk, no capital investment by licensor",
+       "All five types with correct examples"
+      ],
+      "chapters": [
+       "s3-what-is-licensing"
+      ]
+     },
+     {
+      "q": "Describe the four types of intellectual property relevant in licensing, with examples, and explain the main IP protection laws the course names for the USA, the EU and the global level, with their governing bodies.",
+      "marks": 10,
+      "model_answer": "The course names four types of intellectual property (IP) relevant in licensing. Trademarks protect brand names, logos and slogans, such as the Nike logo or the Coca-Cola font. Patents protect inventions and technology, such as a smartphone chip design. Copyrights protect creative content, such as software code, books and music. Trade secrets are confidential business information, such as the Coca-Cola formula.\n\nThese rights are protected differently by region, which is why the course stresses that different countries have different IP laws. In the United States of America (USA), the Lanham Act (1946), governed by the United States Patent and Trademark Office (USPTO), enables trademark owners to sue for infringement and protect against unfair competition, and the Digital Millennium Copyright Act (DMCA, 1998), with the US Copyright Office, protects digital content and service providers and lets copyright holders issue takedown notices. In the European Union (EU), the EU IP Directive and Regulations, with the European Union Intellectual Property Office (EUIPO), centralize IP protection through unitary systems, reducing the need for multiple national filings, with stronger data protection, design rights and enforcement across member states.\n\nAt the global level, the TRIPS Agreement (Trade-Related Aspects of Intellectual Property Rights, 1994), governed by the World Trade Organization (WTO), was part of the Uruguay Round of GATT negotiations and became effective in 1995. It ensures that countries provide legal remedies for IP violations, maintain transparent procedures and do not unfairly discriminate between foreign and domestic rights holders, and it includes flexibilities for developing countries such as transition periods. The course also lists the Berne Convention (copyright), the Madrid Protocol (trademark registration) and WIPO among the key international instruments.",
+      "marking_points": [
+       "Four IP types with examples",
+       "Lanham Act + USPTO; DMCA + US Copyright Office",
+       "EU IP Directive & Regulations + EUIPO and what it does",
+       "TRIPS + WTO, 1994/1995, its three requirements and flexibilities"
+      ],
+      "chapters": [
+       "s7-ip-basics",
+       "s7-ip-laws"
+      ]
+     },
+     {
+      "q": "Distinguish product franchising from business format franchising, with examples, and set out the responsibilities of the franchisor and of the franchisee.",
+      "marks": 10,
+      "model_answer": "Franchising is a business model in which a franchisor grants a franchisee the rights to operate under its brand and to sell its products or services in exchange for a fee and royalties. It is marked by a shared brand identity, ongoing support and training, and a fee-based structure of an initial fee plus royalties.\n\nThe two types differ in what passes to the franchisee. Product franchising focuses on selling the franchisor's products, and the franchisee often gets exclusive rights; the course's examples are car dealerships such as Toyota's and soft drink bottlers such as Coca-Cola's. In business format franchising the franchisee adopts a complete business system, including branding, operations and marketing; the examples are McDonald's, Starbucks and 7-Eleven.\n\nThe franchisor, which owns the brand, trademarks and business system, has four responsibilities: to provide brand standards, to offer initial and ongoing training, to deliver marketing support, and to maintain product quality and updates. The franchisee, which uses the brand to run a local business day to day, has four responsibilities: to pay fees (the franchise fee and royalties), to follow operating standards, to protect the brand's reputation, and to report financials and performance. These duties produce each side's benefits: the franchisor gains rapid market expansion, revenue from franchise fees and lower capital investment, and the franchisee gains a proven business model, brand recognition, and support and training.",
+      "marking_points": [
+       "Definition of franchising",
+       "Product franchising: products, often exclusive; Toyota, Coca-Cola",
+       "Business format: complete system; McDonald's, Starbucks, 7-Eleven",
+       "Four franchisor and four franchisee responsibilities"
+      ],
+      "chapters": [
+       "s9-what-is-franchising",
+       "s9-franchise-roles"
+      ]
+     },
+     {
+      "q": "Summarize the Apple vs. Qualcomm patent dispute: the issue, the legal actions, the outcome and the lessons the course draws from it.",
+      "marks": 10,
+      "model_answer": "Qualcomm is a leading chipmaker that holds key standard-essential patents (SEPs) for mobile communication technologies such as 4G LTE. Apple used Qualcomm's chips in iPhones but argued that Qualcomm's licensing model was unfair, because Qualcomm charged royalties based on the full price of the device rather than the value of the chip. Apple claimed this was excessive and accused Qualcomm of anti-competitive practices and double-dipping, that is, charging both for chips and for licenses.\n\nThe dispute spread across jurisdictions. Apple filed lawsuits in the United States, China, Germany and other countries. Qualcomm counter-sued for patent infringement and demanded product bans, and courts in China and Germany temporarily banned the sale of certain iPhone models because of patent violations. Antitrust regulators in several jurisdictions, including the US FTC, the EU and Korea, investigated.\n\nIn April 2019, after two years of legal battles, the two settled out of court. Apple agreed to pay Qualcomm an undisclosed sum estimated at $4.5–6 billion, a new six-year licensing agreement with an optional two-year extension was signed, and Qualcomm resumed supplying chips for iPhones.\n\nThe course draws four lessons. Legal clarity is critical, because ambiguous or overly aggressive licensing terms can result in multi-billion-dollar litigation. IP value must be carefully negotiated, especially with standard-essential patents, where fair and transparent terms are crucial. Global disputes need global awareness, because IP laws vary by country and what is enforceable in one jurisdiction may be banned in another. And settlements may be more strategic than litigation, because prolonged lawsuits damage both financials and operations.",
+      "marking_points": [
+       "Issue: royalties on full device price; double-dipping; SEPs",
+       "Legal actions in several countries; bans in China and Germany; antitrust probes",
+       "Settlement terms (April 2019)",
+       "All four lessons with their explanations"
+      ],
+      "chapters": [
+       "s7-apple-qualcomm"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "B",
+    "title": "Section B · Application (50 marks)",
+    "questions": [
+     {
+      "q": "Using the course's strategy comparison table, explain when a company should choose exporting, licensing, franchising or a strategic alliance to enter an international market. Illustrate each strategy with the company example the course gives, and state the main advantages and challenges of each.",
+      "marks": 15,
+      "model_answer": "The course gives four reasons to enter international markets: to access new customers, increase revenue, gain competitive advantage and spread risk across markets. It then offers four entry strategies, which its comparison table rates on investment, control and risk and matches to a best use case.\n\nExporting, selling domestic products abroad, is rated low on investment, control and risk. Its best use case is testing foreign demand, and its advantages are low risk and easy entry, with limited control and trade barriers as its challenges. Indomie is the example: it exports instant noodles from Indonesia to more than 80 countries without local factories.\n\nLicensing, permitting a foreign company to use your intellectual property, is low on investment and control but medium on risk. It suits entering IP-intensive industries. Its advantages are low cost and fast expansion; its challenges are loss of control and potential IP misuse. Disney is the example: it licenses its characters to global partners for merchandise production.\n\nFranchising, letting a foreign party run a business under your system and brand, is medium on investment, control and risk, and suits service businesses seeking global scale. It is scalable and uses local knowledge, but brings the challenges of franchisee quality control and dependency. McDonald's is the example: it operates globally via franchisees under standard systems.\n\nA strategic alliance, collaboration between two or more firms to pursue mutual goals while remaining independent, is medium–high on investment, shared on control and medium on risk. It suits complex markets requiring local support. Its advantages are shared cost and risk and access to local market expertise; its challenges are complex coordination and possible conflict. Starbucks and Tata are the example: they formed an alliance to enter India, with Tata handling sourcing and operations.\n\nThe choice therefore depends on the company's aim and what it can commit: exporting to test demand cheaply, licensing to earn from IP, franchising to scale a service business, and an alliance where the market is complex and a local partner's support is needed.",
+      "marking_points": [
+       "Investment, control and risk ratings for all four strategies",
+       "Best use case for each",
+       "Advantages and challenges of each",
+       "Indomie, Disney, McDonald's, Starbucks + Tata used correctly"
+      ],
+      "chapters": [
+       "s1-four-routes",
+       "s1-comparing-routes"
+      ]
+     },
+     {
+      "q": "Scenario (invented for practice): an animation studio owns a popular cartoon character and plans to license it to a toy and apparel maker in Southeast Asia. Using the course's frameworks, explain (a) the core clauses its licensing agreement should contain, (b) how it should select its licensing partner, and (c) the main risks it faces and how to mitigate them. Refer to the Disney case where relevant.",
+      "marks": 15,
+      "model_answer": "This is brand and merchandise licensing, the same type as the Disney case, in which Disney licenses characters such as Mickey Mouse, Marvel heroes and Star Wars to toy companies and apparel producers such as Hasbro and LEGO, with royalties based on product sales.\n\n(a) The agreement should contain the eight core clauses the course lists. The IP scope clause defines exactly what intellectual property is licensed, here the character as a trademark. The territory clause limits geographical use, for example a license valid only in Southeast Asia. The exclusivity clause decides whether one or many licensees may use the IP in the region. The duration clause sets the agreement period, for example three years, renewable. The royalty terms settle whether payment is a percentage of sales or a flat fee, whether reporting is monthly or annual, and whether the studio has audit rights. The quality control clause lets the licensor inspect operations to maintain brand reputation. The termination clause defines breach conditions, exit rights and dispute resolution. The renewal and transferability clause sets the renewal terms and whether the rights can be sold or transferred.\n\n(b) The studio should apply the four strategic partner criteria: market access and reputation; financial and operational capabilities; cultural and regulatory alignment; and a track record of compliance and performance. The course's evaluation tools for this are a SWOT or TOWS analysis and partner scorecards.\n\n(c) For the licensor, licensing brings quick market entry, low financial risk and royalty revenue, but limited control over operations and a risk of brand dilution. The course lists five risks and their mitigations: IP misuse, met with strong legal agreements and monitoring; reputation damage, met with partner vetting and brand guidelines; quality control problems, met with clear standards and audits; loss of market control, met with exclusivity terms and joint reviews; and legal or compliance risk, met with local legal counsel and jurisdiction clauses. Disney shows the result of managing these well: it generated billions in revenue with minimal manufacturing risk and expanded into local markets through themed toys, school supplies and clothing, while maintaining strict quality and branding controls to protect its IP.",
+      "marking_points": [
+       "Identifies brand/merchandise licensing; links to Disney",
+       "Eight core clauses applied to the scenario",
+       "Four partner criteria and two evaluation tools",
+       "Five risks each with its mitigation",
+       "Disney outcomes used as support"
+      ],
+      "chapters": [
+       "s3-licensing-agreement",
+       "s5-partners-risks",
+       "s3-disney-arm"
+      ]
+     },
+     {
+      "q": "Compare master franchising and area development as ways to develop a franchise internationally. Use the course's comparison table, its strategic considerations and the Domino's India and 7-Eleven Thailand cases.",
+      "marks": 10,
+      "model_answer": "In master franchising, a franchisor gives one franchisee, the master franchisee, the right to develop and sub-franchise within a territory, usually a country or a large region. The master franchisee recruits and trains sub-franchisees, provides local support, ensures brand consistency and shares revenue with the franchisor. Subway, Baskin-Robbins and McDonald's in some markets use it. In India, Jubilant FoodWorks holds the master franchise rights for Domino's, is responsible for all stores and sub-franchisees, and its local adaptation led to successful expansion.\n\nIn area development, a franchisee receives the right to open and operate multiple outlets within a specific territory, such as a city, state or region, within a set timeframe. No sub-franchising is allowed and the franchisee owns and manages all outlets. It is common in early-stage international expansion and is used by Starbucks in selected markets and Domino's Pizza. In Thailand, CP All operates all 7-Eleven stores in a defined territory, which gives uniformity in management and growth pacing.\n\nThe comparison table sets out four differences: sub-franchise rights are allowed in master franchising but not in area development; investment scope is medium to high versus high; speed of expansion is faster versus slower; and control by the franchisor is lower versus moderate. The strategic considerations guide the choice: cultural alignment, because local partners must understand consumer behavior; the legal framework, to ensure contract compliance and IP protection; market maturity, since advanced markets may support area developers while emerging ones may need master franchising; and brand control, since more control often means slower expansion.",
+      "marking_points": [
+       "Both definitions",
+       "Four rows of the comparison table",
+       "Domino's India and 7-Eleven Thailand correctly matched",
+       "Four strategic considerations"
+      ],
+      "chapters": [
+       "s11-master-area",
+       "s11-franchise-development"
+      ]
+     },
+     {
+      "q": "Explain what a franchise disclosure document (FDD) is, why it is required and what it contains. Then use the FTC v. Burgerim case to show the legal risks of failing to disclose properly, and the mitigations the course recommends.",
+      "marks": 10,
+      "model_answer": "A franchise disclosure document (FDD) is a legal disclosure document, required in many countries such as the USA, that gives prospective franchisees key information about the franchisor and the franchise system. Its purposes are to protect prospective franchisees, to promote transparency and informed decision-making, and to comply with franchise laws and regulations. The course lists eight key sections: franchisor background; litigation history; initial and ongoing fees; estimated initial investment; obligations of the franchisee; territory rights; financial performance representations (earnings claims, if provided); and financial statements (audited reports of the franchisor). In the USA it must be provided at least 14 days before a franchise agreement is signed. The FDD is required in the USA (Federal Trade Commission), Indonesia (Ministry of Trade, Regulation No. 71/2019) and Australia (Franchising Code of Conduct); in the UK there is no specific law and disclosure is voluntary under the BFA.\n\nBurgerim, a US-based fast-food franchise selling customizable mini-burgers, aggressively sold more than 1,500 franchise units between 2016 and 2019, including to first-time business owners and military veterans. It failed to provide accurate and complete FDDs as federal law required, omitting financial performance data, realistic costs and failure rates, and the operating difficulties of prior franchisees, and it overstated earning potential, implying quick success. This violated the FTC Franchise Rule, which mandates full disclosure before signing. Numerous franchisees lost thousands of dollars, many without ever opening a restaurant; in 2021 the FTC sued Burgerim and its founder Oren Loni for deceptive business practices; and the company later filed for bankruptcy.\n\nThe case illustrates one of the four legal risks the course lists, misrepresentation in the FDD; the others are unclear territory boundaries, insufficient dispute resolution mechanisms and lack of enforcement in international jurisdictions. The course's mitigations are to consult legal experts, use standardized contract templates and follow country-specific disclosure rules.",
+      "marking_points": [
+       "FDD definition and three purposes",
+       "Eight key sections and the 14-day rule",
+       "Burgerim facts: omissions, overstated earnings, FTC Franchise Rule, outcome",
+       "Four legal risks and three mitigations"
+      ],
+      "chapters": [
+       "s13-fdd",
+       "s13-legal-risks"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}

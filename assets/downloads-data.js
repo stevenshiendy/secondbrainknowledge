@@ -99,5 +99,15 @@ window.SB_DOWNLOADS = {
    "bytes": 3077837
   },
   "media": []
+ },
+ "international-licensing-franchising": {
+  "pdf": {
+   "href": "notes/pdf/international-licensing-franchising.pdf",
+   "name": "International Licensing, Franchising & Strategic Alliances Notebook.pdf",
+   "title": "International Licensing, Franchising & Strategic Alliances Notebook",
+   "pages": 132,
+   "bytes": 2733943
+  },
+  "media": []
  }
 };
