@@ -128,10 +128,12 @@ Every chapter is one `<section>`:
 - **`h2`:** a title that says what the chapter is about in plain words. A colon followed by the formal name works well. Keep it short enough to read whole on a phone; Slide mode never cuts a chapter title.
 - **Size:** aim for 600–1,500 words per chapter. Split any topic that runs longer. Merge two topics if each would be very thin.
 
+**Every chapter tells a story; it never summarises slides.** It starts from the problem the materials pose, follows the reasoning step by step, and ends where the materials end up. Each paragraph picks up where the one before left off, and each point says why it follows from the one before. A chapter that reads as slide bullets turned into sentences, or as one heading per slide, has to be rewritten. This applies to every tab, Start here and the synthesis chapter included, and to each paper's tab in article notes. The story uses only what the materials say (5.2): it follows their reasoning and adds none of its own.
+
 A chapter body follows this **teaching order**, so that every chapter reads the same way:
 
 1. **The chain**: four short cells covering Problem, Big idea, How (tools) and Result. One or two sentences each.
-2. **In plain words**: two to four paragraphs explaining the idea and the reasoning behind it as a good tutor would, using examples the materials themselves give.
+2. **In plain words**: two to four paragraphs that tell the idea as a story, the way a good tutor would talk it through, using examples the materials themselves give.
 3. **At least one figure** that shows the mechanism as the materials describe it: a flow, a cycle, a matrix, a timeline or a comparison. See 3.5.
 4. **The details to memorise**: definitions, lists, steps, tables and formulas, each under an `h3` subheading.
 5. **An exam tip** only where the materials show how the topic is examined.
@@ -292,6 +294,7 @@ Course notebooks only. Article notes leave this file out, and the notebook then 
 ```
 
 - **Every item names its `week` and `chapter`** (a chapter `id` from the walkthrough). The site uses these to place two questions and one recall card in a "Check yourself" box at the end of each chapter, so each chapter needs **at least 2 quiz questions and 2 flashcards**.
+- **Skip the Start here chapter.** It is the outline of the course, so it gets no flashcards, no quiz questions and no "Check yourself" box. No practice item names its id. Appendices are skipped too.
 - **Flashcards:** 6–15 per chapter. Put one fact, definition, list or contrast on each card, and write the front as a prompt rather than a yes/no question. Keep deck names short, as in "Week 1 · Introduction". Optionally add a separate `"abbreviations"` deck with one card per glossary entry, marked `"quizzable": false`.
 - **Quiz:** 8–15 questions per week, each with four options. `answer` is the 0-based position of the correct option. Spread the right answers across all four positions. Wrong options must be plausible: things a confused student would choose, never jokes. Use `why` to explain the right answer and, where useful, why the most tempting wrong one fails.
 - **Mock exam:** mirror the real exam's format, length and mark split if the materials show it (a past paper, a lecturer's hint, the course outline). Otherwise, write a balanced paper across all weeks. If the lecturer has given a mock paper that `exam-questions.md` works through, copy its format but ask new questions, so the two do not repeat each other; a question that sets an invented scenario says so in `sources.md`. Model answers are written at full-marks standard, in complete paragraphs, using the course's own terms and frameworks and only what the materials say, with the diagram described where one would earn marks. `marking_points` is optional: a short list of what a marker looks for.
@@ -307,6 +310,7 @@ Course notebooks only. Article notes leave this file out, and the notebook then 
 - Never address the request or yourself. No "Sure!", "Here's…", "Let's dive in", "I hope this helps", "In this response", "As an AI", or questions to the reader such as "Ready?".
 - Write in a calm, confident, third-person-neutral voice. "You" is fine when explaining how to do something.
 - Explain the idea in sentences first. Lists hold the details to memorise; they never replace the explanation.
+- Tell each chapter as a story, not a summary of the slides (3.3). Link the sentences with the reasons the materials give ("because", "so", "which is why"), and do not follow the slide order when the reasoning runs in another order.
 - Use a consistent spelling: follow the course materials (British or American), and keep to it.
 
 ### 5.2 Accuracy
@@ -468,7 +472,8 @@ Go through every line before handing the pack back.
 - [ ] Every claim traces to the materials, including chains, captions, link lines, `why` text and model answers. Nothing of your own was added, and points from a student's or user's notes are marked as such.
 - [ ] No "Chapter N", "Figure N" or table of contents is written by hand.
 - [ ] Every abbreviation is spelled out on first use in each chapter and listed in the glossary.
-- [ ] Every flashcard and quiz item has a `week` and a valid `chapter` id, and each chapter has at least 2 of each.
+- [ ] Every chapter, in every tab, reads as a story from problem to result, not as a slide summary.
+- [ ] Every flashcard and quiz item has a `week` and a valid `chapter` id, and each chapter except Start here and the appendices has at least 2 of each. None points at Start here.
 - [ ] Quiz answers are spread across positions 0–3, and every `why` explains the answer.
 - [ ] The mock exam has model answers written at full-marks standard, and does not repeat the questions in `exam-questions.md`.
 - [ ] In `exam-questions.md`, every question has the three required sections, its line, staircase and model answer run in the same order, every outside point is marked **[outside the slides]**, and every chapter id in backticks exists.
