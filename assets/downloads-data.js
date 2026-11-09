@@ -115,8 +115,8 @@ window.SB_DOWNLOADS = {
    "href": "notes/pdf/international-business-environment.pdf",
    "name": "International Business Environment Notebook.pdf",
    "title": "International Business Environment Notebook",
-   "pages": 143,
-   "bytes": 3984002
+   "pages": 175,
+   "bytes": 3480606
   },
   "media": []
  }

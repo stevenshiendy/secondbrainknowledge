@@ -14,6 +14,10 @@ Slide text was extracted from every deck, and every slide that holds an exhibit 
 
 **Practice material.** No exam format is given anywhere in the materials, so the mock exam is a balanced practice paper designed for this pack (120 minutes, 100 marks: four 10-mark concept questions and three 20-mark application questions). Its instructions say so. Question B2 sets an **invented scenario** (a mid-sized consumer electronics firm entering an emerging market); its model answer uses only the course's frameworks (Exhibit 8.1, the risk–return trade-off and the Session 5 risks). All other questions, model answers, quiz items and flashcards restate the slides. Quiz distractors (wrong options) may go beyond the slides, as the brief allows; no `why` does. The flashcards include an "Abbreviations" deck generated from the glossary, marked not quizzable.
 
+**Easy answers tab.** `easy-answers.html` retells the seven mock-exam answers in easy English, with the logic behind each answer, one figure per question and a memory line. Every fact restates the slides; the memory lines and the "Let Real Values Make Many Artists Even Smarter" phrase for the eight elements of culture are memory aids, and the tab's lede says so. Answers are sized at about 150 words per 10-mark question and 300 per 20-mark question.
+
+**Mock exam recheck (2026-11-09).** All seven model answers were checked against the slide text. Six matched. Question B2's answer listed franchising in the Exhibit 8.1 ranking but never evaluated it, and named the DFC without the bilateral investment treaty condition on Session 5, slide 9; both were added from Session 7, slide 11 and Session 5, slide 9.
+
 **No exam-questions.md.** The lecturer gave no kisi-kisi, review sheet, mock paper or past paper, so there is no Kisi-kisi file.
 
 | Chapter id | Built from |
