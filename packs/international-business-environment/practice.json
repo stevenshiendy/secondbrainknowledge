@@ -1,0 +1,2802 @@
+{
+ "decks": {
+  "s1": "Session 1 · Globalization",
+  "s2": "Session 2 · Trade",
+  "s3": "Session 3 · Funds and exchange rates",
+  "s4": "Session 4 · Culture",
+  "s5": "Session 5 · Law and politics",
+  "s6": "Session 6 · Ethics",
+  "s7": "Session 7 · Entry strategies",
+  "abbreviations": "Abbreviations"
+ },
+ "flashcards": [
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Definition of globalization",
+   "back": "The socioeconomic reform process of eliminating trade, investment, cultural, information technology and political barriers across countries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "What globalization can lead to",
+   "back": "Increased economic growth and geopolitical integration and interdependence among the nations of the world."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "What globalization represents",
+   "back": "Freer international trade and investment, or the free flow of goods and services (including cultural and belief systems) between countries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Direction of globalization before 2000",
+   "back": "Business generally expanded from developed countries to developing or emerging economies."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Direction of globalization now",
+   "back": "Business flows in both directions, and increasingly from one developing country to another."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Where the world's center of economic gravity is shifting",
+   "back": "Toward emerging economies, especially China."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Decoupling",
+   "back": "A world economy in which the engines of growth could comprise several major industrialized and emerging economies (United States, EU, China, India, Brazil, Russia, South Africa) rather than the United States alone."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Multipolar world",
+   "back": "A global shift in which industrialized-country-dependent developing economies grow based on their own underlying economic strengths rather than those of highly developed countries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Top three economies in 2050 by nominal GDP (Exhibit 1.2)",
+   "back": "1. China ($50.0 trillion); 2. United States ($34.0 trillion); 3. India ($28.0 trillion)."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "Three countries that enter the 2050 top ten (Exhibit 1.2)",
+   "back": "Indonesia (4th), Mexico (8th) and Russia (10th)."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "India's key economic drivers to 2050 (Exhibit 1.2)",
+   "back": "Young population, productivity growth and a large domestic market."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "The three international organizations that emerged after World War II",
+   "back": "The International Monetary Fund (IMF), the World Bank and the World Trade Organization (WTO)."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "The IMF's four roles in global financial stability",
+   "back": "(1) Forum for cooperation on international monetary problems; (2) facilitates trade that promotes jobs, growth and poverty reduction; (3) promotes exchange rate stability and an open payments system; (4) lends foreign exchange for balance of payments problems."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "The World Bank's initial role",
+   "back": "To aid the reconstruction of Europe after World War II."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "The World Bank's five current focus areas",
+   "back": "Global integration through trade; policy advice to strengthen free-market institutions and infrastructure; international standards in financial systems; knowledge transfer to developing countries; eradicating communicable diseases."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "IDA (World Bank Group)",
+   "back": "International Development Association: long-term, low-interest social sector and infrastructure loans to the poorest members, funded by rich-nation members' foreign aid."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "MIGA (World Bank Group)",
+   "back": "Multilateral Investment Guarantee Agency: provides political risk coverage for private investments in developing countries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "IFC (World Bank Group)",
+   "back": "International Finance Corporation: loans that take an equity position in private companies of developing countries; develops their capital markets."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "IBRD and ICSID (World Bank Group)",
+   "back": "IBRD: supports reconstruction and restructuring using funds raised in capital markets. ICSID: works on foreign investment disputes."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "Where the WTO's history begins",
+   "back": "In 1948 under the General Agreement on Tariffs and Trade (GATT), which lowered or removed tariffs, quotas and subsidies through a series of negotiations."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "Six ways the WTO promotes global trade",
+   "back": "Administering agreements; forum for negotiations; settling disputes; reviewing national trade policies; technical assistance and training for developing countries; cooperating with the IMF and World Bank."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-institutions",
+   "front": "The WTO's five principles",
+   "back": "Trade without discrimination; freer trade; predictability; promoting fair competition; encouraging economic reforms in developing countries."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "Institutions (Session 1)",
+   "back": "The rules, enforcement mechanisms and organizations that support market transactions; political systems must also be in place for them to work."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "Adaptive institutions",
+   "back": "Government organizations that create strong incentives for private investment and operate under checks and balances; they function best in a democratic system."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "Four policy measures that promote globalization",
+   "back": "Good governance; competitive markets; property rights; anticorruption policies."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "Digital divide",
+   "back": "The perceived economic gap between countries with easy access to digital technology and those with limited access."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "How IT has helped emerging economies",
+   "back": "Lower broadband prices have let them reach rural towns and villages, and the IT revolution has been relatively instantaneous."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "Four arguments against globalization",
+   "back": "Job losses and income stagnation; loss of local control over economic policy; disappearance of old industries; erosion of communities."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "The textbook's balanced conclusion on globalization",
+   "back": "Integration offers a more hopeful future and can raise quality of life, but there is no guarantee for all people or that all changes are positive: globalization creates winners and losers."
+  },
+  {
+   "deck": "s1",
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "front": "Globalization's winners and losers (Session 1)",
+   "back": "Winners: China, India, Brazil. Losers: Central Asia, much of Africa, North Korea."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "Three ways international trade benefits all consumers",
+   "back": "Greater choice of goods and services; lower prices; higher living standards."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "Session 2's opening claim about trade and foreign investment",
+   "back": "Trade and foreign investment are good for society as a whole."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "PPP conversion factor",
+   "back": "The number of units of a country's currency needed to buy the same goods and services in its domestic market that a U.S. dollar would buy in the United States."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "GNI",
+   "back": "Gross national income: total value of goods and services produced by a country plus net receipts of employee compensation and property income from abroad."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "World's three largest economies on a PPP basis, 2019 (Exhibit 2.1)",
+   "back": "China (17.26% of world PPP GNI), United States (15.95%), India (6.95%)."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "World FDI inflows: 1990, peak year, 2019 (Exhibit 2.3)",
+   "back": "$205 billion in 1990; peak of $2,754 billion in 2016; $1,631 billion in 2019."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "World FDI inflow in 2018 (Exhibit 2.3)",
+   "back": "$1,110 billion, down from $2,220 billion in 2017."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "front": "What Exhibit 2.3 measures",
+   "back": "Net inflows of investment to acquire or establish an enterprise in another country, by region (US$ billions)."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "Mercantilism",
+   "back": "The oldest trade theory (about 1500–1750): a nation gains from trade only with a surplus, so it should export as much and import as little as possible; wealth was measured in precious metal."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "The flaw in mercantilism",
+   "back": "If all nations raised exports and cut imports, the surplus of exports would depress prices, lower exporters' earnings and lead to underselling."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "Absolute advantage",
+   "back": "The ability of one country to produce a good or service more efficiently than another."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "Comparative advantage",
+   "back": "The ability of a country with an absolute advantage in two or more goods to produce one of them relatively more efficiently than the other."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "Heckscher–Ohlin (H–O) theory",
+   "back": "Attributes a nation's comparative advantage to its factor endowments: land, labor, capital and technology."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "Two key assumptions of the H–O theory",
+   "back": "Perfect competition in the marketplace; perfect immobility of factors of production among countries."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "Factor price equalization theory",
+   "back": "When factors move freely among trading nations, efficiency increases and resources are reallocated until price equilibrium is reached."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "The four corners of Porter's Diamond",
+   "back": "Factor conditions; demand conditions; related and supporting industries; firm strategy, structure and rivalry."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "The two outside influences in Porter's Diamond",
+   "back": "Chance (an external shock such as the COVID-19 pandemic) and government (can help or hurt competitiveness)."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "front": "The three families of trade theory",
+   "back": "Mercantilism; specialization (absolute and comparative advantage); factor endowments (H–O and factor price equalization)."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Trade policy",
+   "back": "All government actions that seek to alter the size of merchandise and/or service flows from and to a country."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Four instruments of trade policy",
+   "back": "Tariffs (customs duties); preferential duties; most favored nation (MFN) status; nontariff barriers."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Specific tariff vs ad valorem tariff",
+   "back": "Specific: a fixed dollar amount per physical unit. Ad valorem: a constant percentage of the monetary value of one unit of the import."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Preferential duty",
+   "back": "An import tariff a nation sets for goods of certain countries and does not apply to the same goods of other countries."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Generalized System of Preferences (GSP)",
+   "back": "An agreement under which many developed countries allow duty-free imports of a selected list of products originating from specific countries."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Import quota (QR)",
+   "back": "A quantitative restriction limiting the amount or number of units of a product that can be imported."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Voluntary export restraint (VER)",
+   "back": "An arrangement in which an efficient exporting nation agrees to limit exports of a product to another country for a temporary period."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Domestic content provisions",
+   "back": "Regulations requiring that a certain percentage of the value of an import be sourced domestically."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Socioeconomic rationale for managed trade",
+   "back": "Countertrade; export cartels; protection of infant industries; questionable labor practices; environmental considerations; health and safety."
+  },
+  {
+   "deck": "s2",
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "front": "Geopolitical rationale for managed trade",
+   "back": "National security; strategic industries; embargoes."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Balance of payments (BOP)",
+   "back": "Shows all transactions between one country and the rest of the world for a given period of time."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "The three accounts of the BOP",
+   "back": "Current account; capital account; financial account."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Four parts of the current account",
+   "back": "Trade balance in goods; trade balance in services; primary income; secondary income."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Sign convention for goods trade",
+   "back": "Exports are + (money comes in); imports are − (money leaves). Importing more than exporting gives a goods trade deficit."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Primary vs secondary income",
+   "back": "Primary: net labor and investment income earned from abroad less paid abroad. Secondary: current transfers between residents and nonresidents."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Capital account",
+   "back": "Credit and debit entries for non-produced nonfinancial assets and capital transfers; the least significant BOP item because amounts are usually small (e.g. land sold to embassies, sales of leases and licenses)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Financial account",
+   "back": "Foreign direct investment, portfolio investment, financial derivatives and other investment assets."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "FDI vs portfolio investment",
+   "back": "FDI: purchases of fixed assets abroad (factories, equipment) used to make and sell goods and services abroad. Portfolio: cross-border debt or equity securities other than those in FDI."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Other investments in the financial account",
+   "back": "Hot money or short-term deposits seeking higher returns; currency seeking a safe haven; trade credit and advances; other receivables and payables."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Net errors and omissions",
+   "back": "Imbalances from imperfect source data and compilation; the financial account balance minus the current and capital account balances; reflects timing and illegal trade."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "What the overall BOP shows up as",
+   "back": "The total of current, capital and financial accounts, adjusted for net errors and omissions, is reflected in the change in foreign currency reserves."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "front": "Risk premium",
+   "back": "The added return investors require for the risk associated with a security or asset."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Bid-ask spread",
+   "back": "The difference between the bid and ask prices of a currency; the transaction fee earned by the bank."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Direct vs indirect quote",
+   "back": "Direct: dollars per one unit of foreign currency. Indirect: the reciprocal, the price of a dollar in foreign currency."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Forward rate",
+   "back": "The price, set at an earlier time, of a currency for future delivery in the forward market."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Hedge",
+   "back": "Insurance that reduces future risk."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Gold standard",
+   "back": "A monetary system that pegs currency values to the market value of gold."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Bretton Woods Agreement (1944)",
+   "back": "A global currency system with the U.S. dollar pegged to gold at a fixed rate and the currencies of 43 other countries fixed to the dollar; it set up the IMF."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Smithsonian Agreement (1971) and Jamaica Agreement (1976)",
+   "back": "Smithsonian: allowed the U.S. to devalue the dollar. Jamaica: allowed countries to adopt different exchange rate systems, including floating."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Forces affecting currency values under flexible rates",
+   "back": "Current account imbalance; economic structure and growth; inflation and interest rates; other factors such as expectations."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Special drawing right (SDR)",
+   "back": "An IMF basket of currencies (dollars, euros, pounds and yen) used as a benchmark to value currencies."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Clean float vs dirty float",
+   "back": "Clean: minimal government intervention, largely market-determined. Dirty: varying degrees of intervention to keep a currency within an acceptable range."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Dollarization",
+   "back": "Using the dollar or another foreign currency together with, or instead of, the domestic currency."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "front": "Hard vs soft currencies",
+   "back": "Hard: leading currencies of developed countries (dollar, euro, yen, pound). Soft: less stable emerging-market currencies, sometimes pegged to hard currencies."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Law of one price",
+   "back": "Identical goods should sell for the same price in different countries according to local currencies."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Arbitrage",
+   "back": "Buying goods in a lower-priced market and selling them in a higher-priced market to make profits."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Purchasing power parity (PPP)",
+   "back": "The theory that a basket of goods should have approximately the same prices across different countries."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Big Mac Index",
+   "back": "A calculation using the cost of a Big Mac sandwich to assess the relative values of currencies."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "When PPP holds, according to empirical tests",
+   "back": "It appears to hold in the long run (over five years) but may not in shorter periods; it does not reliably explain rate changes between countries with similar inflation."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Five things that affect PPP predictions",
+   "back": "Transport costs and trade barriers; government intervention; MNEs with pricing power; market expectations; non-traded goods that affect internal prices."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Interest rate parity (IRP)",
+   "back": "The theory that bond interest rates in different countries become the same as investors buy and sell bonds for arbitrage profits."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Covered vs uncovered interest rate parity",
+   "back": "Covered: forward and spot rates set bond interest rates equal. Uncovered: expected forward and spot rates set them equal."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "The approximate IRP formula",
+   "back": "(iUS − iE) = (F − S)/S = p, the forward premium (when S is fairly stable)."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Why IRP evidence is mixed",
+   "back": "Transaction costs; political risk, legal restrictions, taxes and managed floats; market psychology (herd behavior); central bank intervention."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Forward-rate forecast of the spot rate",
+   "back": "F = S(1 + p): forward rate equals spot rate times one plus the forward premium."
+  },
+  {
+   "deck": "s3",
+   "week": 3,
+   "chapter": "s3-parity",
+   "front": "Three variables in the regression forecasting model",
+   "back": "Differences between the two countries' inflation rates, interest rates and GDP growth rates."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Culture (textbook definition)",
+   "back": "Learned behavior; a way of life for one group of people living in a single, related and independent community."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Why adapting to culture matters",
+   "back": "The degree to which a company adapts to a culture is often the difference between success and failure in international markets."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "The eight elements of culture",
+   "back": "Language; religion; values and attitudes; manners and customs; material elements; aesthetics; education; social institutions."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Verbal vs nonverbal communication",
+   "back": "Verbal: the message's actual contents. Nonverbal: tone of voice, gestures, eye contact, body positions, facial grimaces and other body language."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Backward translation",
+   "back": "Translating a message from English into a foreign language and back into English to check accuracy."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Four effects of religion on business",
+   "back": "Business operations; manufacturing and marketing of products; observance of holidays; working days and hours."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Values vs attitudes",
+   "back": "Values: basic beliefs or philosophies pervasive in a society. Attitudes: feelings or opinions."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Material elements and aesthetics",
+   "back": "Material elements: a direct result of technology, seen in economic, social, financial and marketing infrastructure. Aesthetics: color, form and music, a society's sense of taste and beauty."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "National education specialties (Session 4)",
+   "back": "South Korea and Japan: sciences and engineering. Russia: mathematics and computer programming. India: engineering and software development."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "front": "Reference groups and social stratification",
+   "back": "Reference groups: groups important to individuals. Social stratification: the extent to which groups at the top of the social pyramid control those lower down."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "Hofstede's five dimensions",
+   "back": "Individualism vs collectivism; power distance; masculine vs feminine; uncertainty avoidance; time orientation."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "Trompenaars's four dimensions",
+   "back": "Universalism vs particularism; neutral vs emotional; specific vs diffuse; achievement vs ascription."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "Two other approaches listed with Hofstede and Trompenaars",
+   "back": "The GLOBE Project and Gannon's Cultural Metaphors."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "The nine GLOBE constructs",
+   "back": "Power distance; uncertainty avoidance; humane orientation; collectivism I; collectivism II; assertiveness; gender egalitarianism; future orientation; performance orientation."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "GLOBE: uncertainty avoidance",
+   "back": "The extent to which a society, organization or group relies on social norms, rules and procedures to alleviate the unpredictability of future events."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "GLOBE: collectivism I vs collectivism II",
+   "back": "I (institutional): practices that encourage collective distribution of resources and collective action. II (family): pride, loyalty and cohesiveness in organizations or families."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "GLOBE: future orientation",
+   "back": "The extent to which individuals engage in future-oriented behaviors such as delaying gratification, planning and investing in the future."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "Highest and lowest GLOBE power distance (Exhibit 5.3)",
+   "back": "Highest: Southern Asia, 5.39. Lowest: Eastern Europe, 4.08 (six-point scale)."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "Highest GLOBE uncertainty avoidance (Exhibit 5.3)",
+   "back": "Germanic Europe, 5.12."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "front": "Sources of cultural information and their coverage",
+   "back": "Country Commercial Guide (133); EIU Country Reports (180); Culture Grams (174); Craigshead's guide (84); PwC Doing Business (118)."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Japan: meeting etiquette",
+   "back": "A slight bow and handshake; business card etiquette matters; avoid looking directly into hosts' eyes; hosts need to know your title and rank."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Japan: what executives expect of foreign visitors",
+   "back": "Arrive prepared, have decision-making authority, and be referred through a third party."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Yangban and inwa (Korea)",
+   "back": "Yangban: the noble class's culture of honor, reputation and dignity. Inwa: harmony among unequals, with loyalty owed upward and responsibility owed downward."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Guanxi (China)",
+   "back": "Friendships among unequals and the unlimited exchange of favors; utilitarian, not based on sentiment; can make low-ranking persons influential."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "How a foreigner gains access in China",
+   "back": "Seek out lower-level persons and obtain their favor in order to reach more powerful superiors who make decisions."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Arab countries: four etiquette points",
+   "back": "Do not show the sole of your shoe; the left hand is 'unclean'; good posture is imperative; do not overly praise hosts' possessions."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Latin America: business culture",
+   "back": "Relationship before business; more flexible about time; 'We work to live,' not 'We live to work.'"
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "India: business culture",
+   "back": "Formal traditions (suits, formal greetings); high civility; diplomacy valued over bluntness; sharing personal information builds relationships."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Russia: business culture",
+   "back": "Use a local businessperson (a gift helps); be on time though your host may be late; prefer a third-party introduction; do not refuse a drink or toast."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "South Africa: business culture",
+   "back": "Trust and punctuality matter; a trusted third-party introduction or letter helps; meet in person; bring a gift such as flowers if invited home."
+  },
+  {
+   "deck": "s4",
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "front": "Five ways culture matters for managing and marketing overseas",
+   "back": "Attitudes toward work; management styles; new product development; advertising tailored to local cultures; communication styles."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Democracy and its two forms",
+   "back": "'Rule by the people', all citizens vote. Athenian: all adults vote directly. Representative: citizens elect representatives for a set period."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Totalitarian government",
+   "back": "Individuals govern without the support or consent of the citizenry; for example, a military dictatorship."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Capitalism",
+   "back": "Businesses are privately owned, strong individual incentives exist, and the government plays very little role in the economy."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Socialism",
+   "back": "The government plays a strong role in the economy and may own stakes in certain businesses."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Communism",
+   "back": "The government or state owns and controls all major factors of production; philosophically an economically classless society."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Economic risk and its four examples",
+   "back": "The risk that economic problems or mismanagement will harm business in a country: currency restrictions or devaluation; doubtful loan repayment; labor problems; inflation and corruption."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Micropolitical vs macropolitical risk",
+   "back": "Micro: affects only a certain industry or set of firms. Macro: affects essentially all businesses in a country."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Terrorism Risk Insurance Act of 2002",
+   "back": "A U.S. law that, after a deductible, gives U.S. businesses government insurance coverage for terrorism risk."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "U.S. International Development Finance Corporation (DFC)",
+   "back": "A U.S. agency selling political risk insurance to U.S. businesses in countries with a bilateral investment treaty with the United States."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "front": "Corruption: private vs public",
+   "back": "Private: involving other private businesses, individuals or groups. Public: illegal payments, blackmail or extortion aimed at government officials to win contracts or approvals."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Civil law",
+   "back": "A legal system based on a comprehensive listing of legal rules in written codes of law."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Common law",
+   "back": "Legislatures enact less specific rules, giving judges and courts considerable authority to interpret them based on precedent and other factors."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Theocratic law",
+   "back": "A legal system based on a religious document and religious teachings."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Criminal law and its two U.S. examples",
+   "back": "Defines crimes punishable by possible incarceration; varies by country and time (Prohibition-era alcohol ban; marijuana now legal in about half of U.S. states)."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Contract law",
+   "back": "The law governing legally enforceable agreements to engage in economic exchange; contracts are meaningless unless enforceable."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Tax havens named in Session 5",
+   "back": "Mauritius, Belize, the Cayman Islands, Antigua, Barbuda and the Isle of Man."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Antitrust law and collusion",
+   "back": "Laws promoting fair competition ('antimonopoly laws'); collusion is companies secretly thwarting competition among themselves."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Caveat emptor vs caveat venditor",
+   "back": "Emptor ('buyer beware'): the consumer bears the burden of product safety. Venditor ('seller beware'): the maker or seller must ensure safety or clearly warn."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Litigation vs arbitration",
+   "back": "Litigation: a public court of law. Arbitration: neutral private persons chosen by the parties hear and decide the case."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Intellectual property protections",
+   "back": "The limited monopoly rights a nation grants to the creator of intellectual property: patents, trademarks and copyrights."
+  },
+  {
+   "deck": "s5",
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "front": "Patent, trademark, copyright",
+   "back": "Patent: excludes others from making, using or selling an invention for a time. Trademark: a distinctive name, symbol or design identifying a business's product. Copyright: exclusive right to publish and disseminate a work."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Three philosophical principles of ethics",
+   "back": "Imperative: do what is right. Utilitarian: do what produces the greatest good. Generalization: do what is right, filtered by the consequences."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Ethics (definition)",
+   "back": "The branch of philosophy addressing the rightness and wrongness of actions and the goodness and badness of their intent and results."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Integrity",
+   "back": "Adherence to moral and ethical principles; in practice, knowing what is right and having the courage to do it."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Four basic steps in ethical decision making (Exhibit 7.1)",
+   "back": "Define the facts; identify the people affected and their rights and obligations; identify alternatives and consequences; make the decision and do it."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "The eight rules of the BBB Code",
+   "back": "Build trust; advertise honestly; tell the truth; be transparent; honor promises; be responsive; safeguard privacy; embody integrity."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Corruption Perceptions Index (CPI)",
+   "back": "Published yearly by Transparency International; measures the potential corruption risk of most countries."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "CPI scores at the top and bottom of Exhibit 7.3",
+   "back": "Denmark and New Zealand 87; Mexico 29."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Corporate social responsibility (CSR)",
+   "back": "A company's obligations to society, including the welfare of people and places affected by its activities."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "The six CSR mandates",
+   "back": "Quality products; appropriate return to stockholders; dignity and respect for employees; care for the environment; meeting legal obligations; fair dealing with suppliers, lenders and others."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "front": "Principle of consistency vs principle of respect",
+   "back": "Consistency: what if everyone made the same choice? Respect: choose the alternative that treats people with the greatest respect."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Enron's fraud and its legal consequence",
+   "back": "Misleading accounting ('cooking its books'), including mark-to-market, to hide unprofitable operations; a key event leading to the Sarbanes–Oxley Act of 2002."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "WorldCom's fraud",
+   "back": "Recorded 'line costs' as assets instead of expenses and overstated revenues to show false growth; found by internal auditors; bankruptcy wiped out investors."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Vivendi's fraud and penalties",
+   "back": "Hid cash flow, liquidity and debt problems; found by the board; CEO resigned and paid $1 million; Vivendi paid $50 million."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Parmalat's fraud",
+   "back": "Used risky derivatives and purchases of its own debt to disguise losses on acquisitions; went bankrupt and was placed under a government commissioner."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Ponzi scheme",
+   "back": "A fraud paying earlier investors with money from later investors to appear profitable; first run by Charles Ponzi in the 1920s."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Five fundamentals of ethics education",
+   "back": "Personal integrity; responsibility of business in society; ethical decision making; ethical leadership; corporate governance."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Internal controls",
+   "back": "A system of rules and procedures ensuring the accuracy and reliability of financial and accounting information."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Preventive vs feedback controls",
+   "back": "Preventive: competent ethical staff, written policies, physical security, adequate records. Feedback: production quality control and internal auditing."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "The two parts of the FCPA",
+   "back": "An anti-bribery provision, and a requirement to maintain adequate internal controls over financial books and records."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Three SOX provisions",
+   "back": "25-year sentences for fraud; 20-year sentences for destroying or falsifying records; CEO and CFO must certify the financial statements."
+  },
+  {
+   "deck": "s6",
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "front": "Five basic threats to computer security",
+   "back": "Natural disasters; dishonest employees; disgruntled employees; persons outside the organization; accidental errors and omissions."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Risk profile",
+   "back": "The potential financial loss entrepreneurs are willing to take in a business."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Risk–return trade-off",
+   "back": "The greater the risk (loss of capital invested) entrepreneurs take, the greater the rewards (profit) they are likely to reap."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Three sources of risk in going international",
+   "back": "Ownership, operation or asset transfer."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Entry strategies from low to high risk (Exhibit 8.1)",
+   "back": "Export-import; licensing; franchising; strategic alliances; joint ventures; foreign acquisitions; wholly owned foreign subsidiaries."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Why export-import is relatively low risk",
+   "back": "Capital is not tied up, it is easy to enter or exit, and trade finance techniques minimize financial risk."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Two reasons to license rather than export",
+   "back": "Manufacturing locally saves transport, labor and raw material costs; the licensor may lack the funds for overseas plant or have better uses for them."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "How a licensor protects itself",
+   "back": "Penalty clauses in the license that can work as an exit strategy."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Franchising: risk and capital",
+   "back": "More risk than licensing, but local franchisees usually supply the capital, so markets are entered without significant parent investment abroad."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Strategic alliance vs international joint venture",
+   "back": "Alliance: cooperation without a separate jointly owned entity, aimed at revenues. Joint venture: a jointly owned business, usually with a local firm, sharing profits and risk."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Why a local partner in a joint venture",
+   "back": "Knows the domestic economic, cultural and political environment and helps overcome country-specific logistics and bureaucracy."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "front": "Acquisition vs wholly owned (green field) subsidiary",
+   "back": "Acquisition: buy an established foreign firm for instant market access. Subsidiary: build new facilities tailored to the firm; large capital, high risk and reward."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Multinational enterprises (MNEs)",
+   "back": "Firms headquartered in one country that own and control significant manufacturing, services, R&D or other entities in other countries."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Global 100 by market capitalization (Session 7)",
+   "back": "U.S. MNEs 56; greater China 15; France and Switzerland 4 each."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Emerging-market countries whose MNEs challenge U.S. MNEs",
+   "back": "China, India, Brazil, Russia, South Korea and South Africa."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "The world's three largest companies in 2021 (Exhibit 8.3)",
+   "back": "Apple ($2,231 billion), Microsoft ($1,997 billion), Saudi Aramco ($1,874 billion)."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Overriding objective of firms investing abroad",
+   "back": "To maximize shareholder wealth."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Three strategic motives for investing abroad",
+   "back": "Increase revenues; cut costs; diversify operations to minimize risk."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Revenue-maximizing strategies",
+   "back": "Entering high-growth markets; stable high-income markets; countries with monopolistic market structures; trade-restricted sectors."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Cost-minimizing strategies",
+   "back": "Economies of scale overseas; lower factor input costs by relocating; using exchange rate movements for long-term appreciation of FDI assets."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Dunning's eclectic theory: three advantages",
+   "back": "Ownership (firm-specific internal transfer); location (country-specific); internalization (mode of market entry)."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Host-country benefits of FDI",
+   "back": "Financial inflows; new jobs; new technologies; transfer of skills; more competition and choice; tax revenues."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Host-country costs of FDI",
+   "back": "Environmental pollution; exploitation of labor; lack of CSR; political interference by MNEs."
+  },
+  {
+   "deck": "s7",
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "front": "Attractive investment climate characteristics",
+   "back": "Proper economic reforms; transparent governance structure; rule of law."
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "BBB",
+   "back": "Better Business Bureau, whose Code of Business Practices sets out eight rules (Exhibit 7.2)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "BOP",
+   "back": "Balance of payments: all transactions between one country and the rest of the world for a period",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "BMW",
+   "back": "German MNE named on the slides (company name)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "CEO",
+   "back": "Chief executive officer",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "CFO",
+   "back": "Chief financial officer",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "CILO",
+   "back": "Course intended learning outcome",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "COVID-19",
+   "back": "The coronavirus pandemic that \"puts globalization at risk\" (Session 1)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "CPI",
+   "back": "Corruption Perceptions Index, published yearly by Transparency International",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "CSR",
+   "back": "Corporate social responsibility: a company's obligations to society",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "DFC",
+   "back": "U.S. International Development Finance Corporation, which sells political risk insurance",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "EIU",
+   "back": "The Economist Intelligence Unit, publisher of Country Reports",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "ESG",
+   "back": "Environmental, social and governance; named in the Session 6 title and video, not expanded on the slides",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "EU",
+   "back": "European Union",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "FCPA",
+   "back": "Foreign Corrupt Practices Act: anti-bribery provision plus internal control requirement",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "FDI",
+   "back": "Foreign direct investment: purchases of fixed assets abroad to make and sell goods and services there",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "GATT",
+   "back": "General Agreement on Tariffs and Trade, under which the WTO's history began in 1948",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "GDP",
+   "back": "Gross domestic product",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "GLOBE",
+   "back": "The GLOBE project, which measures nine culture constructs across regional clusters",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "GNI",
+   "back": "Gross national income: value of goods and services produced plus net income receipts from abroad",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "GSP",
+   "back": "Generalized System of Preferences: duty-free imports of selected products from specific countries",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "H–O",
+   "back": "Heckscher–Ohlin theory: comparative advantage comes from factor endowments",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IBRD",
+   "back": "International Bank for Reconstruction and Development (World Bank Group)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "ICSID",
+   "back": "International Center for the Settlement of Investment Disputes (World Bank Group)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IDA",
+   "back": "International Development Association (World Bank Group)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IFC",
+   "back": "International Finance Corporation (World Bank Group)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IMF",
+   "back": "International Monetary Fund",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IP",
+   "back": "Intellectual property",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IRP",
+   "back": "Interest rate parity",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "IT",
+   "back": "Information technology",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "M&A",
+   "back": "Mergers and acquisitions",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "MFN",
+   "back": "Most favored nation (status)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "MIGA",
+   "back": "Multilateral Investment Guarantee Agency (World Bank Group)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "MNE",
+   "back": "Multinational enterprise",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "PPP",
+   "back": "Purchasing power parity",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "PwC",
+   "back": "PricewaterhouseCoopers",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "QR",
+   "back": "Quantitative restriction (import quota)",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "R&D",
+   "back": "Research and development",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "SDR",
+   "back": "Special drawing right: IMF basket of dollars, euros, pounds and yen",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "SOX",
+   "back": "Sarbanes–Oxley Act of 2002",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "TSMC",
+   "back": "Company name as printed in Exhibit 8.3 (semiconductor chip design, Taiwan); not expanded on the slide",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "U.K.",
+   "back": "United Kingdom",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "U.S.",
+   "back": "United States",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "US$",
+   "back": "U.S. dollars",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "VER",
+   "back": "Voluntary export restraint",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "VW",
+   "back": "Volkswagen, a German MNE",
+   "quizzable": false
+  },
+  {
+   "deck": "abbreviations",
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "front": "WTO",
+   "back": "World Trade Organization",
+   "quizzable": false
+  }
+ ],
+ "quiz": [
+  {
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "q": "According to the textbook, globalization is best defined as:",
+   "options": [
+    "The socioeconomic reform process of eliminating trade, investment, cultural, IT and political barriers across countries",
+    "A world economy driven by the United States alone",
+    "The replacement of national currencies with the dollar",
+    "The expansion of firms from developed to developing countries"
+   ],
+   "answer": 0,
+   "why": "The textbook defines globalization as eliminating trade, investment, cultural, information technology and political barriers. Expansion from developed to developing countries describes only its pre-2000 direction."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "q": "How has the direction of globalization changed since 2000?",
+   "options": [
+    "It now runs only from emerging to developed economies",
+    "It now runs in both directions and increasingly from one developing country to another",
+    "It now runs only within the European Union",
+    "It has stopped, because of COVID-19"
+   ],
+   "answer": 1,
+   "why": "Before 2000 business expanded from developed to emerging economies; now it flows both ways and increasingly between developing countries."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "q": "A world economy whose engines of growth include the U.S., the EU, China, India, Brazil, Russia and South Africa rather than the U.S. alone is called:",
+   "options": [
+    "Mercantilism",
+    "Factor price equalization",
+    "Decoupling",
+    "Dollarization"
+   ],
+   "answer": 2,
+   "why": "That is the textbook's definition of decoupling. The related idea of a multipolar world stresses developing economies growing on their own strengths."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-what-is-globalization",
+   "q": "In Exhibit 1.2, which country is ranked first by nominal GDP in 2050?",
+   "options": [
+    "United States",
+    "India",
+    "Indonesia",
+    "China"
+   ],
+   "answer": 3,
+   "why": "China is first with $50.0 trillion, ahead of the United States ($34.0 trillion) and India ($28.0 trillion)."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-institutions",
+   "q": "Which institution lends countries foreign exchange to help address balance of payments problems?",
+   "options": [
+    "The International Monetary Fund (IMF)",
+    "The World Trade Organization (WTO)",
+    "GATT",
+    "The World Bank"
+   ],
+   "answer": 0,
+   "why": "Lending foreign exchange for balance of payments problems is one of the IMF's four roles. The World Bank's focus is development."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-institutions",
+   "q": "Which World Bank Group institution provides political risk coverage for private investments in developing countries?",
+   "options": [
+    "ICSID",
+    "MIGA",
+    "IBRD",
+    "IDA"
+   ],
+   "answer": 1,
+   "why": "The Multilateral Investment Guarantee Agency (MIGA) provides political risk coverage. ICSID deals with investment disputes, not insurance."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-institutions",
+   "q": "The WTO's history began in 1948 under:",
+   "options": [
+    "The Smithsonian Agreement",
+    "The Bretton Woods Agreement",
+    "The General Agreement on Tariffs and Trade (GATT)",
+    "The Jamaica Agreement"
+   ],
+   "answer": 2,
+   "why": "The slides say the WTO began trading in 1948 under GATT, which liberalized trade by lowering tariffs, quotas and subsidies."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-institutions",
+   "q": "Which is NOT one of the WTO's five principles?",
+   "options": [
+    "Promoting fair competition",
+    "Trade without discrimination",
+    "Predictability",
+    "Fixed exchange rates"
+   ],
+   "answer": 3,
+   "why": "The five principles are trade without discrimination, freer trade, predictability, fair competition and encouraging reform in developing countries. Exchange rates are the IMF's field."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "q": "Which is NOT one of the four policy measures that promote globalization?",
+   "options": [
+    "Import quotas",
+    "Good governance",
+    "Property rights",
+    "Anticorruption policies"
+   ],
+   "answer": 0,
+   "why": "The four measures are good governance, competitive markets, property rights and anticorruption policies. Import quotas are a trade barrier."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "q": "The perceived economic gap between countries with easy access to digital technology and those with limited access is the:",
+   "options": [
+    "Power distance",
+    "Digital divide",
+    "Risk premium",
+    "Bid-ask spread"
+   ],
+   "answer": 1,
+   "why": "The textbook calls this gap the digital divide."
+  },
+  {
+   "week": 1,
+   "chapter": "s1-making-it-work",
+   "q": "Adaptive institutions function best in:",
+   "options": [
+    "A gold standard system",
+    "A totalitarian system",
+    "A democratic system of government with checks and balances",
+    "A system without property rights"
+   ],
+   "answer": 2,
+   "why": "Adaptive institutions create incentives for private investment and operate under checks and balances, functioning best in a democracy."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "q": "According to Session 2, international trade benefits all consumers in three ways. Which is one of them?",
+   "options": [
+    "Fewer imported goods",
+    "Fixed exchange rates",
+    "Higher tariffs",
+    "Lower prices for goods and services"
+   ],
+   "answer": 3,
+   "why": "The three benefits are more choice, lower prices and higher living standards."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "q": "In Exhibit 2.1 (PPP basis, 2019), which economy is the largest?",
+   "options": [
+    "China",
+    "Japan",
+    "United States",
+    "India"
+   ],
+   "answer": 0,
+   "why": "China's PPP GNI is $23,468 billion (17.26% of world), ahead of the United States at $21,690 billion (15.95%)."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-and-fdi",
+   "q": "In Exhibit 2.3, in which year did world FDI inflows peak?",
+   "options": [
+    "2010",
+    "2016",
+    "2000",
+    "2019"
+   ],
+   "answer": 1,
+   "why": "World FDI reached $2,754 billion in 2016, the highest value in the exhibit."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "q": "Mercantilists believed a nation becomes wealthy by:",
+   "options": [
+    "Specializing in what it produces most efficiently",
+    "Allowing factors of production to move freely",
+    "Exporting as much as possible and importing as little as possible",
+    "Joining a currency basket"
+   ],
+   "answer": 2,
+   "why": "Mercantilism measured wealth in precious metal and sought a trade surplus. Specialization belongs to absolute and comparative advantage."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "q": "The Heckscher–Ohlin theory attributes a nation's comparative advantage to:",
+   "options": [
+    "Its government subsidies",
+    "Its trade surplus",
+    "Its exchange rate regime",
+    "Its factor endowments"
+   ],
+   "answer": 3,
+   "why": "H–O traces comparative advantage to land, labor, capital and technology."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "q": "Which is a key assumption of the H–O theory?",
+   "options": [
+    "Perfect immobility of factors of production among countries",
+    "Government ownership of factors",
+    "Fixed exchange rates",
+    "Free mobility of factors among countries"
+   ],
+   "answer": 0,
+   "why": "H–O assumes perfect competition and perfect immobility of factors. Free mobility is the premise of factor price equalization theory."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-theories",
+   "q": "In Porter's Diamond, the COVID-19 pandemic is an example of:",
+   "options": [
+    "Government",
+    "Chance",
+    "Demand conditions",
+    "Factor conditions"
+   ],
+   "answer": 1,
+   "why": "The slide gives COVID-19 as an example of chance, an external shock or development."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "q": "A tax on imports levied as a constant percentage of the value of one unit of the good is a:",
+   "options": [
+    "Domestic content provision",
+    "Specific tariff",
+    "Ad valorem tariff",
+    "Voluntary export restraint"
+   ],
+   "answer": 2,
+   "why": "An ad valorem tariff is a percentage of value; a specific tariff is a fixed amount per unit."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "q": "An arrangement in which an efficient exporting nation agrees to limit its exports to another country for a temporary period is:",
+   "options": [
+    "The GSP",
+    "An import quota",
+    "A preferential duty",
+    "A voluntary export restraint (VER)"
+   ],
+   "answer": 3,
+   "why": "That is the definition of a VER. An import quota is imposed by the importing country."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "q": "Which reason for managed trade belongs to the geopolitical rationale?",
+   "options": [
+    "Embargoes",
+    "Countertrade",
+    "Health and safety",
+    "Protection of infant industries"
+   ],
+   "answer": 0,
+   "why": "The geopolitical rationale lists national security, strategic industries and embargoes; the other three are socioeconomic."
+  },
+  {
+   "week": 2,
+   "chapter": "s2-trade-policy",
+   "q": "Under the Generalized System of Preferences (GSP):",
+   "options": [
+    "All countries pay the same tariff",
+    "Many developed countries allow duty-free imports of selected products from specific countries",
+    "Imports must contain domestic content",
+    "Exporters limit their shipments voluntarily"
+   ],
+   "answer": 1,
+   "why": "GSP is an agreement allowing duty-free imports of a selected list of products originating from specific countries."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "q": "Which account of the balance of payments is described as the least significant because its amounts are usually small?",
+   "options": [
+    "Current account",
+    "Financial account",
+    "Capital account",
+    "Reserves"
+   ],
+   "answer": 2,
+   "why": "The capital account, which records non-produced nonfinancial assets and capital transfers, is usually small."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "q": "The trade balance in services, primary income and secondary income are all parts of the:",
+   "options": [
+    "Capital account",
+    "Financial account",
+    "Net errors and omissions",
+    "Current account"
+   ],
+   "answer": 3,
+   "why": "The current account covers goods, services, primary income and secondary income."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "q": "Purchases of fixed assets abroad, such as factories and equipment, used to make and sell goods abroad are:",
+   "options": [
+    "Foreign direct investment",
+    "Secondary income",
+    "Portfolio investment",
+    "Hot money"
+   ],
+   "answer": 0,
+   "why": "That is FDI, recorded in the financial account. Portfolio investment is in securities."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-balance-of-payments",
+   "q": "According to the slides, net errors and omissions reflect two issues:",
+   "options": [
+    "Inflation and interest rates",
+    "Timing and illegal trade",
+    "Tariffs and quotas",
+    "Exports and imports"
+   ],
+   "answer": 1,
+   "why": "Errors and omissions come from imperfect source data and reflect timing and illegal trade."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "q": "The 1944 agreement that pegged the U.S. dollar to gold and 43 other currencies to the dollar was:",
+   "options": [
+    "The Jamaica Agreement",
+    "The Smithsonian Agreement",
+    "The Bretton Woods Agreement",
+    "GATT"
+   ],
+   "answer": 2,
+   "why": "Bretton Woods (1944) set up this system and the IMF. Smithsonian (1971) let the dollar be devalued; Jamaica (1976) allowed floating."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "q": "A monetary system with varying degrees of government intervention to keep a currency in an acceptable range is a:",
+   "options": [
+    "Clean float",
+    "Gold standard",
+    "Dollarization",
+    "Dirty float"
+   ],
+   "answer": 3,
+   "why": "A dirty float involves intervention; a clean float is largely market-determined."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "q": "The special drawing right (SDR) is:",
+   "options": [
+    "An IMF basket of dollars, euros, pounds and yen used as a benchmark",
+    "A forward contract",
+    "A soft currency",
+    "A tariff"
+   ],
+   "answer": 0,
+   "why": "The IMF created the SDR as a currency basket to value different currencies."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-fx-markets-systems",
+   "q": "The difference between the bid and ask prices of a currency is the:",
+   "options": [
+    "Forward premium",
+    "Bid-ask spread",
+    "Risk premium",
+    "Hedge"
+   ],
+   "answer": 1,
+   "why": "The bid-ask spread is the bank's transaction fee."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-parity",
+   "q": "The theory that a basket of goods should cost approximately the same across countries is:",
+   "options": [
+    "Comparative advantage",
+    "Interest rate parity",
+    "Purchasing power parity",
+    "Factor price equalization"
+   ],
+   "answer": 2,
+   "why": "That is PPP. IRP concerns bond returns."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-parity",
+   "q": "According to empirical tests on the slides, PPP appears to hold:",
+   "options": [
+    "Only for countries with identical inflation",
+    "Never",
+    "Only in periods shorter than one year",
+    "In the long run, for periods exceeding five years"
+   ],
+   "answer": 3,
+   "why": "PPP appears to hold over periods longer than five years but may not in shorter periods."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-parity",
+   "q": "In the forecasting formula F = S(1 + p), p stands for:",
+   "options": [
+    "The forward premium",
+    "The population",
+    "The inflation rate",
+    "The price index"
+   ],
+   "answer": 0,
+   "why": "F is the forward rate, S the spot rate and p the forward premium."
+  },
+  {
+   "week": 3,
+   "chapter": "s3-parity",
+   "q": "Which is NOT given as a reason IRP may not hold?",
+   "options": [
+    "Herd behavior",
+    "Perfect competition",
+    "Transaction costs",
+    "Central bank intervention"
+   ],
+   "answer": 1,
+   "why": "The slides list transaction costs, political and legal factors, market psychology and central bank intervention. Perfect competition is an H–O assumption."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "q": "Translating a message into a foreign language and then back into English to check accuracy is:",
+   "options": [
+    "Aesthetics",
+    "Nonverbal communication",
+    "Backward translation",
+    "Social stratification"
+   ],
+   "answer": 2,
+   "why": "That is backward translation, a tool under the language element."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "q": "Color, form and music are the major components of which element of culture?",
+   "options": [
+    "Manners and customs",
+    "Social institutions",
+    "Material elements",
+    "Aesthetics"
+   ],
+   "answer": 3,
+   "why": "Aesthetics is what a society perceives as taste and beauty. Material elements are the result of technology."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "q": "Which element of culture is a direct result of technology?",
+   "options": [
+    "Material elements",
+    "Language",
+    "Values",
+    "Religion"
+   ],
+   "answer": 0,
+   "why": "Material elements are shown by a society's economic, social, financial and marketing infrastructures."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-elements-of-culture",
+   "q": "According to Session 4, which country emphasizes engineering and software development in education?",
+   "options": [
+    "Russia",
+    "India",
+    "Japan",
+    "Brazil"
+   ],
+   "answer": 1,
+   "why": "India emphasizes engineering and software; Russia is strong in mathematics and programming."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "q": "Which is one of Trompenaars's cultural dimensions?",
+   "options": [
+    "Power distance",
+    "Uncertainty avoidance",
+    "Universalism vs. particularism",
+    "Time orientation"
+   ],
+   "answer": 2,
+   "why": "The other three are Hofstede's dimensions."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "q": "In Exhibit 5.3, which cluster has the highest GLOBE power distance score?",
+   "options": [
+    "Eastern Europe",
+    "Anglo",
+    "Germanic Europe",
+    "Southern Asia"
+   ],
+   "answer": 3,
+   "why": "Southern Asia scores 5.39, the highest; Eastern Europe is lowest at 4.08."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-cultural-dimensions",
+   "q": "The GLOBE construct defined as the degree to which a collective minimizes gender inequality is:",
+   "options": [
+    "Gender egalitarianism",
+    "Collectivism II",
+    "Assertiveness",
+    "Humane orientation"
+   ],
+   "answer": 0,
+   "why": "That is gender egalitarianism. Exhibit 5.3 shows Arabic countries lowest on it at 2.95."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "q": "Guanxi, in China, refers to:",
+   "options": [
+    "Harmony among unequals",
+    "Friendships among unequals and the unlimited exchange of favors",
+    "The noble class's culture of honor",
+    "A ban on business with foreigners"
+   ],
+   "answer": 1,
+   "why": "Guanxi is friendship among unequals and exchange of favors. Inwa (harmony among unequals) and yangban (honor) are Korean ideas."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "q": "According to the country notes, what is impolite in Russia?",
+   "options": [
+    "Being introduced by a third party",
+    "Arriving on time",
+    "Refusing a drink or a toast",
+    "Using a local businessperson"
+   ],
+   "answer": 2,
+   "why": "Refusing a drink or a toast is impolite. Third-party introductions are preferred, and the foreigner should be on time."
+  },
+  {
+   "week": 4,
+   "chapter": "s4-doing-business",
+   "q": "\"We work to live, not live to work\" is the motto given for:",
+   "options": [
+    "Japan",
+    "India",
+    "South Africa",
+    "Latin America"
+   ],
+   "answer": 3,
+   "why": "The slides attribute it to Latin America, where people are less immersed in work than U.S. businesspeople."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "q": "A political risk that affects only a certain industry or set of firms is:",
+   "options": [
+    "Micropolitical risk",
+    "Economic risk",
+    "Public corruption",
+    "Macropolitical risk"
+   ],
+   "answer": 0,
+   "why": "Micropolitical risk is industry-specific; macropolitical risk affects essentially all businesses in a country."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "q": "Under which ideology does the state own and control all major factors of production in a philosophically classless society?",
+   "options": [
+    "Capitalism",
+    "Communism",
+    "Representative democracy",
+    "Socialism"
+   ],
+   "answer": 1,
+   "why": "That is communism. Under socialism the government plays a strong role and may own stakes in some businesses."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "q": "Which U.S. government agency sells political risk insurance to U.S. businesses in countries with a bilateral investment treaty?",
+   "options": [
+    "MIGA",
+    "Transparency International",
+    "The U.S. International Development Finance Corporation (DFC)",
+    "The IMF"
+   ],
+   "answer": 2,
+   "why": "The DFC sells this insurance. MIGA, part of the World Bank Group, offers political risk coverage for investments in developing countries, but it is not a U.S. agency."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "q": "Making illegal payments to government officials to obtain government contracts is:",
+   "options": [
+    "Collusion",
+    "Arbitration",
+    "Private corruption",
+    "Public corruption"
+   ],
+   "answer": 3,
+   "why": "Public corruption targets government officials; private corruption involves other businesses or individuals."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-political-systems-risk",
+   "q": "Which is listed as an economic risk?",
+   "options": [
+    "Restrictions on the transfer or exchange of a country's currency",
+    "Copyright infringement",
+    "Caveat venditor",
+    "Backward translation"
+   ],
+   "answer": 0,
+   "why": "Economic risks include currency restrictions or devaluation, doubtful loan repayment, labor problems, inflation and corruption."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "q": "A legal system in which judges have considerable authority to interpret less specific rules based on precedent is:",
+   "options": [
+    "Theocratic law",
+    "Common law",
+    "Contract law",
+    "Civil law"
+   ],
+   "answer": 1,
+   "why": "Common law relies on judges and precedent; civil law relies on comprehensive written codes."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "q": "Which product safety principle places the burden on manufacturers or sellers?",
+   "options": [
+    "Antitrust",
+    "Caveat emptor",
+    "Caveat venditor",
+    "Arbitration"
+   ],
+   "answer": 2,
+   "why": "Caveat venditor means \"seller beware\"; caveat emptor puts the burden on consumers."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "q": "Disputing parties designating a neutral private person or group to hear and decide their case is:",
+   "options": [
+    "Criminal law",
+    "Litigation",
+    "Collusion",
+    "Arbitration"
+   ],
+   "answer": 3,
+   "why": "Arbitration is the alternative dispute resolution process; litigation uses a public court."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "q": "A distinctive name, symbol or design that identifies a business's product or service is protected by a:",
+   "options": [
+    "Trademark",
+    "Patent",
+    "Copyright",
+    "License"
+   ],
+   "answer": 0,
+   "why": "A trademark identifies a business's product or service. A patent protects an invention; a copyright protects published work."
+  },
+  {
+   "week": 5,
+   "chapter": "s5-legal-environment-ip",
+   "q": "Which is named on the slides as a tax haven?",
+   "options": [
+    "Canada",
+    "The Cayman Islands",
+    "Germany",
+    "Japan"
+   ],
+   "answer": 1,
+   "why": "The slides list Mauritius, Belize, the Cayman Islands, Antigua, Barbuda and the Isle of Man."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "q": "\"Do what produces the greatest good\" is the:",
+   "options": [
+    "Principle of respect",
+    "Imperative principle",
+    "Utilitarian principle",
+    "Generalization argument"
+   ],
+   "answer": 2,
+   "why": "The utilitarian principle looks at the greatest good; the imperative principle says simply do what is right."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "q": "Which is the final step of ethical decision making in Exhibit 7.1?",
+   "options": [
+    "Define all the facts",
+    "Identify the people affected",
+    "Identify the alternatives",
+    "Determine the right thing to do and then do it"
+   ],
+   "answer": 3,
+   "why": "The fourth step is to make the decision: determine the right thing and do it."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "q": "The Corruption Perceptions Index (CPI) is published each year by:",
+   "options": [
+    "Transparency International",
+    "The Better Business Bureau",
+    "The IMF",
+    "The World Bank"
+   ],
+   "answer": 0,
+   "why": "Transparency International publishes the CPI."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "q": "Considering what would happen if everyone made the same choice you are about to make is the:",
+   "options": [
+    "Imperative principle",
+    "Principle of consistency",
+    "Principle of respect",
+    "Utilitarian principle"
+   ],
+   "answer": 1,
+   "why": "That is the principle of consistency; the principle of respect asks which alternative treats people with the greatest respect."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-ethics-csr",
+   "q": "Which is NOT one of the CSR mandates on the slides?",
+   "options": [
+    "Treat employees with dignity and respect",
+    "Take care of the environment",
+    "Maximize market share at any cost",
+    "Meet its legal obligations"
+   ],
+   "answer": 2,
+   "why": "The six mandates include quality products, return to stockholders, dignity for employees, environment, legal obligations and fair dealing; market share is not among them."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "q": "Which company recorded \"line costs\" as assets rather than expensing them?",
+   "options": [
+    "Enron",
+    "Vivendi",
+    "Parmalat",
+    "WorldCom"
+   ],
+   "answer": 3,
+   "why": "WorldCom underreported line costs as assets and overstated revenues."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "q": "Internal auditing is an example of:",
+   "options": [
+    "A feedback control",
+    "An anti-bribery provision",
+    "A tax law",
+    "A preventive control"
+   ],
+   "answer": 0,
+   "why": "Feedback controls, such as quality control and internal auditing, identify errors after they occur."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "q": "Under the Sarbanes–Oxley Act (SOX), who must certify that the financial statements are accurate?",
+   "options": [
+    "The board of directors",
+    "The CEO and CFO",
+    "The stockholders",
+    "The external auditor alone"
+   ],
+   "answer": 1,
+   "why": "SOX requires the chief executive officer and chief financial officer of a public company to certify the statements."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "q": "The two parts of the Foreign Corrupt Practices Act (FCPA) are:",
+   "options": [
+    "A patent and a trademark rule",
+    "A tax haven ban and an antitrust rule",
+    "An anti-bribery provision and an internal control requirement",
+    "A tariff and a quota"
+   ],
+   "answer": 2,
+   "why": "The FCPA combines anti-bribery with a requirement for adequate internal controls over books and records."
+  },
+  {
+   "week": 6,
+   "chapter": "s6-scandals-controls",
+   "q": "Which is NOT one of the five fundamentals of ethics education?",
+   "options": [
+    "Personal integrity",
+    "Ethical leadership",
+    "Corporate governance",
+    "Profit maximization"
+   ],
+   "answer": 3,
+   "why": "The five are personal integrity, responsibility of business in society, ethical decision making, ethical leadership and corporate governance."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "q": "In Exhibit 8.1, which entry strategy carries the highest risk and return?",
+   "options": [
+    "Wholly owned foreign subsidiaries",
+    "Franchising",
+    "Licensing",
+    "Joint ventures"
+   ],
+   "answer": 0,
+   "why": "Wholly owned foreign subsidiaries sit at the high-risk, high-return end; export-import sits at the low end."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "q": "Which of these is a strategy that shares financial risk?",
+   "options": [
+    "Foreign acquisition",
+    "International joint venture",
+    "Export-import business",
+    "Licensing"
+   ],
+   "answer": 1,
+   "why": "Strategic alliances and international joint ventures share risk; export-import and licensing minimize it; acquisitions are higher risk."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "q": "A key difference between a strategic alliance and an international joint venture is that an alliance:",
+   "options": [
+    "Is the highest-risk strategy",
+    "Always involves a local government",
+    "Does not create a separate entity with joint ownership",
+    "Requires more capital than a subsidiary"
+   ],
+   "answer": 2,
+   "why": "A joint venture is a jointly owned business; an alliance is cooperation without creating one."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "q": "New facilities built and operated overseas, tailored to the home firm's exact needs, are called:",
+   "options": [
+    "Franchises",
+    "Licenses",
+    "Cross-border mergers",
+    "Green field plants (wholly owned subsidiaries)"
+   ],
+   "answer": 3,
+   "why": "Wholly owned subsidiaries built from scratch are green field plants; an acquisition buys an existing firm instead."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-entry-modes",
+   "q": "Compared with licensing, franchising:",
+   "options": [
+    "Carries relatively more risk for the parent firm",
+    "Requires the parent to supply all capital",
+    "Is the lowest-risk strategy",
+    "Carries no risk"
+   ],
+   "answer": 0,
+   "why": "The slides say the parent firm assumes relatively more risk with franchising than with licensing."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "q": "Which is NOT one of the three strategic motives for investing abroad?",
+   "options": [
+    "Diversify operations to minimize risk",
+    "Avoid all foreign competition",
+    "Increase revenues",
+    "Cut costs"
+   ],
+   "answer": 1,
+   "why": "The three motives are increasing revenues, cutting costs and diversifying to minimize risk."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "q": "Dunning's eclectic theory names three advantages. Which is one of them?",
+   "options": [
+    "Mercantile advantages",
+    "Tariff advantages",
+    "Location (country-specific) advantages",
+    "Absolute advantages"
+   ],
+   "answer": 2,
+   "why": "Dunning's three are ownership, location and internalization."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "q": "Gaining economies of scale in overseas production is a:",
+   "options": [
+    "Risk-minimizing strategy",
+    "Host-country cost",
+    "Revenue-maximizing strategy",
+    "Cost-minimizing strategy"
+   ],
+   "answer": 3,
+   "why": "Economies of scale, lower factor costs and exchange rate moves are cost-minimizing strategies."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "q": "Which is listed as a cost of FDI from the host country's perspective?",
+   "options": [
+    "Political interference by MNEs in the host country's affairs",
+    "Tax revenues",
+    "Creation of new jobs",
+    "Access to new technologies"
+   ],
+   "answer": 0,
+   "why": "Political interference is a cost; the other three are benefits."
+  },
+  {
+   "week": 7,
+   "chapter": "s7-mnes-fdi",
+   "q": "Which is a characteristic of an attractive investment climate?",
+   "options": [
+    "High tariffs",
+    "Rule of law",
+    "State ownership of all factors",
+    "Secret tax regimes"
+   ],
+   "answer": 1,
+   "why": "The three characteristics are proper economic reforms, a transparent governance structure and the rule of law."
+  }
+ ],
+ "mock_exam": {
+  "minutes": 120,
+  "instructions": "Answer all questions. Section A carries 40 marks and Section B carries 60 marks, for a total of 100. Use the course's own terms, lists and exhibits by name, and sketch a diagram where it helps your answer. This is a practice paper: the course folder gives no details of the real exam's format.",
+  "sections": [
+   {
+    "id": "A",
+    "title": "Section A · Concepts (40 marks)",
+    "questions": [
+     {
+      "q": "Define globalization as the textbook does, and explain how its direction has changed since 2000. Use the concepts of decoupling and the multipolar world in your answer.",
+      "marks": 10,
+      "model_answer": "The textbook defines globalization as the socioeconomic reform process of eliminating trade, investment, cultural, information technology and political barriers across countries. Because these barriers fall, goods, services, investment and even cultural and belief systems flow more freely, which can lead to greater economic growth and to geopolitical integration and interdependence among nations, making them more efficient, interdependent and perhaps more inclusive and homogeneous.\n\nThe direction of globalization has changed. Before 2000 it generally meant businesses expanding from developed countries into developing or emerging economies. Today business flows in both directions, and increasingly from one developing country to another, because emerging economies are adopting more open trade and free-market policies to drive their growth. The world's center of economic gravity is therefore shifting toward emerging economies, especially China; Exhibit 1.2 projects China as the largest economy by nominal GDP in 2050, with India third and Indonesia fourth.\n\nTwo concepts describe this new order. Decoupling describes a world economy with several engines of growth, such as the United States, the European Union, China, India, Brazil, Russia and South Africa, rather than the United States alone. A multipolar world is the shift in which developing economies that used to depend on industrialized countries grow on their own underlying economic strengths. Together they describe a world with several centers of economic power instead of one.",
+      "marking_points": [
+       "Gives the textbook definition (eliminating trade, investment, cultural, IT and political barriers)",
+       "Before 2000: developed to emerging; now both directions and between developing countries",
+       "Center of gravity shifting to emerging economies, especially China (Exhibit 1.2)",
+       "Defines decoupling correctly",
+       "Defines multipolar world correctly"
+      ],
+      "chapters": [
+       "s1-what-is-globalization"
+      ]
+     },
+     {
+      "q": "Explain the roles of the IMF, the World Bank and the WTO in facilitating globalization.",
+      "marks": 10,
+      "model_answer": "Globalization gained momentum after World War II, when the governments of the free world recognized the need for international cooperation and coordination and created three organizations, each addressing a different obstacle to open trade and investment.\n\nThe International Monetary Fund (IMF) supports global financial stability. It provides a forum for cooperation on international monetary problems; facilitates international trade that promotes job creation, growth and poverty reduction; promotes exchange rate stability and an open system of international payments; and lends countries foreign exchange to help with balance of payments problems.\n\nThe World Bank was first created to help rebuild Europe after the war. Its current focus is global integration through trade liberalization, policy advice to strengthen free-market institutions and infrastructure, agreements supporting international financial standards, knowledge transfer to developing countries for sustainable development, and eradicating communicable diseases. It works through five institutions: the IBRD, IDA, IFC, MIGA and ICSID, which range from loans to the poorest members (IDA) to political risk coverage (MIGA).\n\nThe World Trade Organization (WTO) began in 1948 under GATT, which lowered or removed tariffs, quotas and subsidies through negotiations. The WTO administers trade agreements, acts as a forum for negotiations, settles disputes, reviews national trade policies, assists developing countries and cooperates with the IMF and World Bank. It rests on five principles: trade without discrimination, freer trade, predictability, fair competition and encouraging reform in developing countries.",
+      "marking_points": [
+       "Post-WWII origin and need for cooperation",
+       "IMF: four roles",
+       "World Bank: original role, current focus, Group institutions",
+       "WTO: GATT 1948 origin, functions, five principles"
+      ],
+      "chapters": [
+       "s1-institutions"
+      ]
+     },
+     {
+      "q": "Distinguish between absolute advantage, comparative advantage and the Heckscher–Ohlin theory, and explain why mercantilism fails as a basis for trade policy.",
+      "marks": 10,
+      "model_answer": "Mercantilism, the oldest trade theory, was practiced from about 1500 to 1750. It held that wealth was measured by the precious metal a country owned, so a nation should export as much as possible and import as little as possible to run a trade surplus. Its flaw is that it ignores the big picture: if every nation raised exports and cut imports, the world would face a surplus of exports, depressed prices, lower earnings for exporters and underselling.\n\nThe specialization theories replace the surplus goal with efficiency. A country has an absolute advantage when it can produce a good or service more efficiently than another country. Comparative advantage goes further: a country with an absolute advantage in two or more goods can still produce one of them relatively more efficiently than the other, and it should specialize in that one. Specialization encourages each country to produce what it makes most efficiently.\n\nThe Heckscher–Ohlin (H–O) theory explains where comparative advantage comes from: a nation's factor endowments of land (quantity, quality and mineral resources), labor (quantity and skills), capital (cost) and technology (quality). Nations therefore export goods that intensely use their abundant factors. H–O assumes perfect competition and perfect immobility of factors between countries; factor price equalization theory relaxes the second assumption, arguing that free factor mobility raises efficiency until prices reach equilibrium.",
+      "marking_points": [
+       "Mercantilism: surplus, precious metal, 1500–1750",
+       "Flaw: universal surplus depresses prices and earnings",
+       "Absolute advantage definition",
+       "Comparative advantage definition",
+       "H–O: four factor endowments and two assumptions"
+      ],
+      "chapters": [
+       "s2-trade-theories"
+      ]
+     },
+     {
+      "q": "Describe the three accounts of the balance of payments and explain what net errors and omissions are.",
+      "marks": 10,
+      "model_answer": "The balance of payments (BOP) shows all transactions between one country and the rest of the world for a given period. It has three accounts.\n\nThe current account records the activities of consumers and businesses: the trade balance in goods (exports carry a plus sign as money comes in, imports a minus sign as money goes out, so importing more than exporting gives a goods trade deficit), the trade balance in services such as shipping, tourism, banking and software, the primary income balance (labor and investment income earned from abroad less income paid abroad), and secondary income, which records current transfers between residents and nonresidents.\n\nThe capital account records credit and debit entries for non-produced nonfinancial assets and capital transfers, such as land sold to embassies or the sale of leases and licenses. It is the least significant BOP item because the amounts are usually small. The financial account consists of foreign direct investment, portfolio investment, net financial derivatives and other investments such as hot money and trade credit.\n\nIn practice the accounts do not balance exactly because source data and compilation are imperfect. The gap is recorded as net errors and omissions, derived as the financial account balance minus the balance of the current and capital accounts; it reflects timing and illegal trade. The total of the three accounts is the overall balance of payments, and once adjusted for net errors and omissions it is reflected in the change in foreign currency reserves.",
+      "marking_points": [
+       "Defines BOP",
+       "Current account and its four parts with sign convention",
+       "Capital account, least significant",
+       "Financial account components",
+       "Errors and omissions: causes, derivation, link to reserves"
+      ],
+      "chapters": [
+       "s3-balance-of-payments"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "B",
+    "title": "Section B · Application (60 marks)",
+    "questions": [
+     {
+      "q": "Using the eight elements of culture and the country notes from Session 4, explain why a company's degree of cultural adaptation can decide its success abroad. Illustrate with at least three of the markets the course describes, and explain how culture should shape the firm's management and marketing there.",
+      "marks": 20,
+      "model_answer": "Culture is learned behavior, a way of life for one group of people living in a single, related and independent community. Because it is learned, it differs between countries, and the textbook warns that the degree to which a company adapts to a culture is often the difference between success and failure in international markets. A global firm must judge how important each aspect of culture is in each market and adjust its operations to it.\n\nThe eight elements of culture give the firm a checklist. Language covers both verbal content and nonverbal signals, and backward translation helps check messages. Religion affects operations, products, holidays and working hours. Values and attitudes are a society's basic beliefs and its feelings and opinions. Manners and customs are the usual way things are done. Material elements reflect a society's technology and infrastructure, aesthetics its sense of color, form and music, education the skills available among host-country staff, and social institutions the way people relate in groups through reference groups and social stratification.\n\nThe country notes show these elements at work. In Japan, manners and customs govern the first meeting: a slight bow and handshake, careful business card etiquette, no direct eye contact, and hosts who need to know the visitor's title and rank; executives expect visitors to arrive prepared with decision-making authority and to be referred through a third party. In China, the social institution of guanxi, friendship among unequals built on an unlimited exchange of favors, means low-ranking people can be influential, so a foreigner may need to win their favor to reach decision makers. In Latin America, customers want a personal relationship before business, people are more flexible about time, and the motto is \"We work to live,\" not \"We live to work.\" In Arab countries, etiquette such as not showing the sole of one's shoe, treating the left hand as unclean and not over-praising a host's possessions can make or break a meeting. A firm that ignores these rules fails before negotiations begin.\n\nCulture also shapes management and marketing. A country's culture affects its attitudes toward work, so management styles can create challenges or lead to success. New products must take local management styles and other aspects of marketing into account, advertising campaigns must be carefully tailored to local cultures, and communication styles differ: Exhibit 5.4 lists U.S. jargon, such as \"reinvent the wheel\", that foreign business representatives would not understand. The firm that adapts in each of these areas gives itself the best chance of success.",
+      "marking_points": [
+       "Definition of culture and the adaptation argument",
+       "All eight elements named and explained",
+       "At least three country examples used accurately",
+       "Management and marketing implications (work attitudes, styles, products, advertising, communication)",
+       "Clear link between adaptation and success"
+      ],
+      "chapters": [
+       "s4-elements-of-culture",
+       "s4-doing-business"
+      ]
+     },
+     {
+      "q": "A mid-sized consumer electronics firm is considering entering a large emerging market where it has no experience. Using the course's entry strategies (Exhibit 8.1) and its discussion of political and economic risk, recommend how the firm should weigh its options, from export-import to a wholly owned subsidiary. (This scenario is invented for practice.)",
+      "marks": 20,
+      "model_answer": "The firm's choice depends on its risk profile, the potential financial loss its owners are willing to take, and on the risk–return trade-off: the greater the risk of losing invested capital, the greater the likely reward. Risk comes from ownership, operation and asset transfer. Exhibit 8.1 ranks the entry strategies from low risk and low return to high risk and high return: export-import, licensing, franchising, strategic alliances, joint ventures, foreign acquisitions and wholly owned foreign subsidiaries.\n\nThe country itself adds risk. Session 5 lists economic risks, including restrictions on currency transfer or devaluation, doubtful loan repayment, labor problems, inflation and corruption, and political risks, which may be micropolitical (one industry) or macropolitical (all businesses). These risks are not independent, and firms can mitigate them through careful planning; U.S. firms can also buy political risk insurance from the DFC.\n\nGiven no experience in the market, the strategies that minimize financial risk are the natural start. Export-import business ties up little capital, is easy to enter and exit, and can use trade finance to limit financial risk. Licensing brings the firm closer to a local partner, lets it benefit from lower local transport, labor and material costs without investing in plant, and can be protected by penalty clauses that serve as an exit strategy, though it carries slightly more risk than exporting.\n\nIf the market proves attractive and larger investment is needed, the firm can share risk. A strategic alliance offers cooperation for revenue without a jointly owned entity, but any member could quit early. An international joint venture with a local firm shares commercial risk and draws on the local partner's knowledge of the domestic economy, culture and politics and its ability to handle logistics and bureaucracy, which directly reduces the political and cultural risks identified above.\n\nThe higher-risk options suit a later stage. An acquisition gives instant access to existing production, marketing and distribution networks, while a wholly owned green field subsidiary needs large capital, high marketing effort as an unknown newcomer, and carries high risks and rewards. The recommended path is therefore to begin at the low-risk end and move along Exhibit 8.1 as the firm's knowledge grows and its risk profile allows.",
+      "marking_points": [
+       "Risk profile, risk–return trade-off and sources of risk",
+       "Exhibit 8.1 ordering",
+       "Economic and political risks and mitigation",
+       "Evaluates minimize / share / higher-risk groups with course reasons",
+       "Clear recommendation linked to risk"
+      ],
+      "chapters": [
+       "s7-entry-modes",
+       "s5-political-systems-risk"
+      ]
+     },
+     {
+      "q": "Using the financial scandals covered in Session 6, explain how failures of ethics damage markets, and evaluate the role of internal controls, the FCPA and the Sarbanes–Oxley Act in preventing such failures.",
+      "marks": 20,
+      "model_answer": "Ethics is the branch of philosophy that deals with the rightness and wrongness of actions and the goodness and badness of their intent and results. Session 6 argues that ethics and economic progress are connected: ethical business needs mutual trust, fair dealing and honest communication, and unethical behavior, such as using inside information, destroys fair investment markets.\n\nThe scandals show how. Enron used innovative and misleading accounting, including mark-to-market practices, to hide unprofitable operations. WorldCom recorded line costs as assets rather than expenses and overstated revenues to show false growth and prop up its stock price; its bankruptcy wiped out stockholders and bondholders. Vivendi hid cash flow, liquidity and debt problems to boost its stock price and make acquisitions, and Parmalat used risky derivatives and purchases of its own debt to disguise losses until it went bankrupt. In each case investors relied on false financial information, which is exactly the breakdown of trust that destroys fair markets.\n\nInternal controls are the first defense. They are rules and procedures that ensure the accuracy and reliability of financial and accounting information. Preventive controls, such as hiring competent and ethical employees, following written policies, securing assets and keeping adequate records, stop errors and irregularities before they occur. Feedback controls, such as quality control and internal auditing, find them afterwards so they can be corrected. The cases show both at work: WorldCom's fraud was eventually discovered by internal auditors, and Vivendi's by its board.\n\nThe law makes controls compulsory. The FCPA applies to U.S. firms and foreign firms doing business in the United States and combines an anti-bribery provision with a requirement to keep adequate internal controls over books and records. The Enron scandal was a key event behind the Sarbanes–Oxley Act of 2002, which raised the prison sentence for fraud to 25 years, set 20-year sentences for destroying or falsifying records, and requires the CEO and CFO to certify that the financial statements are accurate. Together they raise the cost of fraud and place personal responsibility on top management.\n\nControls and laws work best alongside ethics education. The textbook holds that ethics can be taught through personal integrity, the responsibility of business in society, ethical decision making, ethical leadership and corporate governance, so that managers know what is right and have the courage to do it.",
+      "marking_points": [
+       "Ethics–economics link (trust, fair markets)",
+       "Accurate account of at least three scandals",
+       "Internal controls: definition, preventive vs feedback, with case evidence",
+       "FCPA two parts",
+       "SOX provisions and Enron link",
+       "Evaluation including ethics education"
+      ],
+      "chapters": [
+       "s6-scandals-controls",
+       "s6-ethics-csr"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
